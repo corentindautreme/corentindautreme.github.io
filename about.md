@@ -8,7 +8,7 @@ Hi there! I'm Corentin (good luck saying that - you can stick to Co), I'm (year 
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+I made this blog to post random things, mostly about Eurovision or small tech side projects I work on on my free time.
 
 ### Contact me
 
