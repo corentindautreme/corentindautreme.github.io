@@ -283,6 +283,45 @@ footer {
   text-align: center;
 }
 
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+
+  //Tooltip text container - above element
+  //You can adjust the position to make the container appear below or beside the element
+  &::before {
+    background-color: #000;
+    color: #fff;
+    content: attr(aria-label); //This pulls in the text from the element with the tooltip
+    left: 0;
+    bottom: 0;
+    padding: 1rem;
+    position: fixed;
+    text-transform: none;
+    transition: all 0.25s ease;
+    width: 100%;
+    z-index: 10;
+  }
+
+  //Setting up the transition
+  &::before,
+  &::after {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  //Triggering the transition
+  &:focus::before,
+  &:focus::after,
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    transition: all 0.25s ease;
+  }
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
