@@ -25,6 +25,7 @@ And so I had a sarting point. But still, back to square 0: I don't speak CSS ver
 Or, to be more accruate, [my friend knew](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e) <span class="tooltip-toggle" aria-label="So a friend of a friend of a friend of a friend, etc." tabindex="0">a friend</span>. This article is *everything* I was looking for - brilliant! I'm not going to be rude and paraphrase someone else's work so I strongly recommend suggest you read to article for more details, but after playing around for a little while, this is what I managed to get:
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step1.png)
+
 * Step 1! Believe in it! And... draw tiny black sections?*
 
 Here's the code which is, for the time being, nothing more than a complete rip-off of what our friend (well <span class="tooltip-toggle" aria-label="And what did you expect to find here exactly? I made that pun 3 lines above" tabindex="0">friend of a friend</span>) from the aforementioned article did:
@@ -72,19 +73,22 @@ Here's the code which is, for the time being, nothing more than a complete rip-o
 Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step2.png)
+
 *The red square is the visible area (the actual `.slice` element), and the black square is the content. The part of the black square that overlaps with the red one is what we see in the end.*
 
 Now onto the colors. This involved playing thinking about angles and rotating imaginary things in your head and I'm worse at that than I am at CSS, so keeping a piece of paper in reach is a life-saver. The idea was to use a [radial-gradient](https://developer.mozilla.org/fr/docs/Web/CSS/radial-gradient) and get it to originate from the right place on the :before pseudo element so it would look right. And after a <span class="tooltip-toggle" aria-label="Like I said, I'm not good at this" tabindex="0">looooong period of trial and error</span> (I found that the middle of the right edge works perfectly), hurray! It works!
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step3.png)
+
 *Yes I'm an uninspired patriotic idiot*
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step4.png)
+
 *It's alive!*
 
 Here's the gradient's CSS by the way:
 
-<code>
+<pre class="highlight"><code>
 background: radial-gradient(circle at 50% 0%,
     blue 0,
     blue 16%,
@@ -93,7 +97,7 @@ background: radial-gradient(circle at 50% 0%,
     red 33%,
     red 100%
 );
-</code>
+</code></pre>
 
 One last thing - extracting the real colors from the logo and recreate every slice. Don't try this at home, that wasn't fun. Full list below if you're interested (click on "Click me!").
 
