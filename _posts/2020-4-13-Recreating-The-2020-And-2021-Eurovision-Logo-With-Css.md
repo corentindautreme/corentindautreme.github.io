@@ -15,13 +15,13 @@ And [that's what I did! (view a demo on CodePen)](https://codepen.io/Co_is_tired
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/preview.png)
 
-*Tadaaaaaaa <sub><sup>yes I got the height of each colored section slightly wrong ignore that please</sup></sub>*
+*Tadaaaaaaa yes I got the height of each colored section slightly wrong ignore that please*
 
 I'm no designer and even less of a frontend expert, so I didn't have much clue on where to start. I began with playing around with shapes and see what I could by stacking a bunch of cones, but that wasn't exactly a success and I let the idea rest thinking I'd maybe come back to it another day.
 
 And a week or so later I got another idea - what if this logo wasn't a bunch of cones but a piechart? I mean sure, a weird piechart with multiple colors on each section, but a piechart anyway?
 
-And so I had a sarting point. But still, back to square 0: I don't speak CSS very well, so creating a piechart from the ground up wasn't going to be possible. Luckily, I knew [a friend](https://www.google.com/).
+And so I had a sarting point. But still, back to <span class="tooltip-toggle" aria-label="IT folks start counting at 0" tabindex="0">square 0</span>: I don't speak CSS very well, so creating a piechart from the ground up wasn't going to be possible. Luckily, I knew [a friend](https://www.google.com/).
 
 Or, to be more accruate, [my friend knew](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e) <span class="tooltip-toggle" aria-label="So a friend of a friend of a friend of a friend, etc." tabindex="0">a friend</span>. This article is *everything* I was looking for - brilliant! I'm not going to be rude and paraphrase someone else's work so I strongly recommend suggest you read to article for more details, but after playing around for a little while, this is what I managed to get:
 
@@ -31,7 +31,7 @@ Or, to be more accruate, [my friend knew](https://codeburst.io/how-to-pure-css-p
 
 Here's the code which is, for the time being, nothing more than a complete rip-off of what our friend (well <span class="tooltip-toggle" aria-label="And what did you expect to find here exactly? I made that pun 3 lines above" tabindex="0">friend of a friend</span>) from the aforementioned article did:
 
-<pre class="highlight"><code>
+```html
 <style type="text/css">
     .circle {
         width: 540px;
@@ -69,7 +69,7 @@ Here's the code which is, for the time being, nothing more than a complete rip-o
         <div class="slice" style="--offset: 16; --value: 18;"></div>
     </div>
 </body>
-</code></pre>
+```
 
 Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
 
