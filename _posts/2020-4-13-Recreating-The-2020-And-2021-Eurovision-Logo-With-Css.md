@@ -14,6 +14,7 @@ And to me, aesthetically pleasing data <span class="tooltip-toggle" aria-label="
 And [that's what I did! (view a demo on CodePen)](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe)
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/preview.png)
+
 *Tadaaaaaaa <sub><sup>yes I got the height of each colored section slightly wrong ignore that please</sup></sub>*
 
 I'm no designer and even less of a frontend expert, so I didn't have much clue on where to start. I began with playing around with shapes and see what I could by stacking a bunch of cones, but that wasn't exactly a success and I let the idea rest thinking I'd maybe come back to it another day.
@@ -26,11 +27,11 @@ Or, to be more accruate, [my friend knew](https://codeburst.io/how-to-pure-css-p
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step1.png)
 
-* Step 1! Believe in it! And... draw tiny black sections?*
+*Step 1! Believe in it! And... draw tiny black sections?*
 
 Here's the code which is, for the time being, nothing more than a complete rip-off of what our friend (well <span class="tooltip-toggle" aria-label="And what did you expect to find here exactly? I made that pun 3 lines above" tabindex="0">friend of a friend</span>) from the aforementioned article did:
 
-```html
+<pre class="highlight"><code>
 <style type="text/css">
     .circle {
         width: 540px;
@@ -68,7 +69,7 @@ Here's the code which is, for the time being, nothing more than a complete rip-o
         <div class="slice" style="--offset: 16; --value: 18;"></div>
     </div>
 </body>
-```
+</code></pre>
 
 Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
 
@@ -104,7 +105,7 @@ One last thing - extracting the real colors from the logo and recreate every sli
 <details>
     <summary>Click me!</summary>
     All slices (one by line), clock wise, colors are inner to outer.
-    ```
+    <pre class="highlight"><code>
     #0750c6 #fff #fc0000
     #01aa5a #fff #fc0000
     #ffc832 #000 #fc0000
@@ -136,7 +137,7 @@ One last thing - extracting the real colors from the logo and recreate every sli
     #01aa5a #fc0000 #1ac0f8
     #01aa5a #fff #1ac0f8
     #fc0000 #fff #0750c6
-    ```
+    </code></pre>
 </details>
 
 And that's pretty much it! The rest was all about guessing the correct width and position of everything. You can find the <span class="tooltip-toggle" aria-label="I would lie if I told you I didn't spend an unreasonable 20 minute trying to find the blue I thought matched the background of Eurovision.tv the best" tabindex="0">final version</span> of the code on [CodePen](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe).
