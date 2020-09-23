@@ -71,7 +71,7 @@ Here's the code which is, for the time being, nothing more than a complete rip-o
 </body>
 ```
 
-Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
+Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e)), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step2.png)
 
