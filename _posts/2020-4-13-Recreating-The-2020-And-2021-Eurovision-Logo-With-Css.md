@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Recreating the 2020 (and 2021!) Eurovision logo
-excerpt: (Yes, I'm sneakily backdating this article as it's [not exactly new](https://github.com/corentindautreme/esc-2020-logo), although rewritten especially for this new lil cosy blog)
 ---
 
 <span class="tooltip-toggle" aria-label="" tabindex="0"></span>
