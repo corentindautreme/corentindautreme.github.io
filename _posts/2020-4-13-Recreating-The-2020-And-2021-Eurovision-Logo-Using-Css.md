@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recreating the 2020 (and 2021!) Eurovision logo
+title: Recreating the 2020 (and 2021!) Eurovision logo using CSS
 ---
 
 <span class="tooltip-toggle" aria-label="" tabindex="0"></span>
@@ -15,7 +15,7 @@ And to me, aesthetically pleasing data <span class="tooltip-toggle" aria-label="
 
 And [that's what I did! (view a demo on CodePen)](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe)
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/preview.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/preview.png)
 
 *Tadaaaaaaa yes I got the height of each colored section slightly wrong ignore that please*
 
@@ -27,7 +27,7 @@ And so I had a sarting point. But still, back to <span class="tooltip-toggle" ar
 
 Or, to be more accruate, [my friend knew](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e) <span class="tooltip-toggle" aria-label="So a friend of a friend of a friend of a friend, etc." tabindex="0">a friend</span>. This article is *everything* I was looking for - brilliant! I'm not going to be rude and paraphrase someone else's work so I strongly recommend suggest you read to article for more details, but after playing around for a little while, this is what I managed to get:
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step1.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/step1.png)
 
 *Step 1! Believe in it! And... draw tiny black sections?*
 
@@ -75,17 +75,17 @@ Here's the code which is, for the time being, nothing more than a complete rip-o
 
 Next up - colors! Thankfully the pattern was simple enough to reproduce, with each <span class="tooltip-toggle" aria-label="Yes, slice, it's called a pie after all isn't it?" tabindex="0">slice</span> being made up of exactly 3 parts of equal height. Before adding the colors, let's take a step back and remove the `overflow: hidden` on both the .slice and .circle classes. If you haven't read the css piechart article I've linked earlier ([and you should!](https://codeburst.io/how-to-pure-css-pie-charts-w-css-variables-38287aea161e)), this is what happens behind the scenes: we use the :before pseudo element and rotate it just enough to make it fit in the actual slice element. Hiding the overflow helps making it look clean and sharp.
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step2.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/step2.png)
 
 *The red square is the visible area (the actual `.slice` element), and the black square is the content. The part of the black square that overlaps with the red one is what we see in the end.*
 
 Now onto the colors. This involved playing thinking about angles and rotating imaginary things in your head and I'm worse at that than I am at CSS, so keeping a piece of paper in reach is a life-saver. The idea was to use a [radial-gradient](https://developer.mozilla.org/fr/docs/Web/CSS/radial-gradient) and get it to originate from the right place on the :before pseudo element so it would look right. And after a <span class="tooltip-toggle" aria-label="Like I said, I'm not good at this" tabindex="0">looooong period of trial and error</span> (I found that the middle of the right edge works perfectly), hurray! It works!
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step3.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/step3.png)
 
 *Yes I'm an uninspired patriotic idiot*
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/step4.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/step4.png)
 
 *It's alive!*
 
@@ -144,6 +144,6 @@ One last thing - extracting the real colors from the logo and recreate every sli
 
 And that's pretty much it! The rest was all about guessing the correct width and position of everything. You can find the <span class="tooltip-toggle" aria-label="I would lie if I told you I didn't spend an unreasonable 20 minute trying to find the blue I thought matched the background of Eurovision.tv the best" tabindex="0">final version</span> of the code on [CodePen](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe).
 
-![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-With-Css/preview.png)
+![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/preview.png)
 
 *Here it is again because I'm a show-off - who ends a technical demo without the final result anyway?*
