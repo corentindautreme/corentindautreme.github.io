@@ -9,6 +9,8 @@ title: Recreating the 2020 (and 2021!) Eurovision logo
 
 The visual theme is what makes each Eurovision different and I'm always super curious to see what the next creative team is going to come up with. I was at first unsure about the 2020 (and [as we now know, 2021](https://twitter.com/Eurovision/status/1306933555885420545)) logo, but it quickly grew on me and that's most likely because of what it represents. See, it's not just a logo, it's [data](https://web.archive.org/web/20200731103617/https://eurovision.tv/story/rotterdam-2020-design-celebrates-65-years-of-eurovision-song-contest). And if there's one thing I like more than design, it's a beautifully crafted data vizualization.
 
+<!--more-->
+
 And to me, aesthetically pleasing data <span class="tooltip-toggle" aria-label="Well, maybe not, but this intro is getting long and we need to get to the topic so allow me to cut this short" tabindex="0">is meant to be recreated using CSS</span>.
 
 And [that's what I did! (view a demo on CodePen)](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe)

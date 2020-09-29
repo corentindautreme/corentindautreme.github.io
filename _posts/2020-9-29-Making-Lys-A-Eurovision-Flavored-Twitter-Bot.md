@@ -5,6 +5,8 @@ title: Making Lys, a Eurovision-flavored Twitter bot
 
 In October 2019 I launched [Lys](https://twitter.com/EurovisionLys), a simple Twitter bot made to remind its followers of any Eurovision selection show taking place anywhere in Europe on a daily basis. I'll give it to you, it really isn't <span class="tooltip-toggle" aria-label="TLDR: It's a couple Amazon Lambas scheduled by cron that run a Python script" tabindex="0">anything groundbreaking</span>, but there's more to it than just a script that runs twice a day, so I figured I'd take the time to explain how it all actually works.
 
+<!--more-->
+
 ## Lys - the bot itself
 
 Following Eurovision isn't only about watching the <span class="tooltip-toggle" aria-label="If you're thinking 'Wait, there's THREE live shows??' you just wait - there's more" tabindex="0">3 live shows</span> in May every year: for hardcore fans like myself, it can get very challenging to keep up when 20 to 30 countries decide to pick their act through a <span class="tooltip-toggle" aria-label="A show, in the vast majority of cases broadcast live on TV, that can span over multiple nights" tabindex="0">national selection</span>. The lot of us will usually drop everything they're doing at the height of the selection season and spend their Saturday nights <span class="tooltip-toggle" aria-label="Everyone needs a hobby. No, really, it's a lot of fun - and you get to discover a lot of new music!" tabindex="0">watching shows in a language they often don't understand</span>. And when there's 7 shows happening at once, it can be hard to know when, where and what to watch.
