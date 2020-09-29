@@ -66,3 +66,7 @@ Once the event fetcher was up and running, I added a way to manage the suggestio
 Turns out Lys is a bit more than just a scheduled script running twice a day. When looking at the bot's Twitter feed, the weeks poured into this project obviously won't show as most of the improvements are happening behind the scenes and bring no value to the end user (which is fine! I'm not writing this post to get a Nobel Prize, I just meant to give a quick insight at what's going on behind the scenes and show you that there's more to it than what the eye can see - and now you know what I do on the weekend ;))
 
 Lys is one of these projects that's never finished. Every other week I'll think of a little thing that will make my life easier, or even simply keep me busy for a few hours (there's a lot I've left out of this post, such as a night mode for the app, or how I've added "likely date ranges" for every country's selection to save me 3 taps when processing the event fetcher's suggestions). Maybe I'll make another post a year from now to show how much Lys has changed!
+
+### One last thing
+
+If this is of any iterest to you, and since you've made it to the end of the article, you can find the code of both [Lys](https://github.com/corentindautreme/lys) and the [event fetcher](https://github.com/corentindautreme/lys-event-fetcher) on Github.
