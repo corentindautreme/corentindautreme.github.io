@@ -69,4 +69,4 @@ Lys is one of these projects that's never finished. Every other week I'll think 
 
 ### One last thing
 
-If this is of any iterest to you, and since you've made it to the end of the article, you can find the code of both [Lys](https://github.com/corentindautreme/lys) and the [event fetcher](https://github.com/corentindautreme/lys-event-fetcher) on Github.
+If this is of any interest to you, and since you've made it to the end of the article, you can find the code of both [Lys](https://github.com/corentindautreme/lys) and the [event fetcher](https://github.com/corentindautreme/lys-event-fetcher) on Github.
