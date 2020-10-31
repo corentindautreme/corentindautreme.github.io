@@ -52,7 +52,8 @@ baseurl: ""
 excerpt_separator: "<!--more-->"
 
 collections:
-  - side_projects
+  projects:
+    sort_by: id
 
 #
 # !! You don't need to change any of the configuration flags below !!

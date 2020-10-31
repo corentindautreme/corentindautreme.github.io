@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Side Projects
-permalink: /side-projects/
+title: Projects
+permalink: /projects/
 ---
 
-{% for project in site.side_projects %}
+{% for project in site.projects %}
   <h2>{{ project.name }}</h2>
   <p>{{ project.content | markdownify }}</p>
 {% endfor %}
