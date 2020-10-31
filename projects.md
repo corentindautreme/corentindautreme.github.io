@@ -10,7 +10,8 @@ permalink: /projects/
     <a href="{{ project.preview }}" class="project-preview"><img src="{{ project.preview }}" /></a>
 
     <div class="project-info">
-        <p>{{ project.content | markdownify }}</p>
+        <p>{{ project.content | markdownify }}</p
+        <p>{{ project.preview }}</p>
     </div>
 </div>
 {% endfor %}
