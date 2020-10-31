@@ -289,6 +289,37 @@ footer {
   text-align: center;
 }
 
+// projects
+
+.project-preview {
+  float: left;
+  width: 320px;
+  height: 180px;
+  margin-right: 15px;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+.project-info {
+  float: left;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+// tooltips
+
 .tooltip-toggle {
   cursor: pointer;
   position: relative;
