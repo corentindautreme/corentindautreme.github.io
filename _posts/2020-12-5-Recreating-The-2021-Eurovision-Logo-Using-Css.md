@@ -134,5 +134,3 @@ And now we insert the slices into the HTML. I spent hours readjusting the angle 
 A bit of polishing later, here's what I came up with! You can find the full code [on CodePen](https://codepen.io/CorentinDautreme/pen/MWjyjRv). Well done again [CLEVER ° FRANKE](https://www.cleverfranke.com/work/eurovision) for a smart and nerdy artwork. I cannot wait to see the full extent of it this spring.
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-12-5-Recreating-The-2021-Eurovision-Logo-Using-Css/005.png)
-
-*Yes that looks horribly inaccurate but it worked alright*
