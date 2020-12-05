@@ -3,7 +3,7 @@ layout: post
 title: Recreating the 2021 Eurovision logo using CSS
 ---
 
-Uh oh. <span class="tooltip-toggle" aria-label="Look at me being all fancy with my és and às. And wait until I tell you about clichés!" tabindex="0">Déjà vu</span>. Am I seeing double? Isn't there a post with the exact same title a little further down? Well, almost! I indeed wrote a post titled "[Recreating the 2020 Eurovision logo using CSS](../Recreating-The-2020-Eurovision-Logo-Using-Css/)" a few months ago which was about, well, recreating the 2020 Eurovision logo with CSS. Following the cancellation of the contest and the rescheduling of an ESC in Rotterdam, the team decided to reword the logo a little bit. Which means of course that I had to take care of that one as well.
+Uh oh. <span class="tooltip-toggle" aria-label="Look at me being all fancy with my és and às. And wait until I tell you about clichés!" tabindex="0">Déjà vu</span>. Am I seeing double? Isn't there a post with the exact same title a little further down? Well, almost! I indeed wrote a post titled "[Recreating the 2020 Eurovision logo using CSS](../Recreating-The-2020-Eurovision-Logo-Using-Css/)" a few months ago which was about, well, recreating the 2020 Eurovision logo with CSS. Following the cancellation of the contest and the rescheduling of an ESC in Rotterdam, the team decided to rework the logo a little bit. Which means of course that I had to take care of that one as well.
 
 <!--more-->
 
