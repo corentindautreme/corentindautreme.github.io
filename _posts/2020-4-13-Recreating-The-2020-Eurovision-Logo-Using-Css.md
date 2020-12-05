@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Recreating the 2020 (and 2021!) Eurovision logo using CSS
+title: Recreating the 2020 Eurovision logo using CSS
 ---
-
-<span class="tooltip-toggle" aria-label="" tabindex="0"></span>
 
 (Yes, I'm sneakily backdating this article as it's [not exactly new](https://github.com/corentindautreme/esc-2020-logo), although rewritten especially for this new lil cosy blog)
 
@@ -13,7 +11,7 @@ The visual theme is what makes each Eurovision different and I'm always super cu
 
 And to me, aesthetically pleasing data <span class="tooltip-toggle" aria-label="Well, maybe not, but this intro is getting long and we need to get to the topic so allow me to cut this short" tabindex="0">is meant to be recreated using CSS</span>.
 
-And [that's what I did! (view a demo on CodePen)](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe)
+And [that's what I did! (view a demo on CodePen)](https://codepen.io/CorentinDautreme/pen/PowpmVe)
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/preview.png)
 
@@ -142,7 +140,7 @@ One last thing - extracting the real colors from the logo and recreate every sli
     </code></pre>
 </details>
 
-And that's pretty much it! The rest was all about guessing the correct width and position of everything. You can find the <span class="tooltip-toggle" aria-label="I would lie if I told you I didn't spend an unreasonable 20 minute trying to find the blue I thought matched the background of Eurovision.tv the best" tabindex="0">final version</span> of the code on [CodePen](https://codepen.io/Co_is_tired_of_his_username_being_taken/pen/PowpmVe).
+And that's pretty much it! The rest was all about guessing the correct width and position of everything. You can find the <span class="tooltip-toggle" aria-label="I would lie if I told you I didn't spend an unreasonable 20 minute trying to find the blue I thought matched the background of Eurovision.tv the best" tabindex="0">final version</span> of the code on [CodePen](https://codepen.io/CorentinDautreme/pen/PowpmVe).
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-4-13-Recreating-The-2020-And-2021-Eurovision-Logo-Using-Css/preview.png)
 
