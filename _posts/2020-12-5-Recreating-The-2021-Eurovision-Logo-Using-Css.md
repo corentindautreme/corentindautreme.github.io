@@ -17,7 +17,7 @@ I got slightly worried when the ESC core organizing team teased a new logo for 2
 
 Recreating this logo (like I [did recreate the 2020 one almost exactly a year ago](../Recreating-The-2020-Eurovision-Logo-Using-Css/)) sounded like a lot of fun and I wanted to give it a go. Plus, the data used gave me an idea for an additional fun challenge, but more on that later (follow my Twitter for more 👀).
 
-The 2021 logo being so close to the 2021, my starting point was obviously my 2020 logo recreation.
+The 2021 logo being so close to the 2020 one, my starting point was obviously my previous logo recreation.
 
 ![_config.yml]({{ site.baseurl }}/images/articles/2020-12-5-Recreating-The-2021-Eurovision-Logo-Using-Css/001.png)
 
