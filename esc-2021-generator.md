@@ -11,9 +11,8 @@ permalink: /esc-2021-generator/
                 width: 100%;
                 height: 100%;
                 background-size: cover;
-                background: #dadada;
-                background: #030b27;
                 background: linear-gradient(20deg, #392556, #200c53 70%);
+                background-attachment: fixed;
                 font-family: 'Montserrat', sans-serif;
             }
 
