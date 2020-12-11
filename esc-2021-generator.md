@@ -21,6 +21,7 @@ permalink: /esc-2021-generator/
                 position: absolute;
                 margin: 1em;
                 color: white;
+                z-index: 10;
             }
 
             .circle {
