@@ -452,7 +452,7 @@ permalink: /esc-2021-generator/
                 slices = generateSlices(hostCity, actualMinimumSliceSize);
 
                 var step = Math.round((45/actualMinimumSliceSize) * 10) / 10;
-                var cssString = "radial-gradient(circle at 50% 0%, var(--color1, transparent) 0, ";
+                var cssString = "radial-gradient(50% 50% at 50% 0, var(--color1, transparent) 0, ";
                 for (var i=step, j=1; j<actualMinimumSliceSize; i+=step, j+=1) {
                     cssString += "var(--color" + Math.floor(j) + ", transparent) " + i + "%, var(--color" + Math.floor(j+1) + ", transparent) " + i + "%, ";
                 }
