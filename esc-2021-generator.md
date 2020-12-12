@@ -11,6 +11,8 @@ permalink: /esc-2021-generator/
                 width: 100%;
                 height: 100%;
                 background-size: cover;
+                background: #dadada;
+                background: #030b27;
                 background: linear-gradient(20deg, #392556, #200c53 70%);
                 background-attachment: fixed;
                 font-family: 'Montserrat', sans-serif;
@@ -30,6 +32,23 @@ permalink: /esc-2021-generator/
                 width: 900px;
                 height: 900px;
                 overflow: hidden;
+                border-radius: 100%;
+            }
+
+            #grid {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: none;
+                z-index: 5;
+            }
+
+            #grid .separator {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 1px dashed #a0a0a0;
                 border-radius: 100%;
             }
 
@@ -259,6 +278,16 @@ permalink: /esc-2021-generator/
                 }
             }
 
+            function drawGrid(sliceSize) {
+                var grid = '<div id="grid">';
+                for (var i=1; i<sliceSize; i++) {
+                    var size = ($(".circle").height() / sliceSize) * i;
+                    grid += '<div class="separator" style="width: ' + size + 'px; height: ' + size + 'px;"></div>'
+                }
+                grid += '</div>';
+                $("#logo").append(grid);
+            }
+
             function generateSlices(hostCity, sliceSize, shiftSections) {
                 var countriesPerSlice = Array(33);
                 for (var i=0; i < 33; i++) {
@@ -449,6 +478,8 @@ permalink: /esc-2021-generator/
 
                 $("#logo").empty();
                 drawSlices(slices, sliceSize);
+                drawGrid(sliceSize);
+                $("#grid").css("display", $("#chk-show-grid").prop('checked') ? "block" : "none");
                 $(".label").css("display", $("#chk-show-labels").prop('checked') ? "block" : "none");
             }
 
@@ -500,12 +531,15 @@ permalink: /esc-2021-generator/
                     $("#grid-style").remove();
                     $("head").append("<style id='grid-style'>.slice:after{display: " + ($(this).prop('checked') ? "block" : "none") + "}</style>");
                     $(".circle").css("border", $(this).prop('checked') ? "1px dashed #a0a0a0" : "none");
+                    $("#grid").css("display", $(this).prop('checked') ? "block" : "none");
                 });
 
                 $("#chk-show-labels").change(function() {
                     $(".label").css("display", $(this).prop('checked') ? "block" : "none");
                 });
 
+                $("#chk-show-grid").prop('checked', false);
+                $("#chk-show-labels").prop('checked', false);
                 drawInitialLogo(hostCity, minimumSliceSize, defaultSliceSize, maximumSliceSize);
 
                 var cityList = Object.keys(cities).sort();
@@ -515,7 +549,6 @@ permalink: /esc-2021-generator/
         </script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
     </head>
 
      <body>
@@ -531,6 +564,7 @@ permalink: /esc-2021-generator/
             <input type="checkbox" id="chk-show-labels" name="show-labels"/><br>
         </div>
         <div class="circle" id="logo">
+            <div id="grid"></div>
         </div>
     </body>
 </html>
