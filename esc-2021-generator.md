@@ -103,6 +103,7 @@ permalink: /esc-2021-generator/
                 "Baku": {"country": "Azerbaijan", "lat": 40.38333333, "lon": 49.866667, "code": "AZ", "colors": ["#1ac0f8", "#01a95b"]},
                 "Minsk": {"country": "Belarus", "lat": 53.9, "lon": 27.566667, "code": "BY", "colors": ["#fc0000", "#01a95b"]},
                 "Brussels": {"country": "Belgium", "lat": 50.83333333, "lon": 4.333333, "code": "BE", "colors": ["#ffc832", "#fc0000"]},
+                "Sarajevo": {"country": "Bosnia and Herzegovina", "lat": 43.8563, "lon": 18.4131, "code": "", "colors": []},
                 "Sofia": {"country": "Bulgaria", "lat": 42.68333333, "lon": 23.316667, "code": "BG", "colors": ["#fff", "#01a95b"]},
                 "Zagreb": {"country": "Croatia", "lat": 45.8, "lon": 16, "code": "HR", "colors": ["#fff", "#fc0000"]},
                 "Nicosia": {"country": "Cyprus", "lat": 35.16666667, "lon": 33.366667, "code": "CY", "colors": ["#ff8c33", "#fff"]},
@@ -298,7 +299,7 @@ permalink: /esc-2021-generator/
                 
                 // assign capital cities to the slice on which they appear
                 for (const [city, value] of Object.entries(cities)) {
-                    if (city == "Rotterdam" || city == hostCity) continue;
+                    if (city == "Rotterdam" || city == "Sarajevo" || city == hostCity) continue;
 
                     var angle = angleBetween2Cities(hostCity, city);
                     var sliceNumber = Math.floor(angle / SLICE_LENGTH) -1;
