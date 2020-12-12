@@ -527,6 +527,7 @@ permalink: /esc-2021-generator/
         </script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <title>{% if page.title %}{{ page.title }} – {% endif %}</title>
     </head>
 
      <body>
