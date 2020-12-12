@@ -185,10 +185,7 @@ permalink: /esc-2021-generator/
             }
 
             function distanceToSliceSections(distance, slice_size, first_section) {
-                if (first_section) {
-                    return Math.ceil(distance / (3200 / slice_size));
-                }
-                return Math.ceil(distance / (3200 / (slice_size / 2) ));
+                return Math.ceil(distance / (3200 / slice_size));
             }
 
             function generateSectionSizesForSlice(slice, sliceSize) {
