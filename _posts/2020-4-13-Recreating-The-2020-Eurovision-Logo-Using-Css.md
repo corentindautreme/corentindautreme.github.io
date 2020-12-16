@@ -87,7 +87,7 @@ Now onto the colors. This involved playing thinking about angles and rotating im
 
 *It's alive!*
 
-Here's the <span class="tooltip-toggle" aria-label="I actually came back and updated this piece of CSS to something cleaner that works better; note that it doesn't match the screenshots and give the correct size to each section instead!" tabindex="0">lgradient's CSS</span> by the way:
+Here's the <span class="tooltip-toggle" aria-label="I actually came back and updated this piece of CSS to something cleaner that works better; note that it doesn't match the screenshots and give the correct size to each section instead!" tabindex="0">gradient's CSS</span> by the way:
 
 <pre class="highlight"><code>
 background: radial-gradient(50% 50% at 50% 0, 

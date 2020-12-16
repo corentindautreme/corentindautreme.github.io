@@ -37,7 +37,7 @@ Let's add a few more and see what we can do. Some slices on the logo are shorter
 
 *Looks very DMGP-y now that I think of it*
 
-OK but enough fooling around. I just spend 20 minutes delaying the inevitable: it's time to get the Gimp running and extract all the colors again (*sigh*).
+OK but enough fooling around. I've just spent 20 minutes delaying the inevitable: it's time to get the Gimp running and extract all the colors again (*sigh*).
 
 Now let's be real, I'm just making this hard on myself - the color palette is most likely the same as last year, but you never know, and I want to get it somewhat right. Truth be told, I fully expected to find the exact same colors but I... didn't? I could've gotten them wrong last year... but when I say "I didn't", I was by like a couple digits in the RGB code. Ah well, <span class="tooltip-toggle" aria-label="Me. I'm counting." tabindex="0">who's counting</span>. Maybe a high res export of the logo would clear that up.
 
