@@ -87,16 +87,16 @@ Now onto the colors. This involved playing thinking about angles and rotating im
 
 *It's alive!*
 
-Here's the gradient's CSS by the way:
+Here's the <span class="tooltip-toggle" aria-label="I actually came back and updated this piece of CSS to something cleaner that works better; note that it doesn't match the screenshots and give the correct size to each section instead!" tabindex="0">lgradient's CSS</span> by the way:
 
 <pre class="highlight"><code>
-background: radial-gradient(circle at 50% 0%,
-    blue 0,
-    blue 16%,
-    white 16%,
-    white 33%,
-    red 33%,
-    red 100%
+background: radial-gradient(50% 50% at 50% 0, 
+    var(--color1, white) 0,
+    var(--color1, white) 33.3%,
+    var(--color2, white) 33.3%,
+    var(--color2, white) 66.6%,
+    var(--color3, white) 66.6%,
+    var(--color3, white) 100%
 );
 </code></pre>
 
