@@ -292,15 +292,16 @@ footer {
 // projects
 
 .project-preview {
-  float: left;
-  width: 320px;
-  height: 180px;
-  margin-right: 15px;
+  display: inline-block;
+  width: 38%;
+  height: auto;
+  margin-right: 1%;
 
   @include mobile {
-    float: none;
+    /*float: none;*/
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
 
   img {
@@ -309,12 +310,14 @@ footer {
 }
 
 .project-info {
-  float: left;
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
 
   @include mobile {
-    float: none;
     display: block;
     margin: 0 auto;
+    width: 100%;
   }
 }
 
