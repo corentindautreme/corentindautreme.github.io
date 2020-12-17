@@ -11,7 +11,8 @@ permalink: /projects/
     <div class="project-info">
         <p>{{ project.content | markdownify }}</p>
         <p style="margin-top: 0.5em;">
-            {% for label in project.labels | split: ", " %}
+            {% assign labels = project.labels | split: ", " %}
+            {% for label in labels %}
             <span class="project-label">{{ label }}</span>
             {% endfor %}
         </p>
