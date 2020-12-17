@@ -13,7 +13,7 @@ permalink: /projects/
         <p style="margin-top: 0.5em;">
             {% assign labels = project.labels | split: ", " %}
             {% for label in labels %}
-            <span class="project-label">{{ label }}</span>
+            <div class="project-label">{{ label }}</div>
             {% endfor %}
         </p>
     </div>
