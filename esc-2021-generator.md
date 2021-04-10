@@ -22,17 +22,24 @@ permalink: /esc-2021-generator/
                 position: absolute;
                 margin: 1em;
                 color: white;
-                z-index: 10;
+                z-index: 15;
             }
 
             .circle {
-                position: relative;
-                margin: 0 auto;
-                margin-top: 50px;
-                width: 900px;
-                height: 900px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 580px;
+                height: 580px;
+                margin: -290px 0 0 -290px;
                 overflow: hidden;
                 border-radius: 100%;
+            }
+
+            .circle.no-label {
+                width: 900px;
+                height: 900px;
+                margin: -450px 0 0 -450px;
             }
 
             #grid {
@@ -50,6 +57,37 @@ permalink: /esc-2021-generator/
                 transform: translate(-50%, -50%);
                 border: 1px dashed #a0a0a0;
                 border-radius: 100%;
+            }
+
+            #label-grid {
+                width: 1180px;
+                height: 1180px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -590px 0 0 -590px;
+                overflow: hidden;
+                border-radius: 100%;
+                z-index: 10;
+            }
+
+            #label-grid .label {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg));
+                transform-origin: 50% 100%;
+                font-size: 14px;
+                bottom: 0;
+            }
+
+            #label-grid .label > span {
+                position: absolute;
+                bottom: 0;
+                transform: rotate(180deg); 
+                color: white;
+                font-size: 20px;
             }
 
             .slice {
@@ -76,19 +114,10 @@ permalink: /esc-2021-generator/
                 width: 50%;
                 display: none;
                 content: '';
-                border-top: 1px dashed #a0a0a0;
             }
 
-            .label {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                width: 50%;
-                display: none;
-                font-size: 14px;
-                text-align: right;
-                transform: translate(0, 50%) rotate(calc(var(--value, 45)/2 * 1deg + 180deg));
-                transform-origin: 0 50%;
+            .slice:nth-child(odd):after {
+                border-top: 1px dashed #a0a0a0;
             }
         </style>
 
@@ -96,49 +125,49 @@ permalink: /esc-2021-generator/
 
         <script>
             var cities = {
-                "Tirana": {"country": "Albania", "lat": 41.31666667, "lon": 19.816667, "code": "AL", "colors": ["#fc0000", "#fc0000"]},
-                "Yerevan": {"country": "Armenia", "lat": 40.16666667, "lon": 44.5, "code": "AM", "colors": ["#fc0000", "#0750c6"]},
-                "Canberra": {"country": "Australia", "lat": -35.26666667, "lon": 149.133333, "code": "AU", "colors": ["#0750c6", "#0750c6"]},
-                "Vienna": {"country": "Austria", "lat": 48.2, "lon": 16.366667, "code": "AT", "colors": ["#fc0000", "#fff"]},
-                "Baku": {"country": "Azerbaijan", "lat": 40.38333333, "lon": 49.866667, "code": "AZ", "colors": ["#1ac0f8", "#01a95b"]},
-                "Minsk": {"country": "Belarus", "lat": 53.9, "lon": 27.566667, "code": "BY", "colors": ["#fc0000", "#01a95b"]},
-                "Brussels": {"country": "Belgium", "lat": 50.83333333, "lon": 4.333333, "code": "BE", "colors": ["#ffc832", "#fc0000"]},
+                "Tirana": {"country": "Albania", "lat": 41.31666667, "lon": 19.816667, "code": "AL", "emoji": "🇦🇱", "colors": ["#fc0000", "#fc0000"]},
+                "Yerevan": {"country": "Armenia", "lat": 40.16666667, "lon": 44.5, "code": "AM", "emoji": "🇦🇲", "colors": ["#fc0000", "#0750c6"]},
+                "Canberra": {"country": "Australia", "lat": -35.26666667, "lon": 149.133333, "code": "AU", "emoji": "🇦🇺", "colors": ["#0750c6", "#0750c6"]},
+                "Vienna": {"country": "Austria", "lat": 48.2, "lon": 16.366667, "code": "AT", "emoji": "🇦🇹", "colors": ["#fc0000", "#fff"]},
+                "Baku": {"country": "Azerbaijan", "lat": 40.38333333, "lon": 49.866667, "code": "AZ", "emoji": "🇦🇿", "colors": ["#1ac0f8", "#01a95b"]},
+                "Minsk": {"country": "Belarus", "lat": 53.9, "lon": 27.566667, "code": "BY", "emoji": "<i style=\"background: url('../images/by.svg'); background-size:cover; width: 1em; height: 1em;display: inline-block; vertical-align: -0.1em;\"></i>", "colors": ["#fc0000", "#fff"]},
+                "Brussels": {"country": "Belgium", "lat": 50.83333333, "lon": 4.333333, "code": "BE", "emoji": "🇧🇪", "colors": ["#ffc832", "#fc0000"]},
                 "Sarajevo": {"country": "Bosnia and Herzegovina", "lat": 43.8563, "lon": 18.4131, "code": "", "colors": []},
-                "Sofia": {"country": "Bulgaria", "lat": 42.68333333, "lon": 23.316667, "code": "BG", "colors": ["#fff", "#01a95b"]},
-                "Zagreb": {"country": "Croatia", "lat": 45.8, "lon": 16, "code": "HR", "colors": ["#fff", "#fc0000"]},
-                "Nicosia": {"country": "Cyprus", "lat": 35.16666667, "lon": 33.366667, "code": "CY", "colors": ["#ff8c33", "#fff"]},
-                "Prague": {"country": "Czechia", "lat": 50.08333333, "lon": 14.466667, "code": "CZ", "colors": ["#fff", "#fc0000"]},
-                "Copenhagen": {"country": "Denmark", "lat": 55.66666667, "lon": 12.583333, "code": "DK", "colors": ["#fc0000", "#fff"]},
-                "Tallinn": {"country": "Estonia", "lat": 59.43333333, "lon": 24.716667, "code": "EE", "colors": ["#000", "#0850c6"]},
-                "Helsinki": {"country": "Finland", "lat": 60.16666667, "lon": 24.933333, "code": "FI", "colors": ["#fff", "#1ac0f8"]},
-                "Paris": {"country": "France", "lat": 48.86666667, "lon": 2.333333, "code": "FR", "colors": ["#fff", "#fc0000"]},
-                "Tbilisi": {"country": "Georgia", "lat": 41.68333333, "lon": 44.833333, "code": "GE", "colors": ["#fff", "#fc0000"]},
-                "Berlin": {"country": "Germany", "lat": 52.51666667, "lon": 13.4, "code": "DE", "colors": ["#000", "#fc0000"]},
-                "Athens": {"country": "Greece", "lat": 37.98333333, "lon": 23.733333, "code": "GR", "colors": ["#fff", "#0750c6"]},
-                "Reykjavik": {"country": "Iceland", "lat": 64.15, "lon": -21.95, "code": "IS", "colors": ["#0850c6", "#fff"]},
-                "Dublin": {"country": "Ireland", "lat": 53.31666667, "lon": -6.233333, "code": "IE", "colors": ["#01a95b", "#ff8c33"]},
-                "Jerusalem": {"country": "Israel", "lat": 31.76666667, "lon": 35.233333, "code": "IL", "colors": ["#fff", "#0750c6"]},
-                "Rome": {"country": "Italy", "lat": 41.9, "lon": 12.483333, "code": "IT", "colors": ["#fff", "#fc0000"]},
-                "Riga": {"country": "Latvia", "lat": 56.95, "lon": 24.1, "code": "LV", "colors": ["#be0000", "#fff"]},
-                "Vilnius": {"country": "Lithuania", "lat": 54.68333333, "lon": 25.316667, "code": "LT", "colors": ["#ffc732", "#01a95b"]},
-                "Valletta": {"country": "Malta", "lat": 35.88333333, "lon": 14.5, "code": "MT", "colors": ["#fff", "#fc0000"]},
-                "Chisinau": {"country": "Moldova", "lat": 47, "lon": 28.85, "code": "MD", "colors": ["#1ac0f8", "#fc0000"]},
-                "Amsterdam": {"country": "Netherlands", "lat": 52.3676, "lon": 4.9041, "code": "NL", "colors": ["#fff", "#fc0000"]},
-                "Rotterdam": {"country": "Netherlands", "lat": 51.9244, "lon": 4.4777, "code": "NL", "colors": ["#fff", "#fc0000"]},
-                "Skopje": {"country": "North Macedonia", "lat": 42, "lon": 21.433333, "code": "MK", "colors": ["#fc0000", "#ffc832"]},
-                "Oslo": {"country": "Norway", "lat": 59.91666667, "lon": 10.75, "code": "NO", "colors": ["#fc0000", "#0750c6"]},
-                "Warsaw": {"country": "Poland", "lat": 52.25, "lon": 21, "code": "PL", "colors": ["#fff", "#fc0000"]},
-                "Lisbon": {"country": "Portugal", "lat": 38.71666667, "lon": -9.133333, "code": "PT", "colors": ["#01a95b", "#fc0000"]},
-                "Bucharest": {"country": "Romania", "lat": 44.43333333, "lon": 26.1, "code": "RO", "colors": ["#0750c6", "#ffc732"]},
-                "Moscow": {"country": "Russia", "lat": 55.75, "lon": 37.6, "code": "RU", "colors": ["#fff", "#fc0000"]},
-                "San Marino": {"country": "San Marino", "lat": 43.93333333, "lon": 12.416667, "code": "SM", "colors": ["#fff", "#1ac0f8"]},
-                "Belgrade": {"country": "Serbia", "lat": 44.83333333, "lon": 20.5, "code": "RS", "colors": ["#fff", "#0750c6"]},
-                "Ljubljana": {"country": "Slovenia", "lat": 46.05, "lon": 14.516667, "code": "SI", "colors": ["#fff", "#fc0000"]},
-                "Madrid": {"country": "Spain", "lat": 40.4, "lon": -3.683333, "code": "ES", "colors": ["#fc0000", "#ffc832"]},
-                "Stockholm": {"country": "Sweden", "lat": 59.33333333, "lon": 18.05, "code": "SE", "colors": ["#0750c6", "#ffc832"]},
-                "Bern": {"country": "Switzerland", "lat": 46.91666667, "lon": 7.466667, "code": "CH", "colors": ["#fc0000", "#fff"]},
-                "Kyiv": {"country": "Ukraine", "lat": 50.43333333, "lon": 30.516667, "code": "UA", "colors": ["#1ac0f8", "#ffc732"]},
-                "London": {"country": "United Kingdom", "lat": 51.5, "lon": -0.083333, "code": "GB", "colors": ["#0750c6", "#fc0000"]}
+                "Sofia": {"country": "Bulgaria", "lat": 42.68333333, "lon": 23.316667, "code": "BG", "emoji": "🇧🇬", "colors": ["#fff", "#01a95b"]},
+                "Zagreb": {"country": "Croatia", "lat": 45.8, "lon": 16, "code": "HR", "emoji": "🇭🇷", "colors": ["#fff", "#fc0000"]},
+                "Nicosia": {"country": "Cyprus", "lat": 35.16666667, "lon": 33.366667, "code": "CY", "emoji": "🇨🇾", "colors": ["#ff8c33", "#fff"]},
+                "Prague": {"country": "Czechia", "lat": 50.08333333, "lon": 14.466667, "code": "CZ", "emoji": "🇨🇿", "colors": ["#fff", "#fc0000"]},
+                "Copenhagen": {"country": "Denmark", "lat": 55.66666667, "lon": 12.583333, "code": "DK", "emoji": "🇩🇰", "colors": ["#fc0000", "#fff"]},
+                "Tallinn": {"country": "Estonia", "lat": 59.43333333, "lon": 24.716667, "code": "EE", "emoji": "🇪🇪", "colors": ["#000", "#0850c6"]},
+                "Helsinki": {"country": "Finland", "lat": 60.16666667, "lon": 24.933333, "code": "FI", "emoji": "🇫🇮", "colors": ["#fff", "#1ac0f8"]},
+                "Paris": {"country": "France", "lat": 48.86666667, "lon": 2.333333, "code": "FR", "emoji": "🇫🇷", "colors": ["#fff", "#fc0000"]},
+                "Tbilisi": {"country": "Georgia", "lat": 41.68333333, "lon": 44.833333, "code": "GE", "emoji": "🇬🇪", "colors": ["#fff", "#fc0000"]},
+                "Berlin": {"country": "Germany", "lat": 52.51666667, "lon": 13.4, "code": "DE", "emoji": "🇩🇪", "colors": ["#000", "#fc0000"]},
+                "Athens": {"country": "Greece", "lat": 37.98333333, "lon": 23.733333, "code": "GR", "emoji": "🇬🇷", "colors": ["#fff", "#0750c6"]},
+                "Reykjavik": {"country": "Iceland", "lat": 64.15, "lon": -21.95, "code": "IS", "emoji": "🇮🇸", "colors": ["#0850c6", "#fff"]},
+                "Dublin": {"country": "Ireland", "lat": 53.31666667, "lon": -6.233333, "code": "IE", "emoji": "🇮🇪", "colors": ["#01a95b", "#ff8c33"]},
+                "Jerusalem": {"country": "Israel", "lat": 31.76666667, "lon": 35.233333, "code": "IL", "emoji": "🇮🇱", "colors": ["#fff", "#0750c6"]},
+                "Rome": {"country": "Italy", "lat": 41.9, "lon": 12.483333, "code": "IT", "emoji": "🇮🇹", "colors": ["#fff", "#fc0000"]},
+                "Riga": {"country": "Latvia", "lat": 56.95, "lon": 24.1, "code": "LV", "emoji": "🇱🇻", "colors": ["#be0000", "#fff"]},
+                "Vilnius": {"country": "Lithuania", "lat": 54.68333333, "lon": 25.316667, "code": "LT", "emoji": "🇱🇹", "colors": ["#ffc732", "#01a95b"]},
+                "Valletta": {"country": "Malta", "lat": 35.88333333, "lon": 14.5, "code": "MT", "emoji": "🇲🇹", "colors": ["#fff", "#fc0000"]},
+                "Chisinau": {"country": "Moldova", "lat": 47, "lon": 28.85, "code": "MD", "emoji": "🇲🇩", "colors": ["#1ac0f8", "#fc0000"]},
+                "Amsterdam": {"country": "Netherlands", "lat": 52.3676, "lon": 4.9041, "code": "NL", "emoji": "🇳🇱", "colors": ["#fff", "#fc0000"]},
+                "Rotterdam": {"country": "Netherlands", "lat": 51.9244, "lon": 4.4777, "code": "NL", "emoji": "🇳🇱", "colors": ["#fff", "#fc0000"]},
+                "Skopje": {"country": "North Macedonia", "lat": 42, "lon": 21.433333, "code": "MK", "emoji": "🇲🇰", "colors": ["#fc0000", "#ffc832"]},
+                "Oslo": {"country": "Norway", "lat": 59.91666667, "lon": 10.75, "code": "NO", "emoji": "🇳🇴", "colors": ["#fc0000", "#0750c6"]},
+                "Warsaw": {"country": "Poland", "lat": 52.25, "lon": 21, "code": "PL", "emoji": "🇵🇱", "colors": ["#fff", "#fc0000"]},
+                "Lisbon": {"country": "Portugal", "lat": 38.71666667, "lon": -9.133333, "code": "PT", "emoji": "🇵🇹", "colors": ["#01a95b", "#fc0000"]},
+                "Bucharest": {"country": "Romania", "lat": 44.43333333, "lon": 26.1, "code": "RO", "emoji": "🇷🇴", "colors": ["#0750c6", "#ffc732"]},
+                "Moscow": {"country": "Russia", "lat": 55.75, "lon": 37.6, "code": "RU", "emoji": "🇷🇺", "colors": ["#fff", "#fc0000"]},
+                "San Marino": {"country": "San Marino", "lat": 43.93333333, "lon": 12.416667, "code": "SM", "emoji": "🇸🇲", "colors": ["#fff", "#1ac0f8"]},
+                "Belgrade": {"country": "Serbia", "lat": 44.83333333, "lon": 20.5, "code": "RS", "emoji": "🇷🇸", "colors": ["#fff", "#0750c6"]},
+                "Ljubljana": {"country": "Slovenia", "lat": 46.05, "lon": 14.516667, "code": "SI", "emoji": "🇸🇮", "colors": ["#fff", "#fc0000"]},
+                "Madrid": {"country": "Spain", "lat": 40.4, "lon": -3.683333, "code": "ES", "emoji": "🇪🇸", "colors": ["#fc0000", "#ffc832"]},
+                "Stockholm": {"country": "Sweden", "lat": 59.33333333, "lon": 18.05, "code": "SE", "emoji": "🇸🇪", "colors": ["#0750c6", "#ffc832"]},
+                "Bern": {"country": "Switzerland", "lat": 46.91666667, "lon": 7.466667, "code": "CH", "emoji": "🇨🇭", "colors": ["#fc0000", "#fff"]},
+                "Kyiv": {"country": "Ukraine", "lat": 50.43333333, "lon": 30.516667, "code": "UA", "emoji": "🇺🇦", "colors": ["#1ac0f8", "#ffc732"]},
+                "London": {"country": "United Kingdom", "lat": 51.5, "lon": -0.083333, "code": "GB", "emoji": "🇬🇧", "colors": ["#0750c6", "#fc0000"]}
             };
 
             var SECTIONS_AMOUNT = 7;
@@ -230,7 +259,7 @@ permalink: /esc-2021-generator/
                 var globalShift = 0;
                 var i;
                 for (i=1; i<=slices.length; i++) {
-                    var countries = [];
+                    var slice_cities = [];
                     var slice1 = '<div class="slice" style="';
                     var currentSection = 0;
                     if (slices[i-1].length == 0) {
@@ -240,7 +269,7 @@ permalink: /esc-2021-generator/
                         }
                     } else {
                         for (var j=0; j<slices[i-1].length; j++) {
-                            countries.push(slices[i-1][j].country);
+                            slice_cities.push(slices[i-1][j].city);
                             for (var k=0; k<slices[i-1][j]["sections"]; k++) {
                                 currentSection += 1;
                                 var color = slices[i-1].length > 0 ? cities[slices[i-1][j].city].colors[0] : "transparent";
@@ -251,7 +280,7 @@ permalink: /esc-2021-generator/
                     if (i > 1 && slices[i-2].length > 0) {
                         globalShift++;
                     }
-                    slice1 += '--offset:' + (i * 10.90909 + 2.6) + '; --value: 5.554545" countries="' + countries.join(" > ") + '"></div>';
+                    slice1 += '--offset:' + (i * 10.90909 + 2.6) + '; --value: 5.554545"></div>';
                     
                     var slice2 = '<div class="slice" style="';
                     currentSection = 0;
@@ -269,7 +298,22 @@ permalink: /esc-2021-generator/
                             }
                         }
                     }
-                    slice2 += '--offset:' + (i * 10.90909 + 2.6 + 5.454545) + '; --value: 5.654545" countries="' + countries.join(" > ") + '"><label class="label"><span style="background-color: rgba(255, 255, 255, 0.5)">' + countries.join(" > ") + '</span></label></div>';
+                    slice2 += '--offset:' + (i * 10.90909 + 2.6 + 5.454545) + '; --value: 5.654545"></div>';
+
+                    if (slice_cities.length > 0) {
+                        label_offset = i * 10.90909 + 2.6 + 3.336363333;
+                        padding_right = 10 - (slice_cities.length - 2) * 2 > 0 ? 10 - (slice_cities.length - 2) * 2 : 0;
+                        if (slices[i-1][0].angle <= 180) {
+                            flags = slice_cities.map(c => cities[c].emoji).join(" < ");
+                            flags_alt_text = slice_cities.map(c => cities[c].code == "BY" ? "BY" : cities[c].emoji).join(" < ");
+                        } else {
+                            slice_cities.reverse();
+                            flags = slice_cities.map(c => cities[c].emoji).join(" > ");
+                            flags_alt_text = slice_cities.map(c => cities[c].code == "BY" ? "BY" : cities[c].emoji).join(" > ");
+                        }
+                        label = '<div class="label" style="--offset: ' + label_offset + '; --value: 5.554545;"><span' + (slices[i-1][0].angle > 180 ? ' class="left"' : '')  + ' style="padding-right: ' + padding_right + 'em" title="' + flags_alt_text + '">' + flags + '</span></div>';
+                        $("#label-grid").append(label);
+                    }
 
                     $("#logo").append(slice1);
                     $("#logo").append(slice2);
@@ -277,6 +321,7 @@ permalink: /esc-2021-generator/
             }
 
             function drawGrid(sliceSize) {
+                $("#logo #grid").remove();
                 var grid = '<div id="grid">';
                 for (var i=1; i<sliceSize; i++) {
                     var size = ($(".circle").height() / sliceSize) * i;
@@ -455,10 +500,11 @@ permalink: /esc-2021-generator/
                 $("head").append("<style id='slice-style'>.slice:before{background:" + cssString + "}</style>");
 
                 $("#logo").empty();
+                $("#label-grid").empty();
                 drawSlices(slices, sliceSize);
                 drawGrid(sliceSize);
                 $("#grid").css("display", $("#chk-show-grid").prop('checked') ? "block" : "none");
-                $(".label").css("display", $("#chk-show-labels").prop('checked') ? "block" : "none");
+                $("#label-grid").css("display", $("#chk-show-labels").prop('checked') ? "block" : "none");
             }
 
             function drawInitialLogo(hostCity, minimumSliceSize, defaultSliceSize, maximumSliceSize) {
@@ -513,7 +559,15 @@ permalink: /esc-2021-generator/
                 });
 
                 $("#chk-show-labels").change(function() {
-                    $(".label").css("display", $(this).prop('checked') ? "block" : "none");
+                    if ($(this).prop('checked')) {
+                        $("#label-grid").css("display", "block");
+                        $(".circle").removeClass("no-label");
+                    } else {
+                        $("#label-grid").css("display", "none");
+                        $(".circle").addClass("no-label");
+                    }
+                    drawGrid(parseInt($("#rng-sections").val()));
+                    $("#grid").css("display", $("#chk-show-grid").prop('checked') ? "block" : "none");
                 });
 
                 $("#chk-show-grid").prop('checked', false);
@@ -542,8 +596,9 @@ permalink: /esc-2021-generator/
             <label for="show-grid">Show country labels</label>
             <input type="checkbox" id="chk-show-labels" name="show-labels"/><br>
         </div>
-        <div class="circle" id="logo">
+        <div class="circle no-label" id="logo">
             <div id="grid"></div>
         </div>
+        <div id="label-grid"></div>
     </body>
 </html>
