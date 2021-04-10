@@ -90,6 +90,15 @@ permalink: /esc-2021-generator/
                 font-size: 20px;
             }
 
+            #label-grid .label > span.left {
+                transform: rotate(0); 
+                width: 265px;
+                text-align: right;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
             .slice {
                 position: absolute;
                 width: 100%;
