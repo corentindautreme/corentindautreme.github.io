@@ -87,9 +87,18 @@ permalink: /cv/
                 padding: 0 1em;
             }
 
+            .preferred, .bolder {
+                font-weight: 600;
+            }
+
+            .highlighted {
+                font-weight: 600;
+                background: yellow;
+            }
+
             #header-top, #header-text {
                 background: #e0e0e0;
-                min-height: 50px;
+                min-height: 20px;
             }
 
             #header-photo {
@@ -128,17 +137,36 @@ permalink: /cv/
                 margin-top: 0.25em;
             }
 
-            .contact-item {
+            #download-cv {
+                display: none !important;
+                display: flex !important;
+                align-items: center;
+                width: fit-content;
+                margin-top: 0.5em !important;
+                padding: 0 0.5em;
+                border-radius: 0.25em;
+                background: #000;
+                color: #fff;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            #download-cv span {
+                margin-left: 0.25em;
+            }
+
+            .details-item {
                 display: flex;
                 align-items: center;
                 padding: 0.25em 0;
             }
 
-            .contact-item i {
+            .details-item i {
                 width: 24px;
             }
 
-            .contact-item .contact-item-text {
+            .details-item .details-item-text {
                 margin-left: 5px;
             }
 
@@ -163,9 +191,9 @@ permalink: /cv/
                 text-align: justify;
             }
 
-            /*.work-experience:not(:first-of-type) {
-                padding-top: 1em;
-            }*/
+            .work-experience:not(:first-of-type) {
+                margin-top: 1em;
+            }
 
             .work-experience .company {
                 font-size: 20px;
@@ -175,6 +203,17 @@ permalink: /cv/
             .work-experience .position {
                 font-size: 17px;
                 padding-top: 0.5em;
+            }
+
+            .work-experience-light {
+                padding: 0 1em;
+                margin-top: 0.5em;
+            }
+
+            .work-experience-light .company {
+                display: inline-block;
+                font-size: 17px;
+                font-weight: 800;
             }
 
             .techs {
@@ -190,8 +229,23 @@ permalink: /cv/
                 display: inline-block;
             }
 
+            .work-experience-light .techs {
+                display: inline-block;
+                font-size: 15px;
+                padding: 0;
+            }
+
+            .work-experience-light .techs .tech {
+                display: inline-block;
+                margin: 0;
+                font-size: 15px;
+            }
+
             .side-project {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 0.5em;
+                justify-content: center;
                 padding: 0 1em;
             }
 
@@ -204,12 +258,23 @@ permalink: /cv/
                 height: 100px;
                 border-radius: 50%;
                 border: 1px solid #a0a0a0;
+                background-size: 100%;
             }
 
             .side-project .description {
                 flex: 1;
-                padding-left: 0.5em;
                 text-align: justify;
+                word-break: break-word;
+                min-width: 200px;
+            }
+
+            .education {
+                padding: 0 1em;
+                text-align: justify;
+            }
+
+            .education .entry {
+                margin: 0.25em 0;
             }
 
             #interests {
@@ -262,6 +327,7 @@ permalink: /cv/
                     grid-row-start: 5;
                     padding: 1em 0;
                     display: flex;
+                    gap: 0.5em;
                     border: 1px solid #c0c0c0;
                     border-width: 1px 0;
                     margin: 0 1em;
@@ -270,6 +336,7 @@ permalink: /cv/
                 #details .details-title {
                     padding: 0;
                     padding-bottom: 1em;
+                    text-align: center;
                 }
 
                 #content {
@@ -294,21 +361,27 @@ permalink: /cv/
                     text-align: center;
                 }
 
-                #header-text-content div {
+                #header-text-content div, #header-text-content a {
                     display: block;
+                    margin: 0 auto;
                 }
 
-                #details {
-                    text-align: center;
-                }
-
-                .contact-item {
+                .details-item {
                     display: inline-flex;
+                }
+
+                #footer {
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    grid-row-start: 7;
+                    height: 20px;
                 }
             }
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..800">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <title>{% if page.title %}{{ page.title }}{% endif %}</title>
     </head>
     <body>
         <div id="container">
@@ -320,44 +393,48 @@ permalink: /cv/
                 <div id="header-text-content">
                     <div id="header-name">Corentin Dautrême</div><div id="header-pronouns">he/him</div>
                     <div id="header-subtitle">26 - Software Engineer</div>
+                    <a id="download-cv" href="https://corentindautreme.github.io/files/cv_corentin_dautreme_software_engineer.pdf" download="cv_corentin_dautreme_software_engineer.pdf">
+                        <i class="material-symbols-outlined">download</i>
+                        <span>Download this CV as PDF</span>
+                    </a>
                 </div>
            </div>
            <div id="header-summary">
-               Hi! I'm Corentin, a software engineer with over 4 years of work experience in backend Java/Spring Boot development, Kubernetes, Jenkins CI/CD pipelines, Python, and an interest in frontend development, UX, and more generally making my users' life easier.
+               Hi! I'm Corentin, a software engineer with over 4 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
            </div>
             <div id="details">
                 <div id="contact-details">
                     <div class="details-title">Get in touch</div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">mail</i>
-                        <span class="contact-item-text">dautreme.corentin@gmail.com</span>
+                        <span class="details-item-text preferred">dautreme.corentin@gmail.com</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">call</i>
-                        <span class="contact-item-text">00336XXXXXX57</span>
+                        <span class="details-item-text">00336XXXXXX57</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">language</i>
-                        <span class="contact-item-text">English, French, Swedish, Spanish</span>
+                        <span class="details-item-text"><span class="preferred">English</span>, <span class="preferred">French</span>, Swedish, Spanish</span>
                     </div>
                 </div>
                 <div id="tech-skills">
-                    <div class="details-title">Tech skills in a nutshell</div>
-                    <div class="contact-item">
+                    <div class="details-title">Tech skills</div>
+                    <div class="details-item">
                         <i class="material-symbols-outlined">code</i>
-                        <span class="contact-item-text">Java 8/11, Javascript, Python</span>
+                        <span class="details-item-text">Java 8/11, Js, Python</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">monitoring</i>
-                        <span class="contact-item-text">Elastic stack</span>
+                        <span class="details-item-text">Elastic stack</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">dns</i>
-                        <span class="contact-item-text">Kubernetes</span>
+                        <span class="details-item-text">Kubernetes</span>
                     </div>
-                    <div class="contact-item">
+                    <div class="details-item">
                         <i class="material-symbols-outlined">database</i>
-                        <span class="contact-item-text">Oracle, Postgres</span>
+                        <span class="details-item-text">Oracle, Postgres</span>
                     </div>
                 </div>
             </div>
@@ -369,18 +446,52 @@ permalink: /cv/
                 <div class="work-experience">
                     <div class="company">Société Générale CIB (Corporate and Investment Banking)</div>
                     <div class="position">
-                        Software Engineer // Sep 2018 - today (4 years 1 month)
+                        Software Engineer // Sep 2018 - today (4+ years)
                     </div>
                     <div class="techs">
                         <div class="tech">Java 8/11</div>
                         <div class="tech">Spring Boot</div>
                         <div class="tech">Microservices</div>
                         <div class="tech">Kubernetes</div>
+                        <div class="tech">Elastic</div>
                         <div class="tech">Jenkins</div>
                     </div>
                     <div class="summary">
-                        Design, development and maintenance of the back office client portfolio management system for the bank's synthetic prime brokerage business (Java 11, Spring Boot & Kubernetes), enhancement of the CI/CD pipelines (Jenkins, Helm & Kubernetes) and lead of the Agile activities of the team (daily meetings, weekly backlog reviews, retrospectives and prioritization sessions with the product owners).
+                        Design, development and maintenance of the back office client portfolio management system for the bank's synthetic prime brokerage business (<span class="bolder">Java 8/11</span>, <span class="bolder">Spring Boot</span> & <span class="bolder">Kubernetes</span>), enhancement of the CI/CD pipelines (<span class="bolder">Jenkins</span>, <span class="bolder">Helm</span> & <span class="bolder">Kubernetes</span>), improvement of the monitoring and alerting using the <span class="bolder">Elastic stack</span>, and lead of the <span class="bolder">Agile activities</span> of the team (daily meetings, weekly backlog reviews, retrospectives and prioritization sessions with the product owners).
                     </div>
+                </div>
+                <div class="work-experience">
+                    <div class="company">Société Générale CIB (Corporate and Investment Banking)</div>
+                    <div class="position">
+                        Software Development Intern // Feb - Aug 2018 (6 months)
+                    </div>
+                    <div class="techs">
+                        <div class="tech">Python</div>
+                        <div class="tech">Jenkins</div>
+                        <div class="tech">Javascript</div>
+                    </div>
+                    <div class="summary">
+                        Design and implementation of a code-learning framework for the sales staff of the bank's front office. A dozen interactive sessions were organized where participants with no coding experience were paired with developers to implement an API that was automatically redeployed via a Jenkins pipeline. Successful calls to this API granted the participant points.
+                    </div>
+                </div>
+                <div class="work-experience-light">
+                    <span class="company">Sopra Steria</span> Web development (Internship) // Jun - Aug 2016 (3 months)
+                    <span class="techs">
+                        <span class="tech">Javascript</span>
+                    </span>
+                </div>
+                <div class="work-experience-light">
+                    <span class="company">B.F.S Feeli</span> Mobile app development (Internship) // Apr - Jun 2015 (3 months)
+                    <span class="techs">
+                        <span class="tech">AngularJS</span>
+                        <span class="tech">Ionic</span>
+                    </span>
+                </div>
+                <div class="work-experience-light">
+                    <span class="company">Allianz France</span> Direction of Operations (Summer job) // Jul - Aug 2015 (2 months)
+                    <span class="techs">
+                        <span class="tech">Non-IT</span>
+                    </span>
                 </div>
 
                 <div class="section-title">
@@ -389,9 +500,9 @@ permalink: /cv/
                 </div>
                 <div id="side-projects">
                     <div class="side-project">
-                        <div class="photo"></div>
+                        <div class="photo" style="background-image: url('https://corentindautreme.github.io/images/cv/lys.png');"></div>
                         <div class="description">
-                            Lys, An AWS/Pyhton-powered bot that tweets date reminders via scheduled Lambdas based on a calendar stored in a DynamoDB table. It's accompanied by a public website listing the full calendar, and a daily scrapping script tasked with making smart suggestions of additions to the calendar. This projects runs on a zero-cost target which has required coming up with workarounds and various technical solutions.
+                            Lys, an <span class="bolder">AWS/Python</span>-powered bot that tweets date reminders via scheduled <span class="bolder">Lambdas</span> based on a calendar stored in a <span class="bolder">DynamoDB</span> table. It's accompanied by a public website displaying the full calendar, a daily scraping script tasked with making smart suggestions of additions to the calendar and a custom-made <span class="bolder">Android app</span> to manage the data. This project runs on a zero-cost target which has required coming up with workarounds and various technical solutions.
                             <div class="techs">
                                 <div class="tech">Python 3</div>
                                 <div class="tech">AWS Lambda</div>
@@ -402,9 +513,9 @@ permalink: /cv/
                         </div>
                     </div>
                     <div class="side-project">
-                        <div class="photo"></div>
+                        <div class="photo" style="background-image: url('https://corentindautreme.github.io/images/cv/logo_generator.png');"></div>
                         <div class="description">
-                            A live generator inspired by the programmatically-generated logo of the 2021 Eurovision Song Contest that was conceived using the geographical data of all 40 participating countries. Accessible at <a href="https://corentindautreme.github.io/esc-2021-generator/">https://corentindautreme.github.io/esc-2021-generator/</a>.
+                            A live Javascript/CSS generator inspired by the programmatically-generated logo of the 2021 Eurovision Song Contest that was conceived using the geographical data of all 39 participating countries. Can be accessed at <a href="https://corentindautreme.github.io/esc-2021-generator/">https://corentindautreme.github.io/esc-2021-generator/</a>.
                             <div class="techs">
                                 <div class="tech">HTML5</div>
                                 <div class="tech">CSS3</div>
@@ -415,11 +526,25 @@ permalink: /cv/
                 </div>
 
                 <div class="section-title">
+                    <i class="material-symbols-outlined">school</i>
+                    <span>Education</span>
+                </div>
+                <div class="education">
+                    <div class="entry"><span class="highlighted">Engineer's degree, Computer Science</span> at <span class="bolder">INSA Lyon, France</span> (2015-2018)</div>
+                </div>
+                <div class="education">
+                    <div class="entry">Erasmus+ exchange at <span class="bolder">Lund University, Sweden</span> (2016-2017)</div>
+                </div>
+                <div class="education">
+                    <div class="entry"><span class="highlighted">DUT (University Diploma of Technology), Computer Science</span> at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
+                </div>
+
+                <div class="section-title">
                     <i class="material-symbols-outlined">celebration</i>
                     <span>Interests</span>
                 </div>
 
-                <div id="interests">I like playing video games, traveling & taking pretty photos on the way, and fiddling with web development on my free time.</div>
+                <div id="interests">I like playing video games, traveling & taking pretty photos on the way, and fiddling with web development in my free time.</div>
             </div>
             <div id="footer"></div>
         </div>
