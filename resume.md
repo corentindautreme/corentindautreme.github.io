@@ -319,6 +319,7 @@ permalink: /cv/
                     grid-column-end: 4;
                     grid-row-start: 4;
                     text-align: center;
+                    padding-top: 0;
                 }
 
                 #details {
@@ -333,17 +334,29 @@ permalink: /cv/
                     margin: 0 1em;
                 }
 
-                #details .details-title {
+                #details .details-block .details-title {
                     padding: 0;
-                    padding-bottom: 1em;
+                    padding-bottom: 0.5em;
                     text-align: center;
+                }
+
+                .details-item {
+                    display: inline-flex;
                 }
 
                 #content {
                     grid-column-start: 1;
                     grid-column-end: 4;
                     grid-row-start: 6;
-                    padding: 1em;
+                    padding: 0 1em 1em;
+                }
+
+                .section-title {
+                    padding-top: 1em;
+                }
+
+                .section-title:not(:first-of-type) {
+                    margin-top: 0;
                 }
 
                 #photo {
@@ -364,10 +377,6 @@ permalink: /cv/
                 #header-text-content div, #header-text-content a {
                     display: block;
                     margin: 0 auto;
-                }
-
-                .details-item {
-                    display: inline-flex;
                 }
 
                 #footer {
@@ -403,43 +412,47 @@ permalink: /cv/
                Hi! I'm Corentin, a software engineer with over 4 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
            </div>
             <div id="details">
-                <div id="contact-details">
-                    <div class="details-title">Get in touch</div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">mail</i>
-                        <span class="details-item-text preferred">dautreme.corentin@gmail.com</span>
-                    </div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">call</i>
-                        <span class="details-item-text">00336XXXXXX57</span>
-                    </div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">language</i>
-                        <span class="details-item-text"><span class="preferred">English</span>, <span class="preferred">French</span>, Swedish, Spanish</span>
+                <div id="contact-details" class="details-block">
+                    <div class="details-title">Contact</div>
+                    <div class="details-items">
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">mail</i>
+                            <span class="details-item-text preferred">dautreme.corentin@gmail.com</span>
+                        </div>
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">call</i>
+                            <span class="details-item-text">00336XXXXXX57</span>
+                        </div>
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">language</i>
+                            <span class="details-item-text"><span class="preferred">English</span>, <span class="preferred">French</span>, Swedish, Spanish</span>
+                        </div>
                     </div>
                 </div>
-                <div id="tech-skills">
-                    <div class="details-title">Tech skills</div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">code</i>
-                        <span class="details-item-text">Java 8/11, Js, Python</span>
-                    </div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">monitoring</i>
-                        <span class="details-item-text">Elastic stack</span>
-                    </div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">dns</i>
-                        <span class="details-item-text">Kubernetes</span>
-                    </div>
-                    <div class="details-item">
-                        <i class="material-symbols-outlined">database</i>
-                        <span class="details-item-text">Oracle, Postgres</span>
+                <div id="tech-skills" class="details-block">
+                    <div class="details-title">Skills</div>
+                    <div class="details-items">
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">code</i>
+                            <span class="details-item-text">Java 8/11, Spring Boot, Js, Python</span>
+                        </div>
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">monitoring</i>
+                            <span class="details-item-text">Elastic stack</span>
+                        </div>
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">dns</i>
+                            <span class="details-item-text">Jenkins, Kubernetes</span>
+                        </div>
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">database</i>
+                            <span class="details-item-text">Oracle, Postgres</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="content">
-                <div class="section-title">
+                <div class="section-title" id="work-experience">
                     <i class="material-symbols-outlined">work</i>
                     <span>Work experience</span>
                 </div>
@@ -494,7 +507,7 @@ permalink: /cv/
                     </span>
                 </div>
 
-                <div class="section-title">
+                <div class="section-title" id="side-projects">
                     <i class="material-symbols-outlined">temp_preferences_custom</i>
                     <span>Side projects</span>
                 </div>
