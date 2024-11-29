@@ -6,10 +6,10 @@
 name: Alle Cos Tankar
 
 # Short bio or description (displayed in the header)
-description: (🇳🇴 - "All of Co's thoughts". Eurovision and light software content)
+description: (🇳🇴 - "All of Co's thoughts". Whatever software content goes through my mind.)
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://pbs.twimg.com/profile_images/1192157001691873281/347fOFOo_400x400.jpg
+avatar: https://cdn.bsky.app/img/avatar/plain/did:plc:7sk7hmwvzsoth4vspcjruydq/bafkreihti74as3lgvnczel3nj3ef77yn6x642nwr7wgzwavaltnonx7h7i@jpeg
 
 #
 # Flags below are optional
@@ -30,6 +30,8 @@ footer-links:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
+  threads: corentin_da_
+  bluesky: allecostankar.bsky.social
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
