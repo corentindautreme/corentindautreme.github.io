@@ -7,11 +7,11 @@ I launched Lys back in late 2019 as a Twitter bot to post reminders about Eurovi
 
 <!--more-->
 
-### Where the grass is greener
+### Where the grass is greener... and the sky bluer
 
 With Twitter losing its grace in favor of spawn-off Bluesky and, <span class="tooltip-toggle" aria-label="Months after Melon Husk bought the platform and turned it into an absolute shitshow, driving advertisers to run off as, apparently, being shown next to literal n*zis isn't a great look">a few months later</span>, [totally-not-trying-to-replace-failing-X-formerly-Twitter](https://www.threads.net/@mosseri/post/CuZ3LjhNl0m) Threads, a platform<span class="tooltip-toggle" aria-label="See, totally not a replacer">hastily put together by Meta to fill what was more and more shaping to become a void in the World Wide Web</span>, it became relevant, and a fun challenge, to deploy Lys to more platforms. Threads, with its (now fullfilled) ambition to <span class="tooltip-toggle" aria-label="Anytime now in the EU I'm sure">open up to the Fediverse</span>, was particularly interesting to the goal of making the bot more available to a fleeing Eurovision Twitter community - sadly, it took a whole year of waiting for the team at Meta to finally open up a basic API.
 
-I started with Bluesky, no only as I had gotten an invite code from a uni friend in the summer of 2023, but also because it was the <span class="tooltip-toggle" aria-label="Oh don't give me that look, Mastodon is a complicated hot mess alright">only</span> platform to 1) be actually accessible to us UE peasants (\*) and 2) come with an API.
+I started with Bluesky, not only as I had gotten an invite code from a uni friend in the summer of 2023, but also because it was the <span class="tooltip-toggle" aria-label="Oh don't give me that look, Mastodon is a complicated hot mess alright">only</span> platform to 1) be actually accessible to us UE peasants (\*) and 2) come with an API.
 
 (\*) _I posted this banger of a... thread before Meta aggressively cut off access to the backend from the EU and COME ON how did it get so few likes??_
 
@@ -20,7 +20,14 @@ I started with Bluesky, no only as I had gotten an invite code from a uni friend
 
 But I digress - Bluesky, was I saying. While Lys was very much a live project, the code base itself was still a hot mess of a proof of concept that I refused to refactor. So, naturally, adding Bluesky was not only a pain, but also extraordinarily ugly, and it was promising to be very annoying to maintain or expand to another platforms.
 
-While on topics, a quick word of appreciation for the customization options offered by the Bluesky API - I particularly appreciate the ability to turn any part of your posts into a link (using facets) and choose to embed or not a URL card. More of that, API makers, please!
+While on topic, a quick word of appreciation for the customization options offered by the Bluesky API - I particularly appreciate the ability to turn any part of your posts into a link (using facets) and choose to embed or not a URL card. More of that, API makers, please!
 
 # TODO screenshot + link (or except from docs or code sample from docs) for links and maybe URL card
+
+### Enters the Threads API
+
+TODO (+ find a better title)
+
+### An API-less web calendar
+
 
