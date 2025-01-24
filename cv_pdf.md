@@ -545,7 +545,7 @@ permalink: /cv-pdf/
                     <div id="header-subtitle">
                         <div>
                             <div class="header-subtitle-item">
-                                28 - Software Engineer
+                                29 - Software Engineer
                             </div>
                         </div>
                         <div>
@@ -566,7 +566,7 @@ permalink: /cv-pdf/
                 </div>
            </div>
            <div id="header-summary">
-               Hi! I'm Corentin, a software engineer with over 6 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
+               Hi! I'm Corentin, a software engineer with 7 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
            </div>
             <div id="details">
                 <div id="contact-details" class="details-block">

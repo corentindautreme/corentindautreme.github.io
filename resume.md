@@ -508,6 +508,9 @@ permalink: /cv/
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..800">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200..800">
         <meta name="viewport" content="width=device-width, user-scalable=no">
+        <meta property="og:title" content="Corentin Dautrême - Software Engineer | CV" />
+        <meta property="og:description" content="29 y.o. software engineer looking for an EMEA full-remote position" />
+        <meta property="og:image" content="https://corentindautreme.github.io/images/cv/card.png" />
         <title>{% if page.title %}{{ page.title }}{% endif %}</title>
         <script>
             function pdfMode () {
@@ -541,7 +544,7 @@ permalink: /cv/
                     <div id="header-subtitle">
                         <div>
                             <div class="header-subtitle-item">
-                                28 - Software Engineer
+                                29 - Software Engineer
                             </div>
                         </div>
                         <div>
@@ -562,7 +565,7 @@ permalink: /cv/
                 </div>
            </div>
            <div id="header-summary">
-               Hi! I'm Corentin, a software engineer with over 6 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
+               Hi! I'm Corentin, a software engineer with 7 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
            </div>
             <div id="details">
                 <div id="contact-details" class="details-block">
