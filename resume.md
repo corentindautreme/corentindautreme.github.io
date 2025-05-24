@@ -175,6 +175,14 @@ permalink: /cv/
                 font-family: 'Inter Tight';
             }
 
+            .location-line-break {
+                display: none;
+            }
+
+            .location-line-break:after {
+                margin-right: 1em;
+            }
+
             #header-disclaimer-message {
                 margin: 0.5em auto;
                 padding: 0.25em;
@@ -363,6 +371,12 @@ permalink: /cv/
                 line-height: 1.3;
             }
 
+            @media (max-width:325px) {
+                .location-line-break {
+                    display: inline-block;
+                }
+            }
+
             @media (max-width:1079px)  {
                 #container {
                     grid-template-columns: auto 200px auto;
@@ -549,13 +563,13 @@ permalink: /cv/
                         </div>
                         <div>
                             <div class="header-subtitle-item">
-                                <i class="material-symbols-outlined" style="margin-right: 0.25em">place</i><span>Sarajevo, Bosnia and Herzegovina</span>
+                                <i class="material-symbols-outlined" style="margin-right: 0.25em">place</i><span>Sarajevo, Bosnia and&nbsp;<br class="location-line-break">Herzegovina</span>
                             </div>
                         </div>
                     </div>
                     <div id="header-disclaimer">
                         <div id="header-disclaimer-message">
-                            Looking for an EMEA-based <span class="highlighted bold">full-remote</span>, full-time software engineer position
+                            Looking for a full-time software engineer position from <span class="highlighted bold">Sarajevo</span> (on-site, hybrid, or full-remote)
                         </div>
                         <a id="download-cv" href="https://corentindautreme.github.io/files/cv_corentin_dautreme_software_engineer.pdf" download="cv_corentin_dautreme_software_engineer.pdf">
                             <i class="material-symbols-outlined">download</i>
@@ -581,7 +595,11 @@ permalink: /cv/
                         </div>
                         <div class="details-item languages">
                             <i class="material-symbols-outlined">language</i>
-                            <span class="details-item-text"><span class="preferred">English</span>, <span class="preferred">French</span>, Swedish, Bosnian, Spanish</span>
+                            <span class="details-item-text">
+                                <div><span class="preferred">English</span>, <span class="preferred">French</span> - Bilingual (C2)</div>
+                                <div><span class="preferred">Swedish</span>, Spanish - Experienced (C1)</div>
+                                <div>Bosnian - Beginner (A1)</div>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -589,20 +607,20 @@ permalink: /cv/
                     <div class="details-title">Skills</div>
                     <div class="details-items">
                         <div class="details-item">
-                            <i class="material-symbols-outlined">code</i>
-                            <span class="details-item-text">Development</span>
+                            <i class="material-symbols-outlined">data_object</i>
+                            <span class="details-item-text">Backend development</span>
                         </div>
                         <div class="tech">Java 11</div>
                         <div class="tech">Spring Boot 2</div>
                         <div class="tech">Python 3</div>
-
                         <div class="details-item">
-                            <i class="material-symbols-outlined">deployed_code</i>
-                            <span class="details-item-text">CI/CD</span>
+                            <i class="material-symbols-outlined">code</i>
+                            <span class="details-item-text">Frontend development</span>
                         </div>
-                        <div class="tech">Kubernetes</div>
-                        <div class="tech">Helm</div>
-                        <div class="tech">Jenkins</div>
+                        <div class="tech">Next.js 15</div>
+                        <div class="tech">HTML</div>
+                        <div class="tech">CSS</div>
+                        <div class="tech">Javascript</div>
 
                         <div class="details-item">
                             <i class="material-symbols-outlined">code</i>
@@ -615,6 +633,14 @@ permalink: /cv/
                     <div class="gap"></div>
 
                     <div class="details-items">
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">deployed_code</i>
+                            <span class="details-item-text">CI/CD</span>
+                        </div>
+                        <div class="tech">Kubernetes</div>
+                        <div class="tech">Helm</div>
+                        <div class="tech">Jenkins</div>
+
                         <div class="details-item">
                             <i class="material-symbols-outlined">monitoring</i>
                             <span class="details-item-text">Observability</span>
