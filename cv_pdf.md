@@ -751,13 +751,17 @@ permalink: /cv-pdf/
                     <div class="side-project">
                         <div class="photo" style="background-image: url('https://corentindautreme.github.io/images/cv/lys.png');"></div>
                         <div class="description">
-                            Lys, an <span class="bolder">AWS/Python</span>-powered bot that posts date reminders to social media (Twitter, Bluesky, Threads) via scheduled <span class="bolder">Lambdas</span> based on a calendar stored in a <span class="bolder">DynamoDB</span> table. A public website displays the full calendar, a daily scraping script makes smart suggestions of additions to the calendar, and a custom-made <span class="bolder">Android app</span> helps managing the data. This project runs on a zero-cost target which has required coming up with workarounds and various technical solutions.
+                            Lys, a <span class="bolder">Python</span> on <span class="bolder">AWS Lambda</span>-powered social media bot (Bluesky, Threads, X) posting regular calendar reminders, with custom-made companion <span class="bolder">Next.js management web app</span>, smart date suggestion scraping script, and public calendar (<a href="https://lyseurovision.github.io">https://lyseurovision.github.io</a>). Running on a zero-cost target, requiring workaround and business case refinement.
                             <div class="techs">
                                 <div class="tech">Python 3</div>
+                                <div class="tech">Next.js 15</div>
                                 <div class="tech">AWS Lambda</div>
                                 <div class="tech">AWS DynamoDB</div>
+                                <div class="tech">AWS Javascript SDK</div>
+                                <div class="tech">Vercel</div>
+                                <div class="tech">GitHub Actions</div>
+                                <div class="tech">AWS Java SDK</div>
                                 <div class="tech">Kotlin/Android SDK</div>
-                                <div class="tech">Github Actions</div>
                             </div>
                         </div>
                     </div>
