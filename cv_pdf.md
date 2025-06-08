@@ -615,6 +615,7 @@ permalink: /cv-pdf/
                             <span class="details-item-text">Frontend development</span>
                         </div>
                         <div class="tech">Next.js 15</div>
+                        <div class="tech">React</div>
                         <div class="tech">HTML</div>
                         <div class="tech">CSS</div>
                         <div class="tech">Javascript</div>
@@ -625,6 +626,12 @@ permalink: /cv-pdf/
                         </div>
                         <div class="tech">Git</div>
                         <div class="tech">Github</div>
+
+                        <div class="details-item">
+                            <i class="material-symbols-outlined">mail</i>
+                            <span class="details-item-text">Messaging</span>
+                        </div>
+                        <div class="tech">RabbitMQ</div>
                     </div>
 
                     <div class="gap"></div>
@@ -637,6 +644,8 @@ permalink: /cv-pdf/
                         <div class="tech">Kubernetes</div>
                         <div class="tech">Helm</div>
                         <div class="tech">Jenkins</div>
+                        <div class="tech">GitHub Actions</div>
+                        <div class="tech">Vercel</div>
 
                         <div class="details-item">
                             <i class="material-symbols-outlined">monitoring</i>
@@ -648,12 +657,6 @@ permalink: /cv-pdf/
                         <div class="tech">Metricbeat</div>
                         <div class="tech">APM</div>
                         <div class="tech">Elastic watcher</div>
-
-                        <div class="details-item">
-                            <i class="material-symbols-outlined">mail</i>
-                            <span class="details-item-text">Messaging</span>
-                        </div>
-                        <div class="tech">RabbitMQ</div>
                     </div>
                 </div>
             </div>
