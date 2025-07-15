@@ -1,0 +1,328 @@
+<!doctype html>
+<html class="overflow-y-scroll scroll-smooth motion-reduce:scroll-auto snap-y snap-mandatory">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --animate-slide: slide 6s linear infinite;
+
+        @keyframes slide {
+          0% {
+            transform: translateY(200%);
+            opacity: 0.1;
+          }
+          3% {
+            transform: translateY(100%);
+            opacity: 1;
+          }
+          30% {
+            transform: translateY(100%);
+            opacity: 1;
+          }
+          33% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(0);
+            opacity: 0.1;
+          }
+        }
+      }
+    </style>
+    <style>
+      .default-bg {
+        --s: 80px; /* control the size*/
+        --c1: #0f0f0f;
+        --c2: #202020;
+        
+        --_s: calc(2*var(--s)) calc(2*var(--s));
+        --_g: 35.36% 35.36% at;
+        --_c: #0000 66%,var(--c2) 68% 70%,#0000 72%;
+        background:
+          radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s),
+          radial-gradient(var(--_g) 0    75%,var(--_c)) var(--s) var(--s)/var(--_s),
+          radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s),
+          radial-gradient(var(--_g) 0    75%,var(--_c)) 0 0/var(--_s),
+          repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%) 0 0/var(--_s),
+          radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s)
+          var(--c1);
+      }
+    </style>
+    <script>
+      // Source: http://stackoverflow.com/questions/30734552/change-url-while-scrolling
+      // stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+      function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+              Math.floor(rect.top) >= 0 &&
+              Math.floor(rect.left) >= 0 &&
+              Math.floor(rect.bottom) <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+              Math.floor(rect.right) <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+          );
+      }
+
+      // debounce util - tailwind's smooth scrolling and/or snapping seems to trigger a lot of scrolling
+      function debounce(method, delay) {
+        clearTimeout(method._tId);
+        method._tId= setTimeout(function(){
+            method();
+        }, delay);
+      }
+
+      function handleScroll() {
+        // check if the anchor elements are visible
+        document.querySelectorAll(".section").forEach(el => {
+            if (isElementInViewport(el)) {
+                // update the URL hash
+                if (window.history.pushState) {
+                    var urlHash = "#" + el.id;
+                    window.history.pushState(null, null, urlHash);
+                }
+            }
+        });
+      }
+
+      // listen for the scroll event
+      document.addEventListener("scroll", () => handleScroll());
+    </script>
+  </head>
+  <body class="bg-black text-white ">
+    <!-- top nav -->
+    <div class="z-1 fixed top-0 left-0 w-full flex items-center justify-between p-2 backdrop-blur-sm border-b-1 border-white/30">
+      <!-- left icon + title -->
+      <div class="flex items-center gap-1">
+        <i data-lucide="arrow-left"></i>
+        <div class="rounded-full w-8 h-8 bg-gray-700"></div>
+        <div class="flex flex-col text-sm/4">
+          <div>Corentin Dautrême</div>
+          <div class="font-bold">Portfolio</div>
+        </div>
+      </div>
+
+      <!-- nav links -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#lys">
+          <div class="flex items-center rounded-lg px-2 py-1">Lys</div>
+        </a>
+        <a href="#just-bill-it">
+          <div class="flex items-center rounded-lg px-2 py-1">Just bill it</div>
+        </a>
+        <a href="#transit-planner">
+          <div class="flex items-center rounded-lg px-2 py-1">Transit planner</div>
+        </a>
+        <a href="#esc-2021-logo-generator">
+          <div class="flex items-center rounded-lg px-2 py-1">ESC 2021 logo generator</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- home screen -->
+    <div id="home" class="section snap-start default-bg w-full h-[100dvh] p-10 flex flex-col">
+      <div class="grow"></div>
+      <div class="flex flex-col flex-[50%] justify-between">
+        <div class="flex flex-col gap-6">
+          <div class="text-4xl font-bold flex flex-col md:flex-row md:items-center w-full">
+            When I'm not working, I
+            <div class="relative md:ml-3 h-[1em] w-[200px] overflow-hidden">
+              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-amber-500">code</span>
+              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-emerald-500 [animation-delay:2s]">create</span>
+              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-purple-500 [animation-delay:4s]">learn</span>
+            </div>
+          </div>
+
+          <div class="md:w-[33%] flex flex-col gap-3">
+            <p>I've accumulated small side projects over the years - some of them to bring an idea to life, others to learn cool new things.</p>
+            <p>On this page, you can read a bit about the most significant of them, check out some pretty screenshots, or even find links to online demos.</p>
+          </div>
+        </div>
+
+        <a class="w-fit" href="#lys">
+          <div class="rounded-full p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-down"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- lys -->
+    <div id="lys" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+
+      <!-- intro -->
+      <div id="lys-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+
+        <a class="mt-14 md:mt-8 w-fit" href="#home">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-up"></i>
+          </div>
+        </a>
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">Lys</div>
+
+            <div class="md:w-[33%]">
+              A calendar-based <span class="font-black">Python</span> social media bot running on <span class="font-black">AWS</span>, and managed & monitored through a <span class="font-black">Next.js</span> webapp.
+            </div>
+
+            <div>
+              <a href="#lys-overview">
+                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                  Learn more
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+              <div class="font-bold">Python 3</div>
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">AWS</span>
+                <span class="text-white/50">Lambda, DynamoDB, CloudWatch, Javascript SDK, Java SDK</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">Next.js 15</span>
+                <span class="text-white/50">React, Typescript, Tailwind CSS</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">Android SDK</span>
+                <span class="text-white/50">Kotlin, Java</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="md:max-w-40 flex flex-col items-end" href="#lys-overview">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              A Eurovision-flavored bot
+            </div>
+          </a>
+
+        </div>
+
+        <a class="w-fit" href="#just-bill-it">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-down"></i>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- overview -->
+      <div id="lys-overview" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">A Eurovision-flavored bot</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
+
+              <p>Lys was initially launched on X (formerly Twitter) back in 2019, and has since then made its way to Bluesky and Threads.</p>
+            </div>
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-bot">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The AWS Python bot
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- bot -->
+      <div id="lys-bot" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">The AWS Python bot</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              At the core of the app is the bot itself. Lambdas, triggered on a schedule defined through CloudWatch Cron Triggers, read events from a DynamoDB table, and build & publish posts to social media via their public APIs.
+            </div>
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-fetcher">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The event fetcher
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- event fetcher -->
+      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">The event fetcher</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
+              <p>A nightly Python script parses the <a href="https://eurovoix.com/">Eurovoix</a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually.</p>
+            </div>
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-manager">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The management app
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- manager -->
+      <div id="lys-manager" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">The management app</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Initially a native Kotlin app for Android, the Lys management application was later rewritten from scratch as a Next.js webapp.</p>
+              <p>Relying on the v3 of the AWS Javascript SDK, it provides a 100% responsive control and monitoring interface on desktop and mobile.</p>
+              <p>The app is publicly hosted through Vercel, with a custom authorization filter based on Github authentication to restrict access.</p>
+            </div>
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-bot">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The management app
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
