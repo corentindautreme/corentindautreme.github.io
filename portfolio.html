@@ -8,6 +8,7 @@
     <style type="text/tailwindcss">
       @theme {
         --animate-slide: slide 6s linear infinite;
+        --animate-slide-phone: slide-phone 10s linear infinite;
 
         @keyframes slide {
           0% {
@@ -31,6 +32,29 @@
             opacity: 0.1;
           }
         }
+
+        @keyframes slide-phone {
+          0% {
+            transform: translateX(200%);
+            opacity: 0.1;
+          }
+          3% {
+            transform: translateX(100%);
+            opacity: 1;
+          }
+          50% {
+            transform: translateX(100%);
+            opacity: 1;
+          }
+          53% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 0.1;
+          }
+        }
       }
     </style>
     <style>
@@ -50,6 +74,35 @@
           repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%) 0 0/var(--_s),
           radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s)
           var(--c1);
+      }
+
+      .lys-bg {
+        --s: 100px; /* control the size*/
+        --c1: #000000;
+        --c2: #0c011d;
+        
+        --_g: 
+           var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+           var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+        background:
+          radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),#0008 96%,#0000),
+          radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+          var(--c1);
+        background-size: var(--s) var(--s);
+      }
+
+      .tp-bg {
+        --s: 40px; /* control the size*/
+        --c1: #1a0606;
+        --c2: #000000;
+        
+        background:
+          conic-gradient(from  45deg at 75% 75%,var(--c1) 25%,var(--c2) 0 50%,#0000 0)
+           0 0/var(--s) var(--s),
+          conic-gradient(from 225deg at 25% 25%,var(--c2) 25%,var(--c1) 0 50%,#0000 0)
+           0 0/var(--s) var(--s),
+          repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
+           0 0/calc(2*var(--s)) calc(2*var(--s));
       }
     </style>
     <script>
@@ -157,7 +210,7 @@
     </div>
 
     <!-- lys -->
-    <div id="lys" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+    <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
       <div id="lys-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
@@ -168,12 +221,12 @@
           </div>
         </a>
 
-        <div class="flex flex-col md:flex-row md:items-between">
+        <div class="h-full flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
 
-          <div class="grow flex flex-col gap-3">
+          <div class="grow md:grow-0 md:w-[40%] flex flex-col gap-3">
             <div class="text-4xl font-bold">Lys</div>
 
-            <div class="md:w-[33%]">
+            <div class="">
               A calendar-based <span class="font-black">Python</span> social media bot running on <span class="font-black">AWS</span>, and managed & monitored through a <span class="font-black">Next.js</span> webapp.
             </div>
 
@@ -202,7 +255,7 @@
               </div>
             </div>
 
-            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+            <div class="flex flex-col text-sm md:text-base">
               <div class="flex items-center gap-2">
                 <i data-lucide="github" class="w-5"></i>
                 <div class="flex items-center gap-2">
@@ -220,6 +273,9 @@
               </div>
             </div>
 
+          </div>
+
+          <div class="hidden md:block grow h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
           </div>
 
           <a class="md:max-w-40 flex flex-col items-end justify-center" href="#lys-overview">
@@ -243,20 +299,41 @@
       </div>
 
       <!-- overview -->
-      <div id="lys-overview" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+      <div id="lys-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
 
-        <div class="flex flex-col md:flex-row md:items-between">
+        <div class="h-full mt-5 md:mt-0 flex flex-col md:flex-row md:items-center md:justify-between">
 
-          <div class="grow flex flex-col gap-3">
+          <div class="absolute w-[70%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-55">
+            <div class="h-full w-full relative overflow-hidden">
+              <!-- <div class="w-full h-full absolute top-1 left-1 bg-black"></div> -->
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:5s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
+              <!-- phone frame -->
+              <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+            </div>
+          </div>
+
+          <div class="md:grow-0 md:w-[33%] flex flex-col gap-3">
 
             <div class="text-4xl font-bold">A Eurovision-flavored bot</div>
 
-            <div class="md:w-[33%] flex flex-col gap-3">
+            <div class="flex flex-col gap-3">
               <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
 
               <p>Lys was initially launched on <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X (formerly Twitter)<i data-lucide="external-link" class="w-4"></i></a> back in 2019, and has since then made its way to <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>.</p>
             </div>
 
+          </div>
+
+          <div class="hidden md:flex grow h-[75%] items-center justify-center">
+            <!-- <div class="w-full h-full relative overflow-hidden"> -->
+            <div class="w-63 h-full relative overflow-hidden">
+              <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:5s] top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
+              <!-- phone frame -->
+              <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+            </div>
           </div>
 
           <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
@@ -473,7 +550,7 @@
     </div>
 
     <!-- transit planner -->
-    <div id="transit-planner" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+    <div id="transit-planner" class="tp-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
       <div id="transit-planner-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
@@ -505,7 +582,7 @@
             <div class="flex flex-col gap-2 mt-3 md:mt-8">
               <div class="flex flex-col md:flex-row md:gap-2">
                 <span class="font-bold">Node.js</span>
-                <span class="text-white/50">Express, Prisma ORM, OpenAPI, Swagger</span>
+                <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger</span>
               </div>
               <div class="flex flex-col md:flex-row md:gap-2">
                 <span class="font-bold">Next.js 15</span>
