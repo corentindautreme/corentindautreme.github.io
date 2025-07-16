@@ -82,6 +82,14 @@
                     var urlHash = "#" + el.id;
                     window.history.pushState(null, null, urlHash);
                 }
+                // update navbar highlighting
+                document.querySelectorAll(".nav-link").forEach(navEl => {
+                  if (navEl.id === el.id + "-link") {
+                    navEl.classList.add('text-black', 'bg-white');
+                  } else {
+                    navEl.classList.remove('text-black', 'bg-white');
+                  }
+                });
             }
         });
       }
@@ -106,16 +114,16 @@
       <!-- nav links -->
       <div class="hidden md:flex items-center gap-1">
         <a href="#lys">
-          <div class="flex items-center rounded-lg px-2 py-1">Lys</div>
+          <div id="lys-link" class="nav-link flex items-center rounded-lg px-2 py-1">Lys</div>
         </a>
-        <a href="#just-bill-it">
-          <div class="flex items-center rounded-lg px-2 py-1">Just bill it</div>
-        </a>
+        <!-- <a href="#just-bill-it">
+          <div class="nav-link flex items-center rounded-lg px-2 py-1">Just bill it</div>
+        </a> -->
         <a href="#transit-planner">
-          <div class="flex items-center rounded-lg px-2 py-1">Transit planner</div>
+          <div id="transit-planner-link" class="nav-link flex items-center rounded-lg px-2 py-1">Transit planner</div>
         </a>
         <a href="#esc-2021-logo-generator">
-          <div class="flex items-center rounded-lg px-2 py-1">ESC 2021 logo generator</div>
+          <div id="esc-2021-logo-generator-link" class="nav-link flex items-center rounded-lg px-2 py-1">ESC 2021 logo generator</div>
         </a>
       </div>
     </div>
@@ -154,13 +162,14 @@
       <!-- intro -->
       <div id="lys-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
 
-        <a class="mt-14 md:mt-8 w-fit" href="#home">
+        <a class="mt-12 md:mt-8 w-fit" href="#home">
           <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
             <i data-lucide="chevron-up"></i>
           </div>
         </a>
 
         <div class="flex flex-col md:flex-row md:items-between">
+
           <div class="grow flex flex-col gap-3">
             <div class="text-4xl font-bold">Lys</div>
 
@@ -192,15 +201,416 @@
                 <span class="text-white/50">Kotlin, Java</span>
               </div>
             </div>
+
+            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+              <div class="flex items-center gap-2">
+                <i data-lucide="github" class="w-5"></i>
+                <div class="flex items-center gap-2">
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Lys<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Lys web manager<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <i data-lucide="globe" class="w-5"></i>
+                <div class="flex gap-2">
+                  <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Calendar<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app/">Web manager<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <a class="md:max-w-40 flex flex-col items-end" href="#lys-overview">
+          <a class="md:max-w-40 flex flex-col items-end justify-center" href="#lys-overview">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
             </div>
             <div class="text-right text-base/5">
               A Eurovision-flavored bot
+            </div>
+          </a>
+
+        </div>
+
+        <a class="w-fit" href="#transit-planner">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-down"></i>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- overview -->
+      <div id="lys-overview" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+
+          <div class="grow flex flex-col gap-3">
+
+            <div class="text-4xl font-bold">A Eurovision-flavored bot</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
+
+              <p>Lys was initially launched on <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X (formerly Twitter)<i data-lucide="external-link" class="w-4"></i></a> back in 2019, and has since then made its way to <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>.</p>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The AWS Python bot
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- bot -->
+      <div id="lys-bot" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+
+          <div class="grow flex flex-col gap-3">
+
+            <div class="text-4xl font-bold">The AWS Python bot</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>At the core of the app is the bot itself. Lambdas, triggered on a schedule defined through CloudWatch Cron Triggers, read events from a DynamoDB table, then build & publish posts to social media via their public APIs.</p>
+              <p>The <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Python code base<i data-lucide="external-link" class="w-4"></i></a> is modular and makes it easy to support new platforms and customize posts.</p>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-fetcher">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The event fetcher
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- event fetcher -->
+      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+
+            <div class="text-4xl font-bold">The event fetcher</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
+              <p>A nightly Python script parses the <a class="inline-flex gap-0.5 underline" href="https://eurovoix.com/">Eurovoix<i data-lucide="external-link" class="w-4"></i></a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually in the management app.</p>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-manager">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The management app
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- manager -->
+      <div id="lys-manager" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+
+            <div class="text-4xl font-bold">The management app</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>Initially a native Kotlin app for Android, the Lys management application was later rewritten from scratch as a 100% responsive <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Next.js webapp<i data-lucide="external-link" class="w-4"></i></a>.</p>
+              <p>It relies on the v3 of the AWS Javascript SDK to offer data read/write and monitoring tools.</p>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-manager-2">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              The management app (cont.)
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- manager (cont.) -->
+      <div id="lys-manager-2" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-3">
+
+            <div class="text-4xl font-bold">The management app (cont.)</div>
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>The app is publicly hosted through Vercel, with a custom authorization filter based on Github authentication to restrict access.</p>
+
+              <div class="flex items-center gap-2">
+                <i data-lucide="globe"></i>
+                <div>
+                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app/">Lys Web Manager<i data-lucide="external-link" class="w-4"></i></a>
+                  <span class="text-white/50">(demo, access on request)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-more">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              To go further
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- more -->
+      <div id="lys-more" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+
+        <div class="flex flex-col md:flex-row md:items-between">
+          <div class="grow flex flex-col gap-1">
+
+            <div class="text-4xl font-bold">To go further</div>
+
+            <div class="md:w-[33%] flex flex-col gap-1 mt-3">
+              <div class="flex items-center gap-1 font-bold">
+                <i data-lucide="twitter"></i> Lys social media accounts
+              </div>
+
+              <div class="flex flex-col">
+                <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X (formerly Twitter)<i data-lucide="external-link" class="w-4"></i></a>
+                <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
+                <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
+              </div>
+            </div>
+
+            <div class="md:w-[33%] flex flex-col gap-1 mt-2">
+              <div class="flex items-center gap-1 font-bold">
+                <i data-lucide="globe"></i> Lys web interfaces
+              </div>
+
+              <div class="flex flex-col">
+                <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
+                <div>
+                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager.vercel.app/">Lys Web Manager<i data-lucide="external-link" class="w-4"></i></a>
+                  <span class="text-white/50">(restricted)</span>
+                </div>
+                <div>
+                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app/">Lys Web Manager (preview)<i data-lucide="external-link" class="w-4"></i></a>
+                  <span class="text-white/50">(demo, access on request)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:w-[33%] flex flex-col gap-1 mt-2">
+              <div class="flex items-center gap-1 font-bold">
+                <i data-lucide="github"></i> Sources
+              </div>
+
+              <div class="flex flex-col">
+                <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">lys<i data-lucide="external-link" class="w-4"></i></a>
+                <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">lys-web-manager<i data-lucide="external-link" class="w-4"></i></a>
+                <a class="inline-flex gap-0.5 underline" href="https://github.com/LysEurovision/lyseurovision.github.io/tree/web">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-1 mt-2">
+              <div class="flex items-center gap-1 font-bold">
+                <i data-lucide="newspaper"></i> Reading
+              </div>
+
+              <div class="flex flex-col">
+                <div>
+                  <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a>
+                  <span class="text-white/50">(september 2020)</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-4 md:mt-0 flex flex-col items-end justify-center" href="#lys-intro">
+            <div class="flex items-center gap-1 text-white/50">
+              <i data-lucide="arrow-left" class="w-5"></i>
+              Back to the start
+            </div>
+            <div class="text-right text-base/5">
+              Lys
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- transit planner -->
+    <div id="transit-planner" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+
+      <!-- intro -->
+      <div id="transit-planner-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+
+        <a class="mt-12 md:mt-8 w-fit" href="#lys">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-up"></i>
+          </div>
+        </a>
+
+        <div class="flex flex-col md:flex-row md:items-between">
+
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">Transit planner</div>
+
+            <div class="md:w-[33%]">
+              A <span class="font-black">Node.js</span> backend API, backed by a <span class="font-black">PostgreSQL</span> database, that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> webapp for demo purposes.
+            </div>
+
+            <div>
+              <a href="#transit-planner-overview">
+                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                  Learn more
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">Node.js</span>
+                <span class="text-white/50">Express, Prisma ORM, OpenAPI, Swagger</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">Next.js 15</span>
+                <span class="text-white/50">React, Typescript, Tailwind CSS</span>
+              </div>
+              <div class="font-bold">PostgreSQL</div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+              <div class="flex items-center gap-2">
+                <i data-lucide="github" class="w-5"></i>
+                <div class="flex flex-col">
+                  <div>
+                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner">transit-planner<i data-lucide="external-link" class="w-4"></i></a>
+                    (backend)
+                  </div>
+                  <div>
+                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner-client">transit-planner-client<i data-lucide="external-link" class="w-4"></i></a>
+                    (frontend)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-overview">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              Getting around Sarajevo
+            </div>
+          </a>
+
+        </div>
+
+        <a class="w-fit" href="#esc-2021-logo-generator">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-down"></i>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- esc 2021 logo generator -->
+    <div id="esc-2021-logo-generator" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+
+      <!-- intro -->
+      <div id="esc-2021-logo-generator-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+
+        <a class="mt-12 md:mt-8 w-fit" href="#transit-planner">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
+            <i data-lucide="chevron-up"></i>
+          </div>
+        </a>
+
+        <div class="flex flex-col md:flex-row md:items-between">
+
+          <div class="grow flex flex-col gap-3">
+            <div class="text-4xl font-bold">ESC 2021 logo generator</div>
+
+            <div class="md:w-[33%]">
+              A <span class="font-black">Javascript</span> and <span class="font-black">HTML/CSS</span> interactive playground based on the logo of the Eurovision Song Contest 2021 designed by <a class="inline-flex gap-0.5 underline" href="https://www.cleverfranke.com/project/eurovision">CLEVER ° FRANKE<i data-lucide="external-link" class="w-4"></i></a>.
+            </div>
+
+            <div>
+              <a href="#transit-planner-overview">
+                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                  Learn more
+                  <i data-lucide="arrow-right"></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+              <div class="font-bold">CSS</div>
+              <div class="flex flex-col md:flex-row md:gap-2">
+                <span class="font-bold">Javascript</span>
+                <span class="text-white/50">jQuery</span>
+              </div>
+              <div class="font-bold">HTML</div>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+              <div class="flex items-center gap-2">
+                <i data-lucide="globe" class="w-5"></i>
+                <div class="flex flex-col">
+                  <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/esc-2021-generator/">ESC 2021 Logo Generator<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#esc-2021-logo-generator-overview">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              A data-based logo
             </div>
           </a>
 
@@ -214,110 +624,6 @@
 
       </div>
 
-      <!-- overview -->
-      <div id="lys-overview" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
-
-        <div class="flex flex-col md:flex-row md:items-between">
-          <div class="grow flex flex-col gap-3">
-            <div class="text-4xl font-bold">A Eurovision-flavored bot</div>
-
-            <div class="md:w-[33%] flex flex-col gap-3">
-              <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
-
-              <p>Lys was initially launched on X (formerly Twitter) back in 2019, and has since then made its way to Bluesky and Threads.</p>
-            </div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-bot">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              The AWS Python bot
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- bot -->
-      <div id="lys-bot" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
-
-        <div class="flex flex-col md:flex-row md:items-between">
-          <div class="grow flex flex-col gap-3">
-            <div class="text-4xl font-bold">The AWS Python bot</div>
-
-            <div class="md:w-[33%] flex flex-col gap-3">
-              At the core of the app is the bot itself. Lambdas, triggered on a schedule defined through CloudWatch Cron Triggers, read events from a DynamoDB table, and build & publish posts to social media via their public APIs.
-            </div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-fetcher">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              The event fetcher
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- event fetcher -->
-      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
-
-        <div class="flex flex-col md:flex-row md:items-between">
-          <div class="grow flex flex-col gap-3">
-            <div class="text-4xl font-bold">The event fetcher</div>
-
-            <div class="md:w-[33%] flex flex-col gap-3">
-              <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
-              <p>A nightly Python script parses the <a href="https://eurovoix.com/">Eurovoix</a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually.</p>
-            </div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-manager">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              The management app
-            </div>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- manager -->
-      <div id="lys-manager" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
-
-        <div class="flex flex-col md:flex-row md:items-between">
-          <div class="grow flex flex-col gap-3">
-            <div class="text-4xl font-bold">The management app</div>
-
-            <div class="md:w-[33%] flex flex-col gap-3">
-              <p>Initially a native Kotlin app for Android, the Lys management application was later rewritten from scratch as a Next.js webapp.</p>
-              <p>Relying on the v3 of the AWS Javascript SDK, it provides a 100% responsive control and monitoring interface on desktop and mobile.</p>
-              <p>The app is publicly hosted through Vercel, with a custom authorization filter based on Github authentication to restrict access.</p>
-            </div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end" href="#lys-bot">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              The management app
-            </div>
-          </a>
-        </div>
-
-      </div>
     </div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
