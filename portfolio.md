@@ -1,3 +1,9 @@
+---
+layout: blank
+title: Portfolio | Corentin Dautrême - Software Engineer
+permalink: /cv-pdf/
+---
+
 <!doctype html>
 <html class="overflow-y-scroll scroll-smooth motion-reduce:scroll-auto snap-y snap-mandatory">
   <head>
