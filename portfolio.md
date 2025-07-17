@@ -268,11 +268,11 @@ permalink: /cv-pdf/
 
         <div class="flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
 
-          <div class="md:w-[40%] flex flex-col gap-3">
+          <div class="md:w-[40%] flex flex-col gap-2">
             <div class="flex flex-row md:flex-col items-end md:items-start gap-3">
               <div class="text-4xl font-bold">Lys</div>
               <div class="flex items-center gap-1 rounded-lg bg-neutral-800 px-2 pb-0.5">
-                <div class="rounded-full bg-red-300 w-2 h-2 mt-0.5 animate-pulse"></div>
+                <div class="rounded-full bg-red-300 w-2 h-2 md:mt-0.5 animate-pulse"></div>
                 Live
               </div>
             </div>
@@ -283,14 +283,14 @@ permalink: /cv-pdf/
 
             <div>
               <a href="#lys-overview">
-                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                <div class="inline-flex items-center gap-1 rounded-lg bg-white text-black p-2">
                   Learn more
                   <i data-lucide="arrow-right"></i>
                 </div>
               </a>
             </div>
 
-            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+            <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
               <div class="font-bold">Python 3</div>
               <div class="flex flex-col md:flex-row md:gap-2">
                 <span class="font-bold">AWS</span>
@@ -300,13 +300,13 @@ permalink: /cv-pdf/
                 <span class="font-bold">Next.js 15</span>
                 <span class="text-white/50">React, Typescript, Tailwind CSS</span>
               </div>
-              <div class="flex flex-col md:flex-row md:gap-2">
+              <div class="flex flex-row gap-2">
                 <span class="font-bold">Android SDK</span>
                 <span class="text-white/50">Kotlin, Java</span>
               </div>
             </div>
 
-            <div class="flex flex-col text-sm md:text-base">
+            <div class="flex flex-col mt-1 text-sm md:text-base">
               <div class="flex items-center gap-2">
                 <i data-lucide="github" class="w-5"></i>
                 <div class="flex items-center gap-2">
@@ -329,16 +329,6 @@ permalink: /cv-pdf/
           <div class="hidden md:block grow h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
           </div>
 
-          <a class="mt-3 md:mt-0 md:max-w-40 flex flex-col items-end justify-center" href="#lys-overview">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              A Eurovision-flavored bot
-            </div>
-          </a>
-
         </div>
 
         <a class="w-fit" href="#transit-planner">
@@ -350,18 +340,18 @@ permalink: /cv-pdf/
       </div>
 
       <!-- overview -->
-      <div id="lys-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+      <div id="lys-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
 
-        <div class="h-full mt-8 md:mt-0 flex flex-col md:flex-row md:items-center md:justify-between">
+        <div class="h-full mt-16 md:mt-0 flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
 
-          <div class="absolute w-[70%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-51">
+          <!-- <div class="absolute w-[60%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-40">
             <div class="h-full w-full relative overflow-hidden">
               <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
               <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
-              <!-- phone frame -->
+              
               <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
             </div>
-          </div>
+          </div> -->
 
           <div class="md:h-full flex items-center gap-10">
 
@@ -372,7 +362,7 @@ permalink: /cv-pdf/
               <div class="flex flex-col gap-3">
                 <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
 
-                <p>Lys was initially launched on <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X (formerly Twitter)<i data-lucide="external-link" class="w-4"></i></a> back in 2019, and has since then made its way to <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>.</p>
+                <p>Launched on <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">Twitter<i data-lucide="external-link" class="w-4"></i></a> back in 2019, Lys has since found its way to <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>.</p>
               </div>
 
             </div>
@@ -399,7 +389,7 @@ permalink: /cv-pdf/
             </div>
           </div>
 
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -408,6 +398,17 @@ permalink: /cv-pdf/
               The AWS Python bot
             </div>
           </a>
+
+          <div class="md:hidden grow flex justify-center mt-1">
+            <!-- <div class="absolute w-[60%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-40"> -->
+              <div class="h-full w-[30dvh] relative overflow-hidden">
+                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
+                <!-- phone frame -->
+                <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+              </div>
+            <!-- </div> -->
+          </div>
 
         </div>
       </div>
@@ -578,7 +579,6 @@ permalink: /cv-pdf/
       </div>
 
       <!-- manager (cont.) -->
-      <!-- <div id="lys-manager-2" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center"> -->
       <div id="lys-manager-2" class="snap-start w-full h-full flex gap-3 shrink-0 md:px-10 items-center">
 
         <div class="md:hidden w-75">
@@ -651,8 +651,8 @@ permalink: /cv-pdf/
                 <i data-lucide="twitter"></i> Lys social media accounts
               </div>
 
-              <div class="flex flex-col">
-                <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X (formerly Twitter)<i data-lucide="external-link" class="w-4"></i></a>
+              <div class="flex gap-2">
+                <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X<i data-lucide="external-link" class="w-4"></i></a>
                 <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
                 <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
               </div>
@@ -696,7 +696,6 @@ permalink: /cv-pdf/
               <div class="flex flex-col">
                 <div>
                   <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a>
-                  <span class="text-white/50">(september 2020)</span>
                 </div>
               </div>
             </div>
@@ -732,11 +731,11 @@ permalink: /cv-pdf/
 
         <div class="flex flex-col md:flex-row md:items-between">
 
-          <div class="grow flex flex-col gap-3">
+          <div class="grow flex flex-col gap-2">
             <div class="text-4xl font-bold">Transit planner</div>
 
             <div class="md:w-[33%]">
-              A <span class="font-black">Node.js</span> backend API, backed by a <span class="font-black">PostgreSQL</span> database, that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> webapp for demo purposes.
+              A <span class="font-black">Node.js</span> backend API that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> demo webapp.
             </div>
 
             <div>
@@ -748,7 +747,7 @@ permalink: /cv-pdf/
               </a>
             </div>
 
-            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+            <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
               <div class="flex flex-col md:flex-row md:gap-2">
                 <span class="font-bold">Node.js</span>
                 <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger</span>
@@ -760,7 +759,7 @@ permalink: /cv-pdf/
               <div class="font-bold">PostgreSQL</div>
             </div>
 
-            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+            <div class="flex flex-col mt-1 md:flex-row md:gap-5 text-sm md:text-base">
               <div class="flex items-center gap-2">
                 <i data-lucide="github" class="w-5"></i>
                 <div class="flex flex-col">
@@ -778,15 +777,7 @@ permalink: /cv-pdf/
 
           </div>
 
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-overview">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              Getting around Sarajevo
-            </div>
-          </a>
+          <!-- TODO overview "Getting around Sarajevo" -->
 
         </div>
 
@@ -830,9 +821,9 @@ permalink: /cv-pdf/
               </a>
             </div>
 
-            <div class="flex flex-col gap-2 mt-3 md:mt-8">
+            <div class="flex flex-col gap-2 mt-3 md:mt-8 text-base/5">
               <div class="font-bold">CSS</div>
-              <div class="flex flex-col md:flex-row md:gap-2">
+              <div class="flex flex-col flex-row gap-2">
                 <span class="font-bold">Javascript</span>
                 <span class="text-white/50">jQuery</span>
               </div>
@@ -850,15 +841,7 @@ permalink: /cv-pdf/
 
           </div>
 
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#esc-2021-logo-generator-overview">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              A data-based logo
-            </div>
-          </a>
+          <!-- TODO overview "A data-based logo" -->
 
         </div>
 
