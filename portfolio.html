@@ -249,7 +249,7 @@
     </div>
 
     <!-- lys -->
-    <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+    <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth overflow-y-hidden">
 
       <!-- intro -->
       <div id="lys-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
@@ -336,18 +336,11 @@
       <!-- overview -->
       <div id="lys-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
 
-        <div class="h-full mt-16 md:mt-0 flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
+        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
 
-          <!-- <div class="absolute w-[60%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-40">
-            <div class="h-full w-full relative overflow-hidden">
-              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
-              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
-              
-              <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
-            </div>
-          </div> -->
+          <div class="md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full flex items-center gap-10">
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-y-scroll">
 
             <div class="md:w-[33%] flex flex-col gap-3">
 
@@ -360,8 +353,8 @@
               </div>
 
             </div>
+
             <div class="hidden md:flex h-[75%] items-center justify-center">
-              <!-- <div class="w-full h-full relative overflow-hidden"> -->
               <div class="w-63 h-full relative overflow-hidden">
                 <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
                 <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
@@ -370,18 +363,15 @@
                 <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
               </div>
             </div>
-          </div>
-
-          <div class="hidden md:flex md:hidden grow h-[75%] items-center justify-center">
-            <!-- <div class="w-full h-full relative overflow-hidden"> -->
-            <div class="w-63 h-full relative overflow-hidden">
-              <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
-              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
-              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
-              <!-- phone frame -->
-              <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+            <div class="hidden md:flex md:hidden grow h-[75%] items-center justify-center">
+              <div class="w-63 h-full relative overflow-hidden">
+                <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
+                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
+              </div>
             </div>
           </div>
+
 
           <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
             <div class="flex items-center gap-1 text-white/50">
@@ -393,15 +383,13 @@
             </div>
           </a>
 
-          <div class="md:hidden grow flex justify-center mt-1">
-            <!-- <div class="absolute w-[60%] bottom-0 left-[50%] translate-x-[-50%] md:hidden h-40"> -->
-              <div class="h-full w-[30dvh] relative overflow-hidden">
-                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
-                <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
-                <!-- phone frame -->
-                <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
-              </div>
-            <!-- </div> -->
+          <div class="md:hidden h-45 shrink-0 flex justify-center mt-1">
+            <div class="h-full w-45 relative overflow-hidden">
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+              <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
+              <!-- phone frame -->
+              <div class="w-full h-full absolute top-0 left-0 bg-cover bg-no-repeat bg-top bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+            </div>
           </div>
 
         </div>
@@ -556,6 +544,14 @@
             <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
 
             <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
           </div>
 
           <div class="w-[200%] animate-carousel-up flex flex-col gap-2">
@@ -568,6 +564,14 @@
             <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
 
             <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
+
+            <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
           </div>
         </div>
       </div>
@@ -605,7 +609,7 @@
                 <p>The app is publicly hosted through Vercel, with a custom authorization filter based on Github authentication to restrict access.</p>
 
                 <div class="flex items-center gap-2">
-                  <i data-lucide="globe"></i>
+                  <i data-lucide="globe" class="w-4 shrink-0"></i>
                   <div>
                     <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app?_vercel_share=gbSZ0UMJMTfpCMi7fhJo7PhvqxsYSr3C">Lys Web Manager<i data-lucide="external-link" class="w-4"></i></a>
                     <span class="text-white/50">(demo, access on request)</span>
@@ -634,69 +638,74 @@
 
       <!-- more -->
       <div id="lys-more" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+        <div class="md:hidden h-5"></div>
+        <div class="text-4xl font-bold">To go further</div>
 
-        <div class="flex flex-col md:flex-row md:items-between">
-          <div class="grow flex flex-col gap-1">
+        <div class="flex flex-col md:flex-row gap-3 md:gap-0 md:justify-between overflow-hidden">
 
-            <div class="text-4xl font-bold">To go further</div>
+          <div class="flex flex-col md:flex-row gap-1 md:gap-0 md:items-between overflow-hidden">
 
-            <div class="md:w-[33%] flex flex-col gap-1 mt-3">
-              <div class="flex items-center gap-1 font-bold">
-                <i data-lucide="twitter"></i> Lys social media accounts
-              </div>
+            <div class="grow flex flex-col gap-3 overflow-y-scroll">
 
-              <div class="flex gap-2">
-                <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X<i data-lucide="external-link" class="w-4"></i></a>
-                <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
-                <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
-              </div>
-            </div>
-
-            <div class="md:w-[33%] flex flex-col gap-1 mt-2">
-              <div class="flex items-center gap-1 font-bold">
-                <i data-lucide="globe"></i> Lys web interfaces
-              </div>
-
-              <div class="flex flex-col">
-                <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
-                <div>
-                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager.vercel.app/">Lys Web Manager<i data-lucide="external-link" class="w-4"></i></a>
-                  <span class="text-white/50">(restricted)</span>
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="twitter"></i> Lys social media accounts
                 </div>
-                <div>
-                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app?_vercel_share=gbSZ0UMJMTfpCMi7fhJo7PhvqxsYSr3C">Lys Web Manager (preview)<i data-lucide="external-link" class="w-4"></i></a>
-                  <span class="text-white/50">(demo, access on request)</span>
+
+                <div class="flex flew-wrap gap-x-2">
+                  <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
                 </div>
               </div>
-            </div>
 
-            <div class="md:w-[33%] flex flex-col gap-1 mt-2">
-              <div class="flex items-center gap-1 font-bold">
-                <i data-lucide="github"></i> Sources
-              </div>
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="globe"></i> Lys web interfaces
+                </div>
 
-              <div class="flex flex-col">
-                <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">lys<i data-lucide="external-link" class="w-4"></i></a>
-                <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">lys-web-manager<i data-lucide="external-link" class="w-4"></i></a>
-                <a class="inline-flex gap-0.5 underline" href="https://github.com/LysEurovision/lyseurovision.github.io/tree/web">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
-              </div>
-            </div>
-
-            <div class="flex flex-col gap-1 mt-2">
-              <div class="flex items-center gap-1 font-bold">
-                <i data-lucide="newspaper"></i> Reading
-              </div>
-
-              <div class="flex flex-col">
-                <div>
-                  <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a>
+                <div class="flex flex-col">
+                  <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
+                  <div>
+                    <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager.vercel.app/">Lys Web Manager<i data-lucide="external-link" class="w-4"></i></a>
+                    <span class="text-white/50">(restricted)</span>
+                  </div>
+                  <div>
+                    <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager-preview.vercel.app?_vercel_share=gbSZ0UMJMTfpCMi7fhJo7PhvqxsYSr3C">Lys Web Manager (preview)<i data-lucide="external-link" class="w-4"></i></a>
+                    <span class="text-white/50">(demo, access on request)</span>
+                  </div>
                 </div>
               </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="github"></i> Sources
+                </div>
+
+                <div class="flex gap-x-2 flex-wrap">
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">lys<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">lys-web-manager<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/LysEurovision/lyseurovision.github.io/tree/web">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1 mt-2">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="newspaper"></i> Reading
+                </div>
+
+                <div class="flex flex-col gap-1 text-base/5">
+                  <div>
+                    <a class="underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a><span class="ms-1 text-white/50">(september 2020)</span>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
-          <a class="md:max-w-40 mt-4 md:mt-0 flex flex-col items-end justify-center" href="#lys-intro">
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#lys-intro">
             <div class="flex items-center gap-1 text-white/50">
               <i data-lucide="arrow-left" class="w-5"></i>
               Back to the start
@@ -705,8 +714,8 @@
               Lys
             </div>
           </a>
-
         </div>
+
       </div>
 
     </div>
