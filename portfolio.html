@@ -143,6 +143,13 @@
           repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
            0 0/calc(2*var(--s)) calc(2*var(--s));
       }
+
+      .logo-bg {
+        background-color: #000000;
+        opacity: 1;
+        background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 20px 20px, linear-gradient(#242424 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, #242424 1.6px, #000000 1.6px) -0.8px 0;
+        background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+      }
     </style>
     <script>
       // Source: http://stackoverflow.com/questions/30734552/change-url-while-scrolling
@@ -235,13 +242,13 @@
           </div>
 
           <div class="md:w-[33%] flex flex-col gap-3">
-            <p>I've accumulated small side projects over the years - some of them to bring an idea to life, others to learn cool new things.</p>
-            <p>On this page, you can read a bit about the most significant of them, check out some pretty screenshots, or even find links to online demos.</p>
+            <p>I've made a thing or two over the years. Some to bring an idea to life, some to learn cool new things.</p>
+            <p>On this page, you can read a bit about some of them, check out some pretty screenshots, or even find links to online demos.</p>
           </div>
         </div>
 
         <a class="w-fit" href="#lys">
-          <div class="rounded-full p-5 backdrop-blur-sm border-1 border-white/30">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
             <i data-lucide="chevron-down"></i>
           </div>
         </a>
@@ -652,7 +659,7 @@
                   <i data-lucide="twitter"></i> Lys social media accounts
                 </div>
 
-                <div class="flex flew-wrap gap-x-2">
+                <div class="flex md:flex-col flew-wrap gap-x-2">
                   <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
@@ -682,7 +689,7 @@
                   <i data-lucide="github"></i> Sources
                 </div>
 
-                <div class="flex gap-x-2 flex-wrap">
+                <div class="flex md:flex-col gap-x-2 flex-wrap">
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">lys<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">lys-web-manager<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/LysEurovision/lyseurovision.github.io/tree/web">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
@@ -694,7 +701,7 @@
                   <i data-lucide="newspaper"></i> Reading
                 </div>
 
-                <div class="flex flex-col gap-1 text-base/5">
+                <div class="flex flex-col gap-1">
                   <div>
                     <a class="underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a><span class="ms-1 text-white/50">(september 2020)</span>
                   </div>
@@ -795,7 +802,7 @@
     </div>
 
     <!-- esc 2021 logo generator -->
-    <div id="esc-2021-logo-generator" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+    <div id="esc-2021-logo-generator" class="logo-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
       <div id="esc-2021-logo-generator-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
