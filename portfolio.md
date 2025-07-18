@@ -149,6 +149,78 @@ permalink: /cv-pdf/
           repeating-conic-gradient(var(--c2) 0 25%,var(--c1) 0 50%)
            0 0/calc(2*var(--s)) calc(2*var(--s));
       }
+
+      .logo-bg {
+        background-color: #000000;
+        opacity: 1;
+        background: radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #000000 20%, #000000 80%, transparent 80%, transparent) 20px 20px, linear-gradient(#242424 1.6px, transparent 1.6px) 0 -0.8px, linear-gradient(90deg, #242424 1.6px, #000000 1.6px) -0.8px 0;
+        background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+      }
+
+      .slice-2021 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        transform: translate(0, -50%) rotate(90deg)
+          rotate(calc(var(--offset, 0) * 1deg));
+        transform-origin: 50% 100%;
+      }
+
+      .slice-2021:before {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 0,
+          var(--color1, transparent) 0,
+          var(--color1, transparent) 14.285714286%,
+          var(--color2, transparent) 14.285714286%,
+          var(--color2, transparent) 28.571428571%,
+          var(--color3, transparent) 28.571428571%,
+          var(--color3, transparent) 42.857142858%,
+          var(--color4, transparent) 42.857142858%,
+          var(--color4, transparent) 57.142857144%,
+          var(--color5, transparent) 57.142857144%,
+          var(--color5, transparent) 71.42857143%,
+          var(--color6, transparent) 71.42857143%,
+          var(--color6, transparent) 85.714285716%,
+          var(--color7, transparent) 85.714285716%,
+          var(--color7, transparent) 100%
+        );
+        content: "";
+        position: absolute;
+        transform: translate(0, 100%) rotate(calc(var(--value, 45) * 1deg));
+        transform-origin: 50% 0;
+      }
+
+      .slice-2021:nth-child(odd):before {
+          border-top: 1px dashed #a0a0a0;
+      }
+
+      .slice-2020 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg));
+        transform-origin: 50% 100%;
+      }
+
+      .slice-2020:before {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 0, 
+          var(--color1, white) 0,
+          var(--color1, white) 33.3%,
+          var(--color2, white) 33.3%,
+          var(--color2, white) 66.6%,
+          var(--color3, white) 66.6%,
+          var(--color3, white) 100%
+        );
+        content: '';
+        position: absolute;
+        transform: translate(0, 100%) rotate(calc(var(--value, 45) * 1deg));
+        transform-origin: 50% 0;
+      }
     </style>
     <script>
       // Source: http://stackoverflow.com/questions/30734552/change-url-while-scrolling
@@ -241,13 +313,13 @@ permalink: /cv-pdf/
           </div>
 
           <div class="md:w-[33%] flex flex-col gap-3">
-            <p>I've accumulated small side projects over the years - some of them to bring an idea to life, others to learn cool new things.</p>
-            <p>On this page, you can read a bit about the most significant of them, check out some pretty screenshots, or even find links to online demos.</p>
+            <p>I've made a thing or two over the years. Some to bring an idea to life, some to learn cool new things.</p>
+            <p>On this page, you can read a bit about some of them, check out some pretty screenshots, or even find links to online demos.</p>
           </div>
         </div>
 
         <a class="w-fit" href="#lys">
-          <div class="rounded-full p-5 backdrop-blur-sm border-1 border-white/30">
+          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
             <i data-lucide="chevron-down"></i>
           </div>
         </a>
@@ -658,7 +730,7 @@ permalink: /cv-pdf/
                   <i data-lucide="twitter"></i> Lys social media accounts
                 </div>
 
-                <div class="flex flew-wrap gap-x-2">
+                <div class="flex md:flex-col flew-wrap gap-x-2">
                   <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">X<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>
@@ -688,7 +760,7 @@ permalink: /cv-pdf/
                   <i data-lucide="github"></i> Sources
                 </div>
 
-                <div class="flex gap-x-2 flex-wrap">
+                <div class="flex md:flex-col gap-x-2 flex-wrap">
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">lys<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">lys-web-manager<i data-lucide="external-link" class="w-4"></i></a>
                   <a class="inline-flex gap-0.5 underline" href="https://github.com/LysEurovision/lyseurovision.github.io/tree/web">Lys (public calendar)<i data-lucide="external-link" class="w-4"></i></a>
@@ -700,7 +772,7 @@ permalink: /cv-pdf/
                   <i data-lucide="newspaper"></i> Reading
                 </div>
 
-                <div class="flex flex-col gap-1 text-base/5">
+                <div class="flex flex-col gap-1">
                   <div>
                     <a class="underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a><span class="ms-1 text-white/50">(september 2020)</span>
                   </div>
@@ -801,10 +873,10 @@ permalink: /cv-pdf/
     </div>
 
     <!-- esc 2021 logo generator -->
-    <div id="esc-2021-logo-generator" class="section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
+    <div id="esc-2021-logo-generator" class="bg-neutral-900 section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="esc-2021-logo-generator-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+      <div id="esc-2021-logo-generator-intro" class="logo-bg snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
 
         <a class="mt-12 md:mt-8 w-fit" href="#transit-planner">
           <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
@@ -822,7 +894,7 @@ permalink: /cv-pdf/
             </div>
 
             <div>
-              <a href="#transit-planner-overview">
+              <a href="#esc-2021-logo-generator-overview">
                 <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
                   Learn more
                   <i data-lucide="arrow-right"></i>
@@ -850,8 +922,6 @@ permalink: /cv-pdf/
 
           </div>
 
-          <!-- TODO overview "A data-based logo" -->
-
         </div>
 
         <a class="w-fit" href="#just-bill-it">
@@ -859,6 +929,179 @@ permalink: /cv-pdf/
             <i data-lucide="chevron-down"></i>
           </div>
         </a>
+
+      </div>
+
+      <!-- overview -->
+      <div id="esc-2021-logo-generator-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 ps-10 py-15 justify-center overflow-y-clip">
+
+        <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
+
+          <div class="grow flex flex-col gap-3 md:justify-center overflow-hidden">
+            <div class="flex flex-col gap-3 overflow-hidden">
+              <div class="text-4xl font-bold">A data-based logo</div>
+
+              <div class="md:w-[33%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+                <p>The logo of the 2021 Eurovision Song Contest was algorithmically designed by <a class="inline-flex gap-0.5 underline" href="https://www.cleverfranke.com/project/eurovision">CLEVER ° FRANKE<i data-lucide="external-link" class="w-4"></i></a>. It represents the distance between the host city, Rotterdam, and the capital of each participating country.</p>
+
+                <p>I found this ridiculously cool and clever, and wanted to see if it could be programatically recreated.</p>
+              </div>
+            </div>
+          
+            <a class="max-w-30 md:max-w-40 md:mt-5 flex flex-col" href="#esc-2021-logo-generator-css">
+              <div class="flex items-center gap-1 text-white/50">
+                Next
+                <i data-lucide="arrow-right" class="w-5"></i>
+              </div>
+              <div class="text-base/5">
+                Custom Slice Styling (CSS)
+              </div>
+            </a>
+          </div>
+
+          <div class="absolute -bottom-50 md:-bottom-0 -right-50 md:right-0 md:translate-x-[50%] h-100 aspect-1/1 md:h-full border-1 border-dashed border-white/50 rounded-full">
+            <!-- 2021 -->
+            <!-- NO -->
+            <div class="slice-2021" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --offset: 346; --value: 6;"></div>
+            <div class="slice-2021" style="--color1: #0750c6; --color2: #0750c6; --color3: #0750c6; --color4: #0750c6; --offset: 341; --value: 6;"></div>
+            <!-- grid filling -->
+            <div class="slice-2021" style="--color1: transparent; --offset: 335; --value: 6"></div>
+            <div class="slice-2021" style="--color1: transparent; --offset: 331; --value: 6"></div>
+            <div class="slice-2021" style="--color1: transparent; --offset: 325; --value: 6"></div>
+            <div class="slice-2021" style="--color1: transparent; --offset: 320; --value: 6"></div>
+
+            <!-- DK, SE, FI -->
+            <div class="slice-2021" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #0750c6; --color5: #0750c6; --color6: #fff; --offset: 314; --value: 6;"></div>
+            <div class="slice-2021" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #ffc832; --color5: #ffc832; --color6: #1ac0f8; --offset: 309; --value: 5.75;"></div>
+
+            <!-- LV, EE -->
+            <div class="slice-2021" style="--color1: #be0000; --color2: #be0000; --color3: #be0000; --color4: #be0000; --color5: #be0000; --color6: #000; --offset: 303; --value: 6.5;"></div>
+            <div class="slice-2021" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #fff; --color5: #fff; --color6: #0850c6; --offset: 298; --value: 5.75;"></div>
+
+            <!-- LT -->
+            <div class="slice-2021" style="--color1: #ffc732; --color2: #ffc732; --color3: #ffc732; --color4: #ffc732; --color5: #ffc732; --offset: 292; --value: 6.25;"></div>
+            <div class="slice-2021" style="--color1: #01a95b; --color2: #01a95b; --color3: #01a95b; --color4: #01a95b; --color5: #01a95b; --offset: 287; --value: 5.75;"></div>
+
+            <!-- DE, BY, RU -->
+            <div class="slice-2021" style="--color1: #000; --color2: #000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #fc0000; --color7: #fff; --offset: 281; --value: 6;"></div>
+            <div class="slice-2021" style="--color1: #fc0000; --color2: #fc0000; --color3: #01a95b; --color4: #01a95b; --color5: #01a95b; --color6: #01a95b; --color7: #fc0000; --offset: 276; --value: 5.75;"></div>
+
+            <!-- PL, UA -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #fff; --color5: #1ac0f8; --color6: #1ac0f8; --offset: -90; --value: 6.25;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #ffc732; --color6: #ffc732; --offset: -95; --value: 5.75;"></div>
+
+            <!-- CZ, MD, GE, AZ -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #1ac0f8; --color5: #1ac0f8; --color6: #fff; --color7: #1ac0f8; --offset: -100; --value: 6"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #fc0000; --color7: #01a95b; --offset: -104; --value: 5.75;"></div>
+
+            <!-- AT, RO, AM -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #0750c6; --color5: #0750c6; --color6: #fc0000; --offset: -110; --value: 6.25;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #ffc732; --color5: #ffc732; --color6: #0750c6; --offset: -116; --value: 6;"></div>
+
+            <!-- RS, BG, IL, AU -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #fff; --color5: #fff; --color6: #fff; --color7: #0750c6; --offset: -121; --value: 6;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #0750c6; --color2: #0750c6; --color3: #0750c6; --color4: #0750c6; --color5: #01a95b; --color6: #0750c6; --color7: #0750c6; --offset: -126; --value: 5.75;"></div>
+
+            <!-- SI, HR, MK, CY -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #fff; --color5: #fc0000; --color6: #ff8c33; --offset: -132; --value: 6;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #ffc832; --color6: #fff; --offset: -138; --value: 6;"></div>
+
+            <!-- IT, AL, GR -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fff; --color4: #fff; --color5: #fc0000; --color6: #fff; --offset: -143; --value: 6;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #0750c6; --offset: -148; --value: 6;"></div>
+
+            <!-- CH, SM, MT -->
+            <div class="slice-2021 hidden md:block" style="--color1: #fc0000; --color2: #fc0000; --color3: #fff; --color4: #fff; --color5: #fff; --color6: #fff; --offset: -153; --value: 6;"></div>
+            <div class="slice-2021 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #1ac0f8; --color4: #1ac0f8; --color5: #fc0000; --color6: #fc0000; --offset: -158; --value: 6;"></div>
+
+            <!-- grid filling -->
+            <div class="slice-2021" style="--color1: transparent; --offset: -164; --value: 6"></div>
+            <div class="slice-2021" style="--color1: transparent; --offset: -170; --value: 6"></div>
+            <div class="slice-2021" style="--color1: transparent; --offset: -175; --value: 6"></div>
+
+            <!-- 2020 -->
+            <div class="slice-2020" style="--color1: #0750c6; --color2: #fff; --color3: #fc0000; --offset: 0; --value: 16;"></div>
+            <div class="slice-2020" style="--color1: #01aa5a; --color2: #fff; --color3: #fc0000; --offset: 15; --value: 5;"></div>
+            <div class="slice-2020" style="--color1: #ffc832; --color2: #000; --color3: #fc0000; --offset: 19; --value: 9;"></div>
+            <div class="slice-2020" style="--color1: #0750c6; --color2: #fff; --color3: #fc0000; --offset: 27; --value: 13;"></div>
+            <div class="slice-2020" style="--color1: #0750c6; --color2: #ffc832; --color3: #0750c6; --offset: 39; --value: 5;"></div>
+
+            <div class="slice-2020" style="--color1: #fff; --color2: #0750c6; --color3: #fc0000; --offset: 47; --value: 5;"></div>
+            <div class="slice-2020" style="--color1: #1ac0f8; --color2: #fff; --color3: #fc0000; --offset: 51; --value: 5;"></div>
+            <div class="slice-2020" style="--color1: #1ac0f8; --color2: #fff; --color3: #ffc832; --offset: 55; --value: 5;"></div>
+            <div class="slice-2020" style="--color1: #01aa5a; --color2: #fc0000; --color3: #fc0000; --offset: 67; --value: 5;"></div>
+            <div class="slice-2020" style="--color1: #01aa5a; --color2: #fff; --color3: #ff8c32; --offset: 71; --value: 5;"></div>
+
+            <div class="slice-2020 hidden md:block" style="--color1: #fff; --color2: #fff; --color3: #fc0000; --offset: 103; --value: 5;"></div>
+
+            <div class="slice-2020 hidden md:block" style="--color1: #fff; --color2: #1ac0f8; --color3: #fff; --offset: 111; --value: 5;"></div>
+            <div class="slice-2020 hidden md:block" style="--color1: #0750c6; --color2: #fff; --color3: #0750c6; --offset: 115; --value: 5;"></div>
+
+            <div class="slice-2020 hidden md:block" style="--color1: #fff; --color2: #ff8c32; --color3: #fff; --offset: 147; --value: 5;"></div>
+
+            <div class="slice-2020 hidden md:block" style="--color1: #fff; --color2: #fc0000; --color3: #0750c6; --offset: 169; --value: 5;"></div>
+
+            <div class="absolute h-100 md:h-full aspect-1/2 top-0 left-0 overflow-hidden">
+              <div class="relative w-[200%] h-full overflow-hidden">
+                <div class="absolute top-[6.5%] left-[7%] size-[86.5%] border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-[14%] left-[14.5%] size-[72%] border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-[21.5%] left-[21.5%] size-[57%] border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-[28.5%] left-[28.5%] size-[42%] border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-[36.25%] left-[35.5%] size-[28%] border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-[43%] left-[43%] size-[14%] border-1 border-dashed border-white/50 rounded-full"></div>
+
+                <!-- <div class="absolute top-14 left-14 size-74 border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-21 left-21 size-61 border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-28 left-28 size-48 border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-35 left-35 size-35 border-1 border-dashed border-white/50 rounded-full"></div>
+                <div class="absolute top-42 left-42 size-22 border-1 border-dashed border-white/50 rounded-full"></div> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- css -->
+      <div id="esc-2021-logo-generator-css" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center">
+
+        <div class="absolute h-100 md:h-full aspect-1/2 bottom-0 left-0 overflow-hidden">
+          <div class="relative w-[200%] aspect-1/1 overflow-hidden">
+            <div class="absolute top-[16.6%] left-[-33%] size-[66%] border-1 border-dashed border-white/50 rounded-full"></div>
+            <div class="absolute bottom-[-16%] left-[-16%] size-[33%] border-1 border-dashed border-white/50 rounded-full"></div>
+            <!-- <div class="absolute bottom-[-33%] left-[-33%] size-[66%] border-1 border-dashed border-white/50 rounded-full"></div>
+            <div class="absolute bottom-[-16%] left-[-16%] size-[33%] border-1 border-dashed border-white/50 rounded-full"></div> -->
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
+
+          <div class="grow flex flex-col gap-3 md:justify-center overflow-hidden">
+            <div class="flex flex-col gap-3  overflow-hidden">
+              <div class="text-4xl font-bold text-right">Custom Slice Styling (CSS)</div>
+
+              <div class="md:w-[33%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3 text-right">
+                <p>I had previously recreated the logo of the 2020 contest, which was designed by the same team and follows a similar concept.</p>
+
+                <p>Making it work for this project would only require a few adjsutments.</p>
+
+                <a class="inline-flex gap-0.5 justify-end underline" href="https://codepen.io/CorentinDautreme/pen/PowpmVe">CSS Eurovision 2020 logo<i data-lucide="external-link" class="w-4"></i></a>
+              </div>
+            </div>
+          
+            <a class="md:max-w-40 md:mt-5 flex flex-col items-end text-right" href="#esc-2021-logo-generator-css">
+              <div class="flex items-center justify-end gap-1 text-white/50">
+                Next
+                <i data-lucide="arrow-right" class="w-5"></i>
+              </div>
+              <div class="max-w-40 text-base/5">
+                Custom Slice Styling (CSS)
+              </div>
+            </a>
+          </div>
+
+        </div>
 
       </div>
 
