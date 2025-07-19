@@ -186,7 +186,7 @@
         transform-origin: 50% 0;
       }
 
-      .slice-2021:nth-child(odd):before {
+      .slice-2021:nth-child(odd):before, .slice-2020:before {
           border-top: 1px dashed #a0a0a0;
       }
 
@@ -197,6 +197,16 @@
         overflow: hidden;
         transform: translate(0, -50%) rotate(90deg) rotate(calc(var(--offset, 0) * 1deg));
         transform-origin: 50% 100%;
+      }
+
+      .slice-2020:after {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        content: '';
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px dashed #d0d0d0;
       }
 
       .slice-2020:before {
@@ -927,7 +937,7 @@
       </div>
 
       <!-- overview -->
-      <div id="esc-2021-logo-generator-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 ps-10 py-15 justify-center overflow-y-clip">
+      <div id="esc-2021-logo-generator-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center overflow-y-clip">
 
         <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
 
@@ -1043,12 +1053,6 @@
                 <div class="absolute top-[28.5%] left-[28.5%] size-[42%] border-1 border-dashed border-white/50 rounded-full"></div>
                 <div class="absolute top-[36.25%] left-[35.5%] size-[28%] border-1 border-dashed border-white/50 rounded-full"></div>
                 <div class="absolute top-[43%] left-[43%] size-[14%] border-1 border-dashed border-white/50 rounded-full"></div>
-
-                <!-- <div class="absolute top-14 left-14 size-74 border-1 border-dashed border-white/50 rounded-full"></div>
-                <div class="absolute top-21 left-21 size-61 border-1 border-dashed border-white/50 rounded-full"></div>
-                <div class="absolute top-28 left-28 size-48 border-1 border-dashed border-white/50 rounded-full"></div>
-                <div class="absolute top-35 left-35 size-35 border-1 border-dashed border-white/50 rounded-full"></div>
-                <div class="absolute top-42 left-42 size-22 border-1 border-dashed border-white/50 rounded-full"></div> -->
               </div>
             </div>
           </div>
@@ -1058,21 +1062,19 @@
       </div>
 
       <!-- css -->
-      <div id="esc-2021-logo-generator-css" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center">
+      <div id="esc-2021-logo-generator-css" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center overflow-hidden">
 
-        <div class="absolute h-100 md:h-full aspect-1/2 bottom-0 left-0 overflow-hidden">
-          <div class="relative w-[200%] aspect-1/1 overflow-hidden">
-            <div class="absolute top-[16.6%] left-[-33%] size-[66%] border-1 border-dashed border-white/50 rounded-full"></div>
-            <div class="absolute bottom-[-16%] left-[-16%] size-[33%] border-1 border-dashed border-white/50 rounded-full"></div>
-            <!-- <div class="absolute bottom-[-33%] left-[-33%] size-[66%] border-1 border-dashed border-white/50 rounded-full"></div>
-            <div class="absolute bottom-[-16%] left-[-16%] size-[33%] border-1 border-dashed border-white/50 rounded-full"></div> -->
+        <div class="absolute -bottom-50 md:-bottom-0 -left-50 md:-left-0 h-100 md:h-full md:translate-x-[-50%] aspect-1/1 overflow-hidden">
+          <div class="relative w-full aspect-1/1 overflow-hidden">
+            <div class="absolute top-[16.6%] left-[16.6%] size-[66.6%] border-1 border-dashed border-white/50 rounded-full"></div>
+            <div class="absolute top-[33.3%] left-[33.3%] size-[33.3%] border-1 border-dashed border-white/50 rounded-full"></div>
           </div>
         </div>
 
         <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
 
           <div class="grow flex flex-col gap-3 md:justify-center overflow-hidden">
-            <div class="flex flex-col gap-3  overflow-hidden">
+            <div class="flex flex-col gap-3 md:items-end overflow-hidden">
               <div class="text-4xl font-bold text-right">Custom Slice Styling (CSS)</div>
 
               <div class="md:w-[33%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3 text-right">
@@ -1084,7 +1086,7 @@
               </div>
             </div>
           
-            <a class="md:max-w-40 md:mt-5 flex flex-col items-end text-right" href="#esc-2021-logo-generator-css">
+            <a class="md:mt-5 flex flex-col items-end text-right" href="#esc-2021-logo-generator-css">
               <div class="flex items-center justify-end gap-1 text-white/50">
                 Next
                 <i data-lucide="arrow-right" class="w-5"></i>
