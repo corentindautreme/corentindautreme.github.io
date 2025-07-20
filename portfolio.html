@@ -186,7 +186,7 @@
         transform-origin: 50% 0;
       }
 
-      .slice-2021:nth-child(odd):before, .slice-2020:before {
+      .slice-2021:nth-child(odd):not(.no-border):before, .slice-2020:before {
           border-top: 1px dashed #a0a0a0;
       }
 
@@ -206,7 +206,7 @@
         content: '';
         bottom: 0;
         left: 0;
-        border-bottom: 1px dashed #d0d0d0;
+        border-bottom: 1px dashed #a0a0a0;
       }
 
       .slice-2020:before {
@@ -1086,17 +1086,191 @@
               </div>
             </div>
           
-            <a class="md:mt-5 flex flex-col items-end text-right" href="#esc-2021-logo-generator-css">
+            <a class="md:mt-5 flex flex-col items-end text-right" href="#esc-2021-logo-generator-coordinates">
               <div class="flex items-center justify-end gap-1 text-white/50">
                 Next
                 <i data-lucide="arrow-right" class="w-5"></i>
               </div>
               <div class="max-w-40 text-base/5">
-                Custom Slice Styling (CSS)
+                Coordinates to slice
               </div>
             </a>
           </div>
 
+        </div>
+
+      </div>
+
+      <!-- coordinates -->
+      <div id="esc-2021-logo-generator-coordinates" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
+
+        <div class="h-full px-10 pt-15 md:pt-0 grow flex flex-col gap-3 md:justify-center overflow-hidden">
+          <div class="flex flex-col gap-3 overflow-hidden">
+            <div class="text-4xl font-bold">Coordinates to slice</div>
+
+            <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+              <p>Using CSS variables, slices can be dynamically generated given a center, by computing distance and angle between the center and each capital using their GPS coordinates.</p>
+            </div>
+          </div>
+          
+          <a class="z-1 md:max-w-40 md:mt-5 flex flex-col" href="#esc-2021-logo-generator-more">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="max-w-40 text-base/5">
+              To go further
+            </div>
+          </a>
+        </div>
+
+        <div class="relative flex flex-col gap-3 md:h-full justify-center md:aspect-1/1 px-5 md:pe-2">
+          <div class="flex flex-col">
+            <div class="flex items-center">
+              <div class="flex flex-col items-center flex-4/7">
+                <div class="hidden md:block">Brussels, BE</div>
+                <div class="block md:hidden">BE</div>
+                <div>1710.5km</div>
+              </div>
+              <div class="flex flex-col items-center flex-1/7">
+                <div class="hidden md:block">The Hague, NL</div>
+                <div class="block md:hidden">NL</div>
+                <div>163.5km</div>
+              </div>
+              <div class="flex flex-col items-center flex-2/7">
+                <div class="block md:hidden">NO</div>
+                <div class="hidden md:block">Oslo, NO</div>
+                <div>875.3km</div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="h-2 border-s-2 border-e-1 border-[#a0a0a0] flex-4/7"></div>
+              <div class="h-2 border-x-1 border-[#a0a0a0] flex-1/7"></div>
+              <div class="h-2 border-s-1 border-e-2 border-[#a0a0a0] flex-2/7"></div>
+            </div>
+            <div class="w-full border-t-2 border-[#a0a0a0]"></div>
+            <div class="flex items-center">
+              <div class="h-2 border-s-2 border-e-1 border-[#a0a0a0] flex-4/7"></div>
+              <div class="h-2 border-x-1 border-[#a0a0a0] flex-1/7"></div>
+              <div class="h-2 border-s-1 border-e-2 border-[#a0a0a0] flex-2/7"></div>
+            </div>
+          </div>
+          <div class="relative h-25 md:h-35 w-full flex items-center">
+            <div class="z-1 h-full flex flex-col items-center gap-1">
+              <div class="flex-1 flex items-start w-0 rounded-ss-lg border-s-3 border-[#a0a0a0]">
+                <div class="bg-[#a0a0a0] text-black font-bold px-2 rounded-e-lg md:text-2xl">Lisbon</div>
+              </div>
+              <div class="rounded-full size-3 bg-[#a0a0a0]"></div>
+              <div class="flex-1"></div>
+            </div>
+            <div class="absolute left-1.5 rounded-full w-[200%] aspect-1/1 top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <!-- filler before -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:4.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:14.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:24.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:34.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:44.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:54.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:64.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:74.5455; --value: 5.554545"></div>
+
+              <!-- BE, NL, NO -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--color1: #ffc832; --color2: #ffc832; --color3: #ffc832; --color4: #ffc832; --color5: #fff; --color6: #fc0000; --color7: #fc0000; --offset:84.745455; --value: 5.554545"></div>
+              <div class="slice-2021 before:border-t-2 before:border-dashed before:border-[#a0a0a0]" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #0750c6; --color7: #0750c6; --offset:89.7; --value: 5.654545"></div>
+              <!-- filler after -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:104.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:114.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:124.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:134.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:144.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:154.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:164.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:174.5455; --value: 5.554545"></div>
+
+              <!-- grid -->
+              <div class="absolute rounded-full w-[100%] aspect-1/1 overflow-hidden border-2 border-dashed border-[#a0a0a0]/30">
+                <div class="absolute top-[14%] left-[14.5%] size-[71.2%] border-2 border-dashed border-[#a0a0a0]/30 rounded-full"></div>
+                <div class="absolute top-[21.5%] left-[21.5%] size-[57.2%] border-2 border-dashed border-[#a0a0a0]/30 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- more -->
+      <div id="esc-2021-logo-generator-more" class="logo-bg snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+        <div class="md:hidden h-5"></div>
+        <div class="text-4xl font-bold">To go further</div>
+
+        <div class="flex flex-col md:flex-row gap-3 md:gap-0 md:justify-between overflow-hidden">
+
+          <div class="flex flex-col md:flex-row gap-1 md:gap-0 md:items-between overflow-hidden">
+
+            <div class="grow flex flex-col gap-3 overflow-y-scroll">
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="wand-sparkles"></i> The generator
+                </div>
+
+                <div class="flex md:flex-col flew-wrap gap-x-2">
+                  <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/esc-2021-generator/">Eurovision 2021 Logo Generator<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="lightbulb"></i> Other related CSS creations
+                </div>
+
+                <div class="flex flex-col">
+                  <a class="inline-flex gap-0.5 underline" href="https://codepen.io/CorentinDautreme/pen/MWjyjRv">CSS Eurovision 2021 logo<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://codepen.io/CorentinDautreme/pen/PowpmVe">CSS Eurovision 2020 logo<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="github"></i> Source
+                </div>
+
+                <div class="flex md:flex-col gap-x-2 flex-wrap">
+                  <a class="inline-flex gap-0.5 underline" href="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/esc-2021-generator.md">esc-2021-generator<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1 mt-2">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="newspaper"></i> Reading
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div>
+                    <a class="underline" href="https://corentindautreme.github.io/Making-A-2021-Eurovision-Logo-Generator/">Making a 2021 Eurovision logo generator</a><span class="ms-1 text-white/50">(december 2020)</span>
+                  </div>
+                  <div>
+                    <a class="underline" href="https://corentindautreme.github.io/Recreating-The-2021-Eurovision-Logo-Using-Css/">Recreating the 2021 Eurovision logo using CSS</a><span class="ms-1 text-white/50">(december 2020)</span>
+                  </div>
+                  <div>
+                    <a class="underline" href="https://corentindautreme.github.io/Recreating-The-2020-Eurovision-Logo-Using-Css/">Recreating the 2020 Eurovision logo using CSS</a><span class="ms-1 text-white/50">(april 2020)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#esc-2021-logo-generator-intro">
+            <div class="flex items-center gap-1 text-white/50">
+              <i data-lucide="arrow-left" class="w-5"></i>
+              Back to the start
+            </div>
+            <div class="text-right text-base/5">
+              ESC 2021 logo generator
+            </div>
+          </a>
         </div>
 
       </div>
