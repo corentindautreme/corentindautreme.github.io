@@ -91,13 +91,13 @@ permalink: /cv-pdf/
 
         @keyframes pop {
           0% {
-            transform: scale(1);
+            transform: scale(0.95);
           }
           50% {
-            transform: scale(1.05);
+            transform: scale(1);
           }
           100% {
-            transform: scale(1);
+            transform: scale(0.95);
           }
         }
       }
@@ -311,22 +311,23 @@ permalink: /cv-pdf/
     </div>
 
     <!-- home screen -->
-    <div id="home" class="section snap-start default-bg w-full h-[100dvh] p-10 flex flex-col">
-      <div class="grow"></div>
-      <div class="flex flex-col flex-[50%] justify-between">
-        <div class="flex flex-col gap-6">
-          <div class="text-4xl font-bold flex flex-col md:flex-row md:items-center w-full">
-            When I'm not working, I
-            <div class="relative md:ml-3 h-[1em] w-[200px] overflow-hidden">
-              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-amber-500">code</span>
-              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-emerald-500 [animation-delay:2s]">create</span>
-              <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-purple-500 [animation-delay:4s]">learn</span>
+    <div id="home" class="section snap-start default-bg w-full h-[100dvh] p-10 pt-20 flex flex-col">
+      <div class="flex flex-col flex-[50%] overflow-hidden">
+        <div class="grow overflow-hidden">
+          <div class="flex flex-col gap-6 h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
+            <div class="text-4xl font-bold flex flex-col md:flex-row md:items-center w-full">
+              When I'm not working, I
+              <div class="relative md:ml-3 h-[1em] w-[200px] overflow-hidden">
+                <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-amber-500">code</span>
+                <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-emerald-500 [animation-delay:2s]">create</span>
+                <span class="absolute h-full w-full -translate-y-full animate-slide leading-none text-purple-500 [animation-delay:4s]">learn</span>
+              </div>
             </div>
-          </div>
 
-          <div class="md:w-[33%] flex flex-col gap-3">
-            <p>I've made a thing or two over the years. Some to bring an idea to life, some to learn cool new stuff.</p>
-            <p>On this page, you can read a bit about some of them, check out some pretty screenshots, or even find links to online demos.</p>
+            <div class="md:w-[33%] flex flex-col gap-3">
+              <p>I've made a thing or two over the years. Some to bring an idea to life, some to learn cool new stuff.</p>
+              <p>On this page, you can read a bit about some of them, check out some pretty screenshots, or even find links to online demos.</p>
+            </div>
           </div>
         </div>
 
@@ -339,10 +340,10 @@ permalink: /cv-pdf/
     </div>
 
     <!-- lys -->
-    <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth overflow-y-hidden">
+    <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="lys-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+      <div id="lys-intro" class="snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
 
         <a class="mt-12 md:mt-8 w-fit" href="#home">
           <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
@@ -350,18 +351,16 @@ permalink: /cv-pdf/
           </div>
         </a>
 
-        <div class="flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
+        <div class="grow overflow-hidden flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
 
-          <div class="md:w-[40%] flex flex-col gap-2">
+          <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
             <div class="flex flex-row md:flex-col items-end md:items-start gap-3">
               <div class="text-4xl font-bold">Lys</div>
               <div class="flex items-center gap-1 rounded-lg bg-neutral-800 px-2 pb-0.5">
                 <div class="rounded-full bg-red-300 w-2 h-2 md:mt-0.5 animate-pulse"></div>
                 Live
               </div>
-            </div>
-
-            <div>
+            </div><div>
               A calendar-based <span class="font-black">Python</span> social media bot running on <span class="font-black">AWS</span>, and managed & monitored through a <span class="font-black">Next.js</span> webapp.
             </div>
 
@@ -390,7 +389,7 @@ permalink: /cv-pdf/
               </div>
             </div>
 
-            <div class="flex flex-col mt-1 text-sm md:text-base">
+            <div class="flex flex-col mt-1 text-sm md:text-base pb-5">
               <div class="flex items-center gap-2">
                 <i data-lucide="github" class="w-5"></i>
                 <div class="flex items-center gap-2">
@@ -410,7 +409,7 @@ permalink: /cv-pdf/
 
           </div>
 
-          <div class="hidden md:block grow h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
+          <div class="hidden md:block w-300 aspect-16/10 h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
           </div>
 
         </div>
@@ -430,13 +429,13 @@ permalink: /cv-pdf/
 
           <div class="md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-y-scroll">
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
 
-            <div class="md:w-[33%] flex flex-col gap-3">
+            <div class="md:w-[33%] flex flex-col gap-3 overflow-hidden">
 
               <div class="text-4xl font-bold">A Eurovision-flavored bot</div>
 
-              <div class="flex flex-col gap-3">
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8">
                 <p>Lys is a bot that publishes scheduled reminders about upcoming Eurovision national selection shows to social media. The reminders include the show's date and time, as well as links to watch it.</p>
 
                 <p>Launched on <a class="inline-flex gap-0.5 underline" href="https://x.com/EurovisionLys">Twitter<i data-lucide="external-link" class="w-4"></i></a> back in 2019, Lys has since found its way to <a class="inline-flex gap-0.5 underline" href="https://bsky.app/profile/eurovisionlys.bsky.social">Bluesky<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 underline" href="https://www.threads.com/@eurovisionlys">Threads<i data-lucide="external-link" class="w-4"></i></a>.</p>
@@ -444,7 +443,7 @@ permalink: /cv-pdf/
 
             </div>
 
-            <div class="hidden md:flex h-[75%] items-center justify-center">
+            <div class="hidden md:flex h-[75dvh] items-center justify-center">
               <div class="w-63 h-full relative overflow-hidden">
                 <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
                 <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
@@ -453,15 +452,15 @@ permalink: /cv-pdf/
                 <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
               </div>
             </div>
-            <div class="hidden md:flex md:hidden grow h-[75%] items-center justify-center">
+            <div class="hidden md:flex md:hidden grow h-[75dvh] items-center justify-center">
               <div class="w-63 h-full relative overflow-hidden">
                 <div class="w-full h-full absolute top-1 left-1 bg-black"></div>
                 <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
                 <div class="w-full h-full absolute m-0 -translate-x-full animate-slide-phone leading-none [animation-delay:3s] top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_threads_profile.png)]"></div>
               </div>
             </div>
-          </div>
 
+          </div>
 
           <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#lys-bot">
             <div class="flex items-center gap-1 text-white/50">
@@ -486,22 +485,30 @@ permalink: /cv-pdf/
       </div>
 
       <!-- bot -->
-      <div id="lys-bot" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+      <div id="lys-bot" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 pb-5 md:py-10 justify-center">
 
-        <div class="flex flex-col md:flex-row md:items-between">
+        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between py-12 md:py-0">
 
-          <div class="grow flex flex-col gap-3">
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden">
 
-            <div class="text-4xl font-bold">The AWS Python bot</div>
+            <div class="md:w-[33%] flex flex-col gap-3 justify-center-safe">
 
-            <div class="md:w-[33%] flex flex-col gap-3">
-              <p>At the core of the app is the bot itself. Lambdas, triggered on a schedule defined through CloudWatch Cron Triggers, read events from a DynamoDB table, then build & publish posts to social media via their public APIs.</p>
-              <p>The <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Python code base<i data-lucide="external-link" class="w-4"></i></a> is modular and makes it easy to support new platforms and customize posts.</p>
+              <div class="text-4xl font-bold">The AWS Python bot</div>
+
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-5">
+                <p>At the core of the app is the bot itself. Lambdas, triggered on a schedule defined through CloudWatch Cron Triggers, read events from a DynamoDB table, then build & publish posts to social media via their public APIs.</p>
+                <p>The <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Python code base<i data-lucide="external-link" class="w-4"></i></a> is modular and makes it easy to support new platforms and customize posts.</p>
+              </div>
+
+            </div>
+
+            <div class="hidden md:flex grow h-[75dvh] items-center justify-center">
+              <!-- TODO md illustration -->
             </div>
 
           </div>
 
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-fetcher">
+          <a class="md:max-w-40 flex flex-col items-end justify-center" href="#lys-fetcher">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -515,25 +522,38 @@ permalink: /cv-pdf/
       </div>
 
       <!-- event fetcher -->
-      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 p-10 justify-center">
+      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 pb-5 md:py-10 justify-center">
 
-        <div class="flex flex-col md:flex-row md:items-center">
-          <div class="md:w-[33%] flex flex-col gap-3">
+        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
 
-            <div class="text-4xl font-bold">The event fetcher</div>
+          <div class="md:hidden h-12 shrink-0"></div>
 
-            <div class="flex flex-col gap-3">
-              <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
-              <p>A nightly Python script parses the <a class="inline-flex gap-0.5 underline" href="https://eurovoix.com/">Eurovoix<i data-lucide="external-link" class="w-4"></i></a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually in the management app.</p>
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden">
+
+            <div class="md:w-[33%] flex flex-col gap-3">
+
+              <div class="text-4xl font-bold">The event fetcher</div>
+
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll mask-b-from-80% mask-b-to-100% pb-5">
+                <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
+                <p>A nightly Python script parses the <a class="inline-flex gap-0.5 underline" href="https://eurovoix.com/">Eurovoix<i data-lucide="external-link" class="w-4"></i></a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually in the management app.</p>
+              </div>
+
+            </div>
+
+            <div class="hidden md:flex grow h-[75dvh] items-center justify-center">
+              <div class="w-63 h-full relative">
+                <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher.png)]"></div>
+                <!-- phone frame -->
+                <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+                <!-- pop-out context card -->
+                <div class="animate-pop absolute top-[50%] left-[50%] -translate-y-1/3 -translate-x-1/2 w-[110%] aspect-5/4 rounded-xl bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher_context.png)] shadow-xl shadow-black/30 ring ring-black/30"></div>
+              </div>
             </div>
 
           </div>
 
-          <div class="grow hidden md:flex items-center justify-center">
-            <div class="h-[80dvh] aspect-[17/37] rounded-lg ring-10 ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_ter_light.png)]"></div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-manager">
+          <a class="md:max-w-40 flex flex-col items-end justify-center" href="#lys-manager">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -542,6 +562,10 @@ permalink: /cv-pdf/
               The management app
             </div>
           </a>
+
+          <div class="md:hidden h-45 shrink-0 flex justify-center mt-1">
+              <div class="animate-pop h-full aspect-5/4 rounded-xl bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher_context.png)] shadow-xl shadow-black/30 ring ring-black/30"></div>
+          </div>
 
         </div>
       </div>
@@ -552,70 +576,74 @@ permalink: /cv-pdf/
         <div class="md:hidden w-5">
         </div>
 
-        <div class="h-full w-full flex flex-col md:flex-row md:gap-20 md:items-center justify-center">
+        <div class="h-full w-full flex flex-col md:flex-row md:gap-20 md:items-center justify-center py-12 md:py-0">
+
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden">
           
-          <div class="md:w-[33%] flex flex-col gap-3">
+            <div class="md:w-[33%] flex flex-col gap-3 justify-center-safe">
 
-            <div class="text-4xl font-bold">The management app</div>
+              <div class="text-4xl font-bold">The management app</div>
 
-            <div class="flex flex-col gap-3">
-              <p>Initially a native Kotlin app for Android, the Lys management application was later rewritten from scratch as a 100% responsive <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Next.js webapp<i data-lucide="external-link" class="w-4"></i></a>.</p>
-              <p>It relies on the v3 of the AWS Javascript SDK to offer data read/write and monitoring tools.</p>
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll mask-b-from-80% mask-b-to-100% pb-8">
+                <p>Initially a native Kotlin app for Android, the Lys management application was later rewritten from scratch as a 100% responsive <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Next.js webapp<i data-lucide="external-link" class="w-4"></i></a>.</p>
+                <p>It relies on the v3 of the AWS Javascript SDK to offer data read/write and monitoring tools.</p>
+              </div>
+
+            </div>
+
+            <div class="hidden md:flex gap-2 items-center justify-center grow h-full">
+                <div class="w-[50%] h-full relative overflow-hidden flex flex-col gap-2">
+                  <div class="animate-carousel-up flex flex-col gap-2">
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_calendar_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_ter_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
+                  </div>
+
+                  <div class="animate-carousel-up flex flex-col gap-2">
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_calendar_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_ter_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
+                  </div>
+                </div>
+
+                <div class="w-[50%] h-full relative overflow-hidden flex flex-col gap-2">
+                  <div class="animate-carousel-down flex flex-col gap-2">
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
+                  </div>
+
+                  <div class="animate-carousel-down flex flex-col gap-2">
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
+
+                    <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
+                  </div>
+                </div>
             </div>
 
           </div>
 
-          <div class="hidden md:flex gap-2 items-center justify-center grow h-full">
-              <div class="w-[50%] h-full relative overflow-hidden flex flex-col gap-2">
-                <div class="animate-carousel-up flex flex-col gap-2">
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_calendar_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_ter_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
-                </div>
-
-                <div class="animate-carousel-up flex flex-col gap-2">
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_calendar_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_ter_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_logs_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestions_dark.png)]"></div>
-                </div>
-              </div>
-
-              <div class="w-[50%] h-full relative overflow-hidden flex flex-col gap-2">
-                <div class="animate-carousel-down flex flex-col gap-2">
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
-                </div>
-
-                <div class="animate-carousel-down flex flex-col gap-2">
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_referential_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_country_dark.png)]"></div>
-
-                  <div class="w-full aspect-[17/37] rounded-lg inset-ring-3 inset-ring-gray-700 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_suggestion_quater_dark.png)]"></div>
-                </div>
-              </div>
-          </div>
-
-          <a class="md:max-w-40 mt-5 md:mt-0 flex flex-col items-end justify-center" href="#lys-manager-2">
+          <a class="md:max-w-40 flex flex-col items-end justify-center" href="#lys-manager-2">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -739,7 +767,7 @@ permalink: /cv-pdf/
 
           <div class="flex flex-col md:flex-row gap-1 md:gap-0 md:items-between overflow-hidden">
 
-            <div class="grow flex flex-col gap-3 overflow-y-scroll">
+            <div class="grow flex flex-col gap-3 overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-7">
 
               <div class="flex flex-col gap-1">
                 <div class="flex items-center gap-1 font-bold">
@@ -818,7 +846,7 @@ permalink: /cv-pdf/
     <div id="transit-planner" class="tp-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="transit-planner-intro" class="snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+      <div id="transit-planner-intro" class="snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
 
         <a class="mt-12 md:mt-8 w-fit" href="#lys">
           <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
@@ -826,9 +854,9 @@ permalink: /cv-pdf/
           </div>
         </a>
 
-        <div class="flex flex-col md:flex-row md:items-between">
+        <div class="grow overflow-hidden flex flex-col md:flex-row md:items-between">
 
-          <div class="grow flex flex-col gap-2">
+          <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-5 flex flex-col gap-2 justify-center-safe">
             <div class="text-4xl font-bold">Transit planner</div>
 
             <div class="md:w-[33%]">
@@ -892,7 +920,7 @@ permalink: /cv-pdf/
     <div id="esc-2021-logo-generator" class="bg-neutral-900 section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="esc-2021-logo-generator-intro" class="logo-bg snap-start w-full h-full flex flex-col justify-between shrink-0 p-5 md:p-10">
+      <div id="esc-2021-logo-generator-intro" class="logo-bg snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
 
         <a class="mt-12 md:mt-8 w-fit" href="#transit-planner">
           <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
@@ -900,9 +928,9 @@ permalink: /cv-pdf/
           </div>
         </a>
 
-        <div class="flex flex-col md:flex-row md:items-center md:gap-10">
+        <div class="grow overflow-hidden flex flex-col md:flex-row md:items-center md:gap-10">
 
-          <div class="grow flex flex-col gap-3">
+          <div class="h-full grow overflow-hidden overflow-y-scroll mask-b-from-85% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
             <div class="text-4xl font-bold">ESC 2021 logo generator</div>
 
             <div>
@@ -938,7 +966,7 @@ permalink: /cv-pdf/
 
           </div>
 
-          <div class="hidden md:block rounded-xl ring-10 ring-[#a0a0a0] w-300 aspect-16/10 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc-2021-logo-generator-intro.png)]"></div>
+          <div class="hidden md:block rounded-xl ring-10 ring-[#a0a0a0] me-5 h-[90%] aspect-16/10 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc-2021-logo-generator-intro.png)]"></div>
 
         </div>
 
@@ -959,7 +987,7 @@ permalink: /cv-pdf/
             <div class="flex flex-col gap-3 overflow-hidden">
               <div class="text-4xl font-bold">A data-based logo</div>
 
-              <div class="md:w-[33%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+              <div class="z-1 mask-b-from-85% mask-b-to-100% pb-8 md:w-[33%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
                 <p>The logo of the 2021 Eurovision Song Contest was algorithmically designed by <a class="inline-flex gap-0.5 underline" href="https://www.cleverfranke.com/project/eurovision">CLEVER ° FRANKE<i data-lucide="external-link" class="w-4"></i></a>. It represents the distance between the host city, Rotterdam, and the capital of each participating country.</p>
 
                 <p>I found this ridiculously cool and clever, and wanted to see if it could be programatically recreated.</p>
@@ -1093,7 +1121,7 @@ permalink: /cv-pdf/
             <div class="flex flex-col gap-3 items-end md:items-start overflow-hidden">
               <div class="text-4xl font-bold text-right md:text-start">Custom Slice Styling (CSS)</div>
 
-              <div class="md:w-[50%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3 text-right md:text-start">
+              <div class="z-1 mask-b-from-85% mask-b-to-100% pb-8 md:w-[50%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3 text-right md:text-start">
                 <p>I had previously recreated the logos of the <a class="inline-flex gap-0.5 justify-end underline" href="https://codepen.io/CorentinDautreme/pen/MWjyjRv">2021<i data-lucide="external-link" class="w-4"></i></a> and <a class="inline-flex gap-0.5 justify-end underline" href="https://codepen.io/CorentinDautreme/pen/PowpmVe">2020<i data-lucide="external-link" class="w-4"></i></a> contests (both designed by the same team and following a similar concept).</p>
 
                 <p>Making it work for this project would only require a few adjsutments.</p>
@@ -1123,7 +1151,7 @@ permalink: /cv-pdf/
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
             <div class="text-4xl font-bold">Computing distances</div>
 
-            <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+            <div class="mask-b-from-85% mask-b-to-100% pb-8 md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
               <p>The goal of this project is to generate alternative 2021 logos, using any city as the center.</p>
               <p>For that, we first need to compute angles and distances between the selected city and all others - which we can do using GPS coordinates.</p>
               <p>We then group cities by angle ranges - or "slices". For example, from Lisbon, Portugal we can group Brussels, Amsterdam, and Oslo within a single slice at ~40°.</p>
@@ -1141,22 +1169,10 @@ permalink: /cv-pdf/
           </a>
         </div>
 
-        <!-- <div class="relative flex flex-col gap-3 md:h-full justify-center md:aspect-1/1 px-5 md:pe-2"> -->
         <div class="relative flex flex-col gap-3 md:h-full justify-end md:aspect-1/1 px-5 md:pe-2">
-          <!-- <div class="relative h-25 md:h-35 w-full flex items-center"> -->
           <div class="relative md:h-full h-40 aspect-1/1 pb-1.5 flex items-end">
-            <!-- <div class="z-1 h-full flex flex-col items-center gap-1 translate-y-[-30%]"> -->
-            <div class="z-1 flex items-end gap-1">
-              <!-- <div class="flex-1 flex items-start w-0 rounded-ss-lg border-s-3 border-[#a0a0a0]">
-                <div class="bg-[#a0a0a0] text-black font-bold px-2 rounded-e-lg md:text-2xl">Lisbon</div>
-              </div> -->
-              <!-- <div class="rounded-full size-3 bg-[#a0a0a0]"></div> -->
-              <!-- <div class="flex-1"></div> -->
-            </div>
-            <!-- <div class="absolute left-1.5 rounded-full w-[200%] aspect-1/1 top-[0%] translate-x-[-50%] translate-y-[-30%]"> -->
             <div class="absolute left-1.5 -top-3 rounded-full w-[150%] md:w-[200%] aspect-1/1 translate-x-[-50%] translate-y-[-12%] md:translate-y-0">
               <!-- Lisbon -->
-              <!-- <div style="/*bottom: 50%;left: 50%;transform: translate(-50%, 50%);*/" class="absolute bottom-[50%] left-[50%] -translate-x-1/2 translate-y-1/2 rounded-full size-3 bg-[#a0a0a0]"></div> -->
               <div class="z-1 absolute bottom-[49.85%] left-[50%] -translate-x-1.5 translate-y-1 flex items-end gap-x-2">
                 <div class="relative rounded-full size-3 bg-[#a0a0a0]">
                   <div class="absolute top-0 left-0 animate-ping rounded-full size-3 bg-[#a0a0a0]"></div>
@@ -1231,7 +1247,7 @@ permalink: /cv-pdf/
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
             <div class="text-4xl font-bold">Coordinates to slice</div>
 
-            <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+            <div class="mask-b-from-80% mask-b-to-100% pb-8 md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
               <p>Using CSS variables, slices can be dynamically configured with normalized values of the computed distances and angles.</p>
               <p>GPS coordinates are hardcoded, and the generator simply regenerates all slices on the fly when a city is selected.</p>
             </div>
@@ -1251,17 +1267,17 @@ permalink: /cv-pdf/
         <div class="relative flex flex-col gap-3 md:h-full justify-center md:aspect-1/1 px-5 md:pe-2">
           <div class="flex flex-col">
             <div class="flex items-center">
-              <div class="flex flex-col items-center flex-4/7">
+              <div class="flex flex-col items-center flex-4/7 text-center">
                 <div class="hidden md:block">Brussels, BE</div>
                 <div class="block md:hidden">BE</div>
                 <div class="text-sm md:text-base">1710.5km</div>
               </div>
-              <div class="flex flex-col items-center flex-1/7">
+              <div class="flex flex-col items-center flex-1/7 text-center">
                 <div class="hidden md:block">Amsterdam, NL</div>
                 <div class="block md:hidden">NL</div>
                 <div class="text-sm md:text-base">+163.5km</div>
               </div>
-              <div class="flex flex-col items-center flex-2/7">
+              <div class="flex flex-col items-center flex-2/7 text-center">
                 <div class="block md:hidden">NO</div>
                 <div class="hidden md:block">Oslo, NO</div>
                 <div class="text-sm md:text-base">+875.3km</div>
@@ -1334,7 +1350,7 @@ permalink: /cv-pdf/
 
           <div class="flex flex-col md:flex-row gap-1 md:gap-0 md:items-between overflow-hidden">
 
-            <div class="grow flex flex-col gap-3 overflow-y-scroll">
+            <div class="grow flex flex-col gap-3 overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-7">
 
               <div class="flex flex-col gap-1">
                 <div class="flex items-center gap-1 font-bold">
