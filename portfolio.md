@@ -955,7 +955,7 @@ permalink: /cv-pdf/
 
         <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
 
-          <div class="grow flex flex-col gap-3 md:justify-center overflow-hidden">
+          <div class="grow flex flex-col gap-3 justify-center overflow-hidden">
             <div class="flex flex-col gap-3 overflow-hidden">
               <div class="text-4xl font-bold">A data-based logo</div>
 
@@ -1089,7 +1089,7 @@ permalink: /cv-pdf/
 
           <div class="hidden md:block h-[100dvh] aspect-1/2"></div>
 
-          <div class="grow flex flex-col gap-3 md:justify-center overflow-hidden">
+          <div class="grow flex flex-col gap-3 justify-center overflow-hidden">
             <div class="flex flex-col gap-3 items-end md:items-start overflow-hidden">
               <div class="text-4xl font-bold text-right md:text-start">Custom Slice Styling (CSS)</div>
 
@@ -1101,13 +1101,13 @@ permalink: /cv-pdf/
               </div>
             </div>
           
-            <a class="z-1 md:mt-5 flex flex-col items-end md:items-start text-right md:text-start" href="#esc-2021-logo-generator-coordinates">
+            <a class="z-1 md:mt-5 flex flex-col items-end md:items-start text-right md:text-start" href="#esc-2021-logo-generator-gps">
               <div class="flex items-center justify-end md:justify-start gap-1 text-white/50">
                 Next
                 <i data-lucide="arrow-right" class="w-5"></i>
               </div>
               <div class="max-w-30 md:max-w-40 text-base/5">
-                Coordinates to slice
+                Computing distances and angles
               </div>
             </a>
           </div>
@@ -1116,15 +1116,99 @@ permalink: /cv-pdf/
 
       </div>
 
-      <!-- coordinates -->
-      <div id="esc-2021-logo-generator-coordinates" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
+      <!-- coordinates to distance -->
+      <div id="esc-2021-logo-generator-gps" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
 
-        <div class="h-full px-10 pt-15 md:pt-0 grow flex flex-col gap-3 md:justify-center overflow-hidden">
+        <div class="h-full px-10 pt-15 md:pt-0 grow flex flex-col gap-3 justify-center overflow-hidden">
+          <div class="z-2 flex flex-col gap-3 overflow-hidden">
+            <div class="text-4xl font-bold">Computing distances and angles</div>
+
+            <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
+              <p>To determine the angle of each slice, as well as the length of their segments, we make use of the GPS coordinates of the cities.</p>
+              <p>Taking Lisbon, Portugal as an example, we can for example derive a slice at ~40° that wraps Brussels, Belgium; Amsterdam, The Netherlands; and Oslo, Norway.</p>
+            </div>
+          </div>
+          
+          <a class="z-1 md:mt-5 flex flex-col items-end md:items-start text-right md:text-start" href="#esc-2021-logo-generator-slices">
+            <div class="flex items-center justify-end md:justify-start gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="max-w-30 md:max-w-40 text-base/5">
+              Coordinates to slice
+            </div>
+          </a>
+        </div>
+
+        <!-- <div class="relative flex flex-col gap-3 md:h-full justify-center md:aspect-1/1 px-5 md:pe-2"> -->
+        <div class="relative flex flex-col gap-3 md:h-full justify-end md:aspect-1/1 px-5 md:pe-2">
+          <!-- <div class="relative h-25 md:h-35 w-full flex items-center"> -->
+          <div class="relative md:h-full h-40 aspect-1/1 pb-1.5 flex items-end">
+            <!-- <div class="z-1 h-full flex flex-col items-center gap-1 translate-y-[-30%]"> -->
+            <div class="z-1 flex items-end gap-1">
+              <!-- <div class="flex-1 flex items-start w-0 rounded-ss-lg border-s-3 border-[#a0a0a0]">
+                <div class="bg-[#a0a0a0] text-black font-bold px-2 rounded-e-lg md:text-2xl">Lisbon</div>
+              </div> -->
+              <!-- <div class="rounded-full size-3 bg-[#a0a0a0]"></div> -->
+              <!-- <div class="flex-1"></div> -->
+            </div>
+            <!-- <div class="absolute left-1.5 rounded-full w-[200%] aspect-1/1 top-[0%] translate-x-[-50%] translate-y-[-30%]"> -->
+            <div class="absolute left-1.5 -top-3 rounded-full w-[150%] md:w-[200%] aspect-1/1 translate-x-[-50%] translate-y-[-12%] md:translate-y-0">
+              <!-- Lisbon -->
+              <div style="/*bottom: 50%;left: 50%;transform: translate(-50%, 50%);*/" class="absolute bottom-[50%] left-[50%] -translate-x-1/2 translate-y-1/2 rounded-full size-3 bg-[#a0a0a0]"></div>
+              <!-- Brussels -->
+              <div class="absolute bottom-[70%] left-[68%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+              <!-- Amsterdam -->
+              <div class="absolute bottom-[75%] left-[70%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+              <!-- Oslo -->
+              <div class="absolute bottom-[88%] left-[79%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+
+              <!-- gradient overlay -->
+              <div class="md:hidden z-1 w-[200%] aspect-1/1 absolute h-30 left-0 bg-linear-to-b from-neutral-900 from-0% to-transparent to-60%"></div>
+
+              <!-- filler before -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:4.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:14.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:24.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--offset:34.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--offset:44.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:54.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:64.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:74.5455; --value: 5.554545"></div>
+
+              <!-- BE, NL, NO -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:84.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:94.5455; --value: 5.554545"></div>
+              <!-- filler after -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:104.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:114.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:124.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:134.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:144.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:154.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:164.5455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:174.5455; --value: 5.554545"></div>
+
+              <!-- grid -->
+              <div class="absolute rounded-full w-[100%] aspect-1/1 overflow-hidden border-2 border-dashed border-[#a0a0a0]/30">
+                <div class="absolute top-[14%] left-[14.25%] size-[71.5%] border-2 border-dashed border-[#a0a0a0]/30 rounded-full"></div>
+                <div class="absolute top-[21.5%] left-[21.5%] size-[57.2%] border-2 border-dashed border-[#a0a0a0]/30 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- coordinates to slice -->
+      <div id="esc-2021-logo-generator-slices" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
+
+        <div class="h-full px-10 pt-15 md:pt-0 grow flex flex-col gap-3 justify-center overflow-hidden">
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
             <div class="text-4xl font-bold">Coordinates to slice</div>
 
             <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
-              <p>Using CSS variables, slices can be dynamically generated given a center, by computing distance and angle between the center and each capital using their GPS coordinates.</p>
+              <p>Using CSS variables, slices can be dynamically generated, by normalizing the computed distances and angles.</p>
             </div>
           </div>
           
@@ -1140,9 +1224,6 @@ permalink: /cv-pdf/
         </div>
 
         <div class="relative flex flex-col gap-3 md:h-full justify-center md:aspect-1/1 px-5 md:pe-2">
-          <!-- gradient overlays -->
-          <div class="md:hidden z-1 absolute w-full h-50 top-[-100%] md:top-0 left-0 bg-linear-to-b from-neutral-900 from-0% to-transparent to-200%"></div>
-
           <div class="flex flex-col">
             <div class="flex items-center">
               <div class="flex flex-col items-center flex-4/7">
@@ -1182,6 +1263,8 @@ permalink: /cv-pdf/
               <div class="flex-1"></div>
             </div>
             <div class="absolute left-1.5 rounded-full w-[200%] aspect-1/1 top-[50%] translate-x-[-50%] translate-y-[-50%]">
+              <!-- gradient overlay -->
+              <div class="md:hidden z-1 w-[200%] aspect-1/1 absolute h-30 left-0 bg-linear-to-b from-neutral-900 from-70% to-transparent to-100%"></div>
 
               <!-- filler before -->
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:4.5455; --value: 5.554545"></div>
@@ -1194,8 +1277,8 @@ permalink: /cv-pdf/
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:74.5455; --value: 5.554545"></div>
 
               <!-- BE, NL, NO -->
-              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--color1: #ffc832; --color2: #ffc832; --color3: #ffc832; --color4: #ffc832; --color5: #fff; --color6: #fc0000; --color7: #fc0000; --offset:84.745455; --value: 5.554545"></div>
-              <div class="slice-2021 before:border-t-2 before:border-dashed before:border-[#a0a0a0]/30" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #0750c6; --color7: #0750c6; --offset:89.7; --value: 5.654545"></div>
+              <div class="slice-2021 border-b-2 border-dashed border-[#a0a0a0]/30" style="--color1: #ffc832; --color2: #ffc832; --color3: #ffc832; --color4: #ffc832; --color5: #fff; --color6: #fc0000; --color7: #fc0000; --offset:84.745455; --value: 5.554545"></div>
+              <div class="slice-2021 no-border before:border-t-2 before:border-dashed before:border-[#a0a0a0]/30" style="--color1: #fc0000; --color2: #fc0000; --color3: #fc0000; --color4: #fc0000; --color5: #fc0000; --color6: #0750c6; --color7: #0750c6; --offset:89.7; --value: 5.654545"></div>
               <!-- filler after -->
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:104.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:114.5455; --value: 5.554545"></div>
@@ -1302,3 +1385,4 @@ permalink: /cv-pdf/
     </script>
   </body>
 </html>
+
