@@ -1107,7 +1107,7 @@ permalink: /cv-pdf/
                 <i data-lucide="arrow-right" class="w-5"></i>
               </div>
               <div class="max-w-30 md:max-w-40 text-base/5">
-                Computing distances and angles
+                Computing distances
               </div>
             </a>
           </div>
@@ -1121,11 +1121,12 @@ permalink: /cv-pdf/
 
         <div class="h-full px-10 pt-15 md:pt-0 grow flex flex-col gap-3 justify-center overflow-hidden">
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
-            <div class="text-4xl font-bold">Computing distances and angles</div>
+            <div class="text-4xl font-bold">Computing distances</div>
 
             <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
-              <p>To determine the angle of each slice, as well as the length of their segments, we make use of the GPS coordinates of the cities.</p>
-              <p>Taking Lisbon, Portugal as an example, we can for example derive a slice at ~40° that wraps Brussels, Belgium; Amsterdam, The Netherlands; and Oslo, Norway.</p>
+              <p>The goal of this project is to generate alternative 2021 logos, using any city as the center.</p>
+              <p>For that, we first need to compute angles and distances between the selected city and all others - which we can do using GPS coordinates.</p>
+              <p>We then group cities by angle ranges - or "slices". For example, from Lisbon, Portugal we can group Brussels, Amsterdam, and Oslo within a single slice at ~40°.</p>
             </div>
           </div>
           
@@ -1155,13 +1156,37 @@ permalink: /cv-pdf/
             <!-- <div class="absolute left-1.5 rounded-full w-[200%] aspect-1/1 top-[0%] translate-x-[-50%] translate-y-[-30%]"> -->
             <div class="absolute left-1.5 -top-3 rounded-full w-[150%] md:w-[200%] aspect-1/1 translate-x-[-50%] translate-y-[-12%] md:translate-y-0">
               <!-- Lisbon -->
-              <div style="/*bottom: 50%;left: 50%;transform: translate(-50%, 50%);*/" class="absolute bottom-[50%] left-[50%] -translate-x-1/2 translate-y-1/2 rounded-full size-3 bg-[#a0a0a0]"></div>
+              <!-- <div style="/*bottom: 50%;left: 50%;transform: translate(-50%, 50%);*/" class="absolute bottom-[50%] left-[50%] -translate-x-1/2 translate-y-1/2 rounded-full size-3 bg-[#a0a0a0]"></div> -->
+              <div class="z-1 absolute bottom-[49.85%] left-[50%] -translate-x-1.5 translate-y-1 flex items-end gap-x-2">
+                <div class="relative rounded-full size-3 bg-[#a0a0a0]">
+                  <div class="absolute top-0 left-0 animate-ping rounded-full size-3 bg-[#a0a0a0]"></div>
+                </div>
+                <div class="rounded-lg bg-[#a0a0a0] px-1 text-black">Lisbon</div>
+              </div>
+
               <!-- Brussels -->
-              <div class="absolute bottom-[70%] left-[68%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+              <div class="z-1 absolute bottom-[68.5%] left-[67%] flex items-center gap-x-2">
+                <div class="relative rounded-full size-2 bg-[#a0a0a0]">
+                  <div class="absolute top-0 left-0 animate-ping rounded-full size-2 bg-[#a0a0a0]"></div>
+                </div>
+                <div class="rounded-lg bg-[#a0a0a0] px-1 text-black text-xs md:text-base">Brussels</div>
+              </div>
+
               <!-- Amsterdam -->
-              <div class="absolute bottom-[75%] left-[70%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+              <div class="z-1 absolute bottom-[73.5%] left-[69.5%] flex items-center gap-x-2">
+                <div class="relative rounded-full size-2 bg-[#a0a0a0]">
+                  <div class="absolute top-0 left-0 animate-ping rounded-full size-2 bg-[#a0a0a0]"></div>
+                </div>
+                <div class="rounded-lg bg-[#a0a0a0] px-1 text-black text-xs md:text-base">Amsterdam</div>
+              </div>
+
               <!-- Oslo -->
-              <div class="absolute bottom-[88%] left-[79%] -translate-x-1/2 translate-y-1/2 rounded-full size-2 bg-[#a0a0a0]"></div>
+              <div class="z-1 absolute bottom-[87.25%] left-[78.75%] flex items-center gap-x-2">
+                <div class="relative rounded-full size-2 bg-[#a0a0a0]">
+                  <div class="absolute top-0 left-0 animate-ping rounded-full size-2 bg-[#a0a0a0]"></div>
+                </div>
+                <div class="rounded-lg bg-[#a0a0a0] px-1 text-black text-xs md:text-base">Oslo</div>
+              </div>
 
               <!-- gradient overlay -->
               <div class="md:hidden z-1 w-[200%] aspect-1/1 absolute h-30 left-0 bg-linear-to-b from-neutral-900 from-0% to-transparent to-60%"></div>
@@ -1170,16 +1195,15 @@ permalink: /cv-pdf/
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:4.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:14.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:24.5455; --value: 5.554545"></div>
-              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--offset:34.5455; --value: 5.554545"></div>
+              <!-- highlight the target slice -->
+              <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--color1: #a0a0a020; --color2: #a0a0a020; --color3: #a0a0a020; --color4: #a0a0a020; --color5: #a0a0a020; --color6: #a0a0a020; --color7: #a0a0a020; --offset:34.5455; --value: 10"></div>
+              <!-- filler after -->
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]" style="--offset:44.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:54.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:64.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:74.5455; --value: 5.554545"></div>
-
-              <!-- BE, NL, NO -->
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:84.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:94.5455; --value: 5.554545"></div>
-              <!-- filler after -->
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:104.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:114.5455; --value: 5.554545"></div>
               <div class="slice-2021 no-border border-b-2 border-dashed border-[#a0a0a0]/30" style="--offset:124.5455; --value: 5.554545"></div>
@@ -1208,7 +1232,8 @@ permalink: /cv-pdf/
             <div class="text-4xl font-bold">Coordinates to slice</div>
 
             <div class="md:w-[60%] grow overflow-hidden overflow-y-scroll flex flex-col gap-3">
-              <p>Using CSS variables, slices can be dynamically generated, by normalizing the computed distances and angles.</p>
+              <p>Using CSS variables, slices can be dynamically configured with normalized values of the computed distances and angles.</p>
+              <p>GPS coordinates are hardcoded, and the generator simply regenerates all slices on the fly when a city is selected.</p>
             </div>
           </div>
           
@@ -1385,4 +1410,3 @@ permalink: /cv-pdf/
     </script>
   </body>
 </html>
-
