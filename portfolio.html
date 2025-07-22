@@ -12,6 +12,8 @@
         --animate-carousel-up: carousel-up 40s linear infinite;
         --animate-carousel-down: carousel-down 40s linear infinite;
         --animate-pop: pop 3s ease-in-out infinite;
+        --animate-tram-right: tram-right 10s linear infinite;
+        --animate-soft-bounce: soft-bounce 3s infinite;
 
         @keyframes pulse {
           50% {
@@ -93,6 +95,42 @@
           100% {
             transform: scale(0.95);
           }
+        }
+
+        @keyframes tram-right {
+            0% {
+                transform: translateX(-97%);
+            }
+            100% {
+                transform: translateX(97%);
+            }
+        }
+
+        /*@keyframes soft-bounce {
+          0%, 100% {
+            transform: translateY(-5%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          }
+          50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          }
+        }*/
+
+        @keyframes soft-bounce {
+            0%{transform: translateY(0px)}
+            25%{transform: translateY(1px)}
+            27%{transform: translateY(3px)}
+            29%{transform: translateY(5px)}
+            31%{transform: translateY(3px)}
+            33%{transform: translateY(1px)}
+            35%{transform: translateY(0px)}
+            50%{transform: translateY(1px)}
+            52%{transform: translateY(3px)}
+            54%{transform: translateY(5px)}
+            56%{transform: translateY(3px)}
+            59%{transform: translateY(1px)}
+            60%{transform: translateY(0px)}
         }
       }
     </style>
@@ -907,32 +945,141 @@
       </div>
 
       <!-- overview -->
-      <div id="transit-planner-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
-        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
+      <div id="transit-planner-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 justify-center md:p-10">
+        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
 
           <div class="md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden px-10 md:px-0">
 
-            <div class="md:w-[33%] flex flex-col gap-3 overflow-hidden">
+            <div class="md:h-full md:w-[33%] flex flex-col gap-3 overflow-hidden justify-center-safe">
 
               <div class="text-4xl font-bold">Getting around Sarajevo</div>
 
-              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8">
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8 mask-b-from-80% mask-b-to-100%">
                 <p>I got the idea for this project shortly after moving to Sarajevo. The city is served by a competent transport network, but it sadly lacks a centralized app that provides all sorts of information (line routes, departures, etc.).</p>
 
-                <p>Since I was looking for an excuse to try my hand at Node.js backend development, I thought I'd give making such an app, or at least a technical demo for it, a go.</p>
+                <p>Since I was looking for an excuse to try my hand at Node.js backend development, I thought I'd give making such an app a go.</p>
               </div>
 
             </div>
 
-            <div class="hidden md:flex h-[75dvh] items-center justify-center">
+            <div class="hidden md:flex md:grow h-[75dvh] items-center">
+              <div class="relative w-full flex items-end justify-between">
+
+                <div class="absolute size-full">
+                  <div class="absolute left-1/10 top-1/2 -translate-y-1/2 h-[150%] aspect-1/1 rounded-full bg-yellow-600"></div>
+                </div>
+
+                <div class="absolute left-1/2 -translate-x-1/2 w-[90%] h-full overflow-hidden">
+                  <div class="relative size-full">
+                    <div class="absolute bottom-0 flex items-end animate-soft-bounce h-full">
+                      <svg viewBox="0 0 490 93" width="auto" height="50%" class="animate-tram-right" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Tram body with rounded corners and sloped ends -->
+                        <path d="M5,91 Q10,31 25,31 H468 Q478,31 481,91 Z" fill="gold" stroke="black" stroke-width="2" />
+
+                        <!-- Tram roof reflection -->
+                        <rect x="20" y="33" width="450" height="4" fill="rgba(255,255,255,0.3)" rx="4" />
+
+                        <!-- Windows (upper half only) with black outline -->
+                        <g fill="black" stroke="black" stroke-width="2">
+                          <rect x="58" y="41" width="80" height="25" rx="2" />
+
+                          <rect x="204" y="41" width="80" height="25" rx="2" />
+
+                          <rect x="350" y="41" width="80" height="25" rx="2" />
+                        </g>
+
+                        <!-- Doors (reach full height) with black outlines and rounded corners -->
+                        <g fill="black" stroke="black" stroke-width="2">
+                          <!-- Front single door -->
+                          <rect x="25" y="41" width="25" height="50" rx="2" />
+                          <!-- Middle double doors -->
+                          <rect x="146" y="41" width="50" height="50" rx="2" />
+
+                          <rect x="292" y="41" width="50" height="50" rx="2" />
+
+                          <!-- Rear single door -->
+                          <rect x="438" y="41" width="25" height="50" rx="2" />
+                        </g>
+
+                        <!-- Pantograph (outlined triangle, no fill, rounded corners) -->
+                        <g stroke="black" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+                          <polyline points="455,0 440,15" />
+                          <polyline points="440,15 455,30" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <svg width="20%" height="auto" viewBox="0 0 140 278" class="z-1">
+                  <!-- Steps -->
+                  <g fill="#ddd">
+                    <rect x="15" y="258" width="110" height="10" />
+                    <rect x="10" y="268" width="120" height="10" />
+                  </g>
+
+                  <!-- White/Beige base -->
+                  <rect x="25" y="193" width="90" height="65" rx="0" fill="#fef6e5" stroke="#ccc" stroke-width="0"/>
+                  <rect x="25" y="193" width="90" height="3" fill="#bbb"/>
+                  <rect x="25" y="208" width="90" height="2" fill="#bbb"/>
+
+                  <!-- Wooden mid-section -->
+                  <rect x="25" y="68" width="90" height="125" rx="0" fill="#a97442" />
+
+                  <!-- Decorative windows -->
+                  <g fill="#704428">
+                    <rect x="30" y="73" width="24" height="115" rx="4"/>
+                    <rect x="58" y="73" width="25" height="115" rx="4"/>
+                    <rect x="87" y="73" width="24" height="115" rx="4"/>
+                  </g>
+
+                  <!-- Half-disc dome -->
+                  <g>
+                    <!-- Half-circle dome -->
+                    <path d="M20 68 A50 50 0 0 1 120 68 L120 58 L20 58 Z" fill="#2e7d60" />
+
+                    <!-- top bit -->
+                    <rect x="0" y="54" width="140" height="4" fill="#704428"/>
+                    <rect x="5" y="58" width="130" height="10" fill="#a97442"/>
+
+                    <!-- Small spire -->
+                    <line x1="70" y1="18" x2="70" y2="3" stroke="#333" stroke-width="2"/>
+                    <rect x="68" y="0" width="4" rx="2" height="6" fill="#333"/>
+                    <circle cx="70" cy="10" r="2" fill="#333" />
+                    <circle cx="70" cy="15" r="2" fill="#333" />
+                  </g>
+                </svg>
+
+                <svg width="40%" height="auto" viewBox="0 0 190 200" class="z-1">
+                  <!-- Base building -->
+                  <rect x="10" y="110" width="160" height="80" class="fill-[#cac3c3]" />
+
+                  <!-- Dome -->
+                  <path d="M10 111 Q90 40 170 111 Z" fill="#5b5c5b" />
+                  <line x1="90" y1="70" x2="90" y2="75" stroke="#777" />
+                  <circle cx="90" cy="67" r="3" fill="#777" />
+
+                  <!-- Minaret -->
+                  <rect x="170" y="40" width="10" height="150" class="fill-[#c2b8b8]" />
+                  <rect x="168" y="55" width="14" height="5" rx="1" fill="#c9c6be" />
+
+                  <!-- Minaret roof (sharp conical top) -->
+                  <polygon points="175,0 170,40 180,40" fill="#5b5c5b" />
+                  <rect x="170" y="38" width="10" height="2" fill="#aaa" />
+
+                  <!-- Ground -->
+                  <rect x="0" y="190" width="190" height="10" fill="#aaa" />
+                </svg>
+
+              </div>
               
             </div>
 
           </div>
 
-          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-data">
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center px-10 md:px-0" href="#transit-planner-data">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -942,8 +1089,116 @@
             </div>
           </a>
 
-          <div class="md:hidden h-25 shrink-0 flex justify-center mt-1">
-            
+          <div class="md:hidden w-full h-35 px-5 shrink-0 flex justify-center mt-1">
+            <div class="relative w-full flex items-end justify-between overflow-hidden">
+
+                <div class="absolute size-full">
+                  <div class="absolute left-1/30 top-1/2 -translate-y-1/4 h-[150%] aspect-1/1 rounded-full bg-yellow-600"></div>
+                </div>
+
+                <div class="absolute left-1/2 -translate-x-1/2 w-[90%] h-full overflow-hidden">
+                  <div class="relative size-full">
+                    <div class="absolute bottom-0 flex items-end animate-soft-bounce h-full">
+                      <svg viewBox="0 0 490 93" width="auto" height="50%" class="animate-tram-right">
+                        <!-- Tram body with rounded corners and sloped ends -->
+                        <path d="M5,91 Q10,31 25,31 H468 Q478,31 481,91 Z" fill="gold" stroke="black" stroke-width="2" />
+
+                        <!-- Tram roof reflection -->
+                        <rect x="20" y="33" width="450" height="4" fill="rgba(255,255,255,0.3)" rx="4" />
+
+                        <!-- Windows (upper half only) with black outline -->
+                        <g fill="black" stroke="black" stroke-width="2">
+                          <rect x="58" y="41" width="80" height="25" rx="2" />
+
+                          <rect x="204" y="41" width="80" height="25" rx="2" />
+
+                          <rect x="350" y="41" width="80" height="25" rx="2" />
+                        </g>
+
+                        <!-- Doors (reach full height) with black outlines and rounded corners -->
+                        <g fill="black" stroke="black" stroke-width="2">
+                          <!-- Front single door -->
+                          <rect x="25" y="41" width="25" height="50" rx="2" />
+                          <!-- Middle double doors -->
+                          <rect x="146" y="41" width="50" height="50" rx="2" />
+
+                          <rect x="292" y="41" width="50" height="50" rx="2" />
+
+                          <!-- Rear single door -->
+                          <rect x="438" y="41" width="25" height="50" rx="2" />
+                        </g>
+
+                        <!-- Pantograph (outlined triangle, no fill, rounded corners) -->
+                        <g stroke="black" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
+                          <polyline points="455,0 440,15" />
+                          <polyline points="440,15 455,30" />
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <svg width="auto" height="60%" viewBox="0 0 140 278" class="z-1">
+                  <!-- Steps -->
+                  <g fill="#ddd">
+                    <rect x="15" y="258" width="110" height="10" />
+                    <rect x="10" y="268" width="120" height="10" />
+                  </g>
+
+                  <!-- White/Beige base -->
+                  <rect x="25" y="193" width="90" height="65" rx="0" fill="#fef6e5" stroke="#ccc" stroke-width="0"/>
+                  <rect x="25" y="193" width="90" height="3" fill="#bbb"/>
+                  <rect x="25" y="208" width="90" height="2" fill="#bbb"/>
+
+                  <!-- Wooden mid-section -->
+                  <rect x="25" y="68" width="90" height="125" rx="0" fill="#a97442" />
+
+                  <!-- Decorative windows -->
+                  <g fill="#704428">
+                    <rect x="30" y="73" width="24" height="115" rx="4"/>
+                    <rect x="58" y="73" width="25" height="115" rx="4"/>
+                    <rect x="87" y="73" width="24" height="115" rx="4"/>
+                  </g>
+
+                  <!-- Half-disc dome -->
+                  <g>
+                    <!-- Half-circle dome -->
+                    <path d="M20 68 A50 50 0 0 1 120 68 L120 58 L20 58 Z" fill="#2e7d60" />
+
+                    <!-- top bit -->
+                    <rect x="0" y="54" width="140" height="4" fill="#704428"/>
+                    <rect x="5" y="58" width="130" height="10" fill="#a97442"/>
+
+                    <!-- Small spire -->
+                    <line x1="70" y1="18" x2="70" y2="3" stroke="#333" stroke-width="2"/>
+                    <rect x="68" y="0" width="4" rx="2" height="6" fill="#333"/>
+                    <circle cx="70" cy="10" r="2" fill="#333" />
+                    <circle cx="70" cy="15" r="2" fill="#333" />
+                  </g>
+                </svg>
+
+                <svg width="auto" height="100%" viewBox="0 0 190 200" class="z-1">
+                  <!-- Base building -->
+                  <rect x="10" y="110" width="160" height="80" class="fill-[#cac3c3]" />
+
+                  <!-- Dome -->
+                  <path d="M10 111 Q90 40 170 111 Z" fill="#5b5c5b" />
+                  <line x1="90" y1="70" x2="90" y2="75" stroke="#777" />
+                  <circle cx="90" cy="67" r="3" fill="#777" />
+
+                  <!-- Minaret -->
+                  <rect x="170" y="40" width="10" height="150" class="fill-[#c2b8b8]" />
+                  <rect x="168" y="55" width="14" height="5" rx="1" fill="#c9c6be" />
+
+                  <!-- Minaret roof (sharp conical top) -->
+                  <polygon points="175,0 170,40 180,40" fill="#5b5c5b" />
+                  <rect x="170" y="38" width="10" height="2" fill="#aaa" />
+
+                  <!-- Ground -->
+                  <rect x="0" y="190" width="190" height="10" fill="#aaa" />
+                </svg>
+
+              </div>
           </div>
 
         </div>
@@ -1007,7 +1262,7 @@
               <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8">
                 <p>Although the main focus of this project was the Node.js backend, I couldn't help using my recently acquired Next.js knowledge to build a small web app to display all that exposed data.</p>
 
-                <p>It turned out to be a good idea: there's no better way to design a good API than being one of its users. I ended up re-designing my endpoints more than once, because my initial idea turned out to be absolutely impractical.</p>
+                <p>It turned out to be a good idea: there's no better way to design a good API than being one of its users. I ended up re-designing my endpoints more than once, because my initial approach didn't turn out very practical in the end.</p>
               </div>
 
             </div>
@@ -1037,39 +1292,61 @@
 
       <!-- lines -->
       <div id="transit-planner-lines" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
-        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
-          <!-- TODO layout mobile (continuous flex col) vs desktop (flex row) -->
+        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+          <div class="md:h-full md:grow flex flex-col md:flex-row md:items-center gap-3 md:gap-10 md:overflow-hidden">
 
-            <div class="md:w-[33%] flex flex-col gap-3 overflow-hidden">
+            <div class="order-1 md:hidden h-12 shrink-0"></div>
+
+            <div class="order-2 md:w-[33%] flex flex-col gap-3 md:overflow-hidden">
 
               <div class="text-4xl font-bold">Line routes</div>
 
-              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8">
+              <div class="flex flex-col gap-3 md:overflow-hidden md:overflow-y-scroll md:pb-8">
                 <p>The first endpoints I implemented are to describe lines and the routes they take.</p>
+                <p>This one, <span class="font-mono">describe-line</span>, returns the type of the line, its directions, and all stops alongside each direction - along with the available connections at that stop.</p>
               </div>
 
             </div>
 
-            <div class="hidden md:flex h-[75dvh] items-center justify-center">
-              
+            <div class="order-4 md:order-3 md:h-[75dvh] md:grow flex flex-col gap-3 items-center justify-center">
+              <div class="w-full flex items-center gap-2 bg-neutral-800 rounded-lg p-3">
+                <div class="bg-white/10 px-3 py-0.5 rounded">GET</div>
+                <div class="font-mono">/lines/describe-line</div>
+              </div>
+
+              <div class="w-full flex flex-col md:flex-row gap-3 overflow-hidden">
+                <div class="flex-1/2 flex flex-col gap-3 bg-neutral-900 rounded-lg p-3">
+                  <div class="flex items-center">
+                    <button class="flex-1/2 py-1 cursor-pointer rounded-s border-1 border-e-0 border-white/30 bg-white/30">
+                      Model
+                    </button>
+                    <button class="flex-1/2 py-1 cursor-pointer rounded-e border-1 border-s-0 border-white/30">
+                      Example
+                    </button>
+                  </div>
+                  <pre class="font-mono json model overflow-hidden overflow-y-scroll text-sm">
+                    {"name": "string", "type": "string", "directions": ["string"], "routes": [{"direction": "string", "stops": [{"id": 0, "name": "string", "connections": [{"line": "string", "type": "string", "directions": ["string"]}]}]}]}
+                  </pre>
+                  <pre class="font-mono json data hidden overflow-hidden overflow-y-scroll text-sm">{"name":"3","type":"tram","directions":["Ilidža","Baščaršija"],"routes":[{"direction":"Ilidža","stops":[{"id":24,"name":"Baščaršija","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo"]},{"line":"1","type":"tram","directions":["Baščaršija","Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]}]},{"id":25,"name":"Katedrala","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja"]},{"line":"1","type":"tram","directions":["Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila"]},{"line":"5","type":"tram","directions":["Nedžarići"]}]},{"id":26,"name":"Banka","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja"]},{"line":"1","type":"tram","directions":["Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila"]},{"line":"5","type":"tram","directions":["Nedžarići"]}]},{"id":27,"name":"Park","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja"]},{"line":"1","type":"tram","directions":["Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila"]},{"line":"5","type":"tram","directions":["Nedžarići"]}]},{"id":18,"name":"Marijin Dvor","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo","Bentbaša"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija","Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":70,"name":"Tehnička Škola","connections":[{"line":"31E","type":"bus","directions":["Dobrinja"]},{"line":"1","type":"tram","directions":["Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila"]},{"line":"4","type":"tram","directions":["Ilidža"]},{"line":"5","type":"tram","directions":["Nedžarići"]},{"line":"6","type":"tram","directions":["Ilidža"]}]},{"id":16,"name":"Univerzitet","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":15,"name":"Pofalići","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":14,"name":"Socijalno","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":13,"name":"Dolac Malta","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":12,"name":"Čengić Vila","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":11,"name":"Otoka","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]},{"line":"101","type":"trolleybus","directions":["Trg Austrije","Otoka"]},{"line":"102","type":"trolleybus","directions":["Jezero","Otoka"]},{"line":"108","type":"trolleybus","directions":["Dobrinja","Otoka"]}]},{"id":10,"name":"Alipašin Most","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":9,"name":"RTV","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":8,"name":"Alipašino Polje","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo","Bentbaša"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":7,"name":"Nedžarići","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":6,"name":"Avaz","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":5,"name":"Stup","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":3,"name":"Energoinvest","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":2,"name":"Kasindolska","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":1,"name":"Ilidža","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]}]},{"direction":"Baščaršija","stops":[{"id":1,"name":"Ilidža","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":2,"name":"Kasindolska","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":3,"name":"Energoinvest","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":5,"name":"Stup","connections":[{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":6,"name":"Avaz","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":7,"name":"Nedžarići","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":8,"name":"Alipašino Polje","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo","Bentbaša"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":9,"name":"RTV","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":10,"name":"Alipašin Most","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":11,"name":"Otoka","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]},{"line":"101","type":"trolleybus","directions":["Trg Austrije","Otoka"]},{"line":"102","type":"trolleybus","directions":["Jezero","Otoka"]},{"line":"108","type":"trolleybus","directions":["Dobrinja","Otoka"]}]},{"id":12,"name":"Čengić Vila","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":13,"name":"Dolac Malta","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":14,"name":"Socijalno","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":15,"name":"Pofalići","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":16,"name":"Univerzitet","connections":[{"line":"200E","type":"bus","directions":["Bentbaša","Međunarodni Aerodrom Sarajevo"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"4","type":"tram","directions":["Ilidža","Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":17,"name":"Muzeji","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"31E","type":"bus","directions":["Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"4","type":"tram","directions":["Željeznička Stanica"]},{"line":"5","type":"tram","directions":["Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija"]}]},{"id":18,"name":"Marijin Dvor","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo","Bentbaša"]},{"line":"31E","type":"bus","directions":["Dobrinja","Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija","Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]}]},{"id":19,"name":"Skenderija","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"31E","type":"bus","directions":["Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"5","type":"tram","directions":["Baščaršija"]},{"line":"6","type":"tram","directions":["Skenderija","Ilidža"]},{"line":"101","type":"trolleybus","directions":["Trg Austrije","Otoka"]},{"line":"102","type":"trolleybus","directions":["Otoka"]},{"line":"103","type":"trolleybus","directions":["Trg Austrije","Dobrinja"]},{"line":"105","type":"trolleybus","directions":["Trg Austrije"]},{"line":"107","type":"trolleybus","directions":["Dobrinja"]}]},{"id":20,"name":"Pošta","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"31E","type":"bus","directions":["Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"5","type":"tram","directions":["Baščaršija"]}]},{"id":21,"name":"Drvenija","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"31E","type":"bus","directions":["Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"5","type":"tram","directions":["Baščaršija"]},{"line":"101","type":"trolleybus","directions":["Trg Austrije","Otoka"]},{"line":"103","type":"trolleybus","directions":["Trg Austrije","Dobrinja"]},{"line":"105","type":"trolleybus","directions":["Trg Austrije","Vogošća Terminal"]}]},{"id":22,"name":"Latinska Ćuprija","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"31E","type":"bus","directions":["Vijećnica"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"5","type":"tram","directions":["Baščaršija"]}]},{"id":23,"name":"Vijećnica","connections":[{"line":"200E","type":"bus","directions":["Bentbaša"]},{"line":"1","type":"tram","directions":["Baščaršija"]},{"line":"2","type":"tram","directions":["Baščaršija"]},{"line":"5","type":"tram","directions":["Baščaršija"]}]},{"id":24,"name":"Baščaršija","connections":[{"line":"200E","type":"bus","directions":["Međunarodni Aerodrom Sarajevo"]},{"line":"1","type":"tram","directions":["Baščaršija","Željeznička Stanica"]},{"line":"2","type":"tram","directions":["Čengić Vila","Baščaršija"]},{"line":"5","type":"tram","directions":["Nedžarići","Baščaršija"]}]}]}]}</pre>
+                </div>
+                
+                <div class="flex-1/2 rounded-lg overflow-hidden overflow-y-scroll">
+                  <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_line.png" width="full" height="auto"/>
+                </div>
+              </div>
             </div>
 
-          </div>
+            <a class="order-2 md:order-4 md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-lines">
+              <div class="flex items-center gap-1 text-white/50">
+                Next
+                <i data-lucide="arrow-right" class="w-5"></i>
+              </div>
+              <div class="text-right text-base/5">
+                Line routes
+              </div>
+            </a>
 
-          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-lines">
-            <div class="flex items-center gap-1 text-white/50">
-              Next
-              <i data-lucide="arrow-right" class="w-5"></i>
-            </div>
-            <div class="text-right text-base/5">
-              Line routes
-            </div>
-          </a>
-
-          <div class="md:hidden h-25 shrink-0 flex justify-center mt-1">
-            
           </div>
 
         </div>
@@ -1584,6 +1861,22 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
+      var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/mg;
+      const jsonReplacer = function(match, pIndent, pKey, pVal, pEnd) {
+        var key = '<span class="json-key" style="color: brown">',
+          val = '<span class="json-value" style="color: navy">',
+          str = '<span class="json-string" style="color: olive">',
+          r = pIndent || '';
+        if (pKey)
+            r = r + key + pKey.replace(/[": ]/g, '') + '</span>: ';
+        if (pVal)
+            r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
+        return r + (pEnd || '');
+      };
+      document.querySelectorAll(".json").forEach(e => e.innerHTML = JSON.stringify(JSON.parse(e.innerHTML), null, 2))
+      //          .replace(/&/g, '&amp;').replace(/\\"/g, '&quot;')
+      //          .replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      //          .replace(jsonLine, jsonReplacer));
     </script>
   </body>
 </html>
