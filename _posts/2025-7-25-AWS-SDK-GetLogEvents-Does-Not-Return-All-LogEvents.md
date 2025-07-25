@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AWS SDK\: GetLogEvents does not return all LogEvents
+title: AWS SDK - GetLogEvents does not return all LogEvents
 ---
 
 A (seemingly) undocumented feature of CloudWatch's GetLogEvents operation is that, if you don't set a startTime in your command request, you will potentially NOT start reading the log events of your LogStream from the start.
