@@ -515,8 +515,77 @@
 
             </div>
 
-            <div class="hidden md:flex grow h-[75dvh] items-center justify-center">
-              <!-- TODO md illustration -->
+            <div class="hidden px-20 md:flex flex-col grow h-[75dvh] items-end justify-center">
+
+              <!-- first row: database, top Lys lambda -->
+              <div class="w-full flex justify-between">
+                <div class="size-16"></div>
+                <div class="relative rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <i data-lucide="database" class="size-8 text-blue-800"></i>
+                  <div class="absolute -top-9 left-1/2 -translate-x-1/2">DynamoDB</div>
+                </div>
+                <div class="relative rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <div class="flex items-center justify-center size-8">
+                    <div class="text-3xl text-blue-800">λ</div>
+                  <div class="absolute -top-9 left-1/2 -translate-x-1/2">Lys</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- link between trigger lambda and top Lys lambda -->
+              <div class="w-full flex">
+                <div class="w-1/2 h-50 border-e-2 border-white/50">
+
+                </div>
+                <div class="w-1/2 ps-4 pe-8 h-50 flex flex-col">
+                  <div class="h-1/2 border-e-2 border-b-2 border-white/50"></div>
+                  <div class="h-1/2 border-s-2 border-white/50"></div>
+                </div>
+              </div>
+
+              <!-- second row: eventbridge, trigger lambda, middle Lys lambda -->
+              <div class="w-full flex items-center">
+                <div class="relative rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <i data-lucide="clock-2" class="size-8 text-blue-800"></i>
+                    <div class="absolute -bottom-14 left-1/2 -translate-x-1/2 w-4/1 text-center flex flex-col">
+                      <div>Cron</div>
+                      <div>(EventBridge bus rule)</div>
+                    </div>
+                </div>
+                <div class="grow border-t-2 border-white/50"></div>
+                <div class="rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <div class="relative flex items-center justify-center size-8">
+                    <div class="text-3xl text-blue-800">λ</div>
+                    <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 text-nowrap">Lys Trigger</div>
+                  </div>
+                </div>
+                <div class="grow border-t-2 border-white/50"></div>
+                <div class="rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <div class="relative flex items-center justify-center size-8">
+                    <div class="text-3xl text-blue-800">λ</div>
+                    <div class="absolute -bottom-12 left-1/2 -translate-x-1/2">Lys</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- link between trigger lambda and bottom Lys lambda -->
+              <div class="w-1/2 pe-8 h-50 flex flex-col">
+                <div class="h-1/2 border-s-2 border-b-2 border-white/50"></div>
+                <div class="h-1/2 border-e-2 border-white/50"></div>
+              </div>
+
+              <!-- third row: bottom Lys lambda -->
+              <div class="w-full flex justify-between">
+                <div class="size-16"></div>
+                <div class="size-16"></div>
+                <div class="rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                  <div class="relative flex items-center justify-center size-8">
+                    <div class="text-3xl text-blue-800">λ</div>
+                    <div class="absolute -bottom-12 left-1/2 -translate-x-1/2">Lys</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -1465,7 +1534,7 @@
               <div class="text-4xl font-bold">Departures (cont.)</div>
 
               <div class="flex flex-col gap-3 md:overflow-hidden md:overflow-y-scroll">
-                <p>The <span class="font-mono">/departures/scheduled</span> endpoint ...</p>
+                <p>No no, you're not seeing double - the <span class="font-mono">/departures/scheduled</span> endpoint looks exactly like its <span class="font-mono">/departures/next</span> neighbour, but this one is meant to expose <span class="font-bold">scheduled</span> departures - while <span class="font-mono">/next</span> would (for an ideal network that publicly exposes real-time data) return live data.</p>
               </div>
 
             </div>
@@ -1516,9 +1585,8 @@
                 </div>
                 
                 <div class="relative flex flex-col flex-1/2 md:overflow-hidden">
-                  <div class="py-1">a</div>
-                  <div class="grow md:rounded-lg md:overflow-hidden md:overflow-y-scroll">
-                    <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_line.png" class="mx-auto rounded-lg md:rounded-none" width="full" height="auto"/>
+                  <div class="md:rounded-lg md:overflow-hidden md:overflow-y-scroll">
+                    <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_schedule.png" class="mx-auto rounded-lg md:rounded-none" width="full" height="auto"/>
                   </div>
                 </div>
               </div>
