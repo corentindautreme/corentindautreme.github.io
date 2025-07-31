@@ -13,6 +13,7 @@
         --animate-carousel-down: carousel-down 40s linear infinite;
         --animate-pop: pop 3s ease-in-out infinite;
         --animate-tram-right: tram-right 8s ease-in-out infinite;
+        --animate-cycle: cycle 10s linear infinite;
 
         @keyframes pulse {
           50% {
@@ -113,6 +114,18 @@
                 transform: translateX(97%);
             }
         }
+
+        @keyframes cycle {
+          0% {
+            visibility: visible;
+          }
+          20% {
+            visibility: hidden;
+          }
+          100% {
+            visibility: hidden;
+          }
+        }
       }
     </style>
     <style>
@@ -205,8 +218,19 @@
         transform-origin: 50% 0;
       }
 
-      .slice-2021:nth-child(odd):not(.no-border):before, .slice-2020:before {
+      .slice-2021:nth-child(odd):not(.no-border):not(.slice-intro):before, .slice-2020:before {
           border-top: 1px dashed #a0a0a0;
+      }
+
+      .slice-2021.slice-intro:after {
+        position: absolute;
+        bottom: 0;
+        width: 50%;
+        content: '';
+      }
+
+      .slice-2021.slice-intro:after {
+        border-top: 1px dashed #a0a0a0;
       }
 
       .slice-2020 {
@@ -1660,75 +1684,136 @@
     <div id="esc-2021-logo-generator" class="bg-neutral-900 section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="esc-2021-logo-generator-intro" class="relative logo-bg snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
+      <div id="esc-2021-logo-generator-intro" class="relative logo-bg snap-start flex w-full h-full shrink-0 overflow-hidden">
 
-        <!-- up/down nav (mobile) -->
-        <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
-          <a class="w-fit" href="#transit-planner">
-            <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+        <div class="h-full p-5 md:p-10 flex flex-col gap-3 md:gap-0 justify-between">
+
+          <!-- up/down nav (mobile) -->
+          <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
+            <a class="w-fit" href="#transit-planner">
+              <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </a>
+            <a class="hidden w-fit" href="#just-bill-it">
+              <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-down"></i>
+              </div>
+            </a>
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#transit-planner">
+            <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-up"></i>
             </div>
           </a>
-          <a class="hidden w-fit" href="#just-bill-it">
-            <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+
+          <div class="grow overflow-hidden flex flex-col md:flex-row md:items-center md:gap-10">
+
+            <div class="h-full grow overflow-hidden overflow-y-scroll mask-b-from-85% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
+              <div class="text-4xl font-bold">ESC 2021 logo generator</div>
+
+              <div>
+                A <span class="font-black">Javascript</span> and <span class="font-black">HTML/CSS</span> interactive playground based on the logo of the Eurovision Song Contest 2021 designed by <a class="inline-flex gap-0.5 underline" href="https://www.cleverfranke.com/project/eurovision">CLEVER ° FRANKE<i data-lucide="external-link" class="w-4"></i></a>.
+              </div>
+
+              <div>
+                <a href="#esc-2021-logo-generator-overview">
+                  <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                    Learn more
+                    <i data-lucide="arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col gap-2 mt-3 md:mt-8 text-base/5">
+                <div class="font-bold">CSS</div>
+                <div class="flex flex-col flex-row gap-2">
+                  <span class="font-bold">Javascript</span>
+                  <span class="text-white/50">jQuery</span>
+                </div>
+                <div class="font-bold">HTML</div>
+              </div>
+
+              <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="globe" class="w-5"></i>
+                  <div class="flex flex-col">
+                    <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/esc-2021-generator/">ESC 2021 Logo Generator<i data-lucide="external-link" class="w-4"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#just-bill-it">
+            <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-down"></i>
             </div>
           </a>
-        </div>
-
-        <a class="hidden md:block mt-8 w-fit" href="#transit-planner">
-          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-up"></i>
-          </div>
-        </a>
-
-        <div class="grow overflow-hidden flex flex-col md:flex-row md:items-center md:gap-10">
-
-          <div class="h-full grow overflow-hidden overflow-y-scroll mask-b-from-85% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
-            <div class="text-4xl font-bold">ESC 2021 logo generator</div>
-
-            <div>
-              A <span class="font-black">Javascript</span> and <span class="font-black">HTML/CSS</span> interactive playground based on the logo of the Eurovision Song Contest 2021 designed by <a class="inline-flex gap-0.5 underline" href="https://www.cleverfranke.com/project/eurovision">CLEVER ° FRANKE<i data-lucide="external-link" class="w-4"></i></a>.
-            </div>
-
-            <div>
-              <a href="#esc-2021-logo-generator-overview">
-                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
-                  Learn more
-                  <i data-lucide="arrow-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div class="flex flex-col gap-2 mt-3 md:mt-8 text-base/5">
-              <div class="font-bold">CSS</div>
-              <div class="flex flex-col flex-row gap-2">
-                <span class="font-bold">Javascript</span>
-                <span class="text-white/50">jQuery</span>
-              </div>
-              <div class="font-bold">HTML</div>
-            </div>
-
-            <div class="flex flex-col md:flex-row md:gap-5 text-sm md:text-base">
-              <div class="flex items-center gap-2">
-                <i data-lucide="globe" class="w-5"></i>
-                <div class="flex flex-col">
-                  <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/esc-2021-generator/">ESC 2021 Logo Generator<i data-lucide="external-link" class="w-4"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="hidden md:block rounded-xl ring-10 ring-[#a0a0a0] me-5 h-[90%] aspect-16/10 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc-2021-logo-generator-intro.png)]"></div>
 
         </div>
 
-        <a class="hidden md:block mt-8 w-fit" href="#just-bill-it">
-          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-down"></i>
+        <div class="hidden md:flex h-full overflow-hidden">
+          <div class="h-full flex items-center">
+            <div class="relative h-4/3 aspect-1/1 border-1 border-dashed border-[#a0a0a0] rounded-full">
+              <div class="grid">
+                <div class="slice-2021 slice-intro" style="--offset:13.50909; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:24.418180000000003; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:35.327270000000006; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:46.236360000000005; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:57.145450000000004; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:68.05454; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:78.96363; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:89.87272; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:100.78181000000001; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:111.6909; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:122.59999; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:133.50908; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:144.41817; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:155.32726; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:166.23635000000002; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:177.14544; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:188.05453; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:198.96362000000002; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:209.87271; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:220.7818; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:231.69089000000002; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:242.59998000000002; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:253.50907; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:264.41816000000006; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:275.32725000000005; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:286.23634000000004; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:297.14543000000003; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:308.05452; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:318.9636100000001; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:329.87270000000007; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:340.78179000000006; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:351.69088000000005; --value: 5.554545"></div>
+                <div class="slice-2021 slice-intro" style="--offset:362.59997000000004; --value: 5.554545"></div>
+              </div>
+
+              <div class="animate-cycle absolute w-full aspect-1/1 
+              bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_vienna.png)]"></div>
+              <div class="animate-cycle [animation-delay:2s] absolute w-full aspect-1/1 
+              bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_stockholm.png)]" style="visibility: hidden;"></div>
+              <div class="animate-cycle [animation-delay:4s] absolute w-full aspect-1/1 
+              bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_sarajevo.png)]" style="visibility: hidden;"></div>
+              <div class="animate-cycle [animation-delay:6s] absolute w-full aspect-1/1 
+              bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_athens.png)]" style="visibility: hidden;"></div>
+              <div class="animate-cycle [animation-delay:8s] absolute w-full aspect-1/1 
+              bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_lisbon.png)]" style="visibility: hidden;"></div>
+
+              <div class="size-1/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              <div class="size-2/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              <div class="size-3/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              <div class="size-4/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              <div class="size-5/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              <div class="size-6/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+            </div>
           </div>
-        </a>
+        </div>
 
       </div>
 
