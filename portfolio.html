@@ -982,86 +982,1004 @@
     <div id="transit-planner" class="tp-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="transit-planner-intro" class="relative snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
+      <div id="transit-planner-intro" class="relative snap-start w-full h-full flex shrink-0">
 
-        <!-- up/down nav (mobile) -->
-        <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
-          <a class="w-fit" href="#lys">
-            <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+        <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 justify-between p-5 md:p-10">
+
+          <!-- up/down nav (mobile) -->
+          <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
+            <a class="w-fit" href="#lys">
+              <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </a>
+            <a class="w-fit" href="#esc-2021-logo-generator">
+              <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-down"></i>
+              </div>
+            </a>
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#lys">
+            <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-up"></i>
             </div>
           </a>
-          <a class="w-fit" href="#esc-2021-logo-generator">
-            <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+
+          <div class="overflow-hidden flex flex-col md:flex-row md:items-between">
+
+            <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-5 flex flex-col gap-2 justify-center-safe">
+              <div class="text-4xl font-bold">Transit planner</div>
+
+              <div>
+                A <span class="font-black">Node.js</span> backend API that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> demo webapp.
+              </div>
+
+              <div>
+                <a href="#transit-planner-overview">
+                  <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
+                    Learn more
+                    <i data-lucide="arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
+                <div class="flex flex-col md:flex-row md:gap-2">
+                  <span class="font-bold">Node.js</span>
+                  <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:gap-2">
+                  <span class="font-bold">Next.js 15</span>
+                  <span class="text-white/50">React, Typescript, Tailwind CSS</span>
+                </div>
+                <div class="font-bold">PostgreSQL</div>
+              </div>
+
+              <div class="flex flex-col mt-1 md:flex-row md:gap-5 text-sm md:text-base">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="github" class="w-5"></i>
+                  <div class="flex flex-col">
+                    <div>
+                      <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner">transit-planner<i data-lucide="external-link" class="w-4"></i></a>
+                      (backend)
+                    </div>
+                    <div>
+                      <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner-client">transit-planner-client<i data-lucide="external-link" class="w-4"></i></a>
+                      (frontend)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#esc-2021-logo-generator">
+            <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-down"></i>
             </div>
           </a>
-        </div>
-
-        <a class="hidden md:block mt-8 w-fit" href="#lys">
-          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-up"></i>
-          </div>
-        </a>
-
-        <div class="grow overflow-hidden flex flex-col md:flex-row md:items-between">
-
-          <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-5 flex flex-col gap-2 justify-center-safe">
-            <div class="text-4xl font-bold">Transit planner</div>
-
-            <div>
-              A <span class="font-black">Node.js</span> backend API that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> demo webapp.
-            </div>
-
-            <div>
-              <a href="#transit-planner-overview">
-                <div class="flex w-fit items-center gap-1 rounded-lg bg-white text-black p-2">
-                  Learn more
-                  <i data-lucide="arrow-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
-              <div class="flex flex-col md:flex-row md:gap-2">
-                <span class="font-bold">Node.js</span>
-                <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger</span>
-              </div>
-              <div class="flex flex-col md:flex-row md:gap-2">
-                <span class="font-bold">Next.js 15</span>
-                <span class="text-white/50">React, Typescript, Tailwind CSS</span>
-              </div>
-              <div class="font-bold">PostgreSQL</div>
-            </div>
-
-            <div class="flex flex-col mt-1 md:flex-row md:gap-5 text-sm md:text-base">
-              <div class="flex items-center gap-2">
-                <i data-lucide="github" class="w-5"></i>
-                <div class="flex flex-col">
-                  <div>
-                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner">transit-planner<i data-lucide="external-link" class="w-4"></i></a>
-                    (backend)
-                  </div>
-                  <div>
-                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner-client">transit-planner-client<i data-lucide="external-link" class="w-4"></i></a>
-                    (frontend)
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="hidden md:block w-300 aspect-16/10 h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_intro.png)]">
-          </div>
 
         </div>
 
-        <a class="hidden md:block mt-8 w-fit" href="#esc-2021-logo-generator">
-          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-down"></i>
+        <div class="flex-4/7 hidden md:grid grid-cols-5 grid-rows-8 gap-5 me-5">
+          <!-- line 3 plan -->
+          <div class="col-start-4 col-span-2 row-start-1 row-end-5 flex items-end overflow-hidden">
+            <div class="flex flex-col">
+              <div class="flex justify-center"><div class="h-4 w-[4.8px] bg-yellow-500"></div></div>
+              <div class="flex gap-x-2 items-stretch">
+                  <div class="flex-1 flex gap-x-1 items-center justify-end text-right overflow-hidden">
+                      <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Marijin Dvor</span></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                      <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                      <div class="rounded-full border-yellow-500 bg-yellow-500 w-3 h-3"></div>
+                      <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                  </div>
+                  <div class="flex-1 flex items-center overflow-hidden">
+                      <div class="w-full flex flex-wrap items-center gap-0.5">
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">6</div>
+                          <div class="flex items-center">
+                              <div class="flex justify-center rounded font-bold border-2 border-black"><i data-lucide="bus-front" class="w-3"></i></div>
+                              <div class="w-0.5 border-y-1 border-black"></div>
+                              <div class="flex justify-center rounded p-0.5 font-bold bg-black text-white">
+                                  <i data-lucide="plane" class="w-3"></i>
+                              </div>
+                          </div>
+                          <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                              <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="flex justify-center"><div class="h-4 w-[4.8px] bg-yellow-500"></div></div>
+              <div class="flex">
+                  <div class="flex w-[50%]">
+                      <div class="flex-4"></div>
+                      <div class="w-2"></div>
+                      <div class="flex flex-col w-3 items-center">
+                          <div class="mr-[-7.6px] w-3 rounded-tl-xl border-t-[4.8px] border-l-[4.8px] h-6 border-yellow-500"></div>
+                          <div class="w-5 h-5 rounded-full text-black bg-yellow-500">
+                              <i data-lucide="chevron-down" class="w-5 -mt-0.5"></i>
+                          </div>
+                          <div class="w-[4.8px] h-4 bg-yellow-500"></div>
+                      </div>
+                      <div class="w-2 rounded-tl border-t-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="flex-1 border-t-[4.8px] h-6 border-yellow-500"></div>
+                  </div>
+                  <div class="flex w-[50%]">
+                      <div class="flex-1 border-t-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="w-2 rounded-tr border-t-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="flex flex-col w-3 items-center">
+                          <div class="ml-[-7.6px] w-3 rounded-tr-xl border-t-[4.8px] border-r-[4.8px] h-6 border-yellow-500"></div>
+                          <div class="w-5 h-5 rounded-full text-black bg-yellow-500">
+                              <i data-lucide="chevron-up" class="w-5 -mt-0.5"></i>
+                          </div>
+                          <div class="w-[4.8px] h-4 bg-yellow-500"></div>
+                      </div>
+                      <div class="w-2"></div>
+                      <div class="flex-4"></div>
+                  </div>
+              </div>
+              <div class="flex items-stretch">
+                  <div class="w-[50%] flex flex-col justify-between">
+                      <div class="flex flex-col">
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 flex flex-col gap-y-1 text-right overflow-hidden">
+                                  <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Skenderija</span></div>
+                              </div>
+                              <div class="flex flex-col items-center">
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                                  <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                              </div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5 justify-end">
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">6</div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">101</div>
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">103</div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-red-500/75">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">102</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Oto.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-red-500/75">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">105</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Trg. A.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-red-500/75">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">107</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Dob.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                        <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                          <div class="flex-4"></div>
+                          <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                          <div class="flex-1"></div>
+                      </div>
+                      <div class="flex flex-col">
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 flex flex-col gap-y-1 text-right overflow-hidden">
+                                  <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Pošta</span></div>
+                              </div>
+                              <div class="flex flex-col items-center">
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                                  <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                              </div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5 justify-end">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                          <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                          <div class="flex-4"></div>
+                          <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                          <div class="flex-1"></div>
+                      </div>
+                      <div class="flex flex-col">
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 flex flex-col gap-y-1 text-right overflow-hidden">
+                                  <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Drvenija</span></div>
+                              </div>
+                              <div class="flex flex-col items-center">
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                                  <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                                  <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                              </div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5 justify-end">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">101</div>
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">103</div>
+                                      <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-red-500 text-white">105</div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                        <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                  <div class="flex-4"></div>
+                  <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                  <div class="flex-1"></div>
+                </div>
+                      <div class="flex flex-col">
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 flex flex-col gap-y-1 text-right overflow-hidden">
+                                  <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Latinska Ćuprija</span></div>
+                              </div>
+                              <div class="flex flex-col items-center">
+                          <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                          <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                          <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                        </div>
+                              <div class="flex-1 flex items-center"></div>
+                    </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5 justify-end">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                          <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                  <div class="flex-4"></div>
+                  <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                  <div class="flex-1"></div>
+                </div>
+                      <div class="flex flex-col">
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-4"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 flex flex-col gap-y-1 text-right overflow-hidden">
+                                  <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis">Vijećnica</span></div>
+                              </div>
+                              <div class="flex flex-col items-center">
+                          <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                          <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                          <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                        </div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5 justify-end">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Baš.</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-1 flex items-center"></div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="w-[50%] flex flex-col justify-between">
+                      <div class="flex flex-col">
+                  <div class="flex gap-x-2 justify-end">
+                    <div class="flex-1"></div>
+                    <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                    <div class="flex-4"></div>
+                  </div>
+                    <div class="flex gap-x-2 items-stretch">
+                      <div class="flex-1 flex items-center"></div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                        <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                      </div>
+                              <div class="flex-4 flex flex-col gap-y-1 overflow-hidden">
+                                  <div class="flex grow overflow-hidden"><span class="overflow-hidden text-ellipsis">Park</span></div>
+                              </div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-1 flex items-center"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Želj. S.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Čen. V.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Nedž.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex items-center">
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold border-1 border-white">
+                                            <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                          <div class="w-1 border-y-1 border-white"></div>
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-white text-black">
+                                            <i data-lucide="plane" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                          <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-1"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-4"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                          <div class="flex-1"></div>
+                          <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                          <div class="flex-4"></div>
+                      </div>
+                      <div class="flex flex-col">
+                  <div class="flex gap-x-2 justify-end">
+                    <div class="flex-1"></div>
+                    <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                    <div class="flex-4"></div>
+                  </div>
+                    <div class="flex gap-x-2 items-stretch">
+                      <div class="flex-1 flex items-center"></div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                        <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                      </div>
+                              <div class="flex-4 flex flex-col gap-y-1 overflow-hidden">
+                                  <div class="flex grow overflow-hidden"><span class="overflow-hidden text-ellipsis">Banka</span></div>
+                              </div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-1 flex items-center"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Želj. S.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Čen. V.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Nedž.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex items-center">
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold border-1 border-white">
+                                            <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                          <div class="w-1 border-y-1 border-white"></div>
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-white text-black">
+                                            <i data-lucide="plane" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                          <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="flex gap-x-2 justify-end">
+                              <div class="flex-1"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-4"></div>
+                          </div>
+                      </div>
+                      <div class="grow flex gap-x-2 justify-end">
+                          <div class="flex-1"></div>
+                          <div class="flex flex-col w-3 items-center"><div class="h-full w-[4.8px] bg-yellow-500"></div></div>
+                          <div class="flex-4"></div>
+                      </div>
+                      <div class="flex flex-col">
+                  <div class="flex gap-x-2 justify-end">
+                    <div class="flex-1"></div>
+                    <div class="flex flex-col w-3 items-center"><div class="h-2 w-[4.8px] bg-yellow-500"></div></div>
+                    <div class="flex-4"></div>
+                  </div>
+                    <div class="flex gap-x-2 items-stretch">
+                      <div class="flex-1 flex items-center"></div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                        <div class="rounded-full bg-yellow-500 w-3 h-3  border-yellow-500"></div>
+                        <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                      </div>
+                              <div class="flex-4 flex flex-col gap-y-1 overflow-hidden">
+                                  <div class="flex grow overflow-hidden"><span class="overflow-hidden text-ellipsis">Katedrala</span></div>
+                              </div>
+                          </div>
+                          <div class="flex gap-x-2 items-stretch">
+                              <div class="flex-1 flex items-center"></div>
+                              <div class="flex flex-col w-3 items-center"><div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div></div>
+                              <div class="flex-4 py-1 overflow-hidden">
+                                  <div class="w-full flex flex-wrap items-center gap-0.5">
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Želj. S.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Čen. V.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex overflow-hidden">
+                                          <div class="flex items-center rounded overflow-hidden bg-yellow-500/75 text-black">
+                                              <div class="shrink-0 rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                                              <div class="grow text-xs text-nowrap overflow-hidden text-ellipsis px-0.5">Nedž.</div>
+                                          </div>
+                                      </div>
+                                      <div class="flex items-center">
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold border-1 border-white">
+                                            <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                          <div class="w-1 border-y-1 border-white"></div>
+                                          <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-white text-black">
+                                            <i data-lucide="plane" class="w-4 -mt-0.5"></i>
+                                          </div>
+                                      </div>
+                                      <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-sky-500 text-white">
+                                          <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="flex">
+                  <div class="flex w-[50%] items-end">
+                      <div class="flex-4"></div>
+                      <div class="w-2"></div>
+                      <div class="flex flex-col w-3 items-center">
+                          <div class="w-[4.8px] h-4 bg-yellow-500"></div>
+                          <div class="w-5 h-5 rounded-full text-black bg-yellow-500"><i data-lucide="chevron-down" class="w-5 -mt-0.5"></i></div>
+                          <div class="mr-[-7.6px] w-3 rounded-bl-xl border-b-[4.8px] border-l-[4.8px] h-6 border-yellow-500"></div>
+                      </div>
+                      <div class="w-2 rounded-bl border-b-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="flex-1 border-b-[4.8px] h-6 border-yellow-500"></div>
+                  </div>
+                  <div class="flex w-[50%] items-end">
+                      <div class="flex-1 border-b-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="w-2 rounded-tr border-b-[4.8px] h-6 border-yellow-500"></div>
+                      <div class="flex flex-col w-3 items-center">
+                          <div class="w-[4.8px] h-4 bg-yellow-500"></div>
+                          <div class="w-5 h-5 rounded-full text-black bg-yellow-500"><i data-lucide="chevron-up" class="w-5 -mt-0.5"></i></div>
+                          <div class="ml-[-7.6px] w-3 rounded-br-xl border-b-[4.8px] border-r-[4.8px] h-6 border-yellow-500"></div>
+                      </div>
+                      <div class="w-2"></div>
+                      <div class="flex-4"></div>
+                  </div>
+              </div>
+              <div class="flex flex-col items-center"><div class="border-x-3 h-3 border-yellow-500"></div></div>
+              <div class="flex gap-x-2 items-stretch">
+                  <div class="flex-1 flex gap-x-1 items-center justify-end text-right text-base/4 overflow-hidden">
+                      <div class="flex grow justify-end overflow-hidden"><span class="overflow-hidden text-ellipsis font-bold p-1 rounded bg-yellow-500 text-black">Baščaršija</span></div>
+                  </div>
+                  <div class="flex flex-col items-center">
+                      <div class="flex-1 shrink-0 w-[4.8px] bg-yellow-500"></div>
+                      <div class="rounded-full border-3 w-4 h-4  border-yellow-500 bg-yellow-500 w-3 h-3 "></div>
+                      <div class="flex-1 shrink-0 w-[4.8px] bg-transparent"></div>
+                  </div>
+                  <div class="flex-1 flex items-center overflow-hidden">
+                      <div class="w-full flex flex-wrap items-center gap-0.5">
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">1</div>
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">2</div>
+                          <div class="rounded w-8 text-xs py-0.5 text-center font-bold bg-yellow-500 text-black">5</div>
+                          <div class="flex items-center">
+                            <div class="flex justify-center rounded px-0.5 h-5 font-bold border-1 border-white">
+                              <i data-lucide="bus-front" class="w-4 -mt-0.5"></i>
+                            </div>
+                            <div class="w-1 border-y-1 border-white"></div>
+                            <div class="flex justify-center rounded px-0.5 h-5 font-bold bg-white text-black">
+                              <i data-lucide="plane" class="w-4 -mt-0.5"></i>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </a>
+          </div>
+
+          <!-- stop departures header -->
+          <div class="col-start-1 col-end-3 row-start-4 row-end-6">
+            <div class="w-full h-full flex flex-col justify-center-safe gap-y-1 bg-white text-black rounded-lg p-3 overflow-x-clip text-ellipsis">
+              <div class="flex flex-col items-center text-xl">
+                <i data-lucide="git-commit-horizontal" class="w-5"></i>
+                <div class="text-center">Otoka</div>
+              </div>
+              <div class="flex items-center justify-center flex-wrap gap-1">
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500">3</div>
+                  <div class="relative flex justify-center py-1">
+                    <i data-lucide="heart" fill="#f0b100" stroke="#f0b100" class="w-5"></i>
+                  </div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500">4</div>
+                  <div class="relative flex justify-center py-1">
+                    <i data-lucide="heart" class="w-5"></i>
+                  </div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500">5</div>
+                  <div class="relative flex justify-center py-1">
+                    <i data-lucide="heart" class="w-5"></i>
+                  </div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500">6</div>
+                  <div class="relative flex justify-center py-1"><i data-lucide="heart" class="w-5"></i></div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white">101</div>
+                  <div class="relative flex justify-center py-1"><i data-lucide="heart" class="w-5"></i></div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white">102</div>
+                  <div class="relative flex justify-center py-1"><i data-lucide="heart" fill="#fb2c36" stroke="#fb2c36" class="w-5"></i></div>
+                </div>
+                <div class="flex flex-col items-stretch">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white">108</div>
+                  <div class="relative flex justify-center py-1"><i data-lucide="heart" class="w-5"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- favorite stop card -->
+          <div class="col-start-3 col-end-4 row-start-4 row-end-6 flex items-center justify-end">
+            <div class="w-full h-full flex flex-col justify-center-safe gap-2 bg-white rounded-lg p-3 text-black">
+              <div class="flex items-center justify-center text-xs font-bold gap-1">
+                <i data-lucide="map-pin" class="w-4"></i>
+                Skenderija
+              </div>
+              <div class="w-full border-t-1 border-black/30"></div>
+              <div class="flex font-bold justify-center">
+                <div class="flex gap-x-1 items-center">
+                  <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500 text-black">3</div>
+                  <div class="text-base/4">Baščaršija</div>
+                </div>
+              </div>
+              <div class="w-full border-t-1 border-black/30"></div>
+              <div class="text-center">
+                <div class="">
+                  <div class="animate-pulse font-bold">now</div>
+                </div>
+                <div class="">
+                  <div class="">4 min</div>
+                </div>
+                <div class="">
+                  <div class="">8 min</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- json area -->
+          <div class="col-start-1 col-end-4 row-start-6 row-end-9">
+            <div class="h-full flex bg-neutral-800 p-3 rounded-lg">
+            </div>
+          </div>
+
+          <!-- scheduled departures -->
+          <div class="col-start-4 col-span-2 row-start-5 row-end-9 overflow-hidden">
+            <div class="flex flex-col grow gap-3 bg-yellow-500 rounded-lg p-3 text-black">
+              <div class="flex flex-col p-3 bg-white rounded-lg">
+                <div class="flex items-center gap-1">
+                  <span class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white inline-block">103</span>
+                  <i data-lucide="map-pin" class="w-5"></i>
+                  Skenderija
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-1 py-2 border-1 border-black bg-black text-white text-center rounded-l-lg">To Trg Austrije</div>
+                <button class="flex-1 py-2 border-1 rounded-e-lg"><div>To Dobrinja</div></button>
+              </div>
+              <div class="grow overflow-hidden flex flex-col gap-1">
+                <div class="h-full animate-carousel-up flex flex-col gap-1">
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:13</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:23</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:33</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:43</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:53</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:03</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:14</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:25</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:36</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:47</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:58</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:09</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:31</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">14:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">14:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center font-bold">14:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:13</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:24</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:35</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:46</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:57</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:08</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:19</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:41</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:03</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:14</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:25</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:36</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:47</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:58</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:09</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:28</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:38</div>
+                </div>
+                <div class="h-full animate-carousel-up flex flex-col gap-1">
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:13</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:23</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:33</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:43</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">06:53</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:03</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:14</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:25</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:36</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:47</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">07:58</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:09</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:31</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">08:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">09:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">10:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">11:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">12:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:12</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">13:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">14:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center text-black/50">14:12</div>
+                  <div class="w-full py-1 bg-background rounded-lg text-center font-bold">14:22</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:32</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:42</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">14:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:02</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:13</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:24</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:35</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:46</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">15:57</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:08</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:19</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:41</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">16:52</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:03</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:14</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:25</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:36</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:47</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">17:58</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:09</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">18:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">19:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">20:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">21:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:30</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:40</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">22:50</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:00</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:10</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:20</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:28</div>
+                  <div class="w-full py-1 bg-white rounded-lg text-center">23:38</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
