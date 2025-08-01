@@ -14,6 +14,9 @@
         --animate-pop: pop 3s ease-in-out infinite;
         --animate-tram-right: tram-right 8s ease-in-out infinite;
         --animate-cycle: cycle 10s linear infinite;
+        --animate-typewriter: typewriter 10s steps(30) forwards infinite;
+        --animate-caret: typewriter 10s steps(30) forwards infinite, blink 1s steps(2) infinite 2s;
+        --animate-cycle-json: cycle-json 20s linear infinite;
 
         @keyframes pulse {
           50% {
@@ -120,6 +123,51 @@
             visibility: visible;
           }
           20% {
+            visibility: hidden;
+          }
+          100% {
+            visibility: hidden;
+          }
+        }
+
+        @keyframes typewriter {
+          0% {
+            left: 0;
+          }
+          5% {
+            left: 100%;
+          }
+          90% {
+            left: 100%;
+          }
+          95% {
+            left: 0;
+          }
+        }
+
+        @keyframes blink {
+          0% {
+            opacity: 0;
+          },
+          0.1% {
+            opacity: 1;
+          },
+          50% {
+            opacity: 1;
+          },
+          50.1% {
+            opacity: 0;
+          },
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @keyframes cycle-json {
+          0% {
+            visibility: visible;
+          }
+          50% {
             visibility: hidden;
           }
           100% {
@@ -1065,6 +1113,45 @@
         </div>
 
         <div class="flex-4/7 hidden md:grid grid-cols-5 grid-rows-8 gap-5 me-5">
+          <!-- swagger excerpt -->
+          <div class="col-start-1 col-end-4 row-start-1 row-end-4 flex flex-col gap-1.5 justify-end overflow-hidden">
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/lines</div>
+              <div class="text-sm">List all lines</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/lines/describe-line</div>
+              <div class="text-sm">Describe line</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/lines/describe-route</div>
+              <div class="text-sm">Describe line route</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/lines/describe-all</div>
+              <div class="text-sm">Describe the routes of each line</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/departures/scheduled</div>
+              <div class="text-sm">Get scheduled departures</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/departures/next</div>
+              <div class="text-sm">Get next departures</div>
+            </div>
+            <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
+              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold">/stops</div>
+              <div class="text-sm">List all stops</div>
+            </div>
+          </div>
+
           <!-- line 3 plan -->
           <div class="col-start-4 col-span-2 row-start-1 row-end-5 flex items-end overflow-hidden">
             <div class="flex flex-col">
@@ -1672,7 +1759,7 @@
 
           <!-- stop departures header -->
           <div class="col-start-1 col-end-3 row-start-4 row-end-6">
-            <div class="w-full h-full flex flex-col justify-center-safe gap-y-1 bg-white text-black rounded-lg p-3 overflow-x-clip text-ellipsis">
+            <div class="w-full h-full flex flex-col justify-center-safe gap-y-1 bg-white text-black rounded-lg p-3 overflow-hidden">
               <div class="flex flex-col items-center text-xl">
                 <i data-lucide="git-commit-horizontal" class="w-5"></i>
                 <div class="text-center">Otoka</div>
@@ -1718,7 +1805,7 @@
 
           <!-- favorite stop card -->
           <div class="col-start-3 col-end-4 row-start-4 row-end-6 flex items-center justify-end">
-            <div class="w-full h-full flex flex-col justify-center-safe gap-2 bg-white rounded-lg p-3 text-black">
+            <div class="w-full h-full flex flex-col justify-center-safe gap-2 bg-white rounded-lg p-3 text-black overflow-hidden">
               <div class="flex items-center justify-center text-xs font-bold gap-1">
                 <i data-lucide="map-pin" class="w-4"></i>
                 Skenderija
@@ -1747,7 +1834,175 @@
 
           <!-- json area -->
           <div class="col-start-1 col-end-4 row-start-6 row-end-9">
-            <div class="h-full flex bg-neutral-800 p-3 rounded-lg">
+            <div class="h-full flex flex-col bg-neutral-800 rounded-lg">
+              <div class="flex gap-2 justify-end bg-neutral-700 rounded-t-lg p-2">
+                <div class="size-3 rounded-full bg-green-500"></div>
+                <div class="size-3 rounded-full bg-amber-500"></div>
+                <div class="size-3 rounded-full bg-red-500"></div>
+              </div>
+              <div class="relative w-full grow">
+                <div class="absolute top-0 left-0 w-full h-full p-4 overflow-hidden font-mono text-sm">
+                  <div class="relative h-[1.5em] before:z-1 before:absolute before:inset-0 before:animate-typewriter before:bg-neutral-800">
+                    <div class="absolute top-0 left-0 animate-cycle-json w-[max-content] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-gray-300">
+                      $ curl -X GET https://transitplanner/lines
+                    </div>
+                    
+                    <div class="absolute top-0 left-0 animate-cycle-json [animation-delay:10s] w-[max-content] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-gray-300" style="visibility: hidden;">
+                      $ curl -X GET https://transitplanner/departures/next?stop=77</div>
+                    </div>
+                  <div class="h-full relative before:z-1 before:absolute before:inset-0 before:animate-typewriter before:bg-neutral-800">
+                    <div class="absolute top-0 left-0 flex flex-col animate-cycle-json w-[max-content]">
+                      <span>[</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"3"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Baščaršija"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Ilidža"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"107"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Dobrinja"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Jezero"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"105"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Vogošća Terminal"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Trg Austrije"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"101"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Otoka"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Trg Austrije"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"102"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Otoka"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Jezero"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"103"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Dobrinja"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Trg Austrije"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"108"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"trolleybus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Otoka"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Dobrinja"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"1"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Željeznička Stanica"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Baščaršija"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"2"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Baščaršija"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Čengić Vila"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"4"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Željeznička Stanica"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Ilidža"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"5"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Baščaršija"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Nedžarići"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"6"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"tram"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Ilidža"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Skenderija"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"200E"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"bus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Bentbaša"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Međunarodni Aerodrom Sarajevo"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4">{</span>
+                          <span><span class="ms-8 text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"31E"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"bus"</span>,</span>
+                          <span><span class="ms-8 text-purple-600">"directions":&nbsp;</span>[</span>
+                            <span><span class="ms-12 text-green-600">"Vijećnica"</span>,</span>
+                            <span><span class="ms-12 text-green-600">"Dobrinja"</span></span>
+                          <span class="ms-8">]</span>
+                        <span class="ms-4">}</span>
+                      <span>]</span>
+                    </div>
+                    <div class="absolute top-0 left-0 flex flex-col animate-cycle-json [animation-delay:10s] w-[max-content]" style="visibility: hidden;">
+                      <span>{</span>
+                        <span class="ms-4"><span class="text-purple-600">"stop"</span>:&nbsp;{</span>
+                          <span class="ms-8"><span class="text-purple-600">"id"</span>:&nbsp;<span class="text-sky-600">77</span></span>
+                          <span class="ms-8"><span class="text-purple-600">"name"</span>:&nbsp;<span class="text-green-600">"Međunarodni Aerodrom Sarajevo"</span></span>
+                          <span class="ms-8"><span class="text-purple-600">"connections"</span>:&nbsp;[...]</span>
+                        <span class="ms-4">},</span>
+                        <span class="ms-4"><span class="text-purple-600">"departures"</span>:&nbsp;{</span>
+                          <span class="ms-8"><span class="text-purple-600">"200E"</span>:&nbsp;{</span>
+                            <span class="ms-12"><span class="text-purple-600">"type"</span>:&nbsp;<span class="text-green-600">"bus"</span></span>
+                            <span class="ms-12"><span class="text-purple-600">"departures"</span>:&nbsp;{</span>
+                              <span class="ms-16"><span class="text-purple-600">"Bentbaša"</span>:&nbsp;[</span>
+                                <span class="ms-20">{</span>
+                                  <span class="ms-20"><span class="text-purple-600">"scheduledAt"</span>:&nbsp;<span class="text-green-600">"2025-08-01T10:05:00.000Z"</span></span>
+                                <span class="ms-20">},</span>
+                                <span class="ms-20">{</span>
+                                  <span class="ms-20"><span class="text-purple-600">"scheduledAt"</span>:&nbsp;<span class="text-green-600">"2025-08-01T11:25:00.000Z"</span></span>
+                                <span class="ms-20">},</span>
+                                <span class="ms-20">{</span>
+                                  <span class="ms-20"><span class="text-purple-600">"scheduledAt"</span>:&nbsp;<span class="text-green-600">"2025-08-01T12:45:00.000Z"</span></span>
+                                <span class="ms-20">},</span>
+                                <span class="ms-20">{</span>
+                                  <span class="ms-20"><span class="text-purple-600">"scheduledAt"</span>:&nbsp;<span class="text-green-600">"2025-08-01T14:10:00.000Z"</span></span>
+                                <span class="ms-20">},</span>
+                                <span class="ms-20">{</span>
+                                  <span class="ms-20"><span class="text-purple-600">"scheduledAt"</span>:&nbsp;<span class="text-green-600">"2025-08-01T14:45:00.000Z"</span></span>
+                                <span class="ms-20">}</span>
+                              <span class="ms-16">]</span>
+                            <span class="ms-12">}</span>
+                          <span class="ms-8">}</span>
+                        <span class="ms-4">}</span>
+                      <span>}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2254,7 +2509,7 @@
               <div class="text-4xl font-bold">Gathering data</div>
 
               <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8">
-                <p>Not only is there no centralized source of data, sometimes the data is at best hard to find, at worst... simply inexistent.</p>
+                <p>Not only is there no centralized source of data, sometimes the data is at best hard to find, at worst inexistent, and most often inaccurate.</p>
 
                 <p>Finding even the list of stops for a line turned out to be a challenge. I ended up focusing on the main lines (so I could at least write a bit of code!)</p>
               </div>
