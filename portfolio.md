@@ -1038,7 +1038,7 @@ permalink: /portfolio/
       <!-- intro -->
       <div id="transit-planner-intro" class="relative snap-start w-full h-full flex shrink-0">
 
-        <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 justify-between p-5 md:p-10">
+        <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 md:justify-between justify-center-safe p-5 md:p-10">
 
           <!-- up/down nav (mobile) -->
           <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
@@ -1110,7 +1110,7 @@ permalink: /portfolio/
 
           </div>
 
-          <a class="hidden md:block mt-8 w-fit" href="#esc-2021-logo-generator">
+          <a class="hidden md:block w-fit" href="#esc-2021-logo-generator">
             <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-down"></i>
             </div>
@@ -1118,48 +1118,48 @@ permalink: /portfolio/
 
         </div>
 
-        <div class="flex-4/7 hidden md:grid grid-cols-5 grid-rows-8 gap-5 me-5">
+        <div class="flex-4/7 hidden md:grid md:grid-cols-4 lg:grid-cols-5 grid-rows-8 gap-5 me-5">
           <!-- swagger excerpt -->
-          <div class="col-start-1 col-end-4 row-start-1 row-end-4 flex flex-col gap-1.5 justify-end overflow-hidden">
+          <div class="hidden lg:flex col-start-1 col-end-4 row-start-1 row-end-4 flex-col gap-1.5 justify-end overflow-hidden">
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/lines</div>
-              <div class="text-sm">List all lines</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/lines</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">List all lines</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/lines/describe-line</div>
-              <div class="text-sm">Describe line</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/lines/describe-line</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">Describe line</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/lines/describe-route</div>
-              <div class="text-sm">Describe line route</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/lines/describe-route</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">Describe line route</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/lines/describe-all</div>
-              <div class="text-sm">Describe the routes of each line</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/lines/describe-all</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">Describe the routes of each line</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/departures/scheduled</div>
-              <div class="text-sm">Get scheduled departures</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/departures/scheduled</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">Get scheduled departures</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/departures/next</div>
-              <div class="text-sm">Get next departures</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/departures/next</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">Get next departures</div>
             </div>
             <div class="flex items-center rounded gap-2 bg-sky-100 border-1 border-sky-700 p-1 text-black">
-              <div class="w-20 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
-              <div class="font-mono font-bold">/stops</div>
-              <div class="text-sm">List all stops</div>
+              <div class="w-20 shrink-0 rounded bg-sky-500 font-bold text-white text-center py-0.5">GET</div>
+              <div class="font-mono font-bold shrink-0">/stops</div>
+              <div class="grow text-sm text-nowrap overflow-hidden text-ellipsis">List all stops</div>
             </div>
           </div>
 
           <!-- line 3 plan -->
-          <div class="col-start-4 col-span-2 row-start-1 row-end-5 flex items-end overflow-hidden">
+          <div class="md:col-start-1 md:col-end-5 md:row-start-1 md:row-end-4 lg:col-start-4 lg:col-end-6 lg:row-start-1 lg:row-end-5 flex items-end overflow-hidden">
             <div class="flex flex-col">
               <div class="flex justify-center"><div class="h-4 w-[4.8px] bg-yellow-500"></div></div>
               <div class="flex gap-x-2 items-stretch">
@@ -1764,7 +1764,7 @@ permalink: /portfolio/
           </div>
 
           <!-- stop departures header -->
-          <div class="col-start-1 col-end-3 row-start-4 row-end-6">
+          <div class="col-start-1 md:col-end-4 lg:col-end-3 row-start-4 row-end-6">
             <div class="w-full h-full flex flex-col justify-center-safe gap-y-1 bg-white text-black rounded-lg p-3 overflow-hidden">
               <div class="flex flex-col items-center text-xl">
                 <i data-lucide="git-commit-horizontal" class="w-5"></i>
@@ -1794,10 +1794,6 @@ permalink: /portfolio/
                   <div class="relative flex justify-center py-1"><i data-lucide="heart" class="w-5"></i></div>
                 </div>
                 <div class="flex flex-col items-stretch">
-                  <div class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white">101</div>
-                  <div class="relative flex justify-center py-1"><i data-lucide="heart" class="w-5"></i></div>
-                </div>
-                <div class="flex flex-col items-stretch">
                   <div class="shrink-0 rounded w-10 text-center font-bold bg-red-500 text-white">102</div>
                   <div class="relative flex justify-center py-1"><i data-lucide="heart" fill="#fb2c36" stroke="#fb2c36" class="w-5"></i></div>
                 </div>
@@ -1810,17 +1806,17 @@ permalink: /portfolio/
           </div>
 
           <!-- favorite stop card -->
-          <div class="col-start-3 col-end-4 row-start-4 row-end-6 flex items-center justify-end">
+          <div class="md:col-start-4 lg:col-start-3 col-span-1 row-start-4 row-end-6 flex items-center justify-end">
             <div class="w-full h-full flex flex-col justify-center-safe gap-2 bg-white rounded-lg p-3 text-black overflow-hidden">
               <div class="flex items-center justify-center text-xs font-bold gap-1">
-                <i data-lucide="map-pin" class="w-4"></i>
+                <i data-lucide="map-pin" class="w-4 shrink-0"></i>
                 Skenderija
               </div>
               <div class="w-full border-t-1 border-black/30"></div>
-              <div class="flex font-bold justify-center">
-                <div class="flex gap-x-1 items-center">
+              <div class="flex font-bold justify-center-safe">
+                <div class="flex gap-x-1 items-center overflow-hidden">
                   <div class="shrink-0 rounded w-10 text-center font-bold bg-yellow-500 text-black">3</div>
-                  <div class="text-base/4">Baščaršija</div>
+                  <div class="text-base/4 overflow-hidden text-ellipsis">Baščaršija</div>
                 </div>
               </div>
               <div class="w-full border-t-1 border-black/30"></div>
@@ -1839,7 +1835,7 @@ permalink: /portfolio/
           </div>
 
           <!-- json area -->
-          <div class="col-start-1 col-end-4 row-start-6 row-end-9">
+          <div class="col-start-1 md:col-end-5 lg:col-end-4 row-start-6 row-end-9">
             <div class="h-full flex flex-col bg-neutral-800 rounded-lg">
               <div class="flex gap-2 justify-end bg-neutral-700 rounded-t-lg p-2">
                 <div class="size-3 rounded-full bg-green-500"></div>
@@ -1847,7 +1843,7 @@ permalink: /portfolio/
                 <div class="size-3 rounded-full bg-red-500"></div>
               </div>
               <div class="relative w-full grow">
-                <div class="absolute top-0 left-0 w-full h-full p-4 overflow-hidden font-mono text-sm">
+                <div class="absolute top-0 left-0 w-full h-full p-4 pe-0 overflow-hidden font-mono text-sm">
                   <div class="relative h-[1.5em] before:z-1 before:absolute before:inset-0 before:animate-typewriter before:bg-neutral-800">
                     <div class="absolute top-0 left-0 animate-cycle-json w-[max-content] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-gray-300">
                       $ curl -X GET https://transitplanner/lines
@@ -2013,7 +2009,7 @@ permalink: /portfolio/
           </div>
 
           <!-- scheduled departures -->
-          <div class="col-start-4 col-span-2 row-start-5 row-end-9 overflow-hidden">
+          <div class="hidden lg:block col-start-4 col-span-2 row-start-5 row-end-9 overflow-hidden">
             <div class="flex flex-col grow gap-3 bg-yellow-500 rounded-lg p-3 text-black">
               <div class="flex flex-col p-3 bg-white rounded-lg">
                 <div class="flex items-center gap-1">
@@ -2023,8 +2019,8 @@ permalink: /portfolio/
                 </div>
               </div>
               <div class="flex">
-                <div class="flex-1 py-2 border-1 border-black bg-black text-white text-center rounded-l-lg">To Trg Austrije</div>
-                <button class="flex-1 py-2 border-1 rounded-e-lg"><div>To Dobrinja</div></button>
+                <div class="flex-1 py-2 border-1 border-black bg-black text-sm text-white text-center rounded-l-lg">To Trg Austrije</div>
+                <button class="flex-1 py-2 border-1 text-sm rounded-e-lg"><div>To Dobrinja</div></button>
               </div>
               <div class="grow overflow-hidden flex flex-col gap-1">
                 <div class="h-full animate-carousel-up flex flex-col gap-1">
