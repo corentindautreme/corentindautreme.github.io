@@ -19,6 +19,7 @@
         --animate-caret: typewriter 10s steps(30) forwards infinite, blink 1s steps(2) infinite 2s;
         --animate-cycle-json: cycle-json 20s linear infinite;
         --animate-cycle-request: cycle-request 20s linear infinite;
+        --animate-horizontal-bounce: horizontal-bounce 1s infinite;
 
         @keyframes pulse {
           50% {
@@ -209,6 +210,17 @@
           }
           100% {
             visibility: hidden;
+          }
+        }
+
+        @keyframes horizontal-bounce {
+          0%, 100% {
+            transform: translateX(-25%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+          }
+          50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
           }
         }
       }
@@ -1930,10 +1942,18 @@
       <!-- intro -->
       <div id="transit-planner-intro" class="relative snap-end md:snap-start w-[85dvw] md:w-full h-full flex shrink-0">
 
+        <!-- mobile only - swipe indicators for illustration -->
+        <div class="absolute top-1/5 -left-1/15 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
+        <div class="absolute bottom-1/5 -left-1/15 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
+
         <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 md:justify-between justify-center-safe p-5 md:p-10">
 
           <!-- mobile only - up/down nav -->
-          <div class="z-1 md:hidden absolute bottom-3 w-7/17 left-5/17 -translate-x-1/2 flex items-center justify-center gap-2 text-xs">
+          <div class="z-1 md:hidden absolute bottom-3 w-7/17 left-7/17 -translate-x-1/2 flex items-center justify-center gap-2 text-xs">
             <a class="w-fit" href="#lys">
               <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
                 <i data-lucide="chevron-up"></i>
@@ -1954,7 +1974,7 @@
 
           <div class="overflow-hidden flex flex-col md:flex-row md:items-between">
 
-            <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-2 justify-center-safe">
+            <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pt-8 md:pt-0 pb-8 flex flex-col gap-2 justify-center-safe">
               <div class="text-4xl font-bold">Transit planner</div>
 
               <div>
