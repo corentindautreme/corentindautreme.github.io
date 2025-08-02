@@ -1949,10 +1949,10 @@ permalink: /portfolio/
       <div id="transit-planner-intro" class="relative snap-end md:snap-start w-[85dvw] md:w-full h-full flex shrink-0">
 
         <!-- mobile only - swipe indicators for illustration -->
-        <div class="absolute top-1/5 -left-1/15 animate-horizontal-bounce">
+        <div class="md:hidden block absolute top-1/5 -left-1/15 animate-horizontal-bounce">
           <i data-lucide="chevrons-right"></i>
         </div>
-        <div class="absolute bottom-1/5 -left-1/15 animate-horizontal-bounce">
+        <div class="md:hidden block absolute bottom-1/5 -left-1/15 animate-horizontal-bounce">
           <i data-lucide="chevrons-right"></i>
         </div>
 
@@ -3781,13 +3781,87 @@ permalink: /portfolio/
     <!-- esc 2021 logo generator -->
     <div id="esc-2021-logo-generator" class="bg-neutral-900 section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
+      <!-- mobile only - illustration slide -->
+      <div id="transit-planner-illustration" class="logo-bg block md:hidden relative w-[80dvw] h-full flex shrink-0">
+
+        <!-- swipe indicators for illustration -->
+        <div class="absolute top-1/5 -right-1/24 z-1 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
+        <div class="absolute bottom-1/5 -right-1/24 z-1 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
+
+        <div class="h-full w-full mask-r-from-75%">
+          <div class="flex w-full h-full overflow-hidden">
+            <div class="h-full flex items-center">
+              <div class="-translate-x-3/7 relative h-4/3 aspect-1/1 border-1 border-dashed border-[#a0a0a0] rounded-full">
+                <div class="grid">
+                  <div class="slice-2021 slice-intro" style="--offset:13.50909; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:24.418180000000003; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:35.327270000000006; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:46.236360000000005; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:57.145450000000004; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:68.05454; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:78.96363; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:89.87272; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:100.78181000000001; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:111.6909; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:122.59999; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:133.50908; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:144.41817; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:155.32726; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:166.23635000000002; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:177.14544; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:188.05453; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:198.96362000000002; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:209.87271; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:220.7818; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:231.69089000000002; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:242.59998000000002; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:253.50907; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:264.41816000000006; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:275.32725000000005; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:286.23634000000004; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:297.14543000000003; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:308.05452; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:318.9636100000001; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:329.87270000000007; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:340.78179000000006; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:351.69088000000005; --value: 5.554545"></div>
+                  <div class="slice-2021 slice-intro" style="--offset:362.59997000000004; --value: 5.554545"></div>
+                </div>
+
+                <div class="animate-cycle absolute w-full aspect-1/1 
+                bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_vienna.png)]"></div>
+                <div class="animate-cycle [animation-delay:2s] absolute w-full aspect-1/1 
+                bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_stockholm.png)]" style="visibility: hidden;"></div>
+                <div class="animate-cycle [animation-delay:4s] absolute w-full aspect-1/1 
+                bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_sarajevo.png)]" style="visibility: hidden;"></div>
+                <div class="animate-cycle [animation-delay:6s] absolute w-full aspect-1/1 
+                bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_athens.png)]" style="visibility: hidden;"></div>
+                <div class="animate-cycle [animation-delay:8s] absolute w-full aspect-1/1 
+                bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/esc_2021_logo_lisbon.png)]" style="visibility: hidden;"></div>
+
+                <div class="size-1/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+                <div class="size-2/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+                <div class="size-3/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+                <div class="size-4/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+                <div class="size-5/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+                <div class="size-6/7 absolute top-1/2 left-1/2 -translate-1/2 border-1 border-dashed border-[#a0a0a0] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- intro -->
-      <div id="esc-2021-logo-generator-intro" class="relative logo-bg snap-start flex w-full h-full shrink-0 overflow-hidden">
+      <div id="esc-2021-logo-generator-intro" class="logo-bg relative snap-end md:snap-start flex w-[85dvw] md:w-full h-full shrink-0 overflow-hidden">
 
         <div class="h-full p-5 md:p-10 flex md:w-1/2 flex-col gap-3 md:gap-0 justify-between">
 
-          <!-- up/down nav (mobile) -->
-          <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
+          <!-- mobile only - up/down nav -->
+          <div class="z-1 md:hidden absolute bottom-3 w-7/17 left-7/17 -translate-x-1/2 flex items-center justify-center gap-2 text-xs">
             <a class="w-fit" href="#transit-planner">
               <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
                 <i data-lucide="chevron-up"></i>
@@ -3935,7 +4009,7 @@ permalink: /portfolio/
       </div>
 
       <!-- overview -->
-      <div id="esc-2021-logo-generator-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center overflow-y-clip">
+      <div id="esc-2021-logo-generator-overview" class="bg-neutral-900 relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 py-15 justify-center overflow-y-clip">
 
         <div class="flex flex-col md:flex-row md:items-between h-full justify-center">
 
@@ -4101,7 +4175,7 @@ permalink: /portfolio/
       </div>
 
       <!-- coordinates to distance -->
-      <div id="esc-2021-logo-generator-gps" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
+      <div id="esc-2021-logo-generator-gps" class="bg-neutral-900 relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
 
         <div class="h-full px-10 py-15 grow flex flex-col gap-3 justify-center overflow-hidden">
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
@@ -4197,7 +4271,7 @@ permalink: /portfolio/
       </div>
 
       <!-- coordinates to slice -->
-      <div id="esc-2021-logo-generator-slices" class="relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
+      <div id="esc-2021-logo-generator-slices" class="bg-neutral-900 relative snap-start w-full h-full flex flex-col md:flex-row-reverse gap-5 shrink-0 justify-center overflow-hidden">
 
         <div class="h-full px-10 py-15 grow flex flex-col gap-3 justify-center overflow-hidden">
           <div class="z-2 flex flex-col gap-3 overflow-hidden">
