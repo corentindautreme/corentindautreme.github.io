@@ -477,100 +477,215 @@
     <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
       <!-- intro -->
-      <div id="lys-intro" class="relative snap-start w-full h-full flex flex-col gap-3 md:gap-0 justify-between shrink-0 p-5 md:p-10">
+      <div id="lys-intro" class="relative snap-start w-full h-full flex gap-3 md:gap-0 justify-between shrink-0">
 
-        <!-- up/down nav (mobile) -->
-        <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
-          <a class="w-fit" href="#home">
-            <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+        <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 md:justify-between justify-center-safe p-5 md:p-10">
+
+          <!-- up/down nav (mobile) -->
+          <div class="z-1 md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 text-xs">
+            <a class="w-fit" href="#home">
+              <div class="rounded-full p-2 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-up"></i>
+              </div>
+            </a>
+            <a class="w-fit" href="#transit-planner">
+              <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+                <i data-lucide="chevron-down"></i>
+              </div>
+            </a>
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#home">
+            <div class="rounded-full p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-up"></i>
             </div>
           </a>
-          <a class="w-fit" href="#transit-planner">
-            <div class="rounded-full p-2 md:p-5 backdrop-blur-sm border-1 border-white/30">
+
+          <div class="mt-12 md:mt-0 grow overflow-hidden flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
+
+            <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
+              <div class="flex flex-row md:flex-col items-end md:items-start gap-3">
+                <div class="text-4xl font-bold">Lys</div>
+                <div class="flex items-center gap-1 rounded-lg bg-neutral-800 px-2 pb-0.5">
+                  <div class="rounded-full bg-red-300 w-2 h-2 md:mt-0.5 animate-pulse"></div>
+                  Live
+                </div>
+              </div><div>
+                A calendar-based <span class="font-black">Python</span> social media bot running on <span class="font-black">AWS</span>, and managed & monitored through a <span class="font-black">Next.js</span> webapp.
+              </div>
+
+              <div>
+                <a href="#lys-overview">
+                  <div class="inline-flex items-center gap-1 rounded-lg bg-white text-black p-2">
+                    Learn more
+                    <i data-lucide="arrow-right"></i>
+                  </div>
+                </a>
+              </div>
+
+              <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
+                <div class="font-bold">Python 3</div>
+                <div class="flex flex-col md:flex-row md:gap-2">
+                  <span class="font-bold">AWS</span>
+                  <span class="text-white/50">Lambda, DynamoDB, CloudWatch, Javascript SDK, Java SDK</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:gap-2">
+                  <span class="font-bold">Next.js 15</span>
+                  <span class="text-white/50">React, Typescript, Tailwind CSS</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                  <span class="font-bold">Android SDK</span>
+                  <span class="text-white/50">Kotlin, Java</span>
+                </div>
+                <div class="flex flex-row gap-2">
+                  <span class="font-bold">CI/CD</span>
+                  <span class="text-white/50">GitHub Actions, Vercel</span>
+                </div>
+              </div>
+
+              <div class="flex flex-col mt-1 text-sm md:text-base pb-5">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="github" class="w-5"></i>
+                  <div class="flex items-center gap-2">
+                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Lys<i data-lucide="external-link" class="w-4"></i></a>
+                    <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Lys web manager<i data-lucide="external-link" class="w-4"></i></a>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <i data-lucide="globe" class="w-5"></i>
+                  <div class="flex gap-2">
+                    <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Calendar<i data-lucide="external-link" class="w-4"></i></a>
+                    <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager.vercel.app">Web manager<i data-lucide="external-link" class="w-4"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="hidden md:block w-300 aspect-16/10 h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
+            </div> -->
+
+          </div>
+
+          <a class="hidden md:block mt-8 w-fit" href="#transit-planner">
+            <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
               <i data-lucide="chevron-down"></i>
             </div>
           </a>
-        </div>
-
-        <a class="hidden md:block mt-8 w-fit" href="#home">
-          <div class="rounded-full p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-up"></i>
-          </div>
-        </a>
-
-        <div class="mt-12 md:mt-0 grow overflow-hidden flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
-
-          <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
-            <div class="flex flex-row md:flex-col items-end md:items-start gap-3">
-              <div class="text-4xl font-bold">Lys</div>
-              <div class="flex items-center gap-1 rounded-lg bg-neutral-800 px-2 pb-0.5">
-                <div class="rounded-full bg-red-300 w-2 h-2 md:mt-0.5 animate-pulse"></div>
-                Live
-              </div>
-            </div><div>
-              A calendar-based <span class="font-black">Python</span> social media bot running on <span class="font-black">AWS</span>, and managed & monitored through a <span class="font-black">Next.js</span> webapp.
-            </div>
-
-            <div>
-              <a href="#lys-overview">
-                <div class="inline-flex items-center gap-1 rounded-lg bg-white text-black p-2">
-                  Learn more
-                  <i data-lucide="arrow-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
-              <div class="font-bold">Python 3</div>
-              <div class="flex flex-col md:flex-row md:gap-2">
-                <span class="font-bold">AWS</span>
-                <span class="text-white/50">Lambda, DynamoDB, CloudWatch, Javascript SDK, Java SDK</span>
-              </div>
-              <div class="flex flex-col md:flex-row md:gap-2">
-                <span class="font-bold">Next.js 15</span>
-                <span class="text-white/50">React, Typescript, Tailwind CSS</span>
-              </div>
-              <div class="flex flex-row gap-2">
-                <span class="font-bold">Android SDK</span>
-                <span class="text-white/50">Kotlin, Java</span>
-              </div>
-              <div class="flex flex-row gap-2">
-                <span class="font-bold">CI/CD</span>
-                <span class="text-white/50">GitHub Actions, Vercel</span>
-              </div>
-            </div>
-
-            <div class="flex flex-col mt-1 text-sm md:text-base pb-5">
-              <div class="flex items-center gap-2">
-                <i data-lucide="github" class="w-5"></i>
-                <div class="flex items-center gap-2">
-                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys">Lys<i data-lucide="external-link" class="w-4"></i></a>
-                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/lys-web-manager">Lys web manager<i data-lucide="external-link" class="w-4"></i></a>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <i data-lucide="globe" class="w-5"></i>
-                <div class="flex gap-2">
-                  <a class="inline-flex gap-0.5 underline" href="https://lyseurovision.github.io/">Calendar<i data-lucide="external-link" class="w-4"></i></a>
-                  <a class="inline-flex gap-0.5 underline" href="https://lys-web-manager.vercel.app">Web manager<i data-lucide="external-link" class="w-4"></i></a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="hidden md:block w-300 aspect-16/10 h-full bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_intro.png)]">
-          </div>
 
         </div>
 
-        <a class="hidden md:block mt-8 w-fit" href="#transit-planner">
-          <div class="rounded-full p-3 md:p-5 backdrop-blur-sm border-1 border-white/30">
-            <i data-lucide="chevron-down"></i>
+        <div class="relative hidden md:flex flex-4/7 mask-radial-full mask-radial-from-50%">
+          <div class="w-full h-full grid grid-cols-7 grid-rows-12 gap-3">
+            <!-- status card -->
+            <div class="col-start-1 col-end-4 row-start-2 row-end-4">
+              <div class="h-full w-full flex rounded bg-neutral-800">
+              </div>
+            </div>
+
+            <!-- lambda icon -->
+            <div class="col-start-4 col-end-5 row-start-2 row-end-4">
+              <div class="h-full w-full rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                <div class="h-full w-full flex items-center justify-center">
+                  <div class="text-5xl text-blue-800">λ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- source card -->
+            <div class="col-start-5 col-end-8 row-start-2 row-end-8">
+              <div class="w-full h-full flex flex-col rounded-xl bg-neutral-950 border-1 border-white/50 overflow-hidden">
+                <div class="rounded-t-xl grow min-h-[150px] w-full" style="background-image: url('https://eurovoix.com/wp-content/uploads/2025/05/250509_Alma-Bengtsson_EBU_17940-scaled.jpg'); background-size: cover; background-position: center bottom;">
+                </div>
+                <div class="p-3">
+                  <div class="flex flex-col gap-y-2">
+                    <div class="flex items-center gap-x-1 text-sm">
+                      <div class="rounded-xl bg-neutral-800 px-2 py-1">Eurovoix</div>
+                      <div class="text-white/75">May 16, 2025</div>
+                    </div>
+                    <h1>🇫🇮 Finland: Uuden Musiikin Kilpailu 2026 on February 28 - Eurovoix</h1>
+                    <div class="text-sm text-white/50 italic">
+                      Yle, the Finnish national broadcaster, has confirmed that Uuden Musiikin Kilpailu 2026 will take place on February 28.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- selected folded suggested date -->
+            <div class="col-start-2 col-end-5 row-start-4 row-end-5">
+              <div class="flex items-center h-full p-3 md:px-5 rounded-xl bg-foreground/10 text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -100px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 200% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                <div class="grow">
+                  <button class="flex w-full items-center gap-1 text-sm">
+                    <div class="font-bold">Feb 28, 2026</div>
+                    <i data-lucide="chevron-down"></i>
+                  </button>
+                </div>
+                <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-white/10 checked:bg-transparent checked:border-1 border-white after:border-white" type="checkbox" checked="checked"></div>
+            </div>
+
+            <!-- event card -->
+            <div class="col-start-1 col-end-4 row-start-5 row-end-7">
+              <div class="w-full h-full p-3 flex rounded-md bg-neutral-900">
+                <div class="flex grow">
+                  <div class="flex flex-col justify-center items-center">
+                    <div class="text-3xl font-bold">08</div>
+                    <div class="text-base/3">Mar</div>
+                    <div class="text-xs mt-2 text-white/70">20:00</div>
+                  </div>
+                  <div class="h-fill border-e-3 mx-3 border-sky-500"></div>
+                  <div class="flex flex-col justify-center-safe">
+                    <div class="text-xs/3 text-white/70">Sweden</div>
+                    <div class="text-xl/5 font-bold my-1">Melodifestivalen</div>
+                    <div class="text-base/4 text-white/70">Final</div>
+                    <div class="mt-2 flex gap-1">
+                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                        <i data-lucide="link" class="w-3"></i>
+                        2 link(s)
+                      </div>
+                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                        <i data-lucide="rewind" class="w-3"></i>
+                        2 VOD
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- selected unfolded suggested date -->
+            <div class="col-start-5 col-end-8 row-start-8 row-end-11 overflow-hidden">
+              <div class="h-full flex items-center-safe p-3 md:px-5 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px 0px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100%; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                <div class="flex flex-col justify-center-safe">
+                  <div class="grow flex w-full items-center gap-1 text-sm">
+                    <div class="font-bold">Feb 28, 2026</div>
+                    <i data-lucide="chevron-down"></i>
+                  </div>
+                  <div class="p-3">
+                    <div class="border-l-4 p-1 ps-3 border-white">
+                      <span>The 76th Festival di Sanremo will take place <span class="bg-white text-black">from February 24 to February 28,</span></span>
+                    </div>
+                    <div class="flex items-center gap-1 text-sm mt-2">
+                      <i data-lucide="clock-3" class="w-3"></i>
+                      <span>Saturday, Feb 28, 2026</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-white/10 checked:bg-transparent checked:border-1 border-white after:border-white" type="checkbox" checked="checked"> -->
+              </div>
+            </div>
+
           </div>
-        </a>
+          <div class="h-2/3 aspect-10/16 absolute top-1/2 left-1/2 -translate-1/2 hidden">
+            <div class="w-full h-full relative overflow-hidden">
+              <div class="w-full h-full absolute top-1 left-1"></div>
+              <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+              <!-- phone frame -->
+              <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -1978,7 +2093,7 @@
               <div class="text-4xl font-bold">Transit planner</div>
 
               <div>
-                A <span class="font-black">Node.js</span> backend API that exposes public transport network basic data (lines, stops, connections) - and a simple <span class="font-black">Next.js</span> demo webapp.
+                A <span class="font-black">Node.js</span> backend API to expose public transport data - and a simple <span class="font-black">Next.js</span> demo webapp.
               </div>
 
               <div>
@@ -1993,7 +2108,7 @@
               <div class="flex flex-col gap-2 mt-2 md:mt-8 text-base/5">
                 <div class="flex flex-col md:flex-row md:gap-2">
                   <span class="font-bold">Node.js</span>
-                  <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger</span>
+                  <span class="text-white/50">Typescript, Express, Prisma ORM, OpenAPI, Swagger, Jest</span>
                 </div>
                 <div class="flex flex-col md:flex-row md:gap-2">
                   <span class="font-bold">Next.js 15</span>
