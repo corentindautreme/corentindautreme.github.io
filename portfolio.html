@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
       @theme {
         --animate-slide: slide 6s linear infinite;
@@ -20,6 +21,7 @@
         --animate-cycle-json: cycle-json 20s linear infinite;
         --animate-cycle-request: cycle-request 20s linear infinite;
         --animate-horizontal-bounce: horizontal-bounce 1s infinite;
+        --animate-notification: notification 12s linear infinite;
 
         @keyframes pulse {
           50% {
@@ -221,6 +223,29 @@
           50% {
             transform: none;
             animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+          }
+        }
+
+        @keyframes notification {
+          0% {
+            transform: translateY(-110%);
+            visibility: hidden;
+          }
+          1% {
+            transform: translateY(0);
+            visibility: visible;
+          }
+          44% {
+            transform: translateY(0);
+            visibility: visible;
+          }
+          45% {
+            transform: translateY(-110%);
+            visibility: hidden;
+          }
+          100% {
+            transform: translateY(-110%);
+            visibility: hidden;
           }
         }
       }
@@ -574,7 +599,7 @@
         </div>
 
         <div class="relative hidden md:flex flex-4/7 mask-radial-full mask-radial-from-50%">
-          <div class="w-full h-full grid grid-cols-7 grid-rows-12 gap-3">
+          <div class="w-full h-full grid grid-cols-7 grid-rows-12 gap-3 brightness-50">
 
             <!-- lambda icon -->
             <div class="col-start-4 col-end-5 row-start-1 row-end-3">
@@ -718,7 +743,7 @@
                 <div class="flex gap-2 items-center justify-center">
                   <div class="flex flex-col items-center p-2">
                     <div class="flex items-center justify-center size-14 rounded-full bg-white/10">
-                      <i data-lucide="check"></i>
+                      <i data-lucide="check" class="size-8"></i>
                     </div>
                     <div class="my-1 text-center">Fetcher</div>
                     <div class="text-xs text-center">Last run on Jan 1</div>
@@ -726,7 +751,7 @@
 
                   <div class="flex flex-col items-center p-2">
                     <div class="flex items-center justify-center size-14 rounded-full bg-amber-400 text-black">
-                      <i data-lucide="triangle-alert"></i>
+                      <i data-lucide="triangle-alert" class="size-8"></i>
                     </div>
                     <div class="my-1 text-center font-bold">Dump</div>
                     <div class="text-xs text-center">Last run on Jan 1</div>
@@ -734,7 +759,7 @@
 
                   <div class="flex flex-col items-center p-2">
                     <div class="flex items-center justify-center size-14 rounded-full bg-white/10">
-                      <i data-lucide="check"></i>
+                      <i data-lucide="check" class="size-8"></i>
                     </div>
                     <div class="my-1 text-center">Refresh</div>
                     <div class="text-xs text-center">Last run on Jan 1</div>
@@ -782,10 +807,47 @@
             </div>
 
           </div>
-          <div class="h-2/3 aspect-10/16 absolute top-1/2 left-1/2 -translate-1/2">
+          <div class="h-2/3 aspect-8/16 absolute top-1/2 left-1/2 -translate-1/2">
             <div class="w-full h-full relative overflow-hidden">
-              <div class="w-full h-full absolute top-1 left-1"></div>
-              <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)]"></div>
+              <!-- bluesky profile -->
+              <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)] brightness-75"></div>
+              <!-- notifications -->
+              <div class="w-[85%] h-full absolute top-[3%] pt-[6%] overflow-hidden left-1/2 -translate-x-1/2 text-black text-[11px]/4 font-[Roboto]">
+
+                <div class="relative h-full w-full overflow-hidden">
+
+                  <div class="animate-notification absolute top-0 h-[72px] w-full overflow-hidden flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
+                    <div class="shrink-0 size-8 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                    <div class="h-full flex flex-col overflow-hidden">
+                      <div class="flex items-center gap-2 text-[9px] text-black/65">
+                        <div class="font-semibold">Bluesky</div>
+                        <div class="">now</div>
+                      </div>
+                      <div class="flex flex-col overflow-hidden text-[11px]/3 mask-b-from-50%">
+                        <div class="font-bold">Lys</div>
+                        <div class="flex items-center gap-1"><span class="flex items-center gap-1 text-nowrap">🚨5 MINUTES</span> REMINDER!</div>
+                        <div class="shrink-0 text-nowrap w-full overflow-hidden text-ellipsis">🇵🇹 Festival da Canção - Final (rtp.pt)</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="animate-notification [animation-delay:6s] absolute top-0 h-[72px] w-full flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
+                    <div class="shrink-0 size-8 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                    <div class="flex flex-col overflow-hidden">
+                      <div class="flex items-center gap-2 text-[9px] text-black/65">
+                        <div class="font-semibold">Bluesky</div>
+                        <div class="">now</div>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="font-bold">Lys</div>
+                        <div class="text-nowrap w-full overflow-hidden text-ellipsis">TONIGHT | 3 selection shows across Europe!</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
               <!-- phone frame -->
               <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
             </div>
