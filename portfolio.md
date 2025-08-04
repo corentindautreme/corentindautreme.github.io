@@ -507,8 +507,237 @@ permalink: /portfolio/
     <!-- lys -->
     <div id="lys" class="lys-bg section snap-start w-full h-[100dvh] flex overflow-x-scroll snap-x snap-mandatory motion-reduce:scroll-auto scroll-smooth">
 
+      <!-- mobile only - illustration slide -->
+      <div id="lys-illustration" class="block md:hidden relative w-[80dvw] h-full flex justify-center shrink-0 mask-r-from-75% overflow-hidden">
+
+        <div class="min-w-[590px] h-[720px] grid grid-cols-4 grid-rows-12 gap-3 brightness-50 px-3">
+
+          <!-- selected unfolded suggested date -->
+          <div class="col-start-1 col-end-3 row-start-1 row-end-3 overflow-hidden">
+            <div class="h-full flex items-center-safe p-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px 0px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100%; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+              <div class="flex flex-col gap-1 justify-center-safe">
+                <div class="grow flex w-full items-center gap-1 text-xs">
+                  <div class="font-bold">Feb 28, 2026</div>
+                  <i data-lucide="chevron-down" class="size-3"></i>
+                </div>
+                <div class="p-0.5 text-xs">
+                  <div class="border-l-2 p-1 ps-2 border-white">
+                    <span>The 76th Festival di Sanremo will take place <span class="bg-white text-black">from February 24 to February 28,</span></span>
+                  </div>
+                  <div class="flex items-center gap-1 mt-1 text-xs">
+                    <i data-lucide="clock-3" class="size-2 shrink-0"></i>
+                    <span>Saturday, Feb 28, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- folded watch link -->
+          <div class="col-start-3 col-end-5 row-start-1 row-end-2">
+            <div class="h-full p-3 rounded-lg bg-neutral-900 border-1 border-white/20 overflow-hidden">
+              <div class="h-full flex items-center-safe">
+                <div class="shrink-0 min-w-[24px] h-full bg-[radial-gradient(var(--color-neutral-600)_3px,transparent_1px)] [background-size:12px_12px] bg-left-center">
+                </div>
+                <div class="flex flex-[50%] ml-2 overflow-hidden text-sm font-bold">
+                  <div class="text-nowrap overflow-hidden overflow-ellipsis">areena.yle.fi/suorat</div>
+                  <i data-lucide="chevron-down" class="w-5"></i>
+                </div>
+                <div class="flex flex-[20%] items-center justify-end gap-1">
+                  <div class="size-5 flex items-center justify-center rounded-full text-black bg-sky-500">
+                    <i data-lucide="star" class="w-3.5"></i>
+                  </div>
+                  <i data-lucide="radio" class="w-5"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- event card -->
+          <div class="col-start-3 col-end-5 row-start-2 row-end-4 overflow-hidden">
+            <div class="w-full h-full px-2 py-3 flex rounded-lg bg-neutral-900">
+              <div class="flex grow">
+                <div class="flex flex-col justify-center items-center">
+                  <div class="text-xl font-bold">08</div>
+                  <div class="text-base/2">Mar</div>
+                  <div class="text-[11px] mt-1 text-white/70">20:00</div>
+                </div>
+                <div class="h-fill border-e-3 mx-2 border-sky-500"></div>
+                <div class="flex flex-col justify-center-safe">
+                  <div class="text-xs/2 text-white/70">Sweden</div>
+                  <div class="text-base/4 font-bold my-1">Melodifestivalen</div>
+                  <div class="text-sm/3 text-white/70">Final</div>
+                  <div class="mt-2 flex gap-1">
+                    <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-[11px] bg-gray-700/50">
+                      <i data-lucide="link" class="w-2.5"></i>
+                      2 link(s)
+                    </div>
+                    <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-[11px] bg-gray-700/50">
+                      <i data-lucide="rewind" class="w-2.5"></i>
+                      2 VOD
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- source card -->
+          <div class="col-start-1 col-end-3 row-start-3 row-end-9">
+            <div class="w-full h-full flex flex-col rounded-xl bg-neutral-950 border-1 border-white/50 overflow-hidden">
+              <div class="rounded-t-xl grow min-h-[150px] w-full" style="background-image: url('https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/umk_26_source_card_alma_bengtsson_ebu.jpg'); background-size: cover; background-position: center bottom;">
+              </div>
+              <div class="flex justify-end -mt-2 px-2 text-[10px] text-white/75">Photo: Alma Bengtsson/EBU</div>
+              <div class="px-3 pt-1 pb-3">
+                <div class="flex flex-col gap-y-2">
+                  <div class="flex items-center gap-x-1 text-sm">
+                    <div class="rounded-xl bg-neutral-800 px-2 py-1">Eurovoix</div>
+                    <div class="text-white/75">May 16, 2025</div>
+                  </div>
+                  <h1>🇫🇮 Finland: Uuden Musiikin Kilpailu 2026 on February 28 - Eurovoix</h1>
+                  <div class="text-sm text-white/50 italic">
+                    Yle, the Finnish national broadcaster, has confirmed that Uuden Musiikin Kilpailu 2026 will take place on February 28.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- selected folded suggested date -->
+          <div class="col-start-3 col-end-5 row-start-4 row-end-5">
+            <div class="flex items-center h-full p-3 md:px-5 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: -100% 0px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 200% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+              <div class="grow">
+                <div class="flex w-full items-center gap-1 text-sm">
+                  <div class="font-bold">Mar 7, 2026</div>
+                  <i data-lucide="chevron-down"></i>
+                </div>
+              </div>
+              <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-white/10 checked:bg-transparent checked:border-1 border-white after:border-white" type="checkbox" checked="checked"></div>
+          </div>
+
+          <!-- status card -->
+          <div class="col-start-3 col-end-5 row-start-5 row-end-8">
+            <div class="h-full w-full p-3 flex flex-col items-center rounded bg-neutral-800 text-sm overflow-hidden">
+              <div class="w-full mb-2">
+                <div class="flex items-center gap-2">
+                  <div class="py-0.5 px-2 rounded bg-amber-400 text-black">Technical</div>
+                  <i data-lucide="chevron-up" class="w-4"></i>
+                  <div class="grow"></div>
+                  <i data-lucide="triangle-alert" class="w-5"></i>
+                </div>
+              </div>
+              <div class="grow"></div>
+              <div class="flex items-center gap-2 justify-center">
+                <div class="flex flex-col items-center p-2">
+                  <div class="flex items-center justify-center size-14 rounded-full bg-white/10">
+                    <i data-lucide="check" class="size-8"></i>
+                  </div>
+                  <div class="my-1 text-center">Fetcher</div>
+                  <div class="text-[11px] text-center">Last on Jan 1</div>
+                </div>
+
+                <div class="flex flex-col items-center p-2">
+                  <div class="flex items-center justify-center size-14 rounded-full bg-amber-400 text-black">
+                    <i data-lucide="triangle-alert" class="size-8"></i>
+                  </div>
+                  <div class="my-1 text-center font-bold">Dump</div>
+                  <div class="text-[11px] text-center">Last on Jan 1</div>
+                </div>
+
+                <div class="flex flex-col items-center p-2">
+                  <div class="flex items-center justify-center size-14 rounded-full bg-white/10">
+                    <i data-lucide="check" class="size-8"></i>
+                  </div>
+                  <div class="my-1 text-center">Refresh</div>
+                  <div class="text-[11px] text-center">Last on Jan 1</div>
+                </div>
+              </div>
+              <div class="grow"></div>
+            </div>
+          </div>
+
+          <!-- add link button -->
+          <div class="h-full flex items-center justify-center gap-2 rounded-lg border-2 border-dashed border-white/30 bg-neutral-800">
+            <i data-lucide="circle-plus" class="size-6"></i>
+            <p class="text-xs">Add link</p>
+          </div>
+
+          <!-- logs -->
+          <div class="col-start-1 col-end-5 row-start-9 row-end-14">
+            <div class="h-full w-full flex rounded-t-lg bg-neutral-900 p-3 font-mono">
+              <div class="flex flex-col overflow-hidden">
+                <div class="text-sm">
+                  <span class="text-white/50 me-3">1970-01-01T00:00:00.014Z</span>
+                  <span>END RequestId:  00000001-ffff-ffff-ffff-abcdef012345</span>
+                </div>
+                <div class="text-sm">
+                  <span class="text-white/50 me-3">1970-01-01T00:00:00.013Z</span>
+                  <span>REPORT RequestId:  00000001-ffff-ffff-ffff-abcdef012345 Duration: 4.00 ms Billed Duration: 4 ms Memory Size: 128 MB Max Memory Used: 89 MB</span>
+                </div>
+                <div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.012Z</span><span>Run date 1970-01-01T00:00:00 is outside of NF season range - exiting</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.011Z</span><span>daily|twitter</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.010Z</span><span>START RequestId: 00000001-ffff-ffff-ffff-abcdef012345 Version: $LATEST</span></div><div class="w-full my-1 border-t-1 border-white/30"></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.004Z</span><span>END RequestId:  00000000-ffff-ffff-ffff-abcdef012345</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.003Z</span><span>REPORT RequestId:  00000000-ffff-ffff-ffff-abcdef012345 Duration: 4.00 ms Billed Duration: 4 ms Memory Size: 128 MB Max Memory Used: 89 MB</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.002Z</span><span>Run date 1970-01-01T00:00:00 is outside of NF season range - exiting</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.001Z</span><span>daily|twitter</span></div><div class="text-sm"><span class="text-white/50 me-3">1970-01-01T00:00:00.000Z</span><span>START RequestId: 00000000-ffff-ffff-ffff-abcdef012345 Version: $LATEST</span></div></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="absolute w-[95%] max-w-[300px] bottom-0 translate-y-1/4 aspect-9/16 overflow-hidden">
+          <div class="w-full h-full relative">
+            <!-- bluesky profile -->
+            <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)] brightness-75"></div>
+            <!-- notifications -->
+            <div class="w-[75%] h-full overflow-hidden absolute top-[6.5%] left-1/2 -translate-x-1/2 text-black text-[11px]/4 font-[Roboto]">
+
+              <div class="relative h-full w-full overflow-hidden">
+
+                <div class="animate-notification absolute top-0 h-[72px] w-full overflow-hidden flex items-center gap-2 bg-gray-100 rounded-lg px-2 py-1 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
+                  <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                  
+                  <div class="flex flex-col overflow-hidden">
+                    <div class="flex items-center gap-2 text-[9px] text-black/65">
+                      <div class="font-semibold">Bluesky</div>
+                      <div class="">now</div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="font-bold">Lys</div>
+                      <div class="text-nowrap w-full overflow-hidden text-ellipsis">🚨5 MINUTES REMINDER!</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="animate-notification [animation-delay:6s] absolute top-0 h-[72px] w-full flex items-center gap-2 bg-gray-100 rounded-lg px-2 py-1 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
+                  <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                  
+                  <div class="flex flex-col overflow-hidden">
+                    <div class="flex items-center gap-2 text-[9px] text-black/65">
+                      <div class="font-semibold">Bluesky</div>
+                      <div class="">now</div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="font-bold">Lys</div>
+                      <div class="text-nowrap w-full overflow-hidden text-ellipsis">TONIGHT | 3 selection shows across Europe!</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- phone frame -->
+            <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- intro -->
-      <div id="lys-intro" class="relative snap-start w-full h-full flex gap-3 md:gap-0 justify-between shrink-0">
+      <div id="lys-intro" class="relative snap-end md:snap-start w-[85dvw] md:w-full h-full flex gap-3 md:gap-0 justify-between shrink-0">
+
+        <!-- mobile only - swipe indicators for illustration -->
+        <div class="md:hidden block absolute top-1/5 -left-1/15 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
+        <div class="md:hidden block absolute bottom-1/5 -left-1/15 animate-horizontal-bounce">
+          <i data-lucide="chevrons-right"></i>
+        </div>
 
         <div class="grow md:grow-0 md:flex-3/7 flex flex-col gap-3 md:gap-0 md:justify-between justify-center-safe p-5 md:p-10">
 
@@ -607,50 +836,8 @@ permalink: /portfolio/
         <div class="relative hidden md:flex flex-4/7 mask-radial-full mask-radial-from-50%">
           <div class="w-full h-full grid grid-cols-7 grid-rows-12 gap-3 brightness-50">
 
-            <!-- lambda icon -->
-            <div class="col-start-4 col-end-5 row-start-1 row-end-3">
-              <div class="h-full w-full rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
-                <div class="h-full w-full flex items-center justify-center">
-                  <div class="text-5xl text-blue-800">λ</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- source card -->
-            <div class="col-start-5 col-end-8 row-start-1 row-end-7">
-              <div class="w-full h-full flex flex-col rounded-xl bg-neutral-950 border-1 border-white/50 overflow-hidden">
-                <div class="rounded-t-xl grow min-h-[150px] w-full" style="background-image: url('https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/umk_26_source_card_alma_bengtsson_ebu.jpg'); background-size: cover; background-position: center bottom;">
-                </div>
-                <div class="flex justify-end -mt-2 px-2 text-[10px] text-white/75">Photo: Alma Bengtsson/EBU</div>
-                <div class="p-3">
-                  <div class="flex flex-col gap-y-2">
-                    <div class="flex items-center gap-x-1 text-sm">
-                      <div class="rounded-xl bg-neutral-800 px-2 py-1">Eurovoix</div>
-                      <div class="text-white/75">May 16, 2025</div>
-                    </div>
-                    <h1>🇫🇮 Finland: Uuden Musiikin Kilpailu 2026 on February 28 - Eurovoix</h1>
-                    <div class="text-sm text-white/50 italic">
-                      Yle, the Finnish national broadcaster, has confirmed that Uuden Musiikin Kilpailu 2026 will take place on February 28.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- selected folded suggested date -->
-            <div class="col-start-2 col-end-5 row-start-3 row-end-4">
-              <div class="flex items-center h-full p-3 md:px-5 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: -100% 0px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 200% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
-                <div class="grow">
-                  <div class="flex w-full items-center gap-1 text-sm">
-                    <div class="font-bold">Feb 28, 2026</div>
-                    <i data-lucide="chevron-down"></i>
-                  </div>
-                </div>
-                <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-white/10 checked:bg-transparent checked:border-1 border-white after:border-white" type="checkbox" checked="checked"></div>
-            </div>
-
             <!-- event card -->
-            <div class="col-start-1 col-end-4 row-start-1 row-end-3">
+            <div class="col-start-1 col-end-4 lg:col-end-5 lg:col-end-4 row-start-1 row-end-3">
               <div class="w-full h-full p-3 flex rounded-lg bg-neutral-900 overflow-hidden">
                 <div class="flex grow">
                   <div class="flex flex-col justify-center items-center">
@@ -678,15 +865,59 @@ permalink: /portfolio/
               </div>
             </div>
 
+            <!-- lambda icon -->
+            <div class="hidden lg:block col-start-4 col-end-5 row-start-1 row-end-3">
+              <div class="h-full w-full rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                <div class="h-full w-full flex items-center justify-center">
+                  <div class="text-5xl text-blue-800">λ</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- source card -->
+            <div class="col-start-4 lg:col-start-5 col-end-8 row-start-1 row-end-7">
+              <div class="w-full h-full rounded-xl bg-neutral-950 border-1 border-white/50 overflow-hidden">
+                <div class="w-full h-full flex-col mask-b-from-90%">
+                  <div class="rounded-t-xl grow min-h-[150px] w-full" style="background-image: url('https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/umk_26_source_card_alma_bengtsson_ebu.jpg'); background-size: cover; background-position: center bottom;">
+                  </div>
+                  <div class="flex justify-end -mt-2 px-2 text-[10px] text-white/75">Photo: Alma Bengtsson/EBU</div>
+                  <div class="p-3">
+                    <div class="flex flex-col gap-y-2">
+                      <div class="flex items-center gap-x-1 text-sm">
+                        <div class="rounded-xl bg-neutral-800 px-2 py-1">Eurovoix</div>
+                        <div class="text-white/75">May 16, 2025</div>
+                      </div>
+                      <h1>🇫🇮 Finland: Uuden Musiikin Kilpailu 2026 on February 28 - Eurovoix</h1>
+                      <div class="text-sm text-white/50 italic">
+                        Yle, the Finnish national broadcaster, has confirmed that Uuden Musiikin Kilpailu 2026 will take place on February 28.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- selected folded suggested date -->
+            <div class="col-start-1 lg:col-start-2 col-end-4 lg:col-end-5 row-start-3 row-end-4">
+              <div class="flex items-center h-full p-3 md:px-5 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: -100% 0px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 200% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                <div class="grow">
+                  <div class="flex w-full items-center gap-1 text-sm">
+                    <div class="font-bold">Feb 28, 2026</div>
+                    <i data-lucide="chevron-down"></i>
+                  </div>
+                </div>
+                <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-white/10 checked:bg-transparent checked:border-1 border-white after:border-white" type="checkbox" checked="checked"></div>
+            </div>
+
             <!-- db icon -->
-            <div class="col-start-3 col-end-4 row-start-4 row-end-6">
+            <div class="hidden lg:block col-start-3 col-end-4 row-start-4 row-end-6">
               <div class="h-full w-full flex items-center justify-center rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
                 <i data-lucide="database" class="size-14 text-blue-800" stroke-width="1.5"></i>
               </div>
             </div>
 
             <!-- folded watch link -->
-            <div class="col-start-1 col-end-4 me-10 row-start-6 row-end-7">
+            <div class="col-start-1 col-end-4 lg:me-10 row-start-4 lg:row-start-6 row-end-5 lg:row-end-7">
               <div class="h-full p-3 rounded-lg bg-neutral-900 border-1 border-white/20 overflow-hidden">
                 <div class="h-full flex items-center-safe">
                   <div class="shrink-0 min-w-[24px] h-full bg-[radial-gradient(var(--color-neutral-600)_3px,transparent_1px)] [background-size:12px_12px] bg-left-center">
@@ -706,26 +937,26 @@ permalink: /portfolio/
             </div>
 
             <!-- highlighted event card -->
-            <div class="col-start-1 ms-8 col-end-4 row-start-7 row-end-9">
+            <div class="col-start-1 lg:ms-8 col-end-4 row-start-5 lg:row-start-7 row-end-8 lg:row-end-9">
               <div class="w-full h-full p-3 flex rounded-lg overflow-hidden" style="background: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-blend-mode: screen;">
-                <div class="flex grow">
+                <div class="flex grow overflow-hidden">
                   <div class="flex flex-col justify-center items-center">
                     <div class="text-3xl font-bold">15</div>
                     <div class="text-base/3">Feb</div>
                     <div class="text-xs mt-2 text-white/70">20:40</div>
                   </div>
                   <div class="h-fill border-e-3 mx-3 border-white"></div>
-                  <div class="flex flex-col justify-center-safe">
+                  <div class="flex flex-col justify-center-safe overflow-hidden">
                     <div class="text-xs/3 text-white/70">Italy</div>
                     <div class="text-xl/5 font-bold my-1">Festival di Sanremo</div>
                     <div class="text-base/4 text-white/70">Final</div>
                     <div class="mt-2 flex gap-1">
-                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs border-1 border-white">
-                        <i data-lucide="link" class="w-3"></i>
+                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs border-1 border-white text-nowrap overflow-hidden">
+                        <i data-lucide="link" class="w-3 shrink-0"></i>
                         1 link(s)
                       </div>
-                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs border-1 border-white">
-                        <i data-lucide="rewind" class="w-3"></i>
+                      <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs border-1 border-white text-nowrap overflow-hidden">
+                        <i data-lucide="rewind" class="w-3 shrink-0"></i>
                         1 VOD
                       </div>
                     </div>
@@ -776,8 +1007,8 @@ permalink: /portfolio/
             </div>
 
             <!-- logs -->
-            <div class="col-start-1 col-end-5 row-start-9 row-end-14">
-              <div class="h-full w-full flex rounded-t-lg bg-neutral-900 p-3 font-mono">
+            <div class="col-start-1 col-end-5 row-start-8 lg:row-start-9 row-end-14">
+              <div class="h-full w-full flex rounded-t-lg bg-neutral-900 px-3 pt-3 font-mono">
                 <div class="flex flex-col overflow-hidden">
                   <div class="text-sm">
                     <span class="text-white/50 me-3">1970-01-01T00:00:00.014Z</span>
@@ -813,6 +1044,7 @@ permalink: /portfolio/
             </div>
 
           </div>
+
           <div class="h-2/3 aspect-8/16 absolute top-1/2 left-1/2 -translate-1/2">
             <div class="w-full h-full relative overflow-hidden">
               <!-- bluesky profile -->
@@ -823,22 +1055,23 @@ permalink: /portfolio/
                 <div class="relative h-full w-full overflow-hidden">
 
                   <div class="animate-notification absolute top-0 h-[72px] w-full overflow-hidden flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
-                    <div class="shrink-0 size-8 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
-                    <div class="h-full flex flex-col overflow-hidden">
-                      <div class="flex items-center gap-2 text-[9px] text-black/65">
-                        <div class="font-semibold">Bluesky</div>
-                        <div class="">now</div>
-                      </div>
-                      <div class="flex flex-col overflow-hidden text-[11px]/3 mask-b-from-50%">
-                        <div class="font-bold">Lys</div>
-                        <div class="flex items-center gap-1"><span class="flex items-center gap-1 text-nowrap">🚨5 MINUTES</span> REMINDER!</div>
-                        <div class="shrink-0 text-nowrap w-full overflow-hidden text-ellipsis">🇵🇹 Festival da Canção - Final (rtp.pt)</div>
-                      </div>
+                  <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                  
+                  <div class="flex flex-col overflow-hidden">
+                    <div class="flex items-center gap-2 text-[9px] text-black/65">
+                      <div class="font-semibold">Bluesky</div>
+                      <div class="">now</div>
                     </div>
+                    <div class="flex flex-col">
+                      <div class="font-bold">Lys</div>
+                      <div class="text-nowrap w-full overflow-hidden text-ellipsis">🚨5 MINUTES REMINDER!</div>
+                    </div>
+                  </div>
                   </div>
 
                   <div class="animate-notification [animation-delay:6s] absolute top-0 h-[72px] w-full flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
-                    <div class="shrink-0 size-8 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                    <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                    
                     <div class="flex flex-col overflow-hidden">
                       <div class="flex items-center gap-2 text-[9px] text-black/65">
                         <div class="font-semibold">Bluesky</div>
