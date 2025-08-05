@@ -238,6 +238,7 @@ permalink: /cv/
                 font-size: 22px;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 margin-bottom: 1em;
             }
 
@@ -245,11 +246,17 @@ permalink: /cv/
                 margin-top: 1em;
             }
 
-            .section-title span {
-                margin-left: 0.5em;
+            .section-title .title {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
                 font-weight: 600;
             }
 
+            .section-title a {
+                text-decoration: none;
+            }
+            
             .work-experience {
                 padding: 0 1em;
                 text-align: justify;
@@ -327,6 +334,37 @@ permalink: /cv/
                 display: inline-block;
                 margin: 0;
                 font-size: 15px;
+            }
+
+            .btn-portfolio {
+                --s: 24px; /* control the size*/
+                --c1: #0f0f0f;
+                --c2: #505050;
+
+                --_s: calc(2*var(--s)) calc(2*var(--s));
+                --_g: 35.36% 35.36% at;
+                --_c: #0000 66%,var(--c2) 68% 70%,#0000 72%;
+                background:
+                    radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s),
+                    radial-gradient(var(--_g) 0    75%,var(--_c)) var(--s) var(--s)/var(--_s),
+                    radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s),
+                    radial-gradient(var(--_g) 0    75%,var(--_c)) 0 0/var(--_s),
+                    repeating-conic-gradient(var(--c1) 0 25%,#0000 0 50%) 0 0/var(--_s),
+                    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s)
+                    var(--c1);
+
+                display: flex;
+                align-items: center;
+                gap: 0.25em;
+                padding: 0.5em 0.75em;
+                border-radius: 0.5em;
+                font-size: 16px;
+                text-decoration: none;
+                color: white;
+            }
+
+            .btn-portfolio i.material-symbols-outlined {
+                font-size: 16px;
             }
 
             .side-project {
@@ -518,7 +556,7 @@ permalink: /cv/
                 }
             }
         </style>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0,0" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200..800">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200..800">
         <meta name="viewport" content="width=device-width, user-scalable=no">
@@ -665,8 +703,10 @@ permalink: /cv/
             </div>
             <div id="content">
                 <div class="section-title" id="work-experience">
-                    <i class="material-symbols-outlined">work</i>
-                    <span>Work experience</span>
+                    <div class="title">
+                        <i class="material-symbols-outlined">work</i>
+                        <span>Work experience</span>
+                    </div>
                 </div>
                 <div class="work-experience">
                     <div class="company">Société Générale CIB (Corporate and Investment Banking)</div>
@@ -750,8 +790,16 @@ permalink: /cv/
                 </div>
 
                 <div class="section-title" id="side-projects">
-                    <i class="material-symbols-outlined">temp_preferences_custom</i>
-                    <span>Side projects</span>
+                    <div class="title">
+                        <i class="material-symbols-outlined">temp_preferences_custom</i>
+                        <span>Side projects</span>
+                    </div>
+                    <a href="https://corentindautreme.github.io/portfolio">
+                        <div class="btn-portfolio">
+                            Portfolio
+                            <i class="material-symbols-outlined">open_in_new</i>
+                        </div>
+                    </a>
                 </div>
                 <div id="side-projects">
                     <div class="side-project">
@@ -785,8 +833,10 @@ permalink: /cv/
                 </div>
 
                 <div class="section-title">
-                    <i class="material-symbols-outlined">school</i>
-                    <span>Education</span>
+                    <div class="title">
+                        <i class="material-symbols-outlined">school</i>
+                        <span>Education</span>
+                    </div>
                 </div>
                 <div class="education">
                     <div class="entry"><span class="highlighted">Engineer's degree, Computer Science</span> at <span class="bolder">INSA Lyon, France</span> (2015-2018)</div>
@@ -799,11 +849,13 @@ permalink: /cv/
                 </div>
 
                 <div class="section-title">
-                    <i class="material-symbols-outlined">celebration</i>
-                    <span>Interests</span>
+                    <div class="title">
+                        <i class="material-symbols-outlined">celebration</i>
+                        <span>Interests</span>
+                    </div>
                 </div>
 
-                <div id="interests">I like playing video games, traveling & taking pretty photos on the way, and fiddling with web development in my free time.</div>
+                <div id="interests">I like playing video games, watching tennis, traveling & taking pretty photos on the way, and fiddling with web development in my free time.</div>
             </div>
             <div id="footer"></div>
         </div>

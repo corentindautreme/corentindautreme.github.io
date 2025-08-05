@@ -833,7 +833,7 @@ permalink: /portfolio/
 
         </div>
 
-        <div class="relative hidden md:flex flex-4/7 mask-radial-full mask-radial-from-50%">
+        <div class="relative hidden md:flex flex-4/7 mask-radial-full mask-radial-from-50% mask-radial-at-right">
           <div class="w-full h-full grid grid-cols-7 grid-rows-12 gap-3 brightness-50">
 
             <!-- event card -->
@@ -1049,24 +1049,25 @@ permalink: /portfolio/
             <div class="w-full h-full relative overflow-hidden">
               <!-- bluesky profile -->
               <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_bluesky_profile.png)] brightness-75"></div>
+              
               <!-- notifications -->
               <div class="w-[85%] h-full absolute top-[3%] pt-[6%] overflow-hidden left-1/2 -translate-x-1/2 text-black text-[11px]/4 font-[Roboto]">
 
                 <div class="relative h-full w-full overflow-hidden">
 
                   <div class="animate-notification absolute top-0 h-[72px] w-full overflow-hidden flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
-                  <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
-                  
-                  <div class="flex flex-col overflow-hidden">
-                    <div class="flex items-center gap-2 text-[9px] text-black/65">
-                      <div class="font-semibold">Bluesky</div>
-                      <div class="">now</div>
+                    <div class="shrink-0 size-6 rounded-full bg-[url(https://corentindautreme.github.io/images/cv/lys.png)] bg-contain bg-no-repeat bg-center"></div>
+                    
+                    <div class="flex flex-col overflow-hidden">
+                      <div class="flex items-center gap-2 text-[9px] text-black/65">
+                        <div class="font-semibold">Bluesky</div>
+                        <div class="">now</div>
+                      </div>
+                      <div class="flex flex-col">
+                        <div class="font-bold">Lys</div>
+                        <div class="text-nowrap w-full overflow-hidden text-ellipsis">🚨5 MINUTES REMINDER!</div>
+                      </div>
                     </div>
-                    <div class="flex flex-col">
-                      <div class="font-bold">Lys</div>
-                      <div class="text-nowrap w-full overflow-hidden text-ellipsis">🚨5 MINUTES REMINDER!</div>
-                    </div>
-                  </div>
                   </div>
 
                   <div class="animate-notification [animation-delay:6s] absolute top-0 h-[72px] w-full flex items-center gap-3 bg-gray-100 rounded-lg p-3 shadow-lg shadow-black/30" style="transform: translateY(-110%);">
@@ -1284,33 +1285,212 @@ permalink: /portfolio/
       </div>
 
       <!-- event fetcher -->
-      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 pb-5 md:py-10 justify-center">
+      <div id="lys-fetcher" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 md:py-10 justify-center">
 
-        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
+        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
 
           <div class="md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden">
+          <div class="md:h-full grow flex md:items-center-safe gap-10 overflow-hidden">
 
-            <div class="md:w-[33%] flex flex-col gap-3">
+            <div class="md:h-full md:w-[33%] flex flex-col gap-3 overflow-hidden justify-center-safe">
 
               <div class="text-4xl font-bold">The event fetcher</div>
 
-              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll mask-b-from-80% mask-b-to-100% pb-5">
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll mask-b-from-80% md:mask-b-from-90% mask-b-to-100% pb-5">
                 <p>Once live, maintaining the calendar table in DynamoDB turned out to be the most time consuming.</p>
                 <p>A nightly Python script parses the <a class="inline-flex gap-0.5 underline" href="https://eurovoix.com/">Eurovoix<i data-lucide="external-link" class="w-4"></i></a> RSS feed to extract show dates and compile them into meaningful suggestions to review manually in the management app.</p>
+                <p>Once accepted, suggestions are enriched with static data to generate events.</p>
               </div>
 
             </div>
 
-            <div class="hidden md:flex grow h-[75dvh] items-center justify-center">
-              <div class="w-63 h-full relative">
-                <div class="w-full h-full absolute m-0 top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher.png)]"></div>
-                <!-- phone frame -->
-                <div class="w-full h-full absolute top-0 left-0 bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/phone_template.png)]"></div>
-                <!-- pop-out context card -->
-                <div class="animate-pop absolute top-[50%] left-[50%] -translate-y-1/3 -translate-x-1/2 w-[110%] aspect-5/4 rounded-xl bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher_context.png)] shadow-xl shadow-black/30 ring ring-black/30"></div>
+            <div class="hidden md:flex flex-col gap-5 h-[80dvh] w-7/10 justify-center overflow-hidden overflow-scroll">
+
+              <div class="flex items-center-safe justify-between">
+
+                <!-- source card -->
+                <div class="w-2/5 min-w-[297px] max-h-[280px] overflow-hidden flex flex-col rounded-xl border-1 border-white/50 bg-neutral-800">
+                  <div class="h-full w-full mask-b-from-80% mask-b-to-90%">
+                    <div class="rounded-t-xl shrink-0 w-full h-[125px] bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/benidorm_2026_source_card.jpg)] bg-cover bg-center"></div>
+                    <div class="grow flex flex-col items-center p-3 overflow-hidden">
+                      <div class="grow flex flex-col gap-y-2 overflow-hidden">
+                        <div class="flex items-center gap-x-1 text-sm">
+                          <div class="rounded-xl bg-white/10 px-2 py-1">Eurovoix</div>
+                          <div class="text-white/75">Jun 26, 2025</div>
+                        </div>
+                        <h1>🇪🇸 Spain: Benidorm Fest 2026 Dates &amp; Artistic Director Announced - Eurovoix</h1>
+                        <div class="text-sm text-white/50 italic overflow-hidden">
+                          Spanish broadcaster RTVE has revealed that the Grand Final of Benidorm Fest 2026 will be held on February 14.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <i data-lucide="move-right" class="size-15 shrink-0" stroke-width="1"></i>
+
+                <!-- suggested dates -->
+                <div class="w-1/3 min-w-[261px] flex flex-col">
+
+                  <div class="mx-3 flex items-center h-fit px-5 pt-2 pb-3 rounded-xl bg-neutral-700">
+                    <div class="grow">
+                      <div class="flex w-full items-center gap-1 text-sm">
+                        <div class="">Sep 1, 2025</div>
+                        <i data-lucide="chevron-down" class="size-5"></i>
+                      </div>
+                    </div>
+                    <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 bg-black/10" type="checkbox" disabled>
+                  </div>
+
+                  <div class="mx-2 -mt-4 z-1 bg-neutral-800 rounded-xl shadow-[0px_-10px_5px_-3px_rgba(0,_0,_0,_0.3)]" >
+                    <div class="flex items-center h-fit px-5 pt-2 pb-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -100px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                      <div class="grow">
+                        <div class="flex w-full items-center gap-1 text-sm">
+                          <div class="font-bold">Feb 10, 2026</div>
+                          <i data-lucide="chevron-down" class="size-5"></i>
+                        </div>
+                      </div>
+                      <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-black/10" type="checkbox" checked disabled>
+                    </div>
+                  </div>
+
+                   <div class="mx-1 -mt-4 z-1 bg-neutral-800 rounded-xl shadow-[0px_-10px_5px_-3px_rgba(0,_0,_0,_0.3)]" >
+                    <div class="flex items-center h-fit px-5 pt-2 pb-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -200px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                      <div class="grow">
+                        <div class="flex w-full items-center gap-1 text-sm">
+                          <div class="font-bold">Feb 12, 2026</div>
+                          <i data-lucide="chevron-down" class="size-5"></i>
+                        </div>
+                      </div>
+                      <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-black/10" type="checkbox" checked disabled>
+                    </div>
+                  </div>
+
+                   <div class="-mt-4 z-1 bg-neutral-800 rounded-xl shadow-[0px_-10px_5px_-3px_rgba(0,_0,_0,_0.3)]" >
+                    <div class="flex items-center h-fit px-5 py-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -100px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                      <div class="grow">
+                        <div class="flex w-full items-center gap-1 text-sm">
+                          <div class="font-bold">Feb 14, 2026</div>
+                          <i data-lucide="chevron-up" class="size-5"></i>
+                        </div>
+                        <div class="p-3">
+                          <div class="border-l-4 p-1 ps-3 border-white">
+                            <span>[...] Final of Benidorm Fest 2026 will be held <span class="bg-white text-black">on February 14</span></span>
+                          </div>
+                          <div class="flex items-center gap-1 text-sm mt-2">
+                            <i data-lucide="clock-3" class="size-4"></i>
+                            <span>Saturday, Feb 14, 2026</span>
+                          </div>
+                        </div>
+                      </div>
+                      <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-black/10"type="checkbox" checked disabled>
+                    </div>
+                  </div>
+
+                </div>
+
               </div>
+
+              <div class="flex items-center justify-between">
+                <div class="w-[297px] shrink-0"></div>
+                <div class="w-15 shrink-0"></div>
+                <div class="w-3/10 min-w-[261px] flex justify-center">
+                  <i data-lucide="move-down" class="size-15" stroke-width="1"></i>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <!-- generated events -->
+                <div class="pb-10 shrink-0">
+                  <div class="relative z-1 flex rounded-lg bg-neutral-900 shadow shadow-black/50">
+                    <div class="flex z-1 p-3 rounded-lg bg-neutral-900">
+                      <div class="flex flex-col justify-center items-center">
+                        <div class="text-3xl font-bold">14</div>
+                        <div class="text-base/3">feb</div>
+                      </div>
+                      <div class="h-fill border-e-3 mx-3 border-sky-500"></div>
+                      <div class="flex flex-col justify-center-safe">
+                        <div class="text-xs/3 text-white/70">Spain</div>
+                        <div class="text-xl/5 font-bold my-1">Festival de Benidorm</div>
+                        <div class="text-base/4 text-white/70">Final</div>
+                        <div class="mt-2 flex gap-1">
+                          <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                            <i data-lucide="link" class="w-3"></i>
+                            1 link(s)
+                          </div>
+                          <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                            <i data-lucide="rewind" class="w-3"></i>
+                            1 VOD
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="absolute w-full top-10 left-10 flex rounded-lg bg-neutral-800">
+                      <div class="flex p-3 rounded-lg bg-neutral-800">
+                        <div class="flex flex-col justify-center items-center">
+                          <div class="text-3xl font-bold">10</div>
+                          <div class="text-base/3">feb</div>
+                        </div>
+                        <div class="h-fill border-e-3 mx-3 border-sky-500"></div>
+                        <div class="flex flex-col justify-center-safe">
+                          <div class="text-xs/3 text-white/70">Spain</div>
+                          <div class="text-xl/5 font-bold my-1">Festival de Benidorm</div>
+                          <div class="text-base/4 text-white/70">Final</div>
+                          <div class="mt-2 flex gap-1">
+                            <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                              <i data-lucide="link" class="w-3"></i>
+                              1 link(s)
+                            </div>
+                            <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                              <i data-lucide="rewind" class="w-3"></i>
+                              1 VOD
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="absolute w-full top-5 left-5 flex rounded-lg bg-neutral-800 shadow shadow-black/50">
+                      <div class="flex p-3 rounded-lg bg-neutral-800">
+                        <div class="flex flex-col justify-center items-center">
+                          <div class="text-3xl font-bold">12</div>
+                          <div class="text-base/3">feb</div>
+                        </div>
+                        <div class="h-fill border-e-3 mx-3 border-sky-500"></div>
+                        <div class="flex flex-col justify-center-safe">
+                          <div class="text-xs/3 text-white/70">Spain</div>
+                          <div class="text-xl/5 font-bold my-1">Festival de Benidorm</div>
+                          <div class="text-base/4 text-white/70">Final</div>
+                          <div class="mt-2 flex gap-1">
+                            <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                              <i data-lucide="link" class="w-3"></i>
+                              1 link(s)
+                            </div>
+                            <div class="flex items-center gap-1 w-fit px-1.5 rounded-xs text-xs bg-gray-700/50">
+                              <i data-lucide="rewind" class="w-3"></i>
+                              1 VOD
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <i data-lucide="move-left" class="ms-20 size-15 shrink-0" stroke-width="1"></i>
+
+                <!-- statics db -->
+                <div class="w-3/10 min-w-[261px] flex justify-center">
+                  <div class="relative rounded-lg bg-white p-4 outline-2 outline-white/50 outline-offset-4">
+                    <i data-lucide="database" class="size-8 text-blue-800"></i>
+                    <div class="absolute -bottom-8 left-1/2 w-2/1 -translate-x-1/2 text-center">Statics table</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
 
           </div>
@@ -1326,7 +1506,51 @@ permalink: /portfolio/
           </a>
 
           <div class="md:hidden h-45 shrink-0 flex justify-center mt-1">
-              <div class="animate-pop h-full aspect-5/4 rounded-xl bg-contain bg-no-repeat bg-center bg-[url(https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/lys_manager_event_fetcher_context.png)] shadow-xl shadow-black/30 ring ring-black/30"></div>
+              <div class="h-full flex flex-col overflow-hidden">
+
+                <div class="mx-3 flex items-center h-fit px-5 pt-2 pb-3 rounded-xl bg-neutral-700">
+                  <div class="grow">
+                    <div class="flex w-full items-center gap-1 text-xs">
+                      <div class="">Sep 1, 2025</div>
+                      <i data-lucide="chevron-down" class="size-4"></i>
+                    </div>
+                  </div>
+                  <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 bg-black/10" type="checkbox" disabled>
+                </div>
+
+                 <div class="mx-1 -mt-5 z-1 bg-neutral-800 rounded-xl shadow-[0px_-10px_5px_-3px_rgba(0,_0,_0,_0.3)]" >
+                  <div class="flex items-center h-fit px-5 pt-2 pb-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -200px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                    <div class="grow">
+                      <div class="flex w-full items-center gap-1 text-xs">
+                        <div class="font-bold">Feb 12, 2026</div>
+                        <i data-lucide="chevron-down" class="size-4"></i>
+                      </div>
+                    </div>
+                    <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-black/10" type="checkbox" checked disabled>
+                  </div>
+                </div>
+
+                <div class="-mt-5 z-1 bg-neutral-800 rounded-xl shadow-[0px_-10px_5px_-3px_rgba(0,_0,_0,_0.3)]" >
+                  <div class="flex items-center h-fit px-5 py-3 rounded-xl text-white" style="background-color: rgba(0, 0, 0, 0); background-position: 0px -100px; background-repeat: repeat, repeat, repeat; background-attachment: scroll, scroll, scroll; background-image: linear-gradient(red, transparent), linear-gradient(to left top, lime, transparent), linear-gradient(to right top, blue, transparent); background-size: 100% 400px; background-origin: padding-box, padding-box, padding-box; background-clip: border-box, border-box, border-box; background-blend-mode: screen;">
+                    <div class="grow">
+                      <div class="flex w-full items-center gap-1 text-xs">
+                        <div class="font-bold">Feb 14, 2026</div>
+                        <i data-lucide="chevron-up" class="size-4"></i>
+                      </div>
+                      <div class="p-2">
+                        <div class="border-l-4 p-1 ps-3 border-white text-sm">
+                          <span>[...] Final of Benidorm Fest 2026 will be held <span class="bg-white text-black">on February 14</span></span>
+                        </div>
+                        <div class="flex items-center gap-1 text-xs mt-2">
+                          <i data-lucide="clock-3" class="size-4"></i>
+                          <span>Saturday, Feb 14, 2026</span>
+                        </div>
+                      </div>
+                    </div>
+                    <input class="relative peer ms-1 appearance-none shrink-0 rounded-lg w-6 h-6 after:content-[''] after:hidden checked:after:inline-block after:w-2.5 after:h-4 after:ms-1.5 after:rotate-[40deg] after:border-b-4 after:border-r-4 bg-black/10"type="checkbox" checked disabled>
+                  </div>
+                </div>
+              </div>
           </div>
 
         </div>
@@ -4276,20 +4500,56 @@ permalink: /portfolio/
               </div>
             </div>
 
-            <a class="order-2 xl:order-4 xl:max-w-40 flex flex-col items-end justify-center" href="#transit-planner-lines">
+            <!-- <a class="order-2 xl:order-4 xl:max-w-40 flex flex-col items-end justify-center" href="#transit-planner-js">
               <div class="flex items-center gap-1 text-white/50">
                 Next
                 <i data-lucide="arrow-right" class="w-5"></i>
               </div>
               <div class="text-right text-base/5">
-                Line routes
+                Testing, logging, 
               </div>
-            </a>
+            </a> -->
 
           </div>
 
         </div>
       </div>
+
+      <!-- js -->
+      <!-- <div id="transit-planner-js" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 justify-center md:p-10">
+        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
+
+          <div class="md:hidden h-12 shrink-0"></div>
+
+          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden px-10 md:px-0">
+
+            <div class="md:h-full md:w-[33%] flex flex-col gap-3 overflow-hidden justify-center-safe">
+
+              <div class="text-4xl font-bold">Testing, logging, </div>
+
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8 mask-b-from-80% mask-b-to-100%">
+                <p></p>
+              </div>
+
+            </div>
+
+            <div class="hidden md:flex md:grow h-[75dvh] items-center">              
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center px-10 md:px-0" href="#transit-planner-data">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              Gathering data
+            </div>
+          </a>
+
+        </div>
+      </div> -->
 
     </div>
 
