@@ -492,6 +492,10 @@ permalink: /portfolio/
             <div class="md:w-[33%] flex flex-col gap-3">
               <p>I've made a thing or two over the years. Some to bring an idea to life, some to learn cool new stuff.</p>
               <p>On this page, you can read a bit about some of them, check out some pretty screenshots, or even find links to online demos.</p>
+
+              <div class="text-[10px] md:text-xs text-white/50">
+                Background pattern: <a href="https://css-pattern.com/3d-wavy/" class="underline hover:text-white">3d Wavy by Temani Afif</a>
+              </div>
             </div>
           </div>
         </div>
@@ -764,6 +768,11 @@ permalink: /portfolio/
           <div class="mt-12 md:mt-0 grow overflow-hidden flex flex-col md:flex-row md:gap-10 md:justify-between md:items-center">
 
             <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
+
+              <div class="text-[10px] md:text-xs text-white/50">
+                Background pattern: <a href="https://css-pattern.com/curvy/" class="underline hover:text-white">Curvy by Temani Afif</a>
+              </div>
+
               <div class="flex flex-row md:flex-col items-end md:items-start gap-3">
                 <div class="text-4xl font-bold">Lys</div>
                 <div class="flex items-center gap-1 rounded-lg bg-neutral-800 px-2 pb-0.5">
@@ -2719,6 +2728,11 @@ permalink: /portfolio/
           <div class="overflow-hidden flex flex-col md:flex-row md:items-between">
 
             <div class="h-full overflow-hidden overflow-y-scroll mask-b-from-90% mask-b-to-100% pt-8 md:pt-0 pb-8 flex flex-col gap-2 justify-center-safe">
+
+              <div class="text-[10px] md:text-xs text-white/50">
+                Background pattern: <a href="https://css-pattern.com/diagonal-arrows/" class="underline hover:text-white">Diagonal Arrows by Temani Afif</a>
+              </div>
+
               <div class="text-4xl font-bold">Transit planner</div>
 
               <div>
@@ -4665,6 +4679,11 @@ permalink: /portfolio/
           <div class="grow overflow-hidden flex flex-col md:flex-row md:items-center md:gap-10">
 
             <div class="h-full grow overflow-hidden overflow-y-scroll mask-b-from-85% mask-b-to-100% pb-8 flex flex-col gap-3 justify-center-safe">
+
+              <div class="text-[10px] md:text-xs text-white/50">
+                Background pattern: <a href="https://www.magicpattern.design/tools/css-backgrounds" class="underline hover:text-white">Cross by Jim Raptis</a>
+              </div>
+
               <div class="text-4xl font-bold">ESC 2021 logo generator</div>
 
               <div>
