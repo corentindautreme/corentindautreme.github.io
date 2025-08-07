@@ -4159,14 +4159,14 @@ permalink: /portfolio/
       </div>
 
       <!-- data -->
-      <div id="transit-planner-data" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
+      <div id="transit-planner-data" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 md:px-10 justify-center">
         <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
 
-          <div class="md:hidden h-12 shrink-0"></div>
+          <div class="order-1 md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+          <div class="order-2 md:h-full md:w-[33%] grow md:grow-0 px-10 md:px-0 flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
 
-            <div class="md:w-[33%] flex flex-col gap-3 overflow-hidden">
+            <div class="flex flex-col gap-3 overflow-hidden">
 
               <div class="text-4xl font-bold">Gathering data</div>
 
@@ -4178,13 +4178,14 @@ permalink: /portfolio/
 
             </div>
 
-            <div class="hidden md:flex h-[75dvh] items-center justify-center">
-              
-            </div>
-
           </div>
 
-          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-app">
+          <div class="order-4 md:order-3 p-5 flex flex-col items-end justify-center">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDI0MzdsN2RreDluMTBxYzU2am05NjQ5cGJpa3oyODVraGFpM25qNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hEc4k5pN17GZq/giphy.gif"/>
+            <a href="https://giphy.com/gifs/original-hEc4k5pN17GZq" class="text-sm">Giphy</a>
+          </div>
+
+          <a class="order-3 md:order-4 md:max-w-40 md:mt-0 px-10 md:px-0 flex flex-col items-end justify-center" href="#transit-planner-app">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -4193,10 +4194,6 @@ permalink: /portfolio/
               The app
             </div>
           </a>
-
-          <div class="md:hidden h-25 shrink-0 flex justify-center mt-1">
-            
-          </div>
 
         </div>
       </div>
