@@ -445,7 +445,7 @@ permalink: /portfolio/
   </head>
   <body class="bg-black text-white ">
     <!-- top nav -->
-    <div class="z-2 fixed top-0 left-0 w-full flex items-center justify-between p-2 backdrop-blur-sm border-b-1 border-white/30">
+    <div class="z-10 fixed top-0 left-0 w-full flex items-center justify-between p-2 backdrop-blur-sm border-b-1 border-white/30">
       <!-- left icon + title -->
       <a href="https://corentindautreme.github.io/cv">
         <div class="flex items-center gap-1">
@@ -1176,7 +1176,7 @@ permalink: /portfolio/
 
             </div>
 
-            <div class="hidden px-20 md:flex flex-col grow h-[75dvh] items-end justify-center">
+            <div class="hidden px-20 md:flex flex-col grow h-full py-12 items-end justify-center">
 
               <!-- first row: database, top Lys lambda -->
               <div class="w-full flex justify-between">
@@ -1194,16 +1194,16 @@ permalink: /portfolio/
               </div>
 
               <!-- link between trigger lambda and top Lys lambda -->
-              <div class="w-full flex">
-                <div class="w-1/2 h-50 border-e-2 border-white/50">
+              <div class="grow w-full flex">
+                <div class="w-1/2 border-e-2 border-white/50">
 
                 </div>
-                <div class="relative w-1/2 ps-4 pe-8 h-50 flex flex-col">
+                <div class="relative w-1/2 ps-4 pe-8 flex flex-col">
                   <div class="h-1/2 border-e-2 border-b-2 border-white/50"></div>
                   <div class="h-1/2 border-s-2 border-white/50"></div>
                   <div class="absolute top-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm/4 text-white/50">
                     <div>mode = ...</div>
-                    <div>target = bluesky</div>
+                    <div>target = threads</div>
                     <div>events = [...]</div>
                   </div>
                 </div>
@@ -1245,7 +1245,7 @@ permalink: /portfolio/
               </div>
 
               <!-- link between trigger lambda and bottom Lys lambda -->
-              <div class="relative w-1/2 pe-8 h-50 flex flex-col">
+              <div class="relative w-1/2 pe-8 grow flex flex-col">
                 <div class="h-1/2 border-s-2 border-b-2 border-white/50"></div>
                 <div class="h-1/2 border-e-2 border-white/50"></div>
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 flex flex-col items-center text-sm/4 text-white/50">
@@ -1428,7 +1428,7 @@ permalink: /portfolio/
                     </div>
 
                     <div class="absolute w-full top-10 left-10 flex rounded-lg bg-neutral-800">
-                      <div class="flex p-3 rounded-lg bg-neutral-800">
+                      <div class="flex p-3 rounded-lg bg-neutral-800 opacity-50">
                         <div class="flex flex-col justify-center items-center">
                           <div class="text-3xl font-bold">10</div>
                           <div class="text-base/3">feb</div>
@@ -1453,7 +1453,7 @@ permalink: /portfolio/
                     </div>
 
                     <div class="absolute w-full top-5 left-5 flex rounded-lg bg-neutral-800 shadow shadow-black/50">
-                      <div class="flex p-3 rounded-lg bg-neutral-800">
+                      <div class="flex p-3 rounded-lg bg-neutral-800 opacity-50">
                         <div class="flex flex-col justify-center items-center">
                           <div class="text-3xl font-bold">12</div>
                           <div class="text-base/3">feb</div>
@@ -1685,7 +1685,7 @@ permalink: /portfolio/
       </div>
 
       <!-- manager (cont.) -->
-      <div id="lys-manager-2" class="snap-start w-full h-full flex gap-3 shrink-0 md:px-10 items-center">
+      <div id="lys-manager-2" class="snap-start w-full h-full flex gap-3 shrink-0 md:px-10 items-center overflow-hidden">
 
         <div class="md:hidden w-75">
         </div>
@@ -2525,7 +2525,6 @@ permalink: /portfolio/
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="h-full relative before:z-1 before:absolute before:inset-0 before:animate-typewriter before:bg-neutral-800"> -->
                   <div class="h-full relative">
                     <div class="absolute top-0 left-0 flex flex-col animate-cycle-request w-[max-content]">
                       <span>[</span>
@@ -3513,7 +3512,6 @@ permalink: /portfolio/
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="h-full relative before:z-1 before:absolute before:inset-0 before:animate-typewriter before:bg-neutral-800"> -->
                   <div class="h-full relative">
                     <div class="absolute top-0 left-0 flex flex-col animate-cycle-request w-[max-content]">
                       <span>[</span>
@@ -3903,14 +3901,14 @@ permalink: /portfolio/
       </div>
 
       <!-- overview -->
-      <div id="transit-planner-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 justify-center md:p-10">
+      <div id="transit-planner-overview" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 justify-center md:px-10">
         <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
 
           <div class="md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden px-10 md:px-0">
+          <div class="md:h-full px-10 md:px-0 grow flex md:items-center gap-10 overflow-hidden">
 
-            <div class="md:h-full md:w-[33%] flex flex-col gap-3 overflow-hidden justify-center-safe">
+            <div class="md:h-full md:w-[33%] md:py-10 flex flex-col gap-3 overflow-hidden justify-center-safe">
 
               <div class="text-4xl font-bold">Getting around Sarajevo</div>
 
@@ -3922,7 +3920,7 @@ permalink: /portfolio/
 
             </div>
 
-            <div class="hidden md:flex md:grow h-[75dvh] items-center">
+            <div class="hidden md:flex md:grow items-center">
               <div class="relative w-full flex items-end justify-between">
 
                 <div class="absolute size-full">
@@ -3932,13 +3930,13 @@ permalink: /portfolio/
                 <div class="absolute left-1/2 -translate-x-1/2 w-[90%] h-full overflow-hidden">
                   <div class="relative size-full">
                     <svg viewBox="0 0 490 93" height="50%" class="absolute bottom-0 flex items-end animate-tram-right" xmlns="http://www.w3.org/2000/svg">
-                      <!-- Tram body with rounded corners and sloped ends -->
+                      <!-- tram body -->
                       <path d="M5,91 Q10,31 25,31 H468 Q478,31 481,91 Z" fill="gold" stroke="black" stroke-width="2" />
 
-                      <!-- Tram roof reflection -->
+                      <!-- tram roof reflection -->
                       <rect x="20" y="33" width="450" height="4" fill="rgba(255,255,255,0.3)" rx="4" />
 
-                      <!-- Windows (upper half only) with black outline -->
+                      <!-- windows -->
                       <g fill="black" stroke="black" stroke-width="2">
                         <rect x="58" y="41" width="80" height="25" rx="2" />
 
@@ -3947,20 +3945,20 @@ permalink: /portfolio/
                         <rect x="350" y="41" width="80" height="25" rx="2" />
                       </g>
 
-                      <!-- Doors (reach full height) with black outlines and rounded corners -->
+                      <!-- doors -->
                       <g fill="black" stroke="black" stroke-width="2">
-                        <!-- Front single door -->
+                        <!-- front door -->
                         <rect x="25" y="41" width="25" height="50" rx="2" />
-                        <!-- Middle double doors -->
+                        <!-- middle doors -->
                         <rect x="146" y="41" width="50" height="50" rx="2" />
 
                         <rect x="292" y="41" width="50" height="50" rx="2" />
 
-                        <!-- Rear single door -->
+                        <!-- back door -->
                         <rect x="438" y="41" width="25" height="50" rx="2" />
                       </g>
 
-                      <!-- Pantograph (outlined triangle, no fill, rounded corners) -->
+                      <!-- pantograph-->
                       <g stroke="black" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
                         <polyline points="455,0 440,15" />
                         <polyline points="440,15 455,30" />
@@ -3976,31 +3974,31 @@ permalink: /portfolio/
                     <rect x="10" y="268" width="120" height="10" />
                   </g>
 
-                  <!-- White/Beige base -->
+                  <!-- base -->
                   <rect x="25" y="193" width="90" height="65" rx="0" fill="#fef6e5" stroke="#ccc" stroke-width="0"/>
                   <rect x="25" y="193" width="90" height="3" fill="#bbb"/>
                   <rect x="25" y="208" width="90" height="2" fill="#bbb"/>
 
-                  <!-- Wooden mid-section -->
+                  <!-- wooden mid-section -->
                   <rect x="25" y="68" width="90" height="125" rx="0" fill="#a97442" />
 
-                  <!-- Decorative windows -->
+                  <!-- decorative "windows" -->
                   <g fill="#704428">
                     <rect x="29" y="73" width="24" height="115" rx="4"/>
                     <rect x="57" y="73" width="25" height="115" rx="4"/>
                     <rect x="86" y="73" width="24" height="115" rx="4"/>
                   </g>
 
-                  <!-- Half-disc dome -->
+                  <!-- dome -->
                   <g>
-                    <!-- Half-circle dome -->
+                    <!-- dome -->
                     <path d="M20 68 A50 50 0 0 1 120 68 L120 58 L20 58 Z" fill="#2e7d60" />
 
                     <!-- top bit -->
                     <rect x="0" y="54" width="140" height="4" fill="#704428"/>
                     <rect x="5" y="58" width="130" height="10" fill="#a97442"/>
 
-                    <!-- Small spire -->
+                    <!-- spire -->
                     <line x1="70" y1="18" x2="70" y2="3" stroke="#333" stroke-width="2"/>
                     <rect x="68" y="0" width="4" rx="2" height="6" fill="#333"/>
                     <circle cx="70" cy="10" r="2" fill="#333" />
@@ -4009,23 +4007,23 @@ permalink: /portfolio/
                 </svg>
 
                 <svg width="40%" height="auto" viewBox="0 0 190 200" class="z-1">
-                  <!-- Base building -->
+                  <!-- base building -->
                   <rect x="10" y="110" width="160" height="80" class="fill-[#cac3c3]" />
 
-                  <!-- Dome -->
+                  <!-- dome -->
                   <path d="M10 111 Q90 40 170 111 Z" fill="#5b5c5b" />
                   <line x1="90" y1="70" x2="90" y2="75" stroke="#777" />
                   <circle cx="90" cy="67" r="3" fill="#777" />
 
-                  <!-- Minaret -->
+                  <!-- minaret -->
                   <rect x="170" y="40" width="10" height="150" class="fill-[#c2b8b8]" />
                   <rect x="168" y="55" width="14" height="5" rx="1" fill="#c9c6be" />
 
-                  <!-- Minaret roof (sharp conical top) -->
+                  <!-- minaret roof -->
                   <polygon points="175,0 170,40 180,40" fill="#5b5c5b" />
                   <rect x="170" y="38" width="10" height="2" fill="#aaa" />
 
-                  <!-- Ground -->
+                  <!-- ground -->
                   <rect x="0" y="190" width="190" height="10" fill="#aaa" />
                 </svg>
 
@@ -4056,13 +4054,13 @@ permalink: /portfolio/
                   <div class="relative size-full">
                     <div class="absolute bottom-0 flex items-end h-full">
                       <svg viewBox="0 0 490 93" height="50%" class="animate-tram-right">
-                        <!-- Tram body with rounded corners and sloped ends -->
+                        <!-- tram body -->
                         <path d="M5,91 Q10,31 25,31 H468 Q478,31 481,91 Z" fill="gold" stroke="black" stroke-width="2" />
 
-                        <!-- Tram roof reflection -->
+                        <!-- tram roof reflection -->
                         <rect x="20" y="33" width="450" height="4" fill="rgba(255,255,255,0.3)" rx="4" />
 
-                        <!-- Windows (upper half only) with black outline -->
+                        <!-- windows -->
                         <g fill="black" stroke="black" stroke-width="2">
                           <rect x="58" y="41" width="80" height="25" rx="2" />
 
@@ -4071,20 +4069,20 @@ permalink: /portfolio/
                           <rect x="350" y="41" width="80" height="25" rx="2" />
                         </g>
 
-                        <!-- Doors (reach full height) with black outlines and rounded corners -->
+                        <!-- doors -->
                         <g fill="black" stroke="black" stroke-width="2">
-                          <!-- Front single door -->
+                          <!-- front door -->
                           <rect x="25" y="41" width="25" height="50" rx="2" />
-                          <!-- Middle double doors -->
+                          <!-- middle doors -->
                           <rect x="146" y="41" width="50" height="50" rx="2" />
 
                           <rect x="292" y="41" width="50" height="50" rx="2" />
 
-                          <!-- Rear single door -->
+                          <!-- back door -->
                           <rect x="438" y="41" width="25" height="50" rx="2" />
                         </g>
 
-                        <!-- Pantograph (outlined triangle, no fill, rounded corners) -->
+                        <!-- pantograph -->
                         <g stroke="black" stroke-width="3" fill="none" stroke-linejoin="round" stroke-linecap="round">
                           <polyline points="455,0 440,15" />
                           <polyline points="440,15 455,30" />
@@ -4095,37 +4093,37 @@ permalink: /portfolio/
                 </div>
 
                 <svg height="60%" viewBox="0 0 140 278" class="z-1">
-                  <!-- Steps -->
+                  <!-- steps -->
                   <g fill="#ddd">
                     <rect x="15" y="258" width="110" height="10" />
                     <rect x="10" y="268" width="120" height="10" />
                   </g>
 
-                  <!-- White/Beige base -->
+                  <!-- base -->
                   <rect x="25" y="193" width="90" height="65" rx="0" fill="#fef6e5" stroke="#ccc" stroke-width="0"/>
                   <rect x="25" y="193" width="90" height="3" fill="#bbb"/>
                   <rect x="25" y="208" width="90" height="2" fill="#bbb"/>
 
-                  <!-- Wooden mid-section -->
+                  <!-- wooden mid-section -->
                   <rect x="25" y="68" width="90" height="125" rx="0" fill="#a97442" />
 
-                  <!-- Decorative windows -->
+                  <!-- decorative "windows" -->
                   <g fill="#704428">
                     <rect x="29" y="73" width="24" height="115" rx="4"/>
                     <rect x="57" y="73" width="25" height="115" rx="4"/>
                     <rect x="86" y="73" width="24" height="115" rx="4"/>
                   </g>
 
-                  <!-- Half-disc dome -->
+                  <!-- dome -->
                   <g>
-                    <!-- Half-circle dome -->
+                    <!-- dome -->
                     <path d="M20 68 A50 50 0 0 1 120 68 L120 58 L20 58 Z" fill="#2e7d60" />
 
                     <!-- top bit -->
                     <rect x="0" y="54" width="140" height="4" fill="#704428"/>
                     <rect x="5" y="58" width="130" height="10" fill="#a97442"/>
 
-                    <!-- Small spire -->
+                    <!-- spire -->
                     <line x1="70" y1="18" x2="70" y2="3" stroke="#333" stroke-width="2"/>
                     <rect x="68" y="0" width="4" rx="2" height="6" fill="#333"/>
                     <circle cx="70" cy="10" r="2" fill="#333" />
@@ -4134,23 +4132,23 @@ permalink: /portfolio/
                 </svg>
 
                 <svg height="100%" viewBox="0 0 190 200" class="z-1">
-                  <!-- Base building -->
+                  <!-- base building -->
                   <rect x="10" y="110" width="160" height="80" class="fill-[#cac3c3]" />
 
-                  <!-- Dome -->
+                  <!-- dome -->
                   <path d="M10 111 Q90 40 170 111 Z" fill="#5b5c5b" />
                   <line x1="90" y1="70" x2="90" y2="75" stroke="#777" />
                   <circle cx="90" cy="67" r="3" fill="#777" />
 
-                  <!-- Minaret -->
+                  <!-- minaret -->
                   <rect x="170" y="40" width="10" height="150" class="fill-[#c2b8b8]" />
                   <rect x="168" y="55" width="14" height="5" rx="1" fill="#c9c6be" />
 
-                  <!-- Minaret roof (sharp conical top) -->
+                  <!-- minaret roof -->
                   <polygon points="175,0 170,40 180,40" fill="#5b5c5b" />
                   <rect x="170" y="38" width="10" height="2" fill="#aaa" />
 
-                  <!-- Ground -->
+                  <!-- ground -->
                   <rect x="0" y="190" width="190" height="10" fill="#aaa" />
                 </svg>
 
@@ -4204,14 +4202,14 @@ permalink: /portfolio/
       </div>
 
       <!-- app -->
-      <div id="transit-planner-app" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center">
-        <div class="h-full flex flex-col gap-3 md:gap-0 md:flex-row md:items-center md:justify-between">
+      <div id="transit-planner-app" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 md:px-10 justify-center">
+        <div class="h-full flex flex-col md:flex-row gap-3 md:gap-5 md:items-center md:justify-between">
 
-          <div class="md:hidden h-12 shrink-0"></div>
+          <div class="order-1 md:hidden h-12 shrink-0"></div>
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+          <div class="order-2 md:h-full md:w-1/3 grow md:grow-0 px-10 md:px-0 md:py-10 flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
 
-            <div class="md:w-[33%] flex flex-col gap-3 overflow-hidden">
+            <div class="md:h-full flex flex-col gap-3 overflow-hidden justify-center-safe">
 
               <div class="text-4xl font-bold">The app</div>
 
@@ -4223,13 +4221,29 @@ permalink: /portfolio/
 
             </div>
 
-            <div class="hidden md:flex h-[75dvh] items-center justify-center">
-              
-            </div>
-
           </div>
 
-          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-lines">
+          <div class="order-4 md:order-3 w-full h-50 md:h-full md:w-0 px-10 md:px-0 md:grow flex items-center justify-center overflow-hidden">
+            <div class="w-full h-full flex items-center justify-center pt-[10%] md:pt-0 mb-[-10%] md:mb-0">
+              <div class="hidden xl:block w-[17.5%]">
+                <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_app_4.png" class="rounded-lg max-w-[110%] aspect-9/16 me-[-10%]"/>
+              </div>
+              <div class="w-[30%] xl:w-[20%] shadow-lg shadow-black/30">
+                <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_app_2.png" class="rounded-lg max-w-[110%] aspect-9/16 me-[-10%]"/>
+              </div>
+              <div class="w-[40%] xl:w-[25%] z-2 shadow-lg shadow-black/30">
+                <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_app_1.png" class="rounded-lg"/>
+              </div>
+              <div class="w-[30%] xl:w-[20%] z-1 overflow-hidden shadow-lg shadow-black/30">
+                <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_app_3.png" class="rounded-lg max-w-[110%] aspect-9/16 ms-[-10%]"/>
+              </div>
+              <div class="hidden xl:block w-[17.5%] overflow-hidden">
+                <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/portfolio/images/portfolio/transit_planner_client_app_5.png" class="rounded-lg max-w-[110%] aspect-9/16 ms-[-10%]"/>
+              </div>
+            </div>
+          </div>
+
+          <a class="order-3 md:order-4 md:max-w-40 md:mt-0 flex flex-col items-end justify-center px-10 md:px-0" href="#transit-planner-lines">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
@@ -4238,10 +4252,6 @@ permalink: /portfolio/
               Line routes
             </div>
           </a>
-
-          <div class="md:hidden h-25 shrink-0 flex justify-center mt-1">
-            
-          </div>
 
         </div>
       </div>
@@ -4705,9 +4715,7 @@ permalink: /portfolio/
         <div class="hidden lg:flex w-40 absolute top-1/2 left-1/2 translate-y-[-1px] -translate-x-full">
           <div class="w-3/4 flex flex-col items-center">
             <div class="w-full flex justify-end">
-              <!-- <div class="w-1/2 h-4 border-t-3 border-l-3 border-[#a0a0a0]"></div> -->
               <div class="relative w-1/2 aspect-1/1 after:absolute after:w-2/1 after:aspect-1/1 after:-rotate-45 after:origin-top-right after:right-0 after:border-[#a0a0a0] after:border-t-3 overflow-hidden"></div>
-              <!-- <div class="w-1/2 border-t-3 border-[#a0a0a0]"></div> -->
             </div>
             <div class="relative text-xl w-full mt-1.5 h-[1.5em] overflow-hidden">
               <span class="absolute h-full w-full text-center -translate-y-full animate-cycle-city leading-none text-gray-300">Vienna</span>
