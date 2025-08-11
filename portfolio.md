@@ -1808,7 +1808,7 @@ permalink: /portfolio/
                     <a class="underline" href="https://corentindautreme.github.io/Making-Lys-A-Eurovision-Flavored-Twitter-Bot/">Making Lys, a Eurovision-flavored Twitter bot</a><span class="ms-1 text-white/50">(september 2020)</span>
                   </div>
                   <div>
-                    <a class="underline" href="https://corentindautreme.github.io/Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/">Revisting Lys, a Eurovision-flavored social media bot</a><span class="ms-1 text-white/50">(december 2024)</span>
+                    <a class="underline" href="https://corentindautreme.github.io/Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/">Revisiting Lys, a Eurovision-flavored social media bot</a><span class="ms-1 text-white/50">(december 2024)</span>
                   </div>
                 </div>
               </div>
