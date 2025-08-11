@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Revisting Lys, a Eurovision flavored social media bot
+title: Revisting Lys, a Eurovision6flavored social media bot
 ---
 
 I launched Lys back in late 2019 as a Twitter bot to post reminders about Eurovision national selection TV shows from
@@ -124,7 +124,7 @@ optionally, a **formatter**, that enriches the posts before publishing.
 Now, if I want to support a new platform, I only need to create a corresponding API client and build the relevant
 publishers. Plus, I finally have code I'm not ashamed to push to GitHub.
 
-![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_code_base.png){: height="518px" width="470px"}
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_code_base.png)
 
 With the same Lys processes now running 3 times a day, the read operations on my DynamoDB table spiked
 and <span class="tooltip-toggle" aria-label="I do perform full scans of the event table every 5 minutes like a baboon, after all. Who would've guessed!">
@@ -150,13 +150,13 @@ day, <span class="tooltip-toggle" aria-label="There's nothing quite like the adr
 to add a last minute link for example</span>), so I could do with a periodic extract (say, daily), even if that means I
 have to manually trigger a refresh every now and then.
 
-![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_1.png){: height="239px" width="1545px"}
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_1.png)
 
 _An overview of the write volume to my "events" DynamoDB table during the peak of the Eurovision selection season (
 January to mid March). Updates are largely concentrated in the morning (when I browse overnight date suggestions to
 review) or in the evening (when I find a link for an upcoming show)._
 
-![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_2.png){: height="222px" width="1516px"}
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_2.png)
 
 _OMG THE FIK FINAL STREAM LINK DROPPED EARLY!!_
 
@@ -169,7 +169,7 @@ All that was left
 was [writing some HTML, plugging a Javascript GET onto the raw URL](https://github.com/LysEurovision/lyseurovision.github.io/blob/web/index.html#L341),
 wrapping the whole shebang in a GitHub Pages website and [voilà](https://lyseurovision.github.io/)!
 
-![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_web.png){: height="1092px" width="768px"}
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_web.png)
 
 _The nerdy .github.io URL is well worth the monthly savings_
 
