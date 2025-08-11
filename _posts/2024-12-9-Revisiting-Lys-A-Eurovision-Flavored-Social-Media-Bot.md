@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Revisting Lys, a Eurovision-flavored social media bot
+title: Revisiting Lys, a Eurovision-flavored social media bot
 ---
 
 I launched Lys back in late 2019 as a Twitter bot to post reminders about Eurovision national selection TV shows from
