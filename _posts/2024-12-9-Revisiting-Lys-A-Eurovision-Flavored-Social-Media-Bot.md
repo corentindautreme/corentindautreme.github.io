@@ -20,8 +20,8 @@ With Twitter losing its grace in favor of spawn-off Bluesky
 and, <span class="tooltip-toggle" aria-label="Months after Melon Husk bought the platform and turned it into an absolute shitshow, driving advertisers to run off as, apparently, being shown next to literal n*zis isn't a great look">
 a few months
 later</span>, [totally-not-trying-to-replace-failing-X-formerly-Twitter](https://www.threads.net/@mosseri/post/CuZ3LjhNl0m)
-Threads, a platform <span class="tooltip-toggle" aria-label="See, totally not a replacer">hastily put together by Meta
-to fill what was more and more shaping to become a void in the World Wide Web</span>, it became <span class="tooltip-toggle" aria-label="In the case of Threads, a fun challenge is all it was - it boasts a grand total of 20 followers there (against well over 400 on Bluesky)">relevant, and a fun
+Threads, a platform hastily put together by Meta
+to fill what was more and more shaping to become a void in the World Wide Web, it became <span class="tooltip-toggle" aria-label="In the case of Threads, a fun challenge is all it was - it boasts a grand total of 20 followers there (against well over 400 on Bluesky)">relevant, and a fun
 challenge</span>, to deploy Lys to more platforms. Threads, with its (now fulfilled) ambition
 to <span class="tooltip-toggle" aria-label="Anytime now in the EU I'm sure (edit: I started writing this article in December 2024 (I know I know), came back to it in August 2025, and we're still waiting lol)">
 open up to the Fediverse</span>, was
@@ -124,10 +124,10 @@ optionally, a **formatter**, that enriches the posts before publishing.
 Now, if I want to support a new platform, I only need to create a corresponding API client and build the relevant
 publishers. Plus, I finally have code I'm not ashamed to push to GitHub.
 
-<img width="470" height="518" alt="Image" src="https://github.com/user-attachments/assets/701c404f-e114-4851-a693-e89d574934a5" />
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_code_base.png){: height="518px" width="470px"}
 
 With the same Lys processes now running 3 times a day, the read operations on my DynamoDB table spiked
-and <span class="tooltip-toggle" aria-label="I do perform full scans of the event tables every 5 minutes like a baboon, after all. Who would've guessed!">
+and <span class="tooltip-toggle" aria-label="I do perform full scans of the event table every 5 minutes like a baboon, after all. Who would've guessed!">
 got dangerously close to the free tier limits</span>, and a long overdue, second refactoring was needed, to extract the
 database querying out of the Lys publishing process so that it's only performed once.
 
@@ -146,17 +146,17 @@ extra considerations proper to public interfaces (authentication & authorization
 
 I went back to my use case: I want my data to be displayed as a calendar on a web page. This data doesn't change very
 often (at worst, a few times a
-day, <span class="tooltip-toggle" aria-label="There's nothing quite like the adrenaline rush of the RTSH YouTube stream being posted 30 minutes before the show">
+day, <span class="tooltip-toggle" aria-label="There's nothing quite like the adrenaline rush of the RTSH YouTube stream for Festivali i Këngës being posted 30 minutes before the show">
 to add a last minute link for example</span>), so I could do with a periodic extract (say, daily), even if that means I
 have to manually trigger a refresh every now and then.
 
-<img width="1545" height="239" alt="Image" src="https://github.com/user-attachments/assets/e24631aa-34a6-4ab8-a38f-732bbedfc459" />
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_1.png){: height="239px" width="1545px"}
 
 _An overview of the write volume to my "events" DynamoDB table during the peak of the Eurovision selection season (
 January to mid March). Updates are largely concentrated in the morning (when I browse overnight date suggestions to
 review) or in the evening (when I find a link for an upcoming show)._
 
-<img width="1516" height="222" alt="Image" src="https://github.com/user-attachments/assets/495fcac9-1ad3-48f0-9551-fd0a9ddd51bf" />
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_dynamo_wcu_graph_2.png){: height="222px" width="1516px"}
 
 _OMG THE FIK FINAL STREAM LINK DROPPED EARLY!!_
 
@@ -169,7 +169,7 @@ All that was left
 was [writing some HTML, plugging a Javascript GET onto the raw URL](https://github.com/LysEurovision/lyseurovision.github.io/blob/web/index.html#L341),
 wrapping the whole shebang in a GitHub Pages website and [voilà](https://lyseurovision.github.io/)!
 
-<img width="1092" height="768" alt="Image" src="https://github.com/user-attachments/assets/9dd52c81-abd4-4301-bd11-0e5e0a155bdd" />
+![_config.yml]({{ site.baseurl }}/images/articles/2024-12-09-Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/lys_web.png){: height="1092px" width="768px"}
 
 _The nerdy .github.io URL is well worth the monthly savings_
 
