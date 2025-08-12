@@ -2763,7 +2763,7 @@ permalink: /portfolio/
                 <div class="font-bold">PostgreSQL</div>
               </div>
 
-              <div class="flex flex-col mt-1 md:flex-row md:gap-5 text-sm md:text-base">
+              <div class="flex flex-col gap-2 mt-1 text-sm md:text-base pb-5">
                 <div class="flex items-center gap-2">
                   <i data-lucide="github" class="w-5"></i>
                   <div class="flex flex-col">
@@ -2776,6 +2776,11 @@ permalink: /portfolio/
                       (frontend)
                     </div>
                   </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <i data-lucide="globe" class="w-5"></i>
+                  <a class="inline-flex gap-0.5 underline" href="https://transit-planner.vercel.app/api-docs/">Transit Planner (Swagger)<i data-lucide="external-link" class="w-4"></i></a>
                 </div>
               </div>
 
