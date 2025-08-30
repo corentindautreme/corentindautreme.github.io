@@ -189,7 +189,7 @@ a <span class="tooltip-toggle" aria-label="That was the number 1 requirement - I
 and <span class="tooltip-toggle" aria-label="If you're a fellow AWS free tier abuser, stop worrying about your Lambda runs and start keeping an eye on your DymamoDB R/WCU">
 doesn't send a million and a half requests to DynamoDB</span>.
 
-<img width="640" height="360" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_desktop_suggestions_bis_dark.png" /> <img width="173" height="376" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_suggestion_quater_dark.png" /> <img width="173" height="376" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_event_dark.png" />
+<img width="640" height="auto" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_desktop_suggestions_bis_dark.png" /> <img width="173" height="376" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_suggestion_quater_dark.png" /> <img width="173" height="376" alt="Image" src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/lys_manager_event_dark.png" />
 
 ### What's next?
 
