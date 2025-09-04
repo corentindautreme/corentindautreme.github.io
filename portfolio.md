@@ -4529,56 +4529,318 @@ permalink: /portfolio/
               </div>
             </div>
 
-            <!-- <a class="order-2 xl:order-4 xl:max-w-40 flex flex-col items-end justify-center" href="#transit-planner-js">
+            <a class="order-2 xl:order-4 xl:max-w-40 flex flex-col items-end justify-center" href="#transit-planner-route-departures">
               <div class="flex items-center gap-1 text-white/50">
                 Next
                 <i data-lucide="arrow-right" class="w-5"></i>
               </div>
               <div class="text-right text-base/5">
-                Testing, logging, 
+                Route departures
               </div>
-            </a> -->
+            </a>
 
           </div>
 
         </div>
       </div>
 
-      <!-- js -->
-      <!-- <div id="transit-planner-js" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 justify-center md:p-10">
-        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row md:items-center md:justify-between">
+      <!-- Route departures -->
+      <div id="transit-planner-route-departures" class="relative snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 justify-center overflow-hidden overflow-y-scroll">
+        <div class="h-full flex flex-col gap-3 md:gap-10 md:flex-row xl:items-center xl:justify-between">
 
-          <div class="md:hidden h-12 shrink-0"></div>
+          <div class="h-full xl:grow flex flex-col xl:flex-row xl:items-center gap-3 xl:gap-10 md:overflow-hidden">
 
-          <div class="md:h-full grow flex md:items-center gap-10 overflow-hidden px-10 md:px-0">
+            <div class="order-1 xl:hidden h-12 shrink-0"></div>
 
-            <div class="md:h-full md:w-[33%] flex flex-col gap-3 overflow-hidden justify-center-safe">
+            <div class="order-2 xl:w-[33%] md:min-h-[150px] min-w-[200px] flex flex-col gap-3 md:overflow-hidden">
 
-              <div class="text-4xl font-bold">Testing, logging, </div>
+              <div class="text-4xl font-bold">Route departures</div>
 
-              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-8 mask-b-from-80% mask-b-to-100%">
-                <p></p>
+              <div class="flex flex-col gap-3 md:overflow-hidden md:overflow-y-scroll">
+                <p>The first endpoints I implemented are to describe lines and the routes they take.</p>
+                <p>This one, <span class="font-mono">describe-line</span>, returns the type of the line, its directions, and all stops alongside each direction - along with the available connections at that stop.</p>
               </div>
 
             </div>
 
-            <div class="hidden md:flex md:grow h-[75dvh] items-center">              
+            <div class="order-4 xl:order-3 xl:h-[75dvh] md:grow flex flex-col gap-3 items-center justify-center md:overflow-hidden">
+              <div class="w-full flex items-center gap-2 bg-neutral-800 rounded-lg p-3">
+                <div class="bg-white/10 px-3 py-0.5 rounded">GET</div>
+                <div class="font-mono">/departures/stops</div>
+              </div>
+
+              <div class="grow w-full flex flex-col md:flex-row gap-3 md:overflow-hidden">
+                <div class="max-h-[300px] md:max-h-none flex-1/2 flex flex-col gap-3 bg-neutral-900 rounded-lg p-3">
+                  <div class="flex items-center">
+                    <button class="flex-1/2 py-1 cursor-pointer btn-model rounded-s border-1 border-e-0 border-white/30 bg-white/30">
+                      Model
+                    </button>
+                    <button class="flex-1/2 py-1 cursor-pointer btn-json rounded-e border-1 border-s-0 border-white/30">
+                      Example
+                    </button>
+                  </div>
+                  <pre class="w-full font-mono model overflow-hidden overflow-scroll text-sm">
+[
+  {
+    "id": number,
+    "name": string,
+    "departures": [
+      {
+        "scheduledAt": string
+      }
+    ]
+  }
+]
+                  </pre>
+                  <pre class="w-full font-mono json hidden overflow-hidden overflow-scroll text-sm">[{"id":11,"name":"Otoka","departures":[{"scheduledAt":"2025-09-03T15:10:00.000Z"},{"scheduledAt":"2025-09-03T15:14:00.000Z"},{"scheduledAt":"2025-09-03T15:18:00.000Z"}]},{"id":12,"name":"Čengić Vila","departures":[{"scheduledAt":"2025-09-03T15:13:00.000Z"},{"scheduledAt":"2025-09-03T15:17:00.000Z"},{"scheduledAt":"2025-09-03T15:21:00.000Z"}]},{"id":13,"name":"Dolac Malta","departures":[{"scheduledAt":"2025-09-03T15:15:00.000Z"},{"scheduledAt":"2025-09-03T15:19:00.000Z"},{"scheduledAt":"2025-09-03T15:23:00.000Z"}]},{"id":14,"name":"Socijalno","departures":[{"scheduledAt":"2025-09-03T15:17:00.000Z"},{"scheduledAt":"2025-09-03T15:21:00.000Z"},{"scheduledAt":"2025-09-03T15:25:00.000Z"}]},{"id":15,"name":"Pofalići","departures":[{"scheduledAt":"2025-09-03T15:19:00.000Z"},{"scheduledAt":"2025-09-03T15:23:00.000Z"},{"scheduledAt":"2025-09-03T15:27:00.000Z"}]},{"id":16,"name":"Univerzitet","departures":[{"scheduledAt":"2025-09-03T15:20:00.000Z"},{"scheduledAt":"2025-09-03T15:24:00.000Z"},{"scheduledAt":"2025-09-03T15:28:00.000Z"}]},{"id":17,"name":"Muzeji","departures":[{"scheduledAt":"2025-09-03T15:22:00.000Z"},{"scheduledAt":"2025-09-03T15:26:00.000Z"},{"scheduledAt":"2025-09-03T15:30:00.000Z"}]},{"id":18,"name":"Marijin Dvor","departures":[{"scheduledAt":"2025-09-03T15:24:00.000Z"},{"scheduledAt":"2025-09-03T15:28:00.000Z"},{"scheduledAt":"2025-09-03T15:32:00.000Z"}]},{"id":19,"name":"Skenderija","departures":[{"scheduledAt":"2025-09-03T15:27:00.000Z"},{"scheduledAt":"2025-09-03T15:31:00.000Z"},{"scheduledAt":"2025-09-03T15:35:00.000Z"}]},{"id":20,"name":"Pošta","departures":[{"scheduledAt":"2025-09-03T15:29:00.000Z"},{"scheduledAt":"2025-09-03T15:33:00.000Z"},{"scheduledAt":"2025-09-03T15:37:00.000Z"}]},{"id":21,"name":"Drvenija","departures":[{"scheduledAt":"2025-09-03T15:31:00.000Z"},{"scheduledAt":"2025-09-03T15:35:00.000Z"},{"scheduledAt":"2025-09-03T15:39:00.000Z"}]},{"id":22,"name":"Latinska Ćuprija","departures":[{"scheduledAt":"2025-09-03T15:33:00.000Z"},{"scheduledAt":"2025-09-03T15:37:00.000Z"},{"scheduledAt":"2025-09-03T15:41:00.000Z"}]},{"id":23,"name":"Vijećnica","departures":[{"scheduledAt":"2025-09-03T15:35:00.000Z"},{"scheduledAt":"2025-09-03T15:39:00.000Z"},{"scheduledAt":"2025-09-03T15:43:00.000Z"}]},{"id":24,"name":"Baščaršija","departures":[{"scheduledAt":"2025-09-03T15:37:00.000Z"},{"scheduledAt":"2025-09-03T15:41:00.000Z"},{"scheduledAt":"2025-09-03T15:45:00.000Z"}]}]</pre>
+                </div>
+                
+                <div class="flex-1/2 md:rounded-lg md:overflow-hidden md:overflow-y-scroll">
+                  <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/transit_planner_stop_departures.png" class="mx-auto rounded-lg md:rounded-none" width="full" height="auto"/>
+                </div>
+              </div>
+            </div>
+
+            <a class="order-2 xl:order-4 xl:max-w-40 flex flex-col items-end justify-center" href="#transit-planner-ci-cd">
+              <div class="flex items-center gap-1 text-white/50">
+                Next
+                <i data-lucide="arrow-right" class="w-5"></i>
+              </div>
+              <div class="text-right text-base/5">
+                CI/CD
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CI/CD -->
+      <div id="transit-planner-ci-cd" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 px-10 pb-5 md:py-10 justify-center">
+        <div class="h-full flex flex-col md:flex-row gap-3 md:gap-5 md:items-center md:justify-between">
+
+          <div class="order-1 md:hidden h-12 shrink-0"></div>
+
+          <div class="order-2 md:h-full md:w-1/3 grow md:grow-0 flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+
+            <div class="md:h-full flex flex-col gap-3 overflow-hidden justify-center-safe">
+
+              <div class="text-4xl font-bold">CI/CD</div>
+
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-5">
+                <p>This project turned out useful to me, so I slapped on a layer of authentication and deployed it to Vercel. It gave me a bit of a headache, so I documented the process <a class="inline-flex gap-0.5 underline" href="https://corentindautreme.github.io/Deploying-An-Express-API-To-Vercel/">in a blog post<i data-lucide="external-link" class="w-4"></i></a> for posterity.</p>
+
+                <p>A cool trick I reused from Lys was to use GitHub Actions' <a class="inline-flex gap-0.5 underline" href="https://vercel.com/guides/how-can-i-run-end-to-end-tests-after-my-vercel-preview-deployment#using-github-actions'-repository_dispatch-events">repository dispatch events<i data-lucide="external-link" class="w-4"></i></a> to have <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner-client/pull/10/files">a fixed URL<i data-lucide="external-link" class="w-4"></i></a> pointing to the latest deployed preview of the app - which greatly sped up mobile testing. Maybe I'll write a blog post about that.</p>
+              </div>
+
             </div>
 
           </div>
 
-          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center px-10 md:px-0" href="#transit-planner-data">
+          <div class="order-4 md:order-3 w-full md:w-0 md:h-full md:grow flex items-center justify-center">
+            <div class="w-full md:w-2/3 flex flex-col gap-1 rounded-lg bg-neutral-900 border-1 border-white/10 md:px-4 p-3 text-sm text-white/50 overflow-hidden">
+              <div>Domains</div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="globe" class="size-4 shrink-0"></i>
+                <div class="bg-yellow-500 text-black text-nowrap">transit-planner-client-preview.vercel.app</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="git-branch" class="size-4 shrink-0"></i>
+                <div class="text-white text-nowrap">transit-planner-client-git-fe-e742d9-corentindautremes-projects.vercel.app</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="git-commit-horizontal" class="size-4 shrink-0"></i>
+                <div class="text-white text-nowrap">transit-planner-client-89hl76ac-corentindautremes-projects.vercel.app</div>
+              </div>
+            </div>
+          </div>
+
+          <a class="order-3 md:order-4 md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-ci-cd-testing">
             <div class="flex items-center gap-1 text-white/50">
               Next
               <i data-lucide="arrow-right" class="w-5"></i>
             </div>
             <div class="text-right text-base/5">
-              Gathering data
+              Testing is cool!
             </div>
           </a>
 
         </div>
-      </div> -->
+      </div>
+
+      <!-- Testing is cool! -->
+      <div id="transit-planner-ci-cd-testing" class="snap-start w-full h-full flex flex-col gap-3 shrink-0 pb-5 md:p-10 justify-center">
+        <div class="h-full flex flex-col md:flex-row gap-3 md:gap-5 md:items-center md:justify-between">
+
+          <div class="order-1 md:hidden h-12 shrink-0"></div>
+
+          <div class="order-2 md:h-full md:w-1/3 grow md:grow-0 px-10 md:px-0 md:py-10 flex md:items-center gap-10 overflow-hidden mask-b-from-80% mask-b-to-100%">
+
+            <div class="md:h-full flex flex-col gap-3 overflow-hidden justify-center-safe">
+
+              <div class="text-4xl font-bold">Testing is cool!</div>
+
+              <div class="flex flex-col gap-3 overflow-hidden overflow-y-scroll pb-5">
+                <p>Coming from 6,5 years of Spring Boot development, I came to love being able to (mostly) seamlessly inject an in-memory H2 database for my ITs.</p>
+
+                <p>Since Prisma requires you to generate a client that targets your database platform, it's a little trickier here - but I still managed to set something similar up <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner/pull/20/files">with Jest mocks and sqlite<i data-lucide="external-link" class="w-4"></i></a>. Maybe I'll turn this into a library one day.</p>
+
+                <p>Now I had to show off all this testing - so I got <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner?tab=readme-ov-file#transit-planner">coverage badges<i data-lucide="external-link" class="w-4"></i></a> to be generated upon pushing to main, without relying on GitHub Pages nor any third-party badge service. You can check the <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner/pull/16/files">PR<i data-lucide="external-link" class="w-4"></i></a> - and I might scribble a thing or two about that too one day.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="order-4 md:order-3 w-full h-50 md:h-full md:w-0 md:grow flex items-center justify-center overflow-hidden mask-radial-full mask-radial-from-0%">
+            <div class="w-fit flex flex-col gap-1">
+
+              <div class="flex gap-1 justify-end opacity-30">
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 justify-center">
+                <div class="flex shrink-0 items-center text-sm opacity-30">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm opacity-30">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 bg-linear-to-b from-green-500 to-green-800">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 bg-linear-to-b from-neutral-700 to-neutral-900">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm opacity-30">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm opacity-30">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+              </div>
+
+              <div class="flex gap-1 opacity-30">
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+                <div class="flex shrink-0 items-center text-sm">
+                  <div class="rounded-s p-1 border-t-1 border-s-1 border-b-1">Coverage (branch)</div>
+                  <div class="rounded-e px-1.5 py-1 border-1">93.38%</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <a class="order-3 md:order-4 md:max-w-40 md:mt-0 flex flex-col items-end justify-center px-10 md:px-0" href="#transit-planner-more">
+            <div class="flex items-center gap-1 text-white/50">
+              Next
+              <i data-lucide="arrow-right" class="w-5"></i>
+            </div>
+            <div class="text-right text-base/5">
+              To go further
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- more -->
+      <div id="transit-planner-more" class="snap-start w-full h-full flex flex-col gap-5 shrink-0 p-10 justify-center">
+        <div class="md:hidden h-5"></div>
+        <div class="text-4xl font-bold">To go further</div>
+
+        <div class="flex flex-col md:flex-row gap-5 md:gap-0 md:justify-between overflow-hidden">
+
+          <div class="flex flex-col md:flex-row gap-1 md:gap-0 md:items-between overflow-hidden">
+
+            <div class="grow flex flex-col gap-3 overflow-y-scroll mask-b-from-90% mask-b-to-100% pb-7">
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="globe"></i> The app
+                </div>
+
+                <div class="flex flex-col">
+                  <a class="inline-flex gap-0.5 underline" href="https://transit-planner.vercel.app/api-docs/">API docs (Swagger)<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="github"></i> Sources
+                </div>
+
+                <div class="flex md:flex-col gap-x-2 flex-wrap">
+                  <a class="inline-flex gap-0.5 underline" href="github.com/corentindautreme/transit-planner">transit-planner (backend)<i data-lucide="external-link" class="w-4"></i></a>
+                  <a class="inline-flex gap-0.5 underline" href="https://github.com/corentindautreme/transit-planner-client">transit-planner-client (frontend)<i data-lucide="external-link" class="w-4"></i></a>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-1 mt-2">
+                <div class="flex items-center gap-1 font-bold">
+                  <i data-lucide="newspaper"></i> Reading
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <div>
+                    <a class="underline" href="https://corentindautreme.github.io/Deploying-An-Express-API-To-Vercel/">Deploying an Express API to Vercel</a><span class="ms-1 text-white/50">(august 2025)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <a class="md:max-w-40 md:mt-0 flex flex-col items-end justify-center" href="#transit-planner-intro">
+            <div class="flex items-center gap-1 text-white/50">
+              <i data-lucide="arrow-left" class="w-5"></i>
+              Back to the start
+            </div>
+            <div class="text-right text-base/5">
+              Transit Planner
+            </div>
+          </a>
+        </div>
+
+      </div>
 
     </div>
 
