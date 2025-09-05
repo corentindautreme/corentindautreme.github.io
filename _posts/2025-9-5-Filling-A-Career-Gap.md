@@ -7,7 +7,7 @@ In April 2025, I quit my job for personal relocation purposes, and remained unem
 gone through such a gap before, but I had a plan to keep busy, and I mostly stuck to it. In the end, my day-to-day
 didn't turn out much different from what it was in my previous job. In this post, I'll go over the things I did.
 
-<!-- more -->
+<!--more-->
 
 ## I moved to another country
 
