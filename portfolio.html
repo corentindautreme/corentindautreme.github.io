@@ -4546,13 +4546,13 @@
 
             <div class="order-1 xl:hidden h-12 shrink-0"></div>
 
-            <div class="order-2 xl:w-[33%] md:min-h-[150px] min-w-[200px] flex flex-col gap-3 md:overflow-hidden">
+            <div class="order-2 xl:w-[33%] xl:shrink-0 md:min-h-[150px] min-w-[200px] flex flex-col gap-3 md:overflow-hidden">
 
               <div class="text-4xl font-bold">Route departures</div>
 
               <div class="flex flex-col gap-3 md:overflow-hidden md:overflow-y-scroll">
-                <p>The first endpoints I implemented are to describe lines and the routes they take.</p>
-                <p>This one, <span class="font-mono">describe-line</span>, returns the type of the line, its directions, and all stops alongside each direction - along with the available connections at that stop.</p>
+                <p>This endpoint returns the arrival time of a given ride at each stop of a route, given a departure time at a stop.</p>
+                <p>It can be useful to keep track of a specific vehicule, and allows for user-friendly visual representations.</p>
               </div>
 
             </div>
@@ -4589,8 +4589,10 @@
                   <pre class="w-full font-mono json hidden overflow-hidden overflow-scroll text-sm">[{"id":11,"name":"Otoka","departures":[{"scheduledAt":"2025-09-03T15:10:00.000Z"},{"scheduledAt":"2025-09-03T15:14:00.000Z"},{"scheduledAt":"2025-09-03T15:18:00.000Z"}]},{"id":12,"name":"Čengić Vila","departures":[{"scheduledAt":"2025-09-03T15:13:00.000Z"},{"scheduledAt":"2025-09-03T15:17:00.000Z"},{"scheduledAt":"2025-09-03T15:21:00.000Z"}]},{"id":13,"name":"Dolac Malta","departures":[{"scheduledAt":"2025-09-03T15:15:00.000Z"},{"scheduledAt":"2025-09-03T15:19:00.000Z"},{"scheduledAt":"2025-09-03T15:23:00.000Z"}]},{"id":14,"name":"Socijalno","departures":[{"scheduledAt":"2025-09-03T15:17:00.000Z"},{"scheduledAt":"2025-09-03T15:21:00.000Z"},{"scheduledAt":"2025-09-03T15:25:00.000Z"}]},{"id":15,"name":"Pofalići","departures":[{"scheduledAt":"2025-09-03T15:19:00.000Z"},{"scheduledAt":"2025-09-03T15:23:00.000Z"},{"scheduledAt":"2025-09-03T15:27:00.000Z"}]},{"id":16,"name":"Univerzitet","departures":[{"scheduledAt":"2025-09-03T15:20:00.000Z"},{"scheduledAt":"2025-09-03T15:24:00.000Z"},{"scheduledAt":"2025-09-03T15:28:00.000Z"}]},{"id":17,"name":"Muzeji","departures":[{"scheduledAt":"2025-09-03T15:22:00.000Z"},{"scheduledAt":"2025-09-03T15:26:00.000Z"},{"scheduledAt":"2025-09-03T15:30:00.000Z"}]},{"id":18,"name":"Marijin Dvor","departures":[{"scheduledAt":"2025-09-03T15:24:00.000Z"},{"scheduledAt":"2025-09-03T15:28:00.000Z"},{"scheduledAt":"2025-09-03T15:32:00.000Z"}]},{"id":19,"name":"Skenderija","departures":[{"scheduledAt":"2025-09-03T15:27:00.000Z"},{"scheduledAt":"2025-09-03T15:31:00.000Z"},{"scheduledAt":"2025-09-03T15:35:00.000Z"}]},{"id":20,"name":"Pošta","departures":[{"scheduledAt":"2025-09-03T15:29:00.000Z"},{"scheduledAt":"2025-09-03T15:33:00.000Z"},{"scheduledAt":"2025-09-03T15:37:00.000Z"}]},{"id":21,"name":"Drvenija","departures":[{"scheduledAt":"2025-09-03T15:31:00.000Z"},{"scheduledAt":"2025-09-03T15:35:00.000Z"},{"scheduledAt":"2025-09-03T15:39:00.000Z"}]},{"id":22,"name":"Latinska Ćuprija","departures":[{"scheduledAt":"2025-09-03T15:33:00.000Z"},{"scheduledAt":"2025-09-03T15:37:00.000Z"},{"scheduledAt":"2025-09-03T15:41:00.000Z"}]},{"id":23,"name":"Vijećnica","departures":[{"scheduledAt":"2025-09-03T15:35:00.000Z"},{"scheduledAt":"2025-09-03T15:39:00.000Z"},{"scheduledAt":"2025-09-03T15:43:00.000Z"}]},{"id":24,"name":"Baščaršija","departures":[{"scheduledAt":"2025-09-03T15:37:00.000Z"},{"scheduledAt":"2025-09-03T15:41:00.000Z"},{"scheduledAt":"2025-09-03T15:45:00.000Z"}]}]</pre>
                 </div>
                 
-                <div class="flex-1/2 md:rounded-lg md:overflow-hidden md:overflow-y-scroll">
-                  <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/transit_planner_stop_departures.png" class="mx-auto rounded-lg md:rounded-none" width="full" height="auto"/>
+                <div class="relative flex flex-col flex-1/2 md:overflow-hidden">
+                  <div class="md:rounded-lg md:overflow-hidden md:overflow-y-scroll">
+                    <img src="https://raw.githubusercontent.com/corentindautreme/corentindautreme.github.io/refs/heads/master/images/portfolio/transit_planner_stop_departures.png" class="mx-auto rounded-lg md:rounded-none" width="full" height="auto"/>
+                  </div>
                 </div>
               </div>
             </div>
