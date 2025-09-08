@@ -62,6 +62,7 @@ namely:
 
 * [Revisiting Lys, a Eurovision-flavored social media bot](https://corentindautreme.github.io/Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/)
 * [Deploying an Express API to Vercel](https://corentindautreme.github.io/Deploying-An-Express-API-To-Vercel/)
+* [Using SQLite for your Node.js/Prisma integration tests](https://corentindautreme.github.io/Using-SQLite-For-Your-Node-Prisma-Integration-Tests/)
 * [AWS SDK - GetLogEvents does not return all LogEvents](https://corentindautreme.github.io/AWS-SDK-GetLogEvents-Does-Not-Return-All-LogEvents/)
 * Filling a career gap _(this post)_
 
