@@ -63,6 +63,8 @@ namely:
 * [Revisiting Lys, a Eurovision-flavored social media bot](https://corentindautreme.github.io/Revisiting-Lys-A-Eurovision-Flavored-Social-Media-Bot/)
 * [Deploying an Express API to Vercel](https://corentindautreme.github.io/Deploying-An-Express-API-To-Vercel/)
 * [Using SQLite for your Node.js/Prisma integration tests](https://corentindautreme.github.io/Using-SQLite-For-Your-Node-Prisma-Integration-Tests/)
+* [Free Fixed URL to your latest Vercel preview with GitHub Actions](https://corentindautreme.github.io/Free-Fixed-URL-To-Latest-Vercel-Preview-With-GitHub-Actions/)
+* [GitHub badges without third-party services nor GitHub pages](https://corentindautreme.github.io/GitHub-Badges-Without-Third-Party-Services-Nor-GitHub-Pages/)
 * [AWS SDK - GetLogEvents does not return all LogEvents](https://corentindautreme.github.io/AWS-SDK-GetLogEvents-Does-Not-Return-All-LogEvents/)
 * Filling a career gap _(this post)_
 
