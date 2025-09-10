@@ -17,13 +17,10 @@ be seeded with test data and injected into my code to "override" my actual datab
 ORM layer to interact with, just for the duration of the tests - not unlike what you can achieve in a Spring Boot
 application with JPA and H2.
 
-// diagram (
-mermaid?) https://stackoverflow.com/questions/53883747/how-to-make-github-pages-markdown-support-mermaid-diagram
-
-```mermaid
-flowchart LR
-    Start --> Stop
-```
+![_config.yml]({{ site.baseurl
+}}/images/articles/2025-9-7-Using-SQLite-For-Your-Node-Prisma-Integration-Tests/nodejs_database.svg)
+![_config.yml]({{ site.baseurl
+}}/images/articles/2025-9-7-Using-SQLite-For-Your-Node-Prisma-Integration-Tests/nodejs_database_mock.svg)
 
 The issue with Prisma is that you have to specify the target platform in the configuration of your client, which means
 that a client generated from a Prisma schema targeting Postgres cannot be reused to interact with another database
@@ -59,9 +56,9 @@ Now, let's make our first few adjustments:
 
 * We change the `provider` from `postgresql` to `sqlite`
 * We manually fix the URL of our database (for now) to a local `.db` file
-* We also change the `output` of the generated client so that it doesn't override our "live" PostgreSQL client - this
-  will allow us to test our SQLite client without overriding our "live" PostgreSQL one, and, later, to alternate between
-  running our integration tests and serving a local app without having to regenerate a client everytime
+* We also change the `output` of the generated client - this will allow us to test our SQLite client without overriding
+  our "live" PostgreSQL one, and, later, to alternate between running our integration tests and serving a local app
+  without having to regenerate a client everytime
 
 ```
 generator client {
@@ -78,8 +75,8 @@ datasource db {
 }
 ```
 
-At a glance, that should be it. We can try, **as long as we don't forget to specify a schema in your command**, to
-push this schema to an SQLite database located in the `ìt.db` file using the prisma CLI to test it. Again, **let's not
+At a glance, that should be it. We can try, **as long as we don't forget to specify a schema in our command**, to
+push this schema to an SQLite database located in the `it.db` file using the prisma CLI to test it. Again, **let's not
 forget to tell Prisma to use our "integration" schema, using the `--schema` argument**:
 
 ```bash
@@ -89,7 +86,10 @@ prisma db push --schema prisma/schema.integration.test.prisma
 Now, depending on how large our schema is, we'll likely see quite a few errors. In my case, they were the following
 ones:
 
-* `error: Error validating model "<table>": You defined a database name for the primary key on the model. This is not supported by the provider.`
+*
+
+`error: Error validating model "<table>": You defined a database name for the primary key on the model. This is not supported by the provider.`
+
 * `error: Native type VarChar is not supported for sqlite connector.`
 * `error: Error parsing attribute "@relation": Your provider does not support named foreign keys.`
 
@@ -265,12 +265,13 @@ We earlier created a Prisma schema for our integration tests manually. But manua
 schemas isn't only tedious, it's also error-prone (changing something in one but not in the other, etc.). I would argue
 these 2 arguments are enough to qualify this as a terrible idea.
 
-Ideally, we'd want 1) our "integration" schema to be generated from the current version of our Prisma schema 2) our SQLite
+Ideally, we'd want 1) our "integration" schema to be generated from the current version of our Prisma schema 2) our
+SQLite
 database created and 3) an "integration" Prisma client generated, all right before running our tests.
 
 The detailed steps for this would be:
 
-* Creating a copy of the Prisma schema file
+* Create a copy of the Prisma schema file
 * In the copied schema file:
     * Update the output generation directory
     * Change the provider to `sqlite`
@@ -351,8 +352,8 @@ That should be it, right? Well, if we try re-running our previous test, we hit a
 
     src/lib/db/__mocks__/client.ts:31:38 - error TS2307: Cannot find module '../../../../generated/integration/prisma' or its corresponding type declarations.
 
-    31 import { Prisma, PrismaClient } from '../../../../generated/integration/prisma';
-                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    31 import { PrismaClient } from '../../../../generated/integration/prisma';
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ```
 
 Uh-oh. In our "mock" definition, we try to import our generated client. But at Typescript compilation time, we haven't
