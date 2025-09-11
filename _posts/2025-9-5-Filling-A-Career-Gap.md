@@ -55,7 +55,7 @@ mobile. [Check it out!](https://corentindautreme.github.io/portfolio)
 
 ## I wrote blog posts
 
-**Objective**: document findings & thought processes, and train my synthesis & transmission skills
+**Objective**: document findings & thought processes, and train my synthesis & restitution skills
 
 I wrote a variety of blog posts on topics ranging from side project deep-dives to technical showcases and documentation,
 namely:
