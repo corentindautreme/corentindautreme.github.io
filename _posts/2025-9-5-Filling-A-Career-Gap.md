@@ -11,8 +11,7 @@ didn't turn out much different from what it was in my previous job. In this post
 
 ## I moved to another country
 
-The main reason I ended up with so much time on my hands was because I relocated to another country. To achieve that, I
-emptied my home, sold it, and went through some paperwork. That kept me busy for the first few weeks.
+The main reason I ended up with so much time on my hands was because I relocated to another country. The process (<span class="tooltip-toggle" aria-label="Gdje je pečat!">and the paperwork!</span>) kept me busy for the first few weeks.
 
 ## I rewrote the management app of a side project
 
