@@ -22,7 +22,7 @@ permalink: /cv/
                 left: 0;
                 top: 0;
                 display: grid;
-                grid-template-columns: auto 300px 750px auto;
+                grid-template-columns: auto 300px 775px auto;
                 grid-template-rows: 50px 150px 150px auto 25px;
             }
 
@@ -59,7 +59,6 @@ permalink: /cv/
                 grid-column-start: 2;
                 grid-column-end: 3;
                 grid-row-start: 4;
-                border-right: 1px solid #c0c0c0;
             }
 
             #footer {
@@ -97,7 +96,7 @@ permalink: /cv/
             }
 
             #content {
-                padding: 0 1em;
+                padding-left: 1em;
                 grid-column-start: 3;
                 grid-column-end: 4;
                 grid-row-start: 4;
@@ -126,7 +125,8 @@ permalink: /cv/
             }
 
             #header-photo {
-                background: linear-gradient(to bottom, #e0e0e0 50%, transparent 0%); 
+                background: linear-gradient(to bottom, #e0e0e0 50%, transparent 0%);
+/*                background: linear-gradient(to bottom, #e0e0e0 50%, #f0f0f0 0%);*/
             }
 
             #photo {
@@ -256,40 +256,69 @@ permalink: /cv/
             .section-title a {
                 text-decoration: none;
             }
-            
+
             .work-experience {
-                padding: 0 1em;
                 text-align: justify;
             }
 
-            .work-experience:not(:first-of-type) {
+            .work-experience:first-of-type {
                 margin-top: 1em;
             }
 
             .work-experience .company {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
                 font-family: 'Inter Tight';
                 font-size: 20px;
                 font-weight: 800;
             }
 
+            .work-experience .company .company-logo {
+                background: #fff;
+                background-size: 100%;
+                background-position: center;
+                border-radius: 50%;
+                border: 1px solid #a0a0a0;
+                width: 32px;
+                height: 32px;
+                flex-shrink: 0;
+            }
+
+            .work-experience .work-experience-details {
+                margin-left: 1em;
+                padding-left: 1em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+                border-left: 1px solid #a0a0a0;
+            }
+
             .work-experience .position {
                 font-size: 16px;
                 text-align: left;
-                padding-top: 0.5em;
-                display: inline-flex;
+                display: flex;
                 align-items: center;
+                gap: 0.5em;
+                flex-wrap: wrap;
             }
 
-            .work-experience .position .position-segment {
+            .work-experience .position .title, .work-experience .position .period, .work-experience .position .location {
+                display: flex;
+                align-items: center;
+                gap: 0.25em;
+                flex-wrap: wrap;
+            }
+
+            .position-segment {
                 display: flex;
                 align-items: center
             }
 
-            .work-experience .position .position-segment i {
+            .position-segment i {
                 margin-right: 0.25em;
             }
 
-            .work-experience .position .position-segment:not(:first-of-type) i {
+            .position-segment:not(:first-of-type) i {
                 margin-left: 0.25em;
             }
 
@@ -297,10 +326,44 @@ permalink: /cv/
                 line-height: 1.3;
             }
 
+            .work-experiences-light {
+                margin-left: 1em;
+                padding-top: 0.5em;
+                border-left: 1px solid #a0a0a0;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            .work-experiences-light:after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: -1px;
+                top: 85%;
+                height: 15%;
+                border-left: 2px solid white;
+            }
+
             .work-experience-light {
-                padding: 0 1em;
-                margin-top: 0.5em;
+                display: flex;
+                align-items: center;
+                gap: 0.3em;
+                margin-left: 1em;
                 font-size: 15px;
+            }
+
+            .work-experience-light:before {
+                position: absolute;
+                width: 8px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                background-color: #a0a0a0;
+                content: '';
+                left: 0;
+                transform: translateX(-55%);
+                z-index: 1;
             }
 
             .work-experience-light .company {
@@ -325,7 +388,8 @@ permalink: /cv/
             }
 
             .work-experience-light .techs {
-                display: inline-block;
+                display: flex;
+                gap: 0.25em;
                 font-size: 15px;
                 padding: 0;
             }
@@ -385,6 +449,7 @@ permalink: /cv/
                 border-radius: 50%;
                 border: 1px solid #a0a0a0;
                 background-size: 100%;
+                background-position: center;
             }
 
             .side-project .description {
@@ -543,6 +608,29 @@ permalink: /cv/
                     padding: 0;
                 }
 
+                .work-experience .position {
+                    flex-direction: column;
+                    align-items: start;
+                }
+
+                .work-experience-light {
+                    flex-direction: column;
+                    align-items: start;
+                }
+
+                .work-experience-light:before {
+                    margin-top: 0.5em;
+                }
+
+                .work-experiences-light:after {
+                    top: 74%;
+                    height: 26%;
+                }
+
+                .work-experience-light .separator {
+                    display: none;
+                }
+
                 .side-project {
                     flex-direction: column;
                     align-items: center;
@@ -596,7 +684,7 @@ permalink: /cv/
                     <div id="header-subtitle">
                         <div>
                             <div class="header-subtitle-item">
-                                29 - Software Engineer
+                                30 - Software Engineer
                             </div>
                         </div>
                         <div>
@@ -606,9 +694,9 @@ permalink: /cv/
                         </div>
                     </div>
                     <div id="header-disclaimer">
-                        <div id="header-disclaimer-message">
+                        <!-- <div id="header-disclaimer-message">
                             Looking for a full-time software engineer position from <span class="highlighted bold">Sarajevo</span> (on-site, hybrid, or full-remote)
-                        </div>
+                        </div> -->
                         <a id="download-cv" href="https://corentindautreme.github.io/files/cv_corentin_dautreme_software_engineer.pdf" download="cv_corentin_dautreme_software_engineer.pdf">
                             <i class="material-symbols-outlined">download</i>
                             <span>Download this CV as PDF</span>
@@ -617,7 +705,7 @@ permalink: /cv/
                 </div>
            </div>
            <div id="header-summary">
-               Hi! I'm Corentin, a software engineer with 7 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
+               Hi! I'm Corentin, a software engineer with 7.5 years of work experience in backend <span class="highlighted">Java/Spring Boot</span> development, <span class="highlighted">Kubernetes</span>, <span class="highlighted">Jenkins CI/CD pipelines</span>, <span class="highlighted">Python</span>, and an interest in frontend development, UX, and more generally making my users' life easier.
            </div>
             <div id="details">
                 <div id="contact-details" class="details-block">
@@ -629,13 +717,14 @@ permalink: /cv/
                         </div>
                         <div class="details-item">
                             <i class="material-symbols-outlined">call</i>
-                            <span class="details-item-text">00336XXXXXX57</span><i class="btn-copy material-symbols-outlined">content_copy</i>
+                            <span class="details-item-text">0038760XXXXX96</span><i class="btn-copy material-symbols-outlined">content_copy</i>
                         </div>
                         <div class="details-item languages">
                             <i class="material-symbols-outlined">language</i>
                             <span class="details-item-text">
                                 <div><span class="preferred">English</span>, <span class="preferred">French</span> - Bilingual (C2)</div>
-                                <div><span class="preferred">Swedish</span>, Spanish - Experienced (C1)</div>
+                                <div><span class="preferred">Swedish</span> - Advanced (C1)</div>
+                                <div>Spanish - Upper Intermediate (B2)</div>
                                 <div>Bosnian - Beginner (A1)</div>
                             </span>
                         </div>
@@ -651,6 +740,7 @@ permalink: /cv/
                         <div class="tech">Java 11</div>
                         <div class="tech">Spring Boot 2</div>
                         <div class="tech">Python 3</div>
+                        <div class="tech">Node.js</div>
                         <div class="details-item">
                             <i class="material-symbols-outlined">code</i>
                             <span class="details-item-text">Frontend development</span>
@@ -659,6 +749,7 @@ permalink: /cv/
                         <div class="tech">React</div>
                         <div class="tech">HTML</div>
                         <div class="tech">CSS</div>
+                        <div class="tech">Tailwind CSS</div>
                         <div class="tech">Javascript</div>
 
                         <div class="details-item">
@@ -708,85 +799,105 @@ permalink: /cv/
                         <span>Work experience</span>
                     </div>
                 </div>
+
                 <div class="work-experience">
-                    <div class="company">Société Générale CIB (Corporate and Investment Banking)</div>
-                    <div class="position" style="display: flex;align-items: center; flex-wrap: wrap;">
-                        <!-- Group in a .position-segment what you don't want flex-wrap to break, e.g. icon + first word of sentence -->
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">person</i>
-                            Software&nbsp;
-                        </div>
-                        Engineer
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">calendar_month</i>
-                            since&nbsp;
-                        </div>
-                        Sep 2018 (6+ years)
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">place</i>
-                            Paris&nbsp;
-                        </div>
-                        La Défense
+                    <div class="company">
+                        <div class="company-logo" style="background-image: url('https://corentindautreme.github.io/images/cv/dedalus.png');"></div>
+                        Dedalus
                     </div>
-                    <div class="techs">
-                        <div class="tech">Java 8/11</div>
-                        <div class="tech">Spring Boot 2</div>
-                        <div class="tech">REST APIs</div>
-                        <div class="tech">Kubernetes</div>
-                        <div class="tech">Elastic</div>
-                        <div class="tech">Jenkins</div>
-                    </div>
-                    <div class="summary">
-                        Design and development of REST APIs and scheduled batches, and rewrite of a low latency, high-throughput pre-deal check application for trading, for the client portfolio management system of the bank's prime brokerage business (<span class="bolder">Java 8/11</span>, <span class="bolder">Spring Boot 2</span>, <span class="bolder">RabbitMQ</span>, <span class="bolder">PostgreSQL</span>, <span class="bolder">Kubernetes</span>); enhancement of the CI/CD pipelines (<span class="bolder">Jenkins</span>, <span class="bolder">Helm</span>); enrichment of the monitoring and alerting (<span class="bolder">Elastic stack</span>); and lead of the <span class="bolder">Agile activities</span> of the team (daily meetings, backlog reviews, retrospectives and prioritization with the product owners).
+                    <div class="work-experience-details">
+                        <div class="position">
+                            <span class="title">
+                                <i class="material-symbols-outlined">person</i>
+                                Software Engineer
+                            </span>
+                            <div class="period">
+                                <i class="material-symbols-outlined">calendar_month</i>
+                                since Sep 2025
+                            </div>
+                            <div class="location">
+                                <i class="material-symbols-outlined">place</i>
+                                Sarajevo
+                            </div>
+                        </div>
+                        <div class="techs">
+                            <div class="tech">Java 21</div>
+                            <div class="tech">Quarkus 3</div>
+                            <div class="tech">REST APIs</div>
+                            <div class="tech">Kubernetes</div>
+                            <div class="tech">Grafana stack</div>
+                            <div class="tech">GitHub Actions</div>
+                        </div>
+                        <div class="summary">
+                        </div>
                     </div>
                 </div>
+                
                 <div class="work-experience">
-                    <div class="company">Société Générale CIB (Corporate and Investment Banking)</div>
-                    <div class="position" style="display: flex;align-items: center; flex-wrap: wrap;">
-                        <!-- Group in a .position-segment what you don't want flex-wrap to break, e.g. icon + first word of sentence -->
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">person</i>
-                            Software&nbsp;
-                        </div>
-                        Development Intern
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">calendar_month</i>
-                            Feb -&nbsp;
-                        </div>
-                        Aug 2018 (6 months)
-                        <div class="position-segment">
-                            <i class="material-symbols-outlined">place</i>
-                            Paris&nbsp;
-                        </div>
-                        La Défense
+                    <div class="company">
+                        <div class="company-logo" style="background-image: url('https://corentindautreme.github.io/images/cv/sgcib.png');"></div>
+                        Société Générale CIB
                     </div>
-                    <div class="techs">
-                        <div class="tech">Python 3</div>
-                        <div class="tech">Jenkins</div>
-                        <div class="tech">Javascript</div>
-                    </div>
-                    <div class="summary">
-                        Design and implementation of a code-learning framework for the sales staff of the bank's front office. A dozen interactive sessions were organized where participants with no coding experience were paired with developers to implement an API that was automatically redeployed via a Jenkins pipeline. Successful calls to this API granted the participants points.
+                    <div class="work-experience-details">
+                        <div class="position">
+                            <span class="title">
+                                <i class="material-symbols-outlined">person</i>
+                                Software Engineer
+                            </span>
+                            <div class="period">
+                                <i class="material-symbols-outlined">calendar_month</i>
+                                <div>Sep 2018 - Apr 2025</div> (6.5 years)
+                            </div>
+                            <div class="location">
+                                <i class="material-symbols-outlined">place</i>
+                                Paris La Défense
+                            </div>
+                        </div>
+                        <div class="techs">
+                            <div class="tech">Java 8/11</div>
+                            <div class="tech">Spring Boot 2</div>
+                            <div class="tech">REST APIs</div>
+                            <div class="tech">Kubernetes</div>
+                            <div class="tech">Elastic stack</div>
+                            <div class="tech">Jenkins</div>
+                        </div>
+                        <div class="summary">
+                            Design and development of REST APIs and scheduled batches, and rewrite of a low latency, high-throughput pre-deal check application for trading, for the client portfolio management system of the bank's prime brokerage business (<span class="bolder">Java 8/11</span>, <span class="bolder">Spring Boot 2</span>, <span class="bolder">RabbitMQ</span>, <span class="bolder">PostgreSQL</span>, <span class="bolder">Kubernetes</span>); enhancement of the CI/CD pipelines (<span class="bolder">Jenkins</span>, <span class="bolder">Helm</span>); enrichment of the monitoring and alerting (<span class="bolder">Elastic stack</span>); and lead of the <span class="bolder">Agile activities</span> of the team (daily meetings, backlog reviews, retrospectives and prioritization with the product owners).
+                        </div>
                     </div>
                 </div>
-                <div class="work-experience-light">
-                    <span class="company">Sopra Steria</span> Web development (Internship) · Jun - Aug 2016 (3 months)
-                    <span class="techs">
-                        <span class="tech">Javascript</span>
-                    </span>
-                </div>
-                <div class="work-experience-light">
-                    <span class="company">B.F.S Feeli</span> Mobile app development (Internship) · Apr - Jun 2015 (3 months)
-                    <span class="techs">
-                        <span class="tech">AngularJS</span>
-                        <span class="tech">Ionic</span>
-                    </span>
-                </div>
-                <div class="work-experience-light">
-                    <span class="company">Allianz France</span> Direction of Operations (Summer job) · Jul - Aug 2015 (2 months)
-                    <span class="techs">
-                        <span class="tech">Non-IT</span>
-                    </span>
+
+                <div class="work-experiences-light">
+                    <div class="work-experience-light">
+                        <div class="company">Société Générale CIB</div>
+                        <div class="position">Software dev. intern</div>
+                        <div class="separator">·</div>
+                        <div class="period">Feb - Aug 2018 (6 mo)</div>
+                        <div class="techs">
+                            <div class="tech">Python 3</div>
+                            <div class="tech">Jenkins</div>
+                            <div class="tech">Javascript</div>
+                        </div>
+                    </div>
+                    <div class="work-experience-light">
+                        <div class="company">Sopra Steria</div>
+                        <div class="title">Web development intern</div>
+                        <div class="separator">·</div>
+                        <div class="period">Jun - Aug 2016 (3 mo)</div>
+                        <div class="techs">
+                            <span class="tech">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="work-experience-light">
+                        <div class="company">B.F.S Feeli</div>
+                        <div class="position">Mobile app development intern</div>
+                        <div class="separator">·</div>
+                        <div class="period">Apr - Jun 2015 (3 mo)</div>
+                        <div class="techs">
+                            <span class="tech">AngularJS</span>
+                            <span class="tech">Ionic</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="section-title" id="side-projects">
@@ -820,13 +931,17 @@ permalink: /cv/
                         </div>
                     </div>
                     <div class="side-project">
-                        <div class="photo" style="background-image: url('https://corentindautreme.github.io/images/cv/logo_generator.png');"></div>
+                        <div class="photo" style="background-image: url('https://corentindautreme.github.io/images/cv/transit-planner.png');"></div>
                         <div class="description">
-                            A live Javascript/CSS generator inspired by the programmatically-generated logo of the 2021 Eurovision Song Contest that was conceived using the geographical data of all 39 participating countries. Can be accessed at <a href="https://corentindautreme.github.io/esc-2021-generator/">https://corentindautreme.github.io/esc-2021-generator/</a>.
+                            A <span class="bolder">Node.js</span> API relying on <span class="bolder">Express</span> and <span class="bolder">Prisma</span> to expose public transport data - and a simple <span class="bolder">Next.js</span> demo webapp to display that data (line plans, live departure tables, and more). See Swagger documentation at <a href="https://transit-planner.vercel.app/api-docs/">transit-planner.vercel.app/api-docs</a>, and more details <a href="https://corentindautreme.github.io/portfolio#transit-planner">on my Portfolio</a>.
                             <div class="techs">
-                                <div class="tech">HTML5</div>
-                                <div class="tech">CSS3</div>
-                                <div class="tech">Javascript</div>
+                                <div class="tech">Typescript</div>
+                                <div class="tech">Express</div>
+                                <div class="tech">Prisma</div>
+                                <div class="tech">OpenAPI</div>
+                                <div class="tech">Next.js 15</div>
+                                <div class="tech">Tailwind CSS</div>
+                                <div class="tech">Vercel</div>
                             </div>
                         </div>
                     </div>
@@ -845,7 +960,7 @@ permalink: /cv/
                     <div class="entry">Erasmus+ exchange at <span class="bolder">Lund University, Sweden</span> (2016-2017)</div>
                 </div>
                 <div class="education">
-                    <div class="entry"><span class="highlighted">DUT (University Diploma of Technology), Computer Science</span> at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
+                    <div class="entry"><span class="highlighted">Bacherlo's degree, Computer Science</span> (DUT) at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
                 </div>
 
                 <div class="section-title">
