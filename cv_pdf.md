@@ -228,6 +228,7 @@ permalink: /cv-pdf/
             }
 
             #contact-details .details-item .btn-copy {
+                display: none;
                 margin-left: 0.25em;
                 color: #a0a0a0;
                 cursor: pointer;
@@ -954,7 +955,7 @@ permalink: /cv-pdf/
                     <div class="entry">Erasmus+ exchange at <span class="bolder">Lund University, Sweden</span> (2016-2017)</div>
                 </div>
                 <div class="education">
-                    <div class="entry"><span class="highlighted">DUT (University Diploma of Technology), Computer Science</span> at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
+                    <div class="entry"><span class="highlighted">Bachelor's degree, Computer Science</span> (DUT) at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
                 </div>
 
                 <div class="section-title">

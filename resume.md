@@ -960,7 +960,7 @@ permalink: /cv/
                     <div class="entry">Erasmus+ exchange at <span class="bolder">Lund University, Sweden</span> (2016-2017)</div>
                 </div>
                 <div class="education">
-                    <div class="entry"><span class="highlighted">Bacherlo's degree, Computer Science</span> (DUT) at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
+                    <div class="entry"><span class="highlighted">Bachelor's degree, Computer Science</span> (DUT) at <span class="bolder">IUT de Paris, France</span> (2013-2015)</div>
                 </div>
 
                 <div class="section-title">
